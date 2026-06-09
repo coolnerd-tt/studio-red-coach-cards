@@ -3,6 +3,11 @@
 Turns Vasa Studio Red weekly workout sheets into mobile coach reference cards.
 See [BUILD-BRIEF.md](files/BUILD-BRIEF.md) for the full spec and roadmap.
 
+**📱 Live (phone-ready):** https://coolnerd-tt.github.io/studio-red-coach-cards/
+— open in Safari → Share → *Add to Home Screen*. Auto-redeploys on every push to
+`main` (see [.github/workflows/pages.yml](.github/workflows/pages.yml)); the published
+site is the `cards/` folder.
+
 ## Phase 1 — Renderer CLI (done)
 
 Loads the seed exercise library + day manifests and renders a self-contained,
