@@ -10,13 +10,27 @@ offline, mobile coach card per date. Zero third-party dependencies (Python 3
 stdlib only — runs anywhere without `pip install`).
 
 ```bash
-python3 src/build_card.py 2026-06-02          # render one date -> cards/
-python3 src/build_card.py 2026-06-02 --verify # + print §7 click-handler invariant check
-python3 src/build_card.py --all               # render every date in the manifest
+python3 src/build_card.py 2026-06-09          # render one date -> cards/
+python3 src/build_card.py 2026-06-09 --verify # + print §7 click-handler invariant check
+python3 src/build_card.py --all               # render every date + the index launcher
+python3 src/build_card.py --index             # rebuild just the launcher page
 python3 src/build_card.py --list              # list available dates
 ```
 
 Output: `cards/studio-red-<date>.html` — a single static file (works offline, shareable).
+
+### The app (launcher)
+
+`--all` also writes `cards/index.html` — a dark-themed, mobile launcher that lists
+every class date with its format badge; tap a date to open that day's card. Just open
+`cards/index.html` in any browser (works offline, no server needed):
+
+```bash
+open cards/index.html      # macOS
+```
+
+Currently loaded: 9 dates (2026-04-30 → 2026-06-09). The seed library has grown to
+**56 exercises** (50 seed + 6 mined from the June 9 sheet).
 
 ### Fidelity to the reference card
 
@@ -54,5 +68,9 @@ files/   original handoff bundle (BUILD-BRIEF.md + seed assets)
 ## Not yet built (later phases, see brief §8)
 
 2. Ingestion — wire in `data/parse_workout_pdf.py` (drop a month PDF + date → video links).
+   **Note for the parser:** the June 2026 PDF has a **cover page at index 0**, so for that
+   file `page_index = day-of-month` (not `day − 1` as in brief §5). Detect/skip a cover page
+   rather than assuming a fixed offset. June 9 was ingested from page index 9 by reading the
+   sheet text directly (pypdf `extract_text`) since the parser currently extracts links only.
 3. Matcher + enricher — fuzzy-match sheet names to the library; Claude enrich on miss.
 4. Frontend — date picker → preview/download.
