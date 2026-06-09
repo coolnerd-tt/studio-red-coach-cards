@@ -22,9 +22,11 @@ Usage:
 from __future__ import annotations
 
 import argparse
+import calendar
 import json
 import re
 import sys
+from collections import defaultdict
 from datetime import date
 from html import escape
 from pathlib import Path
@@ -148,6 +150,12 @@ FLOOR_COPY = {
         "Hold form as the reps change.",
         "Descend then ascend the rep ladder. <strong>Form does not change as reps drop</strong> "
         "— only the count does.",
+    ),
+    "BENCHMARK": (
+        "<strong>BENCHMARK · 3 rounds</strong> · Three rounds through the stations. Round 1 is a "
+        "lighter warm-up, round 2 is a practice round, and round 3 is the one that counts.",
+        "Three rounds. <strong>Round 3 is the round that counts</strong> — push for max effort and "
+        "log the reps members hit on each main lift.",
     ),
 }
 DEFAULT_FLOOR = (
@@ -488,33 +496,61 @@ EXTRA_CSS = """
 """
 
 
+MONTH_NAMES = ["", "January", "February", "March", "April", "May", "June",
+               "July", "August", "September", "October", "November", "December"]
+WEEKDAY_INITIALS = ["S", "M", "T", "W", "T", "F", "S"]  # Sunday-first
+
+
+def render_calendar_month(year: int, month: int, day_to_date: dict[int, str], manifests: dict[str, dict]) -> str:
+    """One month as a 7-column calendar grid. Workout days are red, clickable cells."""
+    cal = calendar.Calendar(firstweekday=6)  # 6 = Sunday
+    dow = "".join(f'<div class="cal-dow">{w}</div>' for w in WEEKDAY_INITIALS)
+    cells = []
+    for dnum in (d for week in cal.monthdayscalendar(year, month) for d in week):
+        if dnum == 0:
+            cells.append('    <div class="cal-cell empty"></div>')
+        elif dnum in day_to_date:
+            ds = day_to_date[dnum]
+            kind = format_kind(manifests[ds]["format"])
+            cells.append(
+                f'    <a class="cal-cell workout kind-{kind.lower()}" href="studio-red-{ds}.html">'
+                f'<span class="cal-day">{dnum}</span>'
+                f'<span class="cal-badge">{escape(kind)}</span></a>'
+            )
+        else:
+            cells.append(f'    <div class="cal-cell"><span class="cal-day muted">{dnum}</span></div>')
+    grid = "\n".join(cells)
+    n = len(day_to_date)
+    return f"""<div class="cal-month">
+  <div class="cal-title">{MONTH_NAMES[month]} {year} <span class="cal-count">{n} class{'es' if n != 1 else ''}</span></div>
+  <div class="cal-grid">
+    {dow}
+{grid}
+  </div>
+</div>"""
+
+
 def render_index(manifests: dict[str, dict], style_inner: str) -> str:
-    """A dark-themed launcher: tap a date to open that day's coach card."""
-    months = ["", "Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"]
-    rows = []
-    for d in sorted(manifests, reverse=True):
-        day = manifests[d]
+    """A dark-themed launcher: a month calendar per month with classes — tap a day to open its card."""
+    # Group classes by (year, month) -> {day_of_month: iso_date}
+    by_month: dict[tuple[int, int], dict[int, str]] = defaultdict(dict)
+    for d in manifests:
         y, m, dd = (int(x) for x in d.split("-"))
-        try:
-            wd = date(y, m, dd).strftime("%a")
-        except ValueError:
-            wd = ""
-        kind = format_kind(day["format"])
-        rows.append(
-            f"""  <a class="day-row" href="studio-red-{d}.html">
-    <div class="day-cal">
-      <div class="day-mon">{months[m]}</div>
-      <div class="day-num">{dd:02d}</div>
-    </div>
-    <div class="day-meta">
-      <div class="day-date">{wd} · {y}</div>
-      <div class="day-fmt">{escape(format_label(day['format']))}</div>
-    </div>
-    <span class="day-kind kind-{kind.lower()}">{escape(kind)}</span>
-    <span class="day-go">›</span>
-  </a>"""
-        )
-    body = "\n".join(rows)
+        by_month[(y, m)][dd] = d
+
+    # Most recent month first (matches a coach reaching for the latest classes).
+    months_html = "\n".join(
+        render_calendar_month(y, m, by_month[(y, m)], manifests)
+        for (y, m) in sorted(by_month, reverse=True)
+    )
+
+    # Legend: which colour maps to which class format.
+    legend = "".join(
+        f'<span class="legend-item"><span class="legend-dot kind-{k}"></span>{k.upper()}</span>'
+        for k in ("emom", "circuit", "superset", "ladder", "benchmark")
+    )
+
+    n = len(manifests)
     return f"""<!DOCTYPE html>
 <html lang="en">
 <head>
@@ -525,20 +561,27 @@ def render_index(manifests: dict[str, dict], style_inner: str) -> str:
 <style>{style_inner}
   .home-wrap {{ padding: 14px; max-width: 640px; margin: 0 auto; }}
   .home-sub {{ font-family: 'Barlow Condensed', sans-serif; font-weight: 700; font-size: 17px; letter-spacing: 2px; text-transform: uppercase; color: var(--muted); margin: 4px 0 14px; }}
-  .day-row {{ display: flex; align-items: center; gap: 12px; background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 12px 14px; margin-bottom: 10px; text-decoration: none; }}
-  .day-row:active {{ background: var(--card2); }}
-  .day-cal {{ width: 52px; flex-shrink: 0; background: var(--red); border-radius: 8px; text-align: center; padding: 4px 0; }}
-  .day-mon {{ font-family: 'Barlow Condensed', sans-serif; font-weight: 700; font-size: 14px; letter-spacing: 1px; text-transform: uppercase; color: white; }}
-  .day-num {{ font-family: 'Barlow Condensed', sans-serif; font-weight: 900; font-size: 26px; line-height: 1; color: white; }}
-  .day-meta {{ flex: 1; min-width: 0; }}
-  .day-date {{ font-size: 16px; color: var(--muted); font-weight: 600; }}
-  .day-fmt {{ font-family: 'Barlow Condensed', sans-serif; font-weight: 700; font-size: 24px; color: white; letter-spacing: 0.5px; }}
-  .day-kind {{ font-family: 'Barlow Condensed', sans-serif; font-weight: 700; font-size: 14px; letter-spacing: 1px; padding: 3px 9px; border-radius: 14px; text-transform: uppercase; flex-shrink: 0; }}
-  .kind-emom {{ background: rgba(74,158,232,0.2); color: var(--blue); }}
-  .kind-circuit {{ background: rgba(76,175,80,0.2); color: var(--green); }}
-  .kind-superset {{ background: rgba(212,43,43,0.25); color: #FF6B6B; }}
-  .kind-ladder {{ background: rgba(245,200,66,0.2); color: var(--yellow); }}
-  .day-go {{ font-size: 24px; color: var(--muted); flex-shrink: 0; }}
+  .cal-month {{ margin-bottom: 26px; }}
+  .cal-title {{ font-family: 'Barlow Condensed', sans-serif; font-weight: 900; font-size: 30px; letter-spacing: 1px; text-transform: uppercase; color: white; margin: 6px 2px 12px; }}
+  .cal-count {{ font-size: 15px; font-weight: 700; color: var(--muted); letter-spacing: 1px; margin-left: 6px; }}
+  .cal-grid {{ display: grid; grid-template-columns: repeat(7, 1fr); gap: 6px; }}
+  .cal-dow {{ text-align: center; font-family: 'Barlow Condensed', sans-serif; font-weight: 700; font-size: 14px; letter-spacing: 1px; color: var(--muted); padding-bottom: 2px; }}
+  .cal-cell {{ aspect-ratio: 1 / 1; border-radius: 10px; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 3px; background: var(--card); border: 1px solid var(--border); }}
+  .cal-cell.empty {{ background: transparent; border: none; }}
+  .cal-day {{ font-family: 'Barlow Condensed', sans-serif; font-weight: 700; font-size: 20px; line-height: 1; color: #cfcfcf; }}
+  .cal-day.muted {{ color: #555; font-weight: 600; }}
+  a.cal-cell.workout {{ text-decoration: none; background: var(--red); border-color: var(--red-dark); box-shadow: 0 2px 8px rgba(212,43,43,0.35); }}
+  a.cal-cell.workout .cal-day {{ color: white; font-weight: 900; font-size: 23px; }}
+  a.cal-cell.workout:active {{ filter: brightness(1.15); }}
+  .cal-badge {{ font-family: 'Barlow Condensed', sans-serif; font-weight: 700; font-size: 9px; letter-spacing: 0.5px; text-transform: uppercase; color: rgba(255,255,255,0.92); padding: 0 2px; text-align: center; line-height: 1.05; }}
+  .legend {{ display: flex; flex-wrap: wrap; gap: 12px; margin: 4px 2px 20px; }}
+  .legend-item {{ display: inline-flex; align-items: center; gap: 6px; font-family: 'Barlow Condensed', sans-serif; font-weight: 700; font-size: 13px; letter-spacing: 1px; color: var(--muted); }}
+  .legend-dot {{ width: 12px; height: 12px; border-radius: 50%; display: inline-block; }}
+  .legend-dot.kind-emom {{ background: var(--blue); }}
+  .legend-dot.kind-circuit {{ background: var(--green); }}
+  .legend-dot.kind-superset {{ background: #FF6B6B; }}
+  .legend-dot.kind-ladder {{ background: var(--yellow); }}
+  .legend-dot.kind-benchmark {{ background: #B06CE8; }}
 </style>
 </head>
 <body>
@@ -546,8 +589,9 @@ def render_index(manifests: dict[str, dict], style_inner: str) -> str:
 {render_header_home()}
 
 <div class="home-wrap">
-  <div class="home-sub">{len(manifests)} class{'es' if len(manifests) != 1 else ''} · tap to open</div>
-{body}
+  <div class="home-sub">{n} class{'es' if n != 1 else ''} · tap a day to open</div>
+  <div class="legend">{legend}</div>
+{months_html}
 </div>
 
 </body>
