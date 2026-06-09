@@ -1,0 +1,550 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+<title>Studio Red · 06 / 02 / 2026</title>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600;700;900&family=Barlow:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --red: #D42B2B;
+    --red-dark: #A01F1F;
+    --black: #0F0F0F;
+    --charcoal: #1C1C1C;
+    --card: #242424;
+    --card2: #2E2E2E;
+    --border: #3A3A3A;
+    --text: #F0F0F0;
+    --muted: #999;
+    --yellow: #F5C842;
+    --green: #4CAF50;
+    --blue: #4A9EE8;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { background: var(--black); color: white; font-family: 'Barlow', sans-serif; font-size: 26px; min-height: 100vh; padding-bottom: 40px; }
+  .header { background: var(--red); padding: 14px 16px 12px; display: flex; align-items: center; justify-content: space-between; position: sticky; top: 0; z-index: 100; border-bottom: 3px solid var(--red-dark); }
+  .header-left { display: flex; align-items: center; gap: 10px; }
+  .logo-box { width: 36px; height: 36px; background: white; border-radius: 6px; display: flex; align-items: center; justify-content: center; font-family: 'Barlow Condensed', sans-serif; font-weight: 900; font-size: 22px; color: var(--red); letter-spacing: -1px; }
+  .header-title { font-family: 'Barlow Condensed', sans-serif; font-weight: 900; font-size: 26px; letter-spacing: 2px; color: white; text-transform: uppercase; }
+  .header-date { font-family: 'Barlow Condensed', sans-serif; font-weight: 600; font-size: 17px; color: white; letter-spacing: 1px; }
+  .tabs { display: flex; background: var(--charcoal); border-bottom: 1px solid var(--border); position: sticky; top: 63px; z-index: 99; }
+  .tab { flex: 1; padding: 13px 8px; text-align: center; font-family: 'Barlow Condensed', sans-serif; font-weight: 700; font-size: 21px; letter-spacing: 1px; text-transform: uppercase; color: white; cursor: pointer; border-bottom: 3px solid transparent; transition: all 0.2s; }
+  .tab.active { color: white; border-bottom-color: white; }
+  .section { display: none; padding: 14px 14px 0; }
+  .section.active { display: block; }
+
+  .warmup-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-bottom: 14px; }
+  .warmup-col { background: var(--card); border-radius: 10px; padding: 12px; border: 1px solid var(--border); }
+  .warmup-col h3 { font-family: 'Barlow Condensed', sans-serif; font-weight: 700; font-size: 19px; letter-spacing: 1.5px; text-transform: uppercase; color: white; margin-bottom: 8px; }
+  .warmup-col li { font-size: 24px; color: white; line-height: 1.6; list-style: none; padding: 3px 0; border-bottom: 1px solid rgba(255,255,255,0.05); }
+  .warmup-col li:last-child { border-bottom: none; }
+  .wu-time { font-size: 21px; color: white; font-weight: 600; }
+
+  .cardio-table { width: 100%; border-collapse: separate; border-spacing: 0 6px; margin-bottom: 12px; }
+  .cardio-table thead th { font-family: 'Barlow Condensed', sans-serif; font-size: 17px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: white; padding: 4px 12px; text-align: left; }
+  .cardio-table tbody tr { background: var(--card); }
+  .cardio-table tbody td { padding: 13px 12px; font-family: 'Barlow Condensed', sans-serif; font-size: 22px; font-weight: 700; }
+  .cardio-table tbody td:first-child { border-radius: 8px 0 0 8px; }
+  .cardio-table tbody td:last-child { border-radius: 0 8px 8px 0; }
+  .time-cell { font-size: 32px; color: white; }
+  .intensity-badge { display: inline-block; padding: 4px 12px; border-radius: 20px; font-size: 22px; font-weight: 700; letter-spacing: 0.5px; }
+  .hard .intensity-badge { background: rgba(245,89,66,0.2); color: white; }
+  .easy .intensity-badge { background: rgba(74,158,232,0.2); color: white; }
+  .moderate .intensity-badge { background: rgba(76,175,80,0.2); color: white; }
+  .mz-dot { display: inline-flex; align-items: center; gap: 6px; font-size: 22px; font-weight: 700; }
+  .dot { width: 14px; height: 14px; border-radius: 50%; display: inline-block; }
+  .dot.yellow { background: var(--yellow); }
+  .dot.blue { background: var(--blue); }
+  .dot.green { background: var(--green); }
+
+  .note-box { background: var(--card); border-left: 3px solid var(--red); border-radius: 0 8px 8px 0; padding: 11px 13px; font-size: 22px; color: white; line-height: 1.6; margin-bottom: 14px; }
+  .note-box strong { color: white; font-weight: 700; }
+
+  .section-label { font-family: 'Barlow Condensed', sans-serif; font-weight: 900; font-size: 19px; letter-spacing: 3px; text-transform: uppercase; color: white; margin: 16px 0 8px; display: flex; align-items: center; gap: 8px; }
+  .section-label::after { content: ''; flex: 1; height: 1px; background: var(--border); }
+
+  .exercise-card { background: var(--card); border-radius: 12px; margin-bottom: 10px; border: 1px solid var(--border); overflow: hidden; }
+  .exercise-header { display: flex; align-items: center; justify-content: space-between; padding: 13px 14px; cursor: pointer; user-select: none; }
+  .exercise-header:active { background: var(--card2); }
+  .ex-left { display: flex; align-items: center; gap: 10px; flex: 1; min-width: 0; }
+  .ex-icon { width: 38px; height: 38px; border-radius: 8px; background: var(--red); display: flex; align-items: center; justify-content: center; font-size: 22px; flex-shrink: 0; }
+  .ex-name { font-family: 'Barlow Condensed', sans-serif; font-weight: 700; font-size: 26px; color: white; line-height: 1.2; }
+  .ex-reps { font-size: 20px; color: white; font-weight: 600; margin-top: 2px; letter-spacing: 0.5px; }
+  .chevron { font-size: 17px; color: white; transition: transform 0.2s; flex-shrink: 0; margin-left: 6px; }
+  .exercise-card.open .chevron { transform: rotate(180deg); }
+  .exercise-body { display: none; padding: 0 14px 14px; border-top: 1px solid var(--border); }
+  .exercise-card.open .exercise-body { display: block; }
+  .detail-section { margin-top: 12px; }
+  .detail-label { font-family: 'Barlow Condensed', sans-serif; font-size: 17px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: white; margin-bottom: 6px; }
+  .detail-text { font-size: 25px; color: white; line-height: 1.6; }
+  .cues-list { display: flex; flex-direction: column; gap: 7px; }
+  .cue-item { display: flex; align-items: flex-start; gap: 8px; font-size: 23px; line-height: 1.4; }
+  .cue-arrow { color: var(--yellow); font-weight: 900; font-size: 23px; flex-shrink: 0; margin-top: 1px; }
+  .mod-list { display: flex; flex-direction: column; gap: 6px; }
+  .mod-item { background: var(--card2); border-radius: 6px; padding: 9px 11px; font-size: 22px; display: flex; gap: 8px; align-items: flex-start; }
+  .mod-icon { font-size: 22px; flex-shrink: 0; }
+  .mod-text { color: white; line-height: 1.4; }
+  .mod-label { font-size: 15px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; color: white; display: block; margin-bottom: 2px; }
+  .muscles { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 4px; }
+  .muscle-tag { display: inline-flex; align-items: center; gap: 5px; padding: 4px 10px; border-radius: 20px; font-size: 19px; font-weight: 700; letter-spacing: 0.5px; text-transform: uppercase; }
+  .muscle-tag.primary { background: rgba(212,43,43,0.25); color: white; border: 1px solid rgba(212,43,43,0.5); }
+  .muscle-tag.secondary { background: rgba(255,255,255,0.1); color: white; border: 1px solid var(--border); }
+  .muscle-dot { width: 6px; height: 6px; border-radius: 50%; flex-shrink: 0; }
+  .primary .muscle-dot { background: #FF6B6B; }
+  .secondary .muscle-dot { background: var(--muted); }
+
+  .video-btn { display: inline-flex; align-items: center; gap: 6px; background: linear-gradient(135deg, #1F4A8C, #0E2A52); color: white; text-decoration: none; padding: 9px 14px; border-radius: 8px; font-family: 'Barlow Condensed', sans-serif; font-weight: 700; font-size: 19px; letter-spacing: 1px; text-transform: uppercase; border: 1px solid rgba(74,158,232,0.4); margin-top: 8px; }
+  .video-btn:active { background: linear-gradient(135deg, #2A5BA8, #154078); }
+  .video-icon { font-size: 18px; }
+
+  .cooldown-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; margin-bottom: 14px; }
+  .stretch-card { background: var(--card); border-radius: 10px; padding: 12px; border: 1px solid var(--border); text-align: center; }
+  .stretch-icon { font-size: 32px; margin-bottom: 6px; }
+  .stretch-name { font-family: 'Barlow Condensed', sans-serif; font-weight: 700; font-size: 22px; color: white; margin-bottom: 4px; }
+  .stretch-time { font-size: 19px; color: white; font-weight: 600; letter-spacing: 1px; }
+  .stretch-cue { font-size: 20px; color: white; margin-top: 4px; line-height: 1.4; }
+  .timer-note { background: linear-gradient(135deg, var(--red-dark), #6B0000); border-radius: 10px; padding: 14px; text-align: center; font-family: 'Barlow Condensed', sans-serif; }
+  .timer-note .big { font-size: 40px; font-weight: 900; color: white; }
+  .timer-note .sub { font-size: 22px; color: white; margin-top: 2px; }
+  .structure-banner { background: var(--card2); border-radius: 10px; padding: 12px 14px; margin-bottom: 14px; display: flex; align-items: center; gap: 10px; }
+  .structure-banner .emoji { font-size: 26px; flex-shrink: 0; }
+  .structure-text { font-size: 24px; color: white; line-height: 1.5; }
+  .structure-text strong { color: white; font-weight: 700; }
+  .breathing-card { background: linear-gradient(135deg, #1F4A8C, #0E2A52); border-radius: 12px; padding: 16px; margin-top: 14px; border: 1px solid rgba(74,158,232,0.4); }
+  .breathing-title { font-family: 'Barlow Condensed', sans-serif; font-weight: 900; font-size: 24px; letter-spacing: 2px; color: white; text-transform: uppercase; margin-bottom: 6px; }
+  .breathing-text { font-size: 22px; color: white; line-height: 1.5; }
+  .breathing-text strong { font-weight: 700; }
+
+  /* --- build_card.py additions (brief §6: extend, don't alter, the reference) --- */
+  .cardio-table tbody tr.rounds-row td { background: var(--card2); border-radius: 8px; text-align: center; font-family: 'Barlow Condensed', sans-serif; font-size: 20px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: var(--yellow); padding: 9px 12px; }
+  .max .intensity-badge { background: rgba(255,59,59,0.25); color: white; }
+  .dot.red { background: #FF3B3B; }
+  .ladder-banner { background: rgba(245,200,66,0.12); border: 1px solid rgba(245,200,66,0.5); border-radius: 10px; padding: 12px 14px; margin-bottom: 14px; display: flex; align-items: center; gap: 10px; }
+  .ladder-banner .emoji { font-size: 26px; flex-shrink: 0; }
+  .ladder-text { font-family: 'Barlow Condensed', sans-serif; font-weight: 700; font-size: 19px; letter-spacing: 1.5px; text-transform: uppercase; color: var(--yellow); }
+  .ladder-pills { display: flex; gap: 6px; margin-top: 6px; }
+  .ladder-pill { display: inline-block; background: var(--yellow); color: var(--black); font-weight: 900; font-size: 20px; border-radius: 14px; padding: 2px 12px; letter-spacing: 0; }
+</style>
+</head>
+<body>
+
+<div class="header">
+  <div class="header-left">
+    <div class="logo-box">V</div>
+    <div>
+      <div class="header-title">Studio Red</div>
+      <div class="header-date">06 / 02 / 2026</div>
+    </div>
+  </div>
+  <div style="text-align:right">
+    <div style="font-family:'Barlow Condensed',sans-serif;font-size:11px;color:rgba(255,255,255,0.6);letter-spacing:1px">COACH GUIDE</div>
+    <div style="font-family:'Barlow Condensed',sans-serif;font-size:14px;color:white;font-weight:700">CIRCUIT · 9 MIN</div>
+  </div>
+</div>
+
+<div class="tabs">
+  <div class="tab active" onclick="switchTab('warmup')">Warm Up</div>
+  <div class="tab" onclick="switchTab('cardio')">Cardio</div>
+  <div class="tab" onclick="switchTab('floor')">Floor</div>
+  <div class="tab" onclick="switchTab('cooldown')">Cool Down</div>
+</div>
+
+<div class="section active" id="tab-warmup">
+  <div class="structure-banner">
+    <div class="emoji">⏱</div>
+    <div class="structure-text"><strong>45 seconds each</strong> · Coach all stations equally · 1-min transition between stations</div>
+  </div>
+  <div class="warmup-grid">
+    <div class="warmup-col">
+      <h3>Bench / Rack</h3>
+      <ul>
+        <li>Alt. Leg Cradles</li>
+        <li>Cossack Squat</li>
+        <li>Inverted Toe Touch</li>
+        <li>Butt Kicks</li>
+      </ul>
+    </div>
+    <div class="warmup-col">
+      <h3>Bikes / Treads</h3>
+      <ul>
+        <li><span class="wu-time">1:30</span> Easy</li>
+        <li><span class="wu-time">1:30</span> Moderate</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<div class="section" id="tab-cardio">
+  <table class="cardio-table">
+    <thead><tr><th>TIME</th><th>INTENSITY</th><th>MZ COLOR</th></tr></thead>
+    <tbody>
+      <tr class="moderate">
+        <td class="time-cell">2:00</td>
+        <td><span class="intensity-badge">Moderate 7/10</span></td>
+        <td><span class="mz-dot"><span class="dot green"></span>Green</span></td>
+      </tr>
+      <tr class="hard">
+        <td class="time-cell">2:00</td>
+        <td><span class="intensity-badge">Hard 8/10</span></td>
+        <td><span class="mz-dot"><span class="dot yellow"></span>Yellow</span></td>
+      </tr>
+      <tr class="rounds-row"><td colspan="3">× 2 rounds</td></tr>
+      <tr class="moderate">
+        <td class="time-cell">1:00</td>
+        <td><span class="intensity-badge">Moderate 7/10</span></td>
+        <td><span class="mz-dot"><span class="dot green"></span>Green</span></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<div class="section" id="tab-floor">
+  <div class="structure-banner">
+    <div class="emoji">⏰</div>
+    <div class="structure-text"><strong>CIRCUIT · 9 minutes</strong> · Move through each station for the work interval, then rotate. Keep transitions tight and the pace honest.</div>
+  </div>
+
+  <div class="exercise-card">
+    <div class="exercise-header" onclick="toggleCard(this.parentElement)">
+      <div class="ex-left">
+        <div class="ex-icon">💪</div>
+        <div>
+          <div class="ex-name">DB Forward alt. Lunge</div>
+          <div class="ex-reps">10 EACH SIDE</div>
+        </div>
+      </div>
+      <span class="chevron">▼</span>
+    </div>
+    <div class="exercise-body">
+      <div class="detail-section">
+        <div class="detail-label">Movement</div>
+        <div class="detail-text">Begin feet hip width holding DBs at sides. Step forward, knee almost to ground, torso upright. Return, switch legs, repeat.</div>
+        <a class="video-btn" href="https://www.dropbox.com/s/hflb8vyofhob1jz/Dumbbell%20Forward%20Lunge%20Alternating.mp4?dl=0" target="_blank" rel="noopener"><span class="video-icon">▶</span> Watch Video</a>
+      </div>
+      <div class="detail-section">
+        <div class="detail-label">Coaching Cues</div>
+        <div class="cues-list">
+          <div class="cue-item"><span class="cue-arrow">›</span>&quot;Step out with intention — not a shuffle&quot;</div>
+          <div class="cue-item"><span class="cue-arrow">›</span>&quot;Front shin stays vertical — don&#x27;t let the knee cave forward&quot;</div>
+          <div class="cue-item"><span class="cue-arrow">›</span>&quot;Drive back through that front heel to stand&quot;</div>
+          <div class="cue-item"><span class="cue-arrow">›</span>&quot;Tall spine — DBs hang straight down the whole time&quot;</div>
+        </div>
+      </div>
+      <div class="detail-section">
+        <div class="detail-label">Muscles</div>
+        <div class="muscles">
+          <span class="muscle-tag primary"><span class="muscle-dot"></span>Quads</span>
+          <span class="muscle-tag primary"><span class="muscle-dot"></span>Glutes</span>
+          <span class="muscle-tag secondary"><span class="muscle-dot"></span>Hamstrings</span>
+          <span class="muscle-tag secondary"><span class="muscle-dot"></span>Core</span>
+          <span class="muscle-tag secondary"><span class="muscle-dot"></span>Grip</span>
+        </div>
+      </div>
+      <div class="detail-section">
+        <div class="detail-label">Modifications</div>
+        <div class="mod-list">
+          <div class="mod-item"><span class="mod-icon">⬇️</span><div class="mod-text"><span class="mod-label">Easier</span>BW only or reduce step length. Hold rack or bench for balance.</div></div>
+          <div class="mod-item"><span class="mod-icon">⬆️</span><div class="mod-text"><span class="mod-label">Harder</span>Heavier DBs. Pause 1 sec at the bottom. Slow descent.</div></div>
+          <div class="mod-item"><span class="mod-icon">🩹</span><div class="mod-text"><span class="mod-label">Knee Issues</span>Reduce forward step distance and depth. Keep front shin more vertical.</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="exercise-card">
+    <div class="exercise-header" onclick="toggleCard(this.parentElement)">
+      <div class="ex-left">
+        <div class="ex-icon">💪</div>
+        <div>
+          <div class="ex-name">DB Counterbalance Squat</div>
+          <div class="ex-reps">10 REPS</div>
+        </div>
+      </div>
+      <span class="chevron">▼</span>
+    </div>
+    <div class="exercise-body">
+      <div class="detail-section">
+        <div class="detail-label">Movement</div>
+        <div class="detail-text">Start holding DB at chest. As you squat down, press the DB out in front of your body, keeping it at chest height. As you stand back up, pull the DB back to chest.</div>
+        <a class="video-btn" href="https://www.dropbox.com/s/j3nsjkj6jp7hsia/Dumbbell%20Goblet%20Squat.mp4?dl=0" target="_blank" rel="noopener"><span class="video-icon">▶</span> Watch Video</a>
+      </div>
+      <div class="detail-section">
+        <div class="detail-label">Coaching Cues</div>
+        <div class="cues-list">
+          <div class="cue-item"><span class="cue-arrow">›</span>&quot;DB presses OUT as you squat DOWN — it counterbalances you&quot;</div>
+          <div class="cue-item"><span class="cue-arrow">›</span>&quot;Use the press to sit deeper — chest stays tall&quot;</div>
+          <div class="cue-item"><span class="cue-arrow">›</span>&quot;Pull DB back to chest as you stand — one fluid combo&quot;</div>
+          <div class="cue-item"><span class="cue-arrow">›</span>&quot;Drive through both heels to stand&quot;</div>
+        </div>
+      </div>
+      <div class="detail-section">
+        <div class="detail-label">Muscles</div>
+        <div class="muscles">
+          <span class="muscle-tag primary"><span class="muscle-dot"></span>Quads</span>
+          <span class="muscle-tag primary"><span class="muscle-dot"></span>Glutes</span>
+          <span class="muscle-tag secondary"><span class="muscle-dot"></span>Shoulders</span>
+          <span class="muscle-tag secondary"><span class="muscle-dot"></span>Core</span>
+          <span class="muscle-tag secondary"><span class="muscle-dot"></span>Upper Back</span>
+        </div>
+      </div>
+      <div class="detail-section">
+        <div class="detail-label">Modifications</div>
+        <div class="mod-list">
+          <div class="mod-item"><span class="mod-icon">⬇️</span><div class="mod-text"><span class="mod-label">Easier</span>Lighter DB. Reduce squat depth. Or keep DB at chest the whole time — skip the press out.</div></div>
+          <div class="mod-item"><span class="mod-icon">⬆️</span><div class="mod-text"><span class="mod-label">Harder</span>Pause 2 sec at the bottom with DB pressed out. Heavier DB.</div></div>
+          <div class="mod-item"><span class="mod-icon">🩹</span><div class="mod-text"><span class="mod-label">Knee Issues</span>Limit depth to pain-free range. Lighter DB.</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="exercise-card">
+    <div class="exercise-header" onclick="toggleCard(this.parentElement)">
+      <div class="ex-left">
+        <div class="ex-icon">🎗️</div>
+        <div>
+          <div class="ex-name">Fitband Rotational Row to Press</div>
+          <div class="ex-reps">10 EACH SIDE</div>
+        </div>
+      </div>
+      <span class="chevron">▼</span>
+    </div>
+    <div class="exercise-body">
+      <div class="detail-section">
+        <div class="detail-label">Movement</div>
+        <div class="detail-text">Standing at side of bench, facing the bench, arm furthest from Fitband. Pull and row the band away from the anchor point, switch hands and rotate at the hips, press arm up to fully extend.</div>
+        <a class="video-btn" href="https://www.dropbox.com/s/mphdrj6j0p7crn5/Fitband%20Rotational%20Row%201Arm.mp4?dl=0" target="_blank" rel="noopener"><span class="video-icon">▶</span> Watch Video</a>
+      </div>
+      <div class="detail-section">
+        <div class="detail-label">Coaching Cues</div>
+        <div class="cues-list">
+          <div class="cue-item"><span class="cue-arrow">›</span>&quot;Row first — pull the elbow back, then rotate&quot;</div>
+          <div class="cue-item"><span class="cue-arrow">›</span>&quot;Power comes from the hips on the rotation — not just the arms&quot;</div>
+          <div class="cue-item"><span class="cue-arrow">›</span>&quot;Hand switches at the chest — clean transition&quot;</div>
+          <div class="cue-item"><span class="cue-arrow">›</span>&quot;Press straight up — full lockout overhead&quot;</div>
+        </div>
+      </div>
+      <div class="detail-section">
+        <div class="detail-label">Muscles</div>
+        <div class="muscles">
+          <span class="muscle-tag primary"><span class="muscle-dot"></span>Upper Back</span>
+          <span class="muscle-tag primary"><span class="muscle-dot"></span>Shoulders</span>
+          <span class="muscle-tag primary"><span class="muscle-dot"></span>Obliques</span>
+          <span class="muscle-tag secondary"><span class="muscle-dot"></span>Triceps</span>
+          <span class="muscle-tag secondary"><span class="muscle-dot"></span>Core</span>
+          <span class="muscle-tag secondary"><span class="muscle-dot"></span>Glutes</span>
+        </div>
+      </div>
+      <div class="detail-section">
+        <div class="detail-label">Modifications</div>
+        <div class="mod-list">
+          <div class="mod-item"><span class="mod-icon">⬇️</span><div class="mod-text"><span class="mod-label">Easier</span>Step closer to anchor for less band tension. Smaller rotation range.</div></div>
+          <div class="mod-item"><span class="mod-icon">⬆️</span><div class="mod-text"><span class="mod-label">Harder</span>Step further from anchor. Pause at the top of each press. Slow tempo.</div></div>
+          <div class="mod-item"><span class="mod-icon">🩹</span><div class="mod-text"><span class="mod-label">Shoulder Issues</span>Press to shoulder height — no overhead. Reduce range.</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="exercise-card">
+    <div class="exercise-header" onclick="toggleCard(this.parentElement)">
+      <div class="ex-left">
+        <div class="ex-icon">🔔</div>
+        <div>
+          <div class="ex-name">KB Push Press</div>
+          <div class="ex-reps">10 REPS</div>
+        </div>
+      </div>
+      <span class="chevron">▼</span>
+    </div>
+    <div class="exercise-body">
+      <div class="detail-section">
+        <div class="detail-label">Movement</div>
+        <div class="detail-text">Hold KB in front rack position. Dip and drive with the legs, using the momentum to help press the KBs toward the ceiling, arms lock at the top. Bend the knees as you bring the weights back to front rack.</div>
+        <a class="video-btn" href="https://www.youtube.com/results?search_query=kettlebell+push+press" target="_blank" rel="noopener" title="Search fallback — replace when a real source surfaces"><span class="video-icon">▶</span> Watch Video</a>
+      </div>
+      <div class="detail-section">
+        <div class="detail-label">Coaching Cues</div>
+        <div class="cues-list">
+          <div class="cue-item"><span class="cue-arrow">›</span>&quot;Short DIP — quarter squat only, not a full squat&quot;</div>
+          <div class="cue-item"><span class="cue-arrow">›</span>&quot;Drive through the legs FIRST, then press — let the legs power it&quot;</div>
+          <div class="cue-item"><span class="cue-arrow">›</span>&quot;Full lockout overhead — biceps by your ears&quot;</div>
+          <div class="cue-item"><span class="cue-arrow">›</span>&quot;Soft catch back in the rack — bend the knees to absorb&quot;</div>
+        </div>
+      </div>
+      <div class="detail-section">
+        <div class="detail-label">Muscles</div>
+        <div class="muscles">
+          <span class="muscle-tag primary"><span class="muscle-dot"></span>Shoulders</span>
+          <span class="muscle-tag primary"><span class="muscle-dot"></span>Quads</span>
+          <span class="muscle-tag primary"><span class="muscle-dot"></span>Triceps</span>
+          <span class="muscle-tag secondary"><span class="muscle-dot"></span>Glutes</span>
+          <span class="muscle-tag secondary"><span class="muscle-dot"></span>Core</span>
+          <span class="muscle-tag secondary"><span class="muscle-dot"></span>Traps</span>
+        </div>
+      </div>
+      <div class="detail-section">
+        <div class="detail-label">Modifications</div>
+        <div class="mod-list">
+          <div class="mod-item"><span class="mod-icon">⬇️</span><div class="mod-text"><span class="mod-label">Easier</span>Lighter KBs. Use a single KB held with both hands. Bigger dip if more leg drive is needed.</div></div>
+          <div class="mod-item"><span class="mod-icon">⬆️</span><div class="mod-text"><span class="mod-label">Harder</span>Heavier KBs. Strict press (no dip) for top-end strength.</div></div>
+          <div class="mod-item"><span class="mod-icon">🩹</span><div class="mod-text"><span class="mod-label">Shoulder Issues</span>Press to forehead height only. Lighter KBs. Use the dip to take pressure off the shoulder.</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="exercise-card">
+    <div class="exercise-header" onclick="toggleCard(this.parentElement)">
+      <div class="ex-left">
+        <div class="ex-icon">🔁</div>
+        <div>
+          <div class="ex-name">TRX Power Pull</div>
+          <div class="ex-reps">10 EACH SIDE</div>
+        </div>
+      </div>
+      <span class="chevron">▼</span>
+    </div>
+    <div class="exercise-body">
+      <div class="detail-section">
+        <div class="detail-label">Movement</div>
+        <div class="detail-text">Hold handle in 1 hand with arm straight. Feet hip width. Pull hand to armpit, staying square to anchor. Lower to starting position.</div>
+        <a class="video-btn" href="https://www.dropbox.com/s/t9iigfi4pu659w6/Suspension%20Power%20Pull.mp4?dl=0" target="_blank" rel="noopener"><span class="video-icon">▶</span> Watch Video</a>
+      </div>
+      <div class="detail-section">
+        <div class="detail-label">Coaching Cues</div>
+        <div class="cues-list">
+          <div class="cue-item"><span class="cue-arrow">›</span>&quot;Stay square to the anchor — resist the rotation&quot;</div>
+          <div class="cue-item"><span class="cue-arrow">›</span>&quot;Elbow drives back behind you — pull to the armpit, not the chest&quot;</div>
+          <div class="cue-item"><span class="cue-arrow">›</span>&quot;Full extension on the way down — earn the negative&quot;</div>
+          <div class="cue-item"><span class="cue-arrow">›</span>&quot;Brace the core hard — this is anti-rotation as much as it&#x27;s a pull&quot;</div>
+        </div>
+      </div>
+      <div class="detail-section">
+        <div class="detail-label">Muscles</div>
+        <div class="muscles">
+          <span class="muscle-tag primary"><span class="muscle-dot"></span>Upper Back</span>
+          <span class="muscle-tag primary"><span class="muscle-dot"></span>Biceps</span>
+          <span class="muscle-tag primary"><span class="muscle-dot"></span>Core</span>
+          <span class="muscle-tag secondary"><span class="muscle-dot"></span>Lats</span>
+          <span class="muscle-tag secondary"><span class="muscle-dot"></span>Obliques</span>
+          <span class="muscle-tag secondary"><span class="muscle-dot"></span>Rear Delts</span>
+        </div>
+      </div>
+      <div class="detail-section">
+        <div class="detail-label">Modifications</div>
+        <div class="mod-list">
+          <div class="mod-item"><span class="mod-icon">⬇️</span><div class="mod-text"><span class="mod-label">Easier</span>Walk feet back to reduce body angle. Smaller pull range.</div></div>
+          <div class="mod-item"><span class="mod-icon">⬆️</span><div class="mod-text"><span class="mod-label">Harder</span>Walk feet forward. Pause 2 sec at the top of each pull.</div></div>
+          <div class="mod-item"><span class="mod-icon">🩹</span><div class="mod-text"><span class="mod-label">Shoulder Issues</span>Limit range — keep elbow below shoulder height.</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="exercise-card">
+    <div class="exercise-header" onclick="toggleCard(this.parentElement)">
+      <div class="ex-left">
+        <div class="ex-icon">🏐</div>
+        <div>
+          <div class="ex-name">Ball SL Crunch Standing</div>
+          <div class="ex-reps">10 EACH SIDE</div>
+        </div>
+      </div>
+      <span class="chevron">▼</span>
+    </div>
+    <div class="exercise-body">
+      <div class="detail-section">
+        <div class="detail-label">Movement</div>
+        <div class="detail-text">Start with the ball at chest and press overhead. Pull down to meet the knee as you raise your foot off the floor, driving the knee up to meet the ball to complete a &quot;standing crunch.&quot; Repeat on the other side.</div>
+        <a class="video-btn" href="https://www.dropbox.com/s/wxssajtaod17lca/Ball%20Single%20Leg%20Crunch%20Standing.mp4?dl=0" target="_blank" rel="noopener"><span class="video-icon">▶</span> Watch Video</a>
+      </div>
+      <div class="detail-section">
+        <div class="detail-label">Coaching Cues</div>
+        <div class="cues-list">
+          <div class="cue-item"><span class="cue-arrow">›</span>&quot;Press tall overhead — full extension before the crunch&quot;</div>
+          <div class="cue-item"><span class="cue-arrow">›</span>&quot;Drive the knee UP to meet the ball — meet in the middle&quot;</div>
+          <div class="cue-item"><span class="cue-arrow">›</span>&quot;Crunch the abs hard at the top — that&#x27;s the work&quot;</div>
+          <div class="cue-item"><span class="cue-arrow">›</span>&quot;Stay tall on the standing leg — soft knee, balanced&quot;</div>
+        </div>
+      </div>
+      <div class="detail-section">
+        <div class="detail-label">Muscles</div>
+        <div class="muscles">
+          <span class="muscle-tag primary"><span class="muscle-dot"></span>Abs</span>
+          <span class="muscle-tag primary"><span class="muscle-dot"></span>Hip Flexors</span>
+          <span class="muscle-tag secondary"><span class="muscle-dot"></span>Shoulders</span>
+          <span class="muscle-tag secondary"><span class="muscle-dot"></span>Obliques</span>
+          <span class="muscle-tag secondary"><span class="muscle-dot"></span>Balance/Stabilizers</span>
+        </div>
+      </div>
+      <div class="detail-section">
+        <div class="detail-label">Modifications</div>
+        <div class="mod-list">
+          <div class="mod-item"><span class="mod-icon">⬇️</span><div class="mod-text"><span class="mod-label">Easier</span>Lighter ball or no ball — hands overhead, knee to elbow. Hold rack with free hand for balance.</div></div>
+          <div class="mod-item"><span class="mod-icon">⬆️</span><div class="mod-text"><span class="mod-label">Harder</span>Heavier ball. Pause 1 sec with the knee up. Slow tempo.</div></div>
+          <div class="mod-item"><span class="mod-icon">🩹</span><div class="mod-text"><span class="mod-label">Balance Issues</span>Hold rack with one hand. Or do it seated on the bench with leg lifts.</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="note-box" style="margin-top:14px">
+    <strong>Floor Note:</strong> Rotate through every station once per round. <strong>Keep transitions tight</strong> so the working heart rate stays elevated.
+  </div>
+</div>
+
+<div class="section" id="tab-cooldown">
+  <div class="timer-note" style="margin-bottom:14px">
+    <div class="big">~45 sec each</div>
+    <div class="sub">Choose 3 muscle groups only</div>
+  </div>
+  <div class="cooldown-grid">
+    <div class="stretch-card">
+      <div class="stretch-icon">🦵</div>
+      <div class="stretch-name">Quads</div>
+      <div class="stretch-time">45 SECONDS</div>
+      <div class="stretch-cue">Standing quad pull or kneeling lunge. Hip forward, tall spine.</div>
+    </div>
+    <div class="stretch-card">
+      <div class="stretch-icon">🦶</div>
+      <div class="stretch-name">Calves</div>
+      <div class="stretch-time">45 SECONDS</div>
+      <div class="stretch-cue">Wall calf stretch. Heel down, slight knee bend for soleus.</div>
+    </div>
+    <div class="stretch-card">
+      <div class="stretch-icon">💪</div>
+      <div class="stretch-name">Pecs</div>
+      <div class="stretch-time">45 SECONDS</div>
+      <div class="stretch-cue">Doorframe or corner stretch. Arms at 90°, open chest forward.</div>
+    </div>
+    <div class="stretch-card">
+      <div class="stretch-icon">🙌</div>
+      <div class="stretch-name">Triceps</div>
+      <div class="stretch-time">45 SECONDS</div>
+      <div class="stretch-cue">Overhead stretch. Elbow up, hand behind neck, gentle assist.</div>
+    </div>
+  </div>
+  <div class="note-box">
+    <strong>Coach's Choice:</strong> Pick 3 of the above (or your own) based on what your class needs most today.
+  </div>
+
+  <div class="breathing-card">
+    <div class="breathing-title">🫁 Box Breathing</div>
+    <div class="breathing-text"><strong>4 seconds in</strong> through the nose · <strong>4 seconds out</strong> through the mouth. Cue members to drop their HR and reset their nervous system before they head out.</div>
+  </div>
+</div>
+
+<script>
+  function switchTab(name) {
+    document.querySelectorAll('.tab').forEach((t, i) => {
+      const names = ['warmup','cardio','floor','cooldown'];
+      t.classList.toggle('active', names[i] === name);
+    });
+    document.querySelectorAll('.section').forEach(s => {
+      s.classList.toggle('active', s.id === 'tab-' + name);
+    });
+    window.scrollTo(0, 0);
+  }
+  function toggleCard(card) {
+    card.classList.toggle('open');
+  }
+</script>
+
+</body>
+</html>

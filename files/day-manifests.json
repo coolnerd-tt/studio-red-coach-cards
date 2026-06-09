@@ -1,0 +1,468 @@
+{
+  "days": [
+    {
+      "date": "2026-04-30",
+      "format": "SUPERSET \u00b7 4:30 EA",
+      "warmup": [
+        "3D Lunge",
+        "Alternating Arm Circles",
+        "BW Overhead Squat",
+        "Jumping Jacks"
+      ],
+      "cardio": [
+        {
+          "time": "1:20",
+          "intensity": "Moderate 7/10",
+          "mz": "Green"
+        },
+        {
+          "time": ":40",
+          "intensity": "Hard 8/10",
+          "mz": "Yellow"
+        },
+        {
+          "time": "1:00",
+          "intensity": "Easy 6/10",
+          "mz": "Blue"
+        }
+      ],
+      "exercises": [
+        {
+          "name": "DB Goblet Squat",
+          "reps": "6 REPS"
+        },
+        {
+          "name": "Fitband Standing Fly",
+          "reps": "6 REPS"
+        },
+        {
+          "name": "DB Forward Lunge Alt.",
+          "reps": "6 REPS EACH SIDE"
+        },
+        {
+          "name": "DB Triceps Press",
+          "reps": "6 REPS"
+        },
+        {
+          "name": "KB Sumo Deadlift 2-Arm",
+          "reps": "6 REPS"
+        },
+        {
+          "name": "TRX Low Fly",
+          "reps": "6 REPS"
+        },
+        {
+          "name": "TRX Chest Press",
+          "reps": "6 REPS"
+        },
+        {
+          "name": "TRX Oblique Crunch",
+          "reps": "6 EACH SIDE"
+        }
+      ],
+      "source_file": "studio-red-0430.html"
+    },
+    {
+      "date": "2026-05-05",
+      "format": "EMOM \u00b7 9 MIN",
+      "warmup": [
+        "Inchworm",
+        "Leg Cradles Alt.",
+        "Lateral Lunge w/ Reach Up",
+        "Scissor Jacks"
+      ],
+      "cardio": [
+        {
+          "time": "1:30",
+          "intensity": "Easy 6/10",
+          "mz": "Blue"
+        },
+        {
+          "time": "10 cals",
+          "intensity": "Hard 8/10",
+          "mz": "Yellow"
+        }
+      ],
+      "exercises": [
+        {
+          "name": "DB Devils Press 1 arm Alt.",
+          "reps": "EMOM \u00b7 ALTERNATE ARMS"
+        },
+        {
+          "name": "DB Drop Step Squat 2arm Alt.",
+          "reps": "EMOM \u00b7 ALTERNATE SIDES"
+        },
+        {
+          "name": "V-up to Jump",
+          "reps": "EMOM"
+        },
+        {
+          "name": "KB 2 Hand Stepping Clean",
+          "reps": "EMOM \u00b7 ALTERNATE FEET"
+        },
+        {
+          "name": "KB 2 Hand Curtsy Lunge to Lateral Lunge",
+          "reps": "EMOM \u00b7 SAME LEG, THEN SWITCH"
+        },
+        {
+          "name": "TRX Push Up Fly Combination",
+          "reps": "EMOM \u00b7 ALTERNATE SIDES"
+        }
+      ],
+      "source_file": "studio-red-0505.html"
+    },
+    {
+      "date": "2026-05-07",
+      "format": "EMOM \u00b7 9 MIN",
+      "warmup": [
+        "Bootstrapper",
+        "Buttkicks",
+        "Bodyweight Plank Row",
+        "Mummy Jacks"
+      ],
+      "cardio": [
+        {
+          "time": "1:00",
+          "intensity": "Easy 6/10",
+          "mz": "Blue"
+        },
+        {
+          "time": ".2 mi",
+          "intensity": "Hard 8/10",
+          "mz": "Yellow"
+        }
+      ],
+      "exercises": [
+        {
+          "name": "Side Lunge w/ Hop",
+          "reps": "EMOM \u00b7 ALTERNATE SIDES"
+        },
+        {
+          "name": "DB Plank Push Up w/ Lateral Shift",
+          "reps": "EMOM \u00b7 ALTERNATE SIDES"
+        },
+        {
+          "name": "DB RDL To Power Clean",
+          "reps": "EMOM"
+        },
+        {
+          "name": "KB Lateral Shift w/ Hand Switch",
+          "reps": "EMOM \u00b7 ALTERNATE SIDES"
+        },
+        {
+          "name": "Ball Ground to Shoulder alt.",
+          "reps": "EMOM \u00b7 ALTERNATE SIDES"
+        },
+        {
+          "name": "TRX Standing Rollout",
+          "reps": "EMOM"
+        }
+      ],
+      "source_file": "studio-red-0507.html"
+    },
+    {
+      "date": "2026-05-13",
+      "format": "SUPERSET \u00b7 4:30 EA",
+      "warmup": [
+        "Bootstrapper",
+        "Buttkicks",
+        "Bodyweight Plank Row",
+        "Mummy Jacks"
+      ],
+      "cardio": [
+        {
+          "time": "1:00",
+          "intensity": "Moderate 7/10",
+          "mz": "Green"
+        },
+        {
+          "time": "1:00",
+          "intensity": "Hard 8/10",
+          "mz": "Yellow"
+        },
+        {
+          "time": "1:00",
+          "intensity": "Easy 6/10",
+          "mz": "Blue"
+        },
+        {
+          "rounds": "\u00d7 3 rounds"
+        }
+      ],
+      "exercises": [
+        {
+          "name": "Bulgarian Offset Weight Split Squat",
+          "reps": "8 EACH SIDE"
+        },
+        {
+          "name": "DB Donkey Kicks on Bench",
+          "reps": "8 EACH SIDE"
+        },
+        {
+          "name": "Push Up",
+          "reps": "8 REPS"
+        },
+        {
+          "name": "DB Tate Press",
+          "reps": "8 REPS"
+        },
+        {
+          "name": "KB SL RDL",
+          "reps": "8 EACH SIDE"
+        },
+        {
+          "name": "KB Swing",
+          "reps": "8 REPS"
+        },
+        {
+          "name": "TRX Low Row",
+          "reps": "8 REPS"
+        },
+        {
+          "name": "Ball Slam",
+          "reps": "8 REPS"
+        }
+      ],
+      "source_file": "studio-red-0513.html"
+    },
+    {
+      "date": "2026-05-18",
+      "format": "LADDER \u00b7 9 MIN",
+      "warmup": [
+        "World's Greatest Stretch",
+        "Plank Knee to Elbow",
+        "High Knees",
+        "Squat Jack"
+      ],
+      "cardio": [
+        {
+          "time": "1:00",
+          "intensity": "Moderate 7/10",
+          "mz": "Green"
+        },
+        {
+          "time": "1:00",
+          "intensity": "Hard 8/10",
+          "mz": "Yellow"
+        },
+        {
+          "rounds": "\u00d7 2 rounds"
+        },
+        {
+          "time": "2:00",
+          "intensity": "Moderate 7/10",
+          "mz": "Green"
+        },
+        {
+          "time": "1:00",
+          "intensity": "Hard 8/10",
+          "mz": "Yellow"
+        },
+        {
+          "time": "1:00",
+          "intensity": "Max 9/10",
+          "mz": "Red"
+        },
+        {
+          "time": "1:00",
+          "intensity": "Easy 6/10",
+          "mz": "Blue"
+        }
+      ],
+      "exercises": [
+        {
+          "name": "DB 1arm Snatch w/ Foot on Bench",
+          "reps": "LADDER 8\u21924\u21928 \u00b7 EACH SIDE"
+        },
+        {
+          "name": "DB Bridge and Press on bench",
+          "reps": "LADDER 8\u21924\u21928"
+        },
+        {
+          "name": "DB SL Hip Thrust",
+          "reps": "LADDER 8\u21924\u21928 \u00b7 EACH SIDE"
+        },
+        {
+          "name": "KB Counterbalance Lateral Lunge",
+          "reps": "LADDER 8\u21924\u21928 \u00b7 EACH SIDE"
+        },
+        {
+          "name": "TRX Low Fly",
+          "reps": "LADDER 8\u21924\u21928"
+        },
+        {
+          "name": "Ball Chest Slam",
+          "reps": "LADDER 8\u21924\u21928"
+        }
+      ],
+      "source_file": "studio-red-0518.html"
+    },
+    {
+      "date": "2026-05-19",
+      "format": "SUPERSET \u00b7 4:30 EA",
+      "warmup": [
+        "Bootstrapper",
+        "Butt Kicks",
+        "Bodyweight Plank Row",
+        "Mummy Jacks"
+      ],
+      "cardio": [
+        {
+          "time": "2:00",
+          "intensity": "Moderate 7/10",
+          "mz": "Green"
+        },
+        {
+          "time": "1:00",
+          "intensity": "Hard 8/10",
+          "mz": "Yellow"
+        },
+        {
+          "rounds": "\u00d7 3 rounds"
+        }
+      ],
+      "exercises": [
+        {
+          "name": "DB Box Squat Overhead Press",
+          "reps": "8 REPS"
+        },
+        {
+          "name": "DB Offset Front Rack Lateral Lunge",
+          "reps": "8 EACH SIDE"
+        },
+        {
+          "name": "DB Chest Fly",
+          "reps": "8 REPS"
+        },
+        {
+          "name": "V-Up to Jump",
+          "reps": "8 REPS"
+        },
+        {
+          "name": "KB Sumo Deadlift 2arm",
+          "reps": "8 REPS"
+        },
+        {
+          "name": "TRX Low Row",
+          "reps": "8 REPS"
+        },
+        {
+          "name": "Ball Slam",
+          "reps": "8 REPS"
+        },
+        {
+          "name": "KB Swing",
+          "reps": "8 REPS"
+        }
+      ],
+      "source_file": "studio-red-0519.html"
+    },
+    {
+      "date": "2026-05-26",
+      "format": "EMOM \u00b7 9 MIN",
+      "warmup": [
+        "BW Good Morning",
+        "Lateral Lunge w/ Reach Up",
+        "BW Plank Row",
+        "Seal Jacks"
+      ],
+      "cardio": [
+        {
+          "time": "1:00",
+          "intensity": "Easy 6/10",
+          "mz": "Blue"
+        },
+        {
+          "time": ".3 mi",
+          "intensity": "Hard 8/10",
+          "mz": "Yellow"
+        }
+      ],
+      "exercises": [
+        {
+          "name": "DB Thruster 1arm Alt.",
+          "reps": "EMOM \u00b7 ALTERNATE ARMS"
+        },
+        {
+          "name": "DB Bent Over Fly",
+          "reps": "EMOM"
+        },
+        {
+          "name": "Fitband Tricep Extension",
+          "reps": "EMOM"
+        },
+        {
+          "name": "TRX Lat Pull Seated",
+          "reps": "EMOM"
+        },
+        {
+          "name": "KB Swing w/ Lateral Step",
+          "reps": "EMOM \u00b7 ALTERNATE SIDES"
+        },
+        {
+          "name": "Squat to Split Jump",
+          "reps": "EMOM"
+        }
+      ],
+      "source_file": "studio-red-0526.html"
+    },
+    {
+      "date": "2026-06-02",
+      "format": "CIRCUIT \u00b7 9 MIN",
+      "warmup": [
+        "Alt. Leg Cradles",
+        "Cossack Squat",
+        "Inverted Toe Touch",
+        "Butt Kicks"
+      ],
+      "cardio": [
+        {
+          "time": "2:00",
+          "intensity": "Moderate 7/10",
+          "mz": "Green"
+        },
+        {
+          "time": "2:00",
+          "intensity": "Hard 8/10",
+          "mz": "Yellow"
+        },
+        {
+          "rounds": "\u00d7 2 rounds"
+        },
+        {
+          "time": "1:00",
+          "intensity": "Moderate 7/10",
+          "mz": "Green"
+        }
+      ],
+      "exercises": [
+        {
+          "name": "DB Forward alt. Lunge",
+          "reps": "10 EACH SIDE"
+        },
+        {
+          "name": "DB Counterbalance Squat",
+          "reps": "10 REPS"
+        },
+        {
+          "name": "Fitband Rotational Row to Press",
+          "reps": "10 EACH SIDE"
+        },
+        {
+          "name": "KB Push Press",
+          "reps": "10 REPS"
+        },
+        {
+          "name": "TRX Power Pull",
+          "reps": "10 EACH SIDE"
+        },
+        {
+          "name": "Ball SL Crunch Standing",
+          "reps": "10 EACH SIDE"
+        }
+      ],
+      "source_file": "studio-red-0602.html"
+    }
+  ],
+  "day_count": 8
+}

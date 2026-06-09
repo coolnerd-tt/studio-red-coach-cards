@@ -1,0 +1,14 @@
+# OS / editor cruft
+.DS_Store
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+
+# Handoff bundle archive (originals live unzipped in files/)
+files.zip
+
+# Local preview server config (machine-specific port)
+.claude/launch.json
