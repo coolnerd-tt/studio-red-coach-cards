@@ -127,20 +127,27 @@
 
   .home-wrap { padding: 14px; max-width: 640px; margin: 0 auto; }
   .home-sub { font-family: 'Barlow Condensed', sans-serif; font-weight: 700; font-size: 17px; letter-spacing: 2px; text-transform: uppercase; color: var(--muted); margin: 4px 0 14px; }
-  .day-row { display: flex; align-items: center; gap: 12px; background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 12px 14px; margin-bottom: 10px; text-decoration: none; }
-  .day-row:active { background: var(--card2); }
-  .day-cal { width: 52px; flex-shrink: 0; background: var(--red); border-radius: 8px; text-align: center; padding: 4px 0; }
-  .day-mon { font-family: 'Barlow Condensed', sans-serif; font-weight: 700; font-size: 14px; letter-spacing: 1px; text-transform: uppercase; color: white; }
-  .day-num { font-family: 'Barlow Condensed', sans-serif; font-weight: 900; font-size: 26px; line-height: 1; color: white; }
-  .day-meta { flex: 1; min-width: 0; }
-  .day-date { font-size: 16px; color: var(--muted); font-weight: 600; }
-  .day-fmt { font-family: 'Barlow Condensed', sans-serif; font-weight: 700; font-size: 24px; color: white; letter-spacing: 0.5px; }
-  .day-kind { font-family: 'Barlow Condensed', sans-serif; font-weight: 700; font-size: 14px; letter-spacing: 1px; padding: 3px 9px; border-radius: 14px; text-transform: uppercase; flex-shrink: 0; }
-  .kind-emom { background: rgba(74,158,232,0.2); color: var(--blue); }
-  .kind-circuit { background: rgba(76,175,80,0.2); color: var(--green); }
-  .kind-superset { background: rgba(212,43,43,0.25); color: #FF6B6B; }
-  .kind-ladder { background: rgba(245,200,66,0.2); color: var(--yellow); }
-  .day-go { font-size: 24px; color: var(--muted); flex-shrink: 0; }
+  .cal-month { margin-bottom: 26px; }
+  .cal-title { font-family: 'Barlow Condensed', sans-serif; font-weight: 900; font-size: 30px; letter-spacing: 1px; text-transform: uppercase; color: white; margin: 6px 2px 12px; }
+  .cal-count { font-size: 15px; font-weight: 700; color: var(--muted); letter-spacing: 1px; margin-left: 6px; }
+  .cal-grid { display: grid; grid-template-columns: repeat(7, 1fr); gap: 6px; }
+  .cal-dow { text-align: center; font-family: 'Barlow Condensed', sans-serif; font-weight: 700; font-size: 14px; letter-spacing: 1px; color: var(--muted); padding-bottom: 2px; }
+  .cal-cell { aspect-ratio: 1 / 1; border-radius: 10px; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 3px; background: var(--card); border: 1px solid var(--border); }
+  .cal-cell.empty { background: transparent; border: none; }
+  .cal-day { font-family: 'Barlow Condensed', sans-serif; font-weight: 700; font-size: 20px; line-height: 1; color: #cfcfcf; }
+  .cal-day.muted { color: #555; font-weight: 600; }
+  a.cal-cell.workout { text-decoration: none; background: var(--red); border-color: var(--red-dark); box-shadow: 0 2px 8px rgba(212,43,43,0.35); }
+  a.cal-cell.workout .cal-day { color: white; font-weight: 900; font-size: 23px; }
+  a.cal-cell.workout:active { filter: brightness(1.15); }
+  .cal-badge { font-family: 'Barlow Condensed', sans-serif; font-weight: 700; font-size: 9px; letter-spacing: 0.5px; text-transform: uppercase; color: rgba(255,255,255,0.92); padding: 0 2px; text-align: center; line-height: 1.05; }
+  .legend { display: flex; flex-wrap: wrap; gap: 12px; margin: 4px 2px 20px; }
+  .legend-item { display: inline-flex; align-items: center; gap: 6px; font-family: 'Barlow Condensed', sans-serif; font-weight: 700; font-size: 13px; letter-spacing: 1px; color: var(--muted); }
+  .legend-dot { width: 12px; height: 12px; border-radius: 50%; display: inline-block; }
+  .legend-dot.kind-emom { background: var(--blue); }
+  .legend-dot.kind-circuit { background: var(--green); }
+  .legend-dot.kind-superset { background: #FF6B6B; }
+  .legend-dot.kind-ladder { background: var(--yellow); }
+  .legend-dot.kind-benchmark { background: #B06CE8; }
 </style>
 </head>
 <body>
@@ -159,115 +166,138 @@
 </div>
 
 <div class="home-wrap">
-  <div class="home-sub">9 classes · tap to open</div>
-  <a class="day-row" href="studio-red-2026-06-09.html">
-    <div class="day-cal">
-      <div class="day-mon">Jun</div>
-      <div class="day-num">09</div>
-    </div>
-    <div class="day-meta">
-      <div class="day-date">Tue · 2026</div>
-      <div class="day-fmt">LADDER · 9 MIN</div>
-    </div>
-    <span class="day-kind kind-ladder">LADDER</span>
-    <span class="day-go">›</span>
-  </a>
-  <a class="day-row" href="studio-red-2026-06-02.html">
-    <div class="day-cal">
-      <div class="day-mon">Jun</div>
-      <div class="day-num">02</div>
-    </div>
-    <div class="day-meta">
-      <div class="day-date">Tue · 2026</div>
-      <div class="day-fmt">CIRCUIT · 9 MIN</div>
-    </div>
-    <span class="day-kind kind-circuit">CIRCUIT</span>
-    <span class="day-go">›</span>
-  </a>
-  <a class="day-row" href="studio-red-2026-05-26.html">
-    <div class="day-cal">
-      <div class="day-mon">May</div>
-      <div class="day-num">26</div>
-    </div>
-    <div class="day-meta">
-      <div class="day-date">Tue · 2026</div>
-      <div class="day-fmt">EMOM · 9 MIN</div>
-    </div>
-    <span class="day-kind kind-emom">EMOM</span>
-    <span class="day-go">›</span>
-  </a>
-  <a class="day-row" href="studio-red-2026-05-19.html">
-    <div class="day-cal">
-      <div class="day-mon">May</div>
-      <div class="day-num">19</div>
-    </div>
-    <div class="day-meta">
-      <div class="day-date">Tue · 2026</div>
-      <div class="day-fmt">SUPERSET · 4:30 EA</div>
-    </div>
-    <span class="day-kind kind-superset">SUPERSET</span>
-    <span class="day-go">›</span>
-  </a>
-  <a class="day-row" href="studio-red-2026-05-18.html">
-    <div class="day-cal">
-      <div class="day-mon">May</div>
-      <div class="day-num">18</div>
-    </div>
-    <div class="day-meta">
-      <div class="day-date">Mon · 2026</div>
-      <div class="day-fmt">LADDER · 9 MIN</div>
-    </div>
-    <span class="day-kind kind-ladder">LADDER</span>
-    <span class="day-go">›</span>
-  </a>
-  <a class="day-row" href="studio-red-2026-05-13.html">
-    <div class="day-cal">
-      <div class="day-mon">May</div>
-      <div class="day-num">13</div>
-    </div>
-    <div class="day-meta">
-      <div class="day-date">Wed · 2026</div>
-      <div class="day-fmt">SUPERSET · 4:30 EA</div>
-    </div>
-    <span class="day-kind kind-superset">SUPERSET</span>
-    <span class="day-go">›</span>
-  </a>
-  <a class="day-row" href="studio-red-2026-05-07.html">
-    <div class="day-cal">
-      <div class="day-mon">May</div>
-      <div class="day-num">07</div>
-    </div>
-    <div class="day-meta">
-      <div class="day-date">Thu · 2026</div>
-      <div class="day-fmt">EMOM · 9 MIN</div>
-    </div>
-    <span class="day-kind kind-emom">EMOM</span>
-    <span class="day-go">›</span>
-  </a>
-  <a class="day-row" href="studio-red-2026-05-05.html">
-    <div class="day-cal">
-      <div class="day-mon">May</div>
-      <div class="day-num">05</div>
-    </div>
-    <div class="day-meta">
-      <div class="day-date">Tue · 2026</div>
-      <div class="day-fmt">EMOM · 9 MIN</div>
-    </div>
-    <span class="day-kind kind-emom">EMOM</span>
-    <span class="day-go">›</span>
-  </a>
-  <a class="day-row" href="studio-red-2026-04-30.html">
-    <div class="day-cal">
-      <div class="day-mon">Apr</div>
-      <div class="day-num">30</div>
-    </div>
-    <div class="day-meta">
-      <div class="day-date">Thu · 2026</div>
-      <div class="day-fmt">SUPERSET · 4:30 EA</div>
-    </div>
-    <span class="day-kind kind-superset">SUPERSET</span>
-    <span class="day-go">›</span>
-  </a>
+  <div class="home-sub">37 classes · tap a day to open</div>
+  <div class="legend"><span class="legend-item"><span class="legend-dot kind-emom"></span>EMOM</span><span class="legend-item"><span class="legend-dot kind-circuit"></span>CIRCUIT</span><span class="legend-item"><span class="legend-dot kind-superset"></span>SUPERSET</span><span class="legend-item"><span class="legend-dot kind-ladder"></span>LADDER</span><span class="legend-item"><span class="legend-dot kind-benchmark"></span>BENCHMARK</span></div>
+<div class="cal-month">
+  <div class="cal-title">June 2026 <span class="cal-count">30 classes</span></div>
+  <div class="cal-grid">
+    <div class="cal-dow">S</div><div class="cal-dow">M</div><div class="cal-dow">T</div><div class="cal-dow">W</div><div class="cal-dow">T</div><div class="cal-dow">F</div><div class="cal-dow">S</div>
+    <div class="cal-cell empty"></div>
+    <a class="cal-cell workout kind-emom" href="studio-red-2026-06-01.html"><span class="cal-day">1</span><span class="cal-badge">EMOM</span></a>
+    <a class="cal-cell workout kind-circuit" href="studio-red-2026-06-02.html"><span class="cal-day">2</span><span class="cal-badge">CIRCUIT</span></a>
+    <a class="cal-cell workout kind-ladder" href="studio-red-2026-06-03.html"><span class="cal-day">3</span><span class="cal-badge">LADDER</span></a>
+    <a class="cal-cell workout kind-emom" href="studio-red-2026-06-04.html"><span class="cal-day">4</span><span class="cal-badge">EMOM</span></a>
+    <a class="cal-cell workout kind-ladder" href="studio-red-2026-06-05.html"><span class="cal-day">5</span><span class="cal-badge">LADDER</span></a>
+    <a class="cal-cell workout kind-superset" href="studio-red-2026-06-06.html"><span class="cal-day">6</span><span class="cal-badge">SUPERSET</span></a>
+    <a class="cal-cell workout kind-emom" href="studio-red-2026-06-07.html"><span class="cal-day">7</span><span class="cal-badge">EMOM</span></a>
+    <a class="cal-cell workout kind-circuit" href="studio-red-2026-06-08.html"><span class="cal-day">8</span><span class="cal-badge">CIRCUIT</span></a>
+    <a class="cal-cell workout kind-ladder" href="studio-red-2026-06-09.html"><span class="cal-day">9</span><span class="cal-badge">LADDER</span></a>
+    <a class="cal-cell workout kind-circuit" href="studio-red-2026-06-10.html"><span class="cal-day">10</span><span class="cal-badge">CIRCUIT</span></a>
+    <a class="cal-cell workout kind-superset" href="studio-red-2026-06-11.html"><span class="cal-day">11</span><span class="cal-badge">SUPERSET</span></a>
+    <a class="cal-cell workout kind-ladder" href="studio-red-2026-06-12.html"><span class="cal-day">12</span><span class="cal-badge">LADDER</span></a>
+    <a class="cal-cell workout kind-emom" href="studio-red-2026-06-13.html"><span class="cal-day">13</span><span class="cal-badge">EMOM</span></a>
+    <a class="cal-cell workout kind-circuit" href="studio-red-2026-06-14.html"><span class="cal-day">14</span><span class="cal-badge">CIRCUIT</span></a>
+    <a class="cal-cell workout kind-ladder" href="studio-red-2026-06-15.html"><span class="cal-day">15</span><span class="cal-badge">LADDER</span></a>
+    <a class="cal-cell workout kind-circuit" href="studio-red-2026-06-16.html"><span class="cal-day">16</span><span class="cal-badge">CIRCUIT</span></a>
+    <a class="cal-cell workout kind-benchmark" href="studio-red-2026-06-17.html"><span class="cal-day">17</span><span class="cal-badge">BENCHMARK</span></a>
+    <a class="cal-cell workout kind-emom" href="studio-red-2026-06-18.html"><span class="cal-day">18</span><span class="cal-badge">EMOM</span></a>
+    <a class="cal-cell workout kind-emom" href="studio-red-2026-06-19.html"><span class="cal-day">19</span><span class="cal-badge">EMOM</span></a>
+    <a class="cal-cell workout kind-benchmark" href="studio-red-2026-06-20.html"><span class="cal-day">20</span><span class="cal-badge">BENCHMARK</span></a>
+    <a class="cal-cell workout kind-circuit" href="studio-red-2026-06-21.html"><span class="cal-day">21</span><span class="cal-badge">CIRCUIT</span></a>
+    <a class="cal-cell workout kind-circuit" href="studio-red-2026-06-22.html"><span class="cal-day">22</span><span class="cal-badge">CIRCUIT</span></a>
+    <a class="cal-cell workout kind-emom" href="studio-red-2026-06-23.html"><span class="cal-day">23</span><span class="cal-badge">EMOM</span></a>
+    <a class="cal-cell workout kind-ladder" href="studio-red-2026-06-24.html"><span class="cal-day">24</span><span class="cal-badge">LADDER</span></a>
+    <a class="cal-cell workout kind-emom" href="studio-red-2026-06-25.html"><span class="cal-day">25</span><span class="cal-badge">EMOM</span></a>
+    <a class="cal-cell workout kind-circuit" href="studio-red-2026-06-26.html"><span class="cal-day">26</span><span class="cal-badge">CIRCUIT</span></a>
+    <a class="cal-cell workout kind-emom" href="studio-red-2026-06-27.html"><span class="cal-day">27</span><span class="cal-badge">EMOM</span></a>
+    <a class="cal-cell workout kind-circuit" href="studio-red-2026-06-28.html"><span class="cal-day">28</span><span class="cal-badge">CIRCUIT</span></a>
+    <a class="cal-cell workout kind-emom" href="studio-red-2026-06-29.html"><span class="cal-day">29</span><span class="cal-badge">EMOM</span></a>
+    <a class="cal-cell workout kind-ladder" href="studio-red-2026-06-30.html"><span class="cal-day">30</span><span class="cal-badge">LADDER</span></a>
+    <div class="cal-cell empty"></div>
+    <div class="cal-cell empty"></div>
+    <div class="cal-cell empty"></div>
+    <div class="cal-cell empty"></div>
+  </div>
+</div>
+<div class="cal-month">
+  <div class="cal-title">May 2026 <span class="cal-count">6 classes</span></div>
+  <div class="cal-grid">
+    <div class="cal-dow">S</div><div class="cal-dow">M</div><div class="cal-dow">T</div><div class="cal-dow">W</div><div class="cal-dow">T</div><div class="cal-dow">F</div><div class="cal-dow">S</div>
+    <div class="cal-cell empty"></div>
+    <div class="cal-cell empty"></div>
+    <div class="cal-cell empty"></div>
+    <div class="cal-cell empty"></div>
+    <div class="cal-cell empty"></div>
+    <div class="cal-cell"><span class="cal-day muted">1</span></div>
+    <div class="cal-cell"><span class="cal-day muted">2</span></div>
+    <div class="cal-cell"><span class="cal-day muted">3</span></div>
+    <div class="cal-cell"><span class="cal-day muted">4</span></div>
+    <a class="cal-cell workout kind-emom" href="studio-red-2026-05-05.html"><span class="cal-day">5</span><span class="cal-badge">EMOM</span></a>
+    <div class="cal-cell"><span class="cal-day muted">6</span></div>
+    <a class="cal-cell workout kind-emom" href="studio-red-2026-05-07.html"><span class="cal-day">7</span><span class="cal-badge">EMOM</span></a>
+    <div class="cal-cell"><span class="cal-day muted">8</span></div>
+    <div class="cal-cell"><span class="cal-day muted">9</span></div>
+    <div class="cal-cell"><span class="cal-day muted">10</span></div>
+    <div class="cal-cell"><span class="cal-day muted">11</span></div>
+    <div class="cal-cell"><span class="cal-day muted">12</span></div>
+    <a class="cal-cell workout kind-superset" href="studio-red-2026-05-13.html"><span class="cal-day">13</span><span class="cal-badge">SUPERSET</span></a>
+    <div class="cal-cell"><span class="cal-day muted">14</span></div>
+    <div class="cal-cell"><span class="cal-day muted">15</span></div>
+    <div class="cal-cell"><span class="cal-day muted">16</span></div>
+    <div class="cal-cell"><span class="cal-day muted">17</span></div>
+    <a class="cal-cell workout kind-ladder" href="studio-red-2026-05-18.html"><span class="cal-day">18</span><span class="cal-badge">LADDER</span></a>
+    <a class="cal-cell workout kind-superset" href="studio-red-2026-05-19.html"><span class="cal-day">19</span><span class="cal-badge">SUPERSET</span></a>
+    <div class="cal-cell"><span class="cal-day muted">20</span></div>
+    <div class="cal-cell"><span class="cal-day muted">21</span></div>
+    <div class="cal-cell"><span class="cal-day muted">22</span></div>
+    <div class="cal-cell"><span class="cal-day muted">23</span></div>
+    <div class="cal-cell"><span class="cal-day muted">24</span></div>
+    <div class="cal-cell"><span class="cal-day muted">25</span></div>
+    <a class="cal-cell workout kind-emom" href="studio-red-2026-05-26.html"><span class="cal-day">26</span><span class="cal-badge">EMOM</span></a>
+    <div class="cal-cell"><span class="cal-day muted">27</span></div>
+    <div class="cal-cell"><span class="cal-day muted">28</span></div>
+    <div class="cal-cell"><span class="cal-day muted">29</span></div>
+    <div class="cal-cell"><span class="cal-day muted">30</span></div>
+    <div class="cal-cell"><span class="cal-day muted">31</span></div>
+    <div class="cal-cell empty"></div>
+    <div class="cal-cell empty"></div>
+    <div class="cal-cell empty"></div>
+    <div class="cal-cell empty"></div>
+    <div class="cal-cell empty"></div>
+    <div class="cal-cell empty"></div>
+  </div>
+</div>
+<div class="cal-month">
+  <div class="cal-title">April 2026 <span class="cal-count">1 class</span></div>
+  <div class="cal-grid">
+    <div class="cal-dow">S</div><div class="cal-dow">M</div><div class="cal-dow">T</div><div class="cal-dow">W</div><div class="cal-dow">T</div><div class="cal-dow">F</div><div class="cal-dow">S</div>
+    <div class="cal-cell empty"></div>
+    <div class="cal-cell empty"></div>
+    <div class="cal-cell empty"></div>
+    <div class="cal-cell"><span class="cal-day muted">1</span></div>
+    <div class="cal-cell"><span class="cal-day muted">2</span></div>
+    <div class="cal-cell"><span class="cal-day muted">3</span></div>
+    <div class="cal-cell"><span class="cal-day muted">4</span></div>
+    <div class="cal-cell"><span class="cal-day muted">5</span></div>
+    <div class="cal-cell"><span class="cal-day muted">6</span></div>
+    <div class="cal-cell"><span class="cal-day muted">7</span></div>
+    <div class="cal-cell"><span class="cal-day muted">8</span></div>
+    <div class="cal-cell"><span class="cal-day muted">9</span></div>
+    <div class="cal-cell"><span class="cal-day muted">10</span></div>
+    <div class="cal-cell"><span class="cal-day muted">11</span></div>
+    <div class="cal-cell"><span class="cal-day muted">12</span></div>
+    <div class="cal-cell"><span class="cal-day muted">13</span></div>
+    <div class="cal-cell"><span class="cal-day muted">14</span></div>
+    <div class="cal-cell"><span class="cal-day muted">15</span></div>
+    <div class="cal-cell"><span class="cal-day muted">16</span></div>
+    <div class="cal-cell"><span class="cal-day muted">17</span></div>
+    <div class="cal-cell"><span class="cal-day muted">18</span></div>
+    <div class="cal-cell"><span class="cal-day muted">19</span></div>
+    <div class="cal-cell"><span class="cal-day muted">20</span></div>
+    <div class="cal-cell"><span class="cal-day muted">21</span></div>
+    <div class="cal-cell"><span class="cal-day muted">22</span></div>
+    <div class="cal-cell"><span class="cal-day muted">23</span></div>
+    <div class="cal-cell"><span class="cal-day muted">24</span></div>
+    <div class="cal-cell"><span class="cal-day muted">25</span></div>
+    <div class="cal-cell"><span class="cal-day muted">26</span></div>
+    <div class="cal-cell"><span class="cal-day muted">27</span></div>
+    <div class="cal-cell"><span class="cal-day muted">28</span></div>
+    <div class="cal-cell"><span class="cal-day muted">29</span></div>
+    <a class="cal-cell workout kind-superset" href="studio-red-2026-04-30.html"><span class="cal-day">30</span><span class="cal-badge">SUPERSET</span></a>
+    <div class="cal-cell empty"></div>
+    <div class="cal-cell empty"></div>
+  </div>
+</div>
 </div>
 
 </body>

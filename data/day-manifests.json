@@ -407,6 +407,62 @@
       "source_file": "studio-red-0526.html"
     },
     {
+      "date": "2026-06-01",
+      "format": "EMOM · 9 MIN",
+      "warmup": [
+        "BW Good Morning",
+        "Lateral Lunge w/ Reach Up",
+        "BW Plank Row",
+        "Seal Jacks"
+      ],
+      "cardio": [
+        {
+          "time": "2:00",
+          "intensity": "Moderate 7/10",
+          "mz": "Green"
+        },
+        {
+          "time": ".3 mi",
+          "intensity": "Hard 8/10",
+          "mz": "Yellow"
+        }
+      ],
+      "exercises": [
+        {
+          "name": "DB SL Deadlift Row Alt.",
+          "reps": "",
+          "station": "🏋️ Bench"
+        },
+        {
+          "name": "DB Devils Press",
+          "reps": "",
+          "station": "🏋️ Bench"
+        },
+        {
+          "name": "Leg Raises on bench",
+          "reps": "",
+          "station": "🏋️ Bench"
+        },
+        {
+          "name": "BW Popcorn Squat",
+          "reps": "",
+          "station": "🔵 Rack"
+        },
+        {
+          "name": "KB Lateral Lunge Alt.",
+          "reps": "",
+          "station": "🔵 Rack"
+        },
+        {
+          "name": "TRX Pike",
+          "reps": "",
+          "station": "🔵 Rack"
+        }
+      ],
+      "source_file": "STUDIO RED Workouts June 2026 06.01.26-06.30.2026.pdf p.1",
+      "cardio_note": "The 2:00 Moderate builds your base and elevates heart rate before the distance challenge. Push the .3 mi at true Hard effort — your time is determined by how hard you work."
+    },
+    {
       "date": "2026-06-02",
       "format": "CIRCUIT · 9 MIN",
       "warmup": [
@@ -438,30 +494,429 @@
       "exercises": [
         {
           "name": "DB Forward alt. Lunge",
-          "reps": "10 EACH SIDE"
+          "reps": "10 EACH SIDE",
+          "station": "🏋️ Bench"
         },
         {
           "name": "DB Counterbalance Squat",
-          "reps": "10 REPS"
+          "reps": "10 REPS",
+          "station": "🏋️ Bench"
         },
         {
           "name": "Fitband Rotational Row to Press",
-          "reps": "10 EACH SIDE"
+          "reps": "10 EACH SIDE",
+          "station": "🏋️ Bench"
         },
         {
           "name": "KB Push Press",
-          "reps": "10 REPS"
+          "reps": "10 REPS",
+          "station": "🔵 Rack"
         },
         {
           "name": "TRX Power Pull",
-          "reps": "10 EACH SIDE"
+          "reps": "10 EACH SIDE",
+          "station": "🔵 Rack"
         },
         {
           "name": "Ball SL Crunch Standing",
-          "reps": "10 EACH SIDE"
+          "reps": "10 EACH SIDE",
+          "station": "🔵 Rack"
         }
       ],
-      "source_file": "studio-red-0602.html"
+      "source_file": "STUDIO RED Workouts June 2026 06.01.26-06.30.2026.pdf p.2",
+      "cardio_note": "Two rounds of 2:00 Moderate into 2:00 Hard build sustained cardiovascular endurance. The final 1:00 Moderate brings your heart rate down so you're recovered and ready for the next station."
+    },
+    {
+      "date": "2026-06-03",
+      "format": "LADDER · 9 MIN",
+      "warmup": [
+        "BW Cossack Squat",
+        "Inchworm",
+        "BW Kang Squat",
+        "Ali Shuffle"
+      ],
+      "cardio": [
+        {
+          "time": "1:30",
+          "intensity": "Moderate 7/10",
+          "mz": "Green"
+        },
+        {
+          "time": ":30",
+          "intensity": "Max 9/10",
+          "mz": "Red"
+        },
+        {
+          "time": "1:00",
+          "intensity": "Easy 6/10",
+          "mz": "Blue"
+        },
+        {
+          "rounds": "× 3 rounds"
+        }
+      ],
+      "exercises": [
+        {
+          "name": "DB Neutral Grip Row on Bench",
+          "reps": "LADDER 12→8 · EACH SIDE",
+          "station": "🏋️ Bench"
+        },
+        {
+          "name": "DB 1arm Crossbody Reverse Lunge",
+          "reps": "LADDER 12→8 · EACH SIDE",
+          "station": "🏋️ Bench"
+        },
+        {
+          "name": "Superman on Bench",
+          "reps": "LADDER 12→8",
+          "station": "🏋️ Bench"
+        },
+        {
+          "name": "Ball Overhead Slam to Squat Jump",
+          "reps": "LADDER 12→8",
+          "station": "🔵 Rack"
+        },
+        {
+          "name": "Ball Adductor Squeeze Squat",
+          "reps": "LADDER 12→8",
+          "station": "🔵 Rack"
+        },
+        {
+          "name": "TRX Hinge to Overhead",
+          "reps": "LADDER 12→8",
+          "station": "🔵 Rack"
+        }
+      ],
+      "source_file": "STUDIO RED Workouts June 2026 06.01.26-06.30.2026.pdf p.3",
+      "cardio_note": "Short Max bursts spike the heart rate higher than sustained hard efforts can, increasing cardiovascular adaptation over time. The 1:00 Easy keeps blood moving so members recover fully and can hit true Max each round."
+    },
+    {
+      "date": "2026-06-04",
+      "format": "EMOM · 9 MIN",
+      "warmup": [
+        "Bootstrapper",
+        "Alt Quad Stretch",
+        "Bodyweight Plank Row",
+        "Mummy Jacks"
+      ],
+      "cardio": [
+        {
+          "time": "1:00",
+          "intensity": "Easy 6/10",
+          "mz": "Blue"
+        },
+        {
+          "time": "20 cals",
+          "intensity": "Hard 8/10",
+          "mz": "Yellow"
+        }
+      ],
+      "exercises": [
+        {
+          "name": "Explosive Bench Press Up",
+          "reps": "",
+          "station": "🏋️ Bench"
+        },
+        {
+          "name": "DB Goblet Squat",
+          "reps": "",
+          "station": "🏋️ Bench"
+        },
+        {
+          "name": "Leg Raises on Bench",
+          "reps": "",
+          "station": "🏋️ Bench"
+        },
+        {
+          "name": "KB Deadlift 2arm",
+          "reps": "",
+          "station": "🔵 Rack"
+        },
+        {
+          "name": "TRX 3 Way Row",
+          "reps": "",
+          "station": "🔵 Rack"
+        },
+        {
+          "name": "Ball Reverse Lunge w/ rotation alt.",
+          "reps": "",
+          "station": "🔵 Rack"
+        }
+      ],
+      "source_file": "STUDIO RED Workouts June 2026 06.01.26-06.30.2026.pdf p.4",
+      "cardio_note": "The 1:00 Easy primes the legs and elevates heart rate so members can attack the calorie target at true Hard effort. Calories measure work output — the harder they push, the faster they're done."
+    },
+    {
+      "date": "2026-06-05",
+      "format": "LADDER · 9 MIN",
+      "warmup": [
+        "BW Overhead Squat",
+        "Alt Arm Circles",
+        "Side Kick in Bear",
+        "Drop Squat"
+      ],
+      "cardio": [
+        {
+          "time": "1:00",
+          "intensity": "Easy 6/10",
+          "mz": "Blue"
+        },
+        {
+          "time": "1:00",
+          "intensity": "Moderate 7/10",
+          "mz": "Green"
+        },
+        {
+          "time": "2:00",
+          "intensity": "Hard 8/10",
+          "mz": "Yellow"
+        },
+        {
+          "rounds": "× 2 rounds"
+        },
+        {
+          "time": "1:00",
+          "intensity": "Moderate 7/10",
+          "mz": "Green"
+        }
+      ],
+      "exercises": [
+        {
+          "name": "DB RDL",
+          "reps": "LADDER 10→15",
+          "station": "🏋️ Bench"
+        },
+        {
+          "name": "DB Chest Press and Chest Fly alt.",
+          "reps": "LADDER 10→15",
+          "station": "🏋️ Bench"
+        },
+        {
+          "name": "DB Goblet Bulgarian Split Squat",
+          "reps": "LADDER 10→15 · EACH SIDE",
+          "station": "🏋️ Bench"
+        },
+        {
+          "name": "Ball Squat",
+          "reps": "LADDER 10→15",
+          "station": "🔵 Rack"
+        },
+        {
+          "name": "TRX Inverted Row",
+          "reps": "LADDER 10→15",
+          "station": "🔵 Rack"
+        },
+        {
+          "name": "Ball Woodchop",
+          "reps": "LADDER 10→15",
+          "station": "🔵 Rack"
+        }
+      ],
+      "source_file": "STUDIO RED Workouts June 2026 06.01.26-06.30.2026.pdf p.5",
+      "cardio_note": "Two full minutes at Hard builds real aerobic capacity by forcing the body to sustain elevated output. The final 1:00 Moderate brings heart rate down so members arrive at the next station fresh and ready to go."
+    },
+    {
+      "date": "2026-06-06",
+      "format": "SUPERSET · 4:30 EA",
+      "warmup": [
+        "Alt. Stepovers Forward",
+        "Alt. Leg Cradles",
+        "Inchworm",
+        "Butt Kicks"
+      ],
+      "cardio": [
+        {
+          "time": "3:00",
+          "intensity": "Moderate 7/10",
+          "mz": "Green"
+        },
+        {
+          "time": "3:00",
+          "intensity": "Hard 8/10",
+          "mz": "Yellow"
+        },
+        {
+          "time": "3:00",
+          "intensity": "Moderate 7/10",
+          "mz": "Green"
+        }
+      ],
+      "exercises": [
+        {
+          "name": "DB Split Squat",
+          "reps": "15 EACH SIDE",
+          "station": "🏋️ Bench"
+        },
+        {
+          "name": "Fitband Hip Thrust",
+          "reps": "15 EACH SIDE",
+          "station": "🏋️ Bench"
+        },
+        {
+          "name": "DB Push Press",
+          "reps": "15 REPS",
+          "station": "🏋️ Bench"
+        },
+        {
+          "name": "V-Ups on Bench",
+          "reps": "15 REPS",
+          "station": "🏋️ Bench"
+        },
+        {
+          "name": "KB Sumo Squat",
+          "reps": "15 REPS",
+          "station": "🔵 Rack"
+        },
+        {
+          "name": "TRX Elbow Body Saw",
+          "reps": "15 REPS",
+          "station": "🔵 Rack"
+        },
+        {
+          "name": "Alt. Arm KB Swing",
+          "reps": "15 EACH SIDE",
+          "station": "🔵 Rack"
+        },
+        {
+          "name": "TRX Single Arm row",
+          "reps": "15 EACH SIDE",
+          "station": "🔵 Rack"
+        }
+      ],
+      "source_file": "STUDIO RED Workouts June 2026 06.01.26-06.30.2026.pdf p.6",
+      "cardio_note": "Keeping the floor at Moderate means the cardiovascular system stays loaded for the entire 9:00 — there is no true rest, just a shift in intensity. Sustained elevation at this level builds aerobic endurance efficiently and keeps the heart rate working the whole time."
+    },
+    {
+      "date": "2026-06-07",
+      "format": "EMOM · 9 MIN",
+      "warmup": [
+        "Bootstrapper",
+        "Alt Quad Stretch",
+        "Bodyweight Plank Row",
+        "Mummy Jacks"
+      ],
+      "cardio": [
+        {
+          "time": "1:00",
+          "intensity": "Easy 6/10",
+          "mz": "Blue"
+        },
+        {
+          "time": ".3 mi",
+          "intensity": "Hard 8/10",
+          "mz": "Yellow"
+        }
+      ],
+      "exercises": [
+        {
+          "name": "Push Up to T Stand",
+          "reps": "",
+          "station": "🏋️ Bench"
+        },
+        {
+          "name": "Sprinter Abs on Bench",
+          "reps": "",
+          "station": "🏋️ Bench"
+        },
+        {
+          "name": "Around the world lunge",
+          "reps": "",
+          "station": "🏋️ Bench"
+        },
+        {
+          "name": "SL Ball Slam alt.",
+          "reps": "",
+          "station": "🔵 Rack"
+        },
+        {
+          "name": "TRX Row to Bicep Curl",
+          "reps": "",
+          "station": "🔵 Rack"
+        },
+        {
+          "name": "Ball Adductor Squeeze Squat",
+          "reps": "",
+          "station": "🔵 Rack"
+        }
+      ],
+      "source_file": "STUDIO RED Workouts June 2026 06.01.26-06.30.2026.pdf p.7",
+      "cardio_note": "Unlike timed intervals, distance targets are earned — the effort put in directly determines the outcome. Use the 1:00 Easy to settle in before committing fully to the .3 mi Hard."
+    },
+    {
+      "date": "2026-06-08",
+      "format": "CIRCUIT · 9 MIN",
+      "warmup": [
+        "BW Overhead Squat",
+        "Alt Arm Circles",
+        "Side Kick in Bear",
+        "Drop Squat"
+      ],
+      "cardio": [
+        {
+          "time": "1:00",
+          "intensity": "Moderate 7/10",
+          "mz": "Green"
+        },
+        {
+          "time": "1:00",
+          "intensity": "Hard 8/10",
+          "mz": "Yellow"
+        },
+        {
+          "time": "1:00",
+          "intensity": "Moderate 7/10",
+          "mz": "Green"
+        },
+        {
+          "time": "2:00",
+          "intensity": "Hard 8/10",
+          "mz": "Yellow"
+        },
+        {
+          "time": "1:00",
+          "intensity": "Moderate 7/10",
+          "mz": "Green"
+        },
+        {
+          "time": "3:00",
+          "intensity": "Hard 8/10",
+          "mz": "Yellow"
+        }
+      ],
+      "exercises": [
+        {
+          "name": "DB SL Hip Thrust on Bench",
+          "reps": "12 REPS",
+          "station": "🏋️ Bench"
+        },
+        {
+          "name": "DB Shoulder Press",
+          "reps": "12 REPS",
+          "station": "🏋️ Bench"
+        },
+        {
+          "name": "Alt. Lying Leg Raise",
+          "reps": "12 EACH SIDE",
+          "station": "🏋️ Bench"
+        },
+        {
+          "name": "KB T-rex Swing",
+          "reps": "12 REPS",
+          "station": "🔵 Rack"
+        },
+        {
+          "name": "Ball Slam",
+          "reps": "12 REPS",
+          "station": "🔵 Rack"
+        },
+        {
+          "name": "TRX Low Row",
+          "reps": "12 REPS",
+          "station": "🔵 Rack"
+        }
+      ],
+      "source_file": "STUDIO RED Workouts June 2026 06.01.26-06.30.2026.pdf p.8",
+      "cardio_note": "Each Hard interval is longer than the last, progressively challenging the cardiovascular system as fatigue builds. The Moderate recoveries stay consistent, giving just enough reset to hit the next Hard effort with full commitment."
     },
     {
       "date": "2026-06-09",
@@ -509,36 +964,1356 @@
           "mz": "Blue"
         }
       ],
-      "cardio_note": "The pyramid peaks at <strong>Max</strong>, then descends back through every zone for a complete cardiovascular experience. Starting and ending Easy ensures full recovery before the next station.",
-      "floor_note": "Ladder the reps <strong>down by 1 each round from 15</strong>. Once you reach 10, <strong>repeat from the top</strong> for the full 9 minutes.",
       "exercises": [
         {
           "name": "DB Step Up alt.",
-          "reps": "LADDER 15→10 · EACH SIDE"
-        },
-        {
-          "name": "KB Thruster",
-          "reps": "LADDER 15→10"
+          "reps": "LADDER 15→10 · EACH SIDE",
+          "station": "🏋️ Bench"
         },
         {
           "name": "DB Plank Row",
-          "reps": "LADDER 15→10 · ALTERNATE SIDES"
-        },
-        {
-          "name": "BW Push Up",
-          "reps": "LADDER 15→10"
+          "reps": "LADDER 15→10",
+          "station": "🏋️ Bench"
         },
         {
           "name": "Fitband Triceps Extensions",
-          "reps": "LADDER 15→10"
+          "reps": "LADDER 15→10",
+          "station": "🏋️ Bench"
+        },
+        {
+          "name": "KB Thruster",
+          "reps": "LADDER 15→10",
+          "station": "🔵 Rack"
+        },
+        {
+          "name": "BW Push Up",
+          "reps": "LADDER 15→10",
+          "station": "🔵 Rack"
         },
         {
           "name": "Ball Power Slam w/ Hop",
-          "reps": "LADDER 15→10"
+          "reps": "LADDER 15→10",
+          "station": "🔵 Rack"
         }
       ],
-      "source_file": "STUDIO RED Workouts June 2026 06.01.26-06.30.2026.pdf p.9"
+      "source_file": "STUDIO RED Workouts June 2026 06.01.26-06.30.2026.pdf p.9",
+      "cardio_note": "The pyramid structure peaks at Max before descending back through every zone, giving members a complete cardiovascular experience. Starting and ending in Easy ensures full recovery before the next station."
+    },
+    {
+      "date": "2026-06-10",
+      "format": "CIRCUIT · 9 MIN",
+      "warmup": [
+        "Bootstrapper",
+        "Alt Quad Stretch",
+        "Bodyweight Plank Row",
+        "Mummy Jacks"
+      ],
+      "cardio": [
+        {
+          "time": "1:20",
+          "intensity": "Moderate 7/10",
+          "mz": "Green"
+        },
+        {
+          "time": ":40",
+          "intensity": "Easy 6/10",
+          "mz": "Blue"
+        },
+        {
+          "time": "2:00",
+          "intensity": "Hard 8/10",
+          "mz": "Yellow"
+        },
+        {
+          "rounds": "× 2 rounds"
+        },
+        {
+          "time": "1:00",
+          "intensity": "Moderate 7/10",
+          "mz": "Green"
+        }
+      ],
+      "exercises": [
+        {
+          "name": "DB Overhead Triceps Extension 1arm",
+          "reps": "12 EACH SIDE",
+          "station": "🏋️ Bench"
+        },
+        {
+          "name": "DB Upright Row",
+          "reps": "12 REPS",
+          "station": "🏋️ Bench"
+        },
+        {
+          "name": "DB Preacher Curl 1 Arm",
+          "reps": "12 EACH SIDE",
+          "station": "🏋️ Bench"
+        },
+        {
+          "name": "KB Wave Squat",
+          "reps": "12 REPS",
+          "station": "🔵 Rack"
+        },
+        {
+          "name": "KB Side Step Swing",
+          "reps": "12 EACH SIDE",
+          "station": "🔵 Rack"
+        },
+        {
+          "name": "Ball Frog Jump",
+          "reps": "12 REPS",
+          "station": "🔵 Rack"
+        }
+      ],
+      "source_file": "STUDIO RED Workouts June 2026 06.01.26-06.30.2026.pdf p.10",
+      "cardio_note": "The :40 Easy keeps legs moving so the body stays primed to surge into the 2:00 Hard. The final 1:00 Moderate is a controlled descent, leaving members recovered and ready at the next station."
+    },
+    {
+      "date": "2026-06-11",
+      "format": "SUPERSET · 4:30 EA",
+      "warmup": [
+        "Bodyweight Good Morning",
+        "Bodyweight Plank Row",
+        "Alt. Toe Touches",
+        "Drop Squat"
+      ],
+      "cardio": [
+        {
+          "time": ":45",
+          "intensity": "Moderate 7/10",
+          "mz": "Green"
+        },
+        {
+          "time": ":30",
+          "intensity": "Max 9/10",
+          "mz": "Red"
+        },
+        {
+          "time": ":45",
+          "intensity": "Easy 6/10",
+          "mz": "Blue"
+        },
+        {
+          "rounds": "× 4 rounds"
+        },
+        {
+          "time": "1:00",
+          "intensity": "Moderate 7/10",
+          "mz": "Green"
+        }
+      ],
+      "exercises": [
+        {
+          "name": "DB Forward Lunge Alt.",
+          "reps": "6 EACH SIDE",
+          "station": "🏋️ Bench"
+        },
+        {
+          "name": "DB Bird Dog Row",
+          "reps": "10 EACH SIDE",
+          "station": "🏋️ Bench"
+        },
+        {
+          "name": "DB Sumo Deadlift 2arm",
+          "reps": "6 REPS",
+          "station": "🏋️ Bench"
+        },
+        {
+          "name": "DB Bent over Triceps Kickback",
+          "reps": "10 REPS",
+          "station": "🏋️ Bench"
+        },
+        {
+          "name": "KB Dual Front Rack Squat",
+          "reps": "6 REPS",
+          "station": "🔵 Rack"
+        },
+        {
+          "name": "TRX High Row",
+          "reps": "10 REPS",
+          "station": "🔵 Rack"
+        },
+        {
+          "name": "Ball Clean to Press",
+          "reps": "6 REPS",
+          "station": "🔵 Rack"
+        },
+        {
+          "name": "Ball Half Push up",
+          "reps": "10 REPS",
+          "station": "🔵 Rack"
+        }
+      ],
+      "source_file": "STUDIO RED Workouts June 2026 06.01.26-06.30.2026.pdf p.11",
+      "cardio_note": "Brief Max bursts followed by active Easy recovery train the body to spike and recover repeatedly, building cardiovascular efficiency. The final 1:00 Moderate closes the station with a controlled descent."
+    },
+    {
+      "date": "2026-06-12",
+      "format": "LADDER · 9 MIN",
+      "warmup": [
+        "Alt. Stepovers Forward",
+        "Alt. Leg Cradles",
+        "Inchworm",
+        "Bodyweight Good Morning",
+        "06/12/2026 - Complete the following stations for 9 mins each,"
+      ],
+      "cardio": [
+        {
+          "time": "1:00",
+          "intensity": "Moderate 7/10",
+          "mz": "Green"
+        },
+        {
+          "time": "3:00",
+          "intensity": "Hard 8/10",
+          "mz": "Yellow"
+        },
+        {
+          "time": "1:00",
+          "intensity": "Moderate 7/10",
+          "mz": "Green"
+        },
+        {
+          "time": "2:00",
+          "intensity": "Hard 8/10",
+          "mz": "Yellow"
+        },
+        {
+          "time": "1:00",
+          "intensity": "Moderate 7/10",
+          "mz": "Green"
+        },
+        {
+          "time": "1:00",
+          "intensity": "Hard 8/10",
+          "mz": "Yellow"
+        }
+      ],
+      "exercises": [
+        {
+          "name": "DB Upright Row",
+          "reps": "LADDER 12→15",
+          "station": "🏋️ Bench"
+        },
+        {
+          "name": "Alt. Lunge Off Bench (ea)",
+          "reps": "LADDER 12→15",
+          "station": "🏋️ Bench"
+        },
+        {
+          "name": "DB Front Loaded Good Morning",
+          "reps": "LADDER 12→15",
+          "station": "🏋️ Bench"
+        },
+        {
+          "name": "TRX Mid Row Underhand Grip",
+          "reps": "LADDER 12→15",
+          "station": "🔵 Rack"
+        },
+        {
+          "name": "Ball Squat",
+          "reps": "LADDER 12→15",
+          "station": "🔵 Rack"
+        },
+        {
+          "name": "KB Farmer Carry Knee Raise in Place",
+          "reps": "LADDER 12→15 · EACH SIDE",
+          "station": "🔵 Rack"
+        }
+      ],
+      "source_file": "STUDIO RED Workouts June 2026 06.01.26-06.30.2026.pdf p.12",
+      "cardio_note": "Each Hard interval is shorter than the last, so members can push harder as the rounds progress — the end is always closer than the last. Consistent 1:00 Moderate recoveries keep the pattern predictable so members can stay focused on the work."
+    },
+    {
+      "date": "2026-06-13",
+      "format": "EMOM · 9 MIN",
+      "warmup": [
+        "Bootstrapper",
+        "BW Alt Arm Circles",
+        "Bodyweight Plank Row",
+        "Mummy Jacks"
+      ],
+      "cardio": [
+        {
+          "time": "2:00",
+          "intensity": "Moderate 7/10",
+          "mz": "Green"
+        },
+        {
+          "time": ".3 mi",
+          "intensity": "Hard 8/10",
+          "mz": "Yellow"
+        }
+      ],
+      "exercises": [
+        {
+          "name": "DB SL Deadlift Alt.",
+          "reps": "",
+          "station": "🏋️ Bench"
+        },
+        {
+          "name": "Band Squats",
+          "reps": "",
+          "station": "🏋️ Bench"
+        },
+        {
+          "name": "DB Arnold Press",
+          "reps": "",
+          "station": "🏋️ Bench"
+        },
+        {
+          "name": "TRX I-Y-T",
+          "reps": "",
+          "station": "🔵 Rack"
+        },
+        {
+          "name": "KB Row in Gorilla Alt.",
+          "reps": "",
+          "station": "🔵 Rack"
+        },
+        {
+          "name": "TRX Rollout",
+          "reps": "",
+          "station": "🔵 Rack"
+        }
+      ],
+      "source_file": "STUDIO RED Workouts June 2026 06.01.26-06.30.2026.pdf p.13",
+      "cardio_note": "The 2:00 Moderate builds momentum so members arrive at the distance target with an elevated heart rate and legs already working. On the .3 mi, effort determines the outcome — push harder, finish faster."
+    },
+    {
+      "date": "2026-06-14",
+      "format": "CIRCUIT · 9 MIN",
+      "warmup": [
+        "BW Overhead Squat",
+        "Alt Arm Circles",
+        "Side Kick in Bear",
+        "Drop Squat"
+      ],
+      "cardio": [
+        {
+          "time": "1:00",
+          "intensity": "Moderate 7/10",
+          "mz": "Green"
+        },
+        {
+          "time": "2:00",
+          "intensity": "Hard 8/10",
+          "mz": "Yellow"
+        },
+        {
+          "time": "1:00",
+          "intensity": "Easy 6/10",
+          "mz": "Blue"
+        },
+        {
+          "rounds": "× 2 rounds"
+        },
+        {
+          "time": "1:00",
+          "intensity": "Moderate 7/10",
+          "mz": "Green"
+        }
+      ],
+      "exercises": [
+        {
+          "name": "DB Crossbody Curtsy Lunge 1arm",
+          "reps": "12 EACH SIDE",
+          "station": "🏋️ Bench"
+        },
+        {
+          "name": "DB 2 arm Row in Lunge",
+          "reps": "12 REPS",
+          "station": "🏋️ Bench"
+        },
+        {
+          "name": "DB Donkey Kicks on Bench",
+          "reps": "12 EACH SIDE",
+          "station": "🏋️ Bench"
+        },
+        {
+          "name": "Ball Racked Split Squat",
+          "reps": "12 EACH SIDE",
+          "station": "🔵 Rack"
+        },
+        {
+          "name": "KB Shoulder to Shoulder Press",
+          "reps": "12 EACH SIDE",
+          "station": "🔵 Rack"
+        },
+        {
+          "name": "Plank w/ knee to both elbows",
+          "reps": "12 EACH SIDE",
+          "station": "🔵 Rack"
+        }
+      ],
+      "source_file": "STUDIO RED Workouts June 2026 06.01.26-06.30.2026.pdf p.14",
+      "cardio_note": "Each round builds from Moderate into a 2:00 Hard effort, with a brief Easy to reset before going again. The final 1:00 Moderate is a controlled close, leaving members recovered and ready for the next station."
+    },
+    {
+      "date": "2026-06-15",
+      "format": "LADDER · 9 MIN",
+      "warmup": [
+        "Bodyweight Good Morning",
+        "Bodyweight Plank Row",
+        "Alt. Toe Touches",
+        "Drop Squat"
+      ],
+      "cardio": [
+        {
+          "time": ":45",
+          "intensity": "Moderate 7/10",
+          "mz": "Green"
+        },
+        {
+          "time": ":45",
+          "intensity": "Hard 8/10",
+          "mz": "Yellow"
+        },
+        {
+          "time": ":45",
+          "intensity": "Easy 6/10",
+          "mz": "Blue"
+        },
+        {
+          "rounds": "× 4 rounds"
+        }
+      ],
+      "exercises": [
+        {
+          "name": "DB Deadlift",
+          "reps": "LADDER 1→6",
+          "station": "🏋️ Bench"
+        },
+        {
+          "name": "Explosive Bench Press Up",
+          "reps": "LADDER 1→6",
+          "station": "🏋️ Bench"
+        },
+        {
+          "name": "Box Jump",
+          "reps": "LADDER 1→6",
+          "station": "🏋️ Bench"
+        },
+        {
+          "name": "KB Goblet Squat",
+          "reps": "LADDER 1→6",
+          "station": "🔵 Rack"
+        },
+        {
+          "name": "TRX Single Arm Row",
+          "reps": "LADDER 1→6 · EACH SIDE",
+          "station": "🔵 Rack"
+        },
+        {
+          "name": "KB Tactical Lunge",
+          "reps": "LADDER 1→6 · EACH SIDE",
+          "station": "🔵 Rack"
+        }
+      ],
+      "source_file": "STUDIO RED Workouts June 2026 06.01.26-06.30.2026.pdf p.15",
+      "cardio_note": "Equal intervals across all three zones keep the pattern simple and predictable, letting members focus entirely on hitting each intensity. The goal is the same effort on round four as round one."
+    },
+    {
+      "date": "2026-06-16",
+      "format": "CIRCUIT · 9 MIN",
+      "warmup": [
+        "Bootstrapper",
+        "Alt Quad Stretch",
+        "Bodyweight Plank Row",
+        "Mummy Jacks"
+      ],
+      "cardio": [
+        {
+          "time": "2:15",
+          "intensity": "Moderate 7/10",
+          "mz": "Green"
+        },
+        {
+          "time": "2:15",
+          "intensity": "Hard 8/10",
+          "mz": "Yellow"
+        },
+        {
+          "rounds": "× 2 rounds"
+        }
+      ],
+      "exercises": [
+        {
+          "name": "DB Offset Weight Bulgarian Split Squat",
+          "reps": "15 EACH SIDE",
+          "station": "🏋️ Bench"
+        },
+        {
+          "name": "DB 1 Arm Crossbody RDL",
+          "reps": "15 EACH SIDE",
+          "station": "🏋️ Bench"
+        },
+        {
+          "name": "DB Squeeze Press",
+          "reps": "15 REPS",
+          "station": "🏋️ Bench"
+        },
+        {
+          "name": "KB Lateral Shift w/ Hand Switch",
+          "reps": "15 EACH SIDE",
+          "station": "🔵 Rack"
+        },
+        {
+          "name": "TRX High Row",
+          "reps": "15 REPS",
+          "station": "🔵 Rack"
+        },
+        {
+          "name": "Ball Ground to Overhead",
+          "reps": "15 REPS",
+          "station": "🔵 Rack"
+        }
+      ],
+      "source_file": "STUDIO RED Workouts June 2026 06.01.26-06.30.2026.pdf p.16",
+      "cardio_note": "Alternating Moderate and Hard intervals challenge members to recover just enough before pushing back into high intensity, driving cardiovascular adaptation through repeated effort."
+    },
+    {
+      "date": "2026-06-17",
+      "format": "BENCHMARK · 3 ROUNDS",
+      "warmup": [
+        "Bootstrapper",
+        "Elbow to Instep Alt.",
+        "Bodyweight Curtsy Lunge",
+        "Explosive Jacks"
+      ],
+      "cardio": [
+        {
+          "rounds": "BENCHMARK TEST · MAX DISTANCE"
+        }
+      ],
+      "exercises": [
+        {
+          "name": "DB Deadlift",
+          "reps": "",
+          "station": "🏋️ Bench"
+        },
+        {
+          "name": "BW Reverse Lunge w/ Reach Alt.",
+          "reps": "",
+          "station": "🏋️ Bench"
+        },
+        {
+          "name": "DB Chest Press",
+          "reps": "",
+          "station": "🏋️ Bench"
+        },
+        {
+          "name": "KB Goblet Squat",
+          "reps": "",
+          "station": "🔵 Rack"
+        },
+        {
+          "name": "Down Dog with Foot Pedal",
+          "reps": "",
+          "station": "🔵 Rack"
+        },
+        {
+          "name": "TRX Seated Lat Pull",
+          "reps": "",
+          "station": "🔵 Rack"
+        }
+      ],
+      "source_file": "STUDIO RED Workouts June 2026 06.01.26-06.30.2026.pdf p.17",
+      "floor_note": "<strong>Benchmark Day · 3 rounds.</strong> Round 1 is a lighter warm-up; round 2 sets your working weight; <strong>round 3 is the round that counts</strong> — log reps for each main lift."
+    },
+    {
+      "date": "2026-06-18",
+      "format": "EMOM · 9 MIN",
+      "warmup": [
+        "BW Overhead Squat",
+        "Alt Arm Circles",
+        "Side Kick in Bear",
+        "BW Good Morning"
+      ],
+      "cardio": [
+        {
+          "time": "1:00",
+          "intensity": "Easy 6/10",
+          "mz": "Blue"
+        },
+        {
+          "time": "25 cals",
+          "intensity": "Hard 8/10",
+          "mz": "Yellow"
+        }
+      ],
+      "exercises": [
+        {
+          "name": "DB Bent over Row alt.",
+          "reps": "",
+          "station": "🏋️ Bench"
+        },
+        {
+          "name": "DB Rev. Lunge w/ Rotation Alt.",
+          "reps": "",
+          "station": "🏋️ Bench"
+        },
+        {
+          "name": "V-Up to Jump",
+          "reps": "",
+          "station": "🏋️ Bench"
+        },
+        {
+          "name": "KB Sumo Squat",
+          "reps": "",
+          "station": "🔵 Rack"
+        },
+        {
+          "name": "TRX Inverted Row",
+          "reps": "",
+          "station": "🔵 Rack"
+        },
+        {
+          "name": "KB American Swing",
+          "reps": "",
+          "station": "🔵 Rack"
+        }
+      ],
+      "source_file": "STUDIO RED Workouts June 2026 06.01.26-06.30.2026.pdf p.18",
+      "cardio_note": "Members push through a calorie target at Hard intensity, driving strong consistent effort to hit the goal quickly before recovering in the Easy interval."
+    },
+    {
+      "date": "2026-06-19",
+      "format": "EMOM · 9 MIN",
+      "warmup": [
+        "BW 3D Lunge",
+        "Leg Cradles Alt.",
+        "BW Good Morning",
+        "Explosive Jacks"
+      ],
+      "cardio": [
+        {
+          "time": ".1mile",
+          "intensity": "Moderate 7/10",
+          "mz": "Green"
+        },
+        {
+          "time": ".1mile",
+          "intensity": "Hard 8/10",
+          "mz": "Yellow"
+        }
+      ],
+      "exercises": [
+        {
+          "name": "DB Man Maker",
+          "reps": "",
+          "station": "🏋️ Bench"
+        },
+        {
+          "name": "DB Upright Row",
+          "reps": "",
+          "station": "🏋️ Bench"
+        },
+        {
+          "name": "DB Rev. Lunge to Step Up Alt.",
+          "reps": "",
+          "station": "🏋️ Bench"
+        },
+        {
+          "name": "KB 1.5 Stance Vertical Clean alt.",
+          "reps": "",
+          "station": "🔵 Rack"
+        },
+        {
+          "name": "TRX Y and T Pull",
+          "reps": "",
+          "station": "🔵 Rack"
+        },
+        {
+          "name": "Ball 3 Squat Press 3 Chest Slam",
+          "reps": "",
+          "station": "🔵 Rack"
+        }
+      ],
+      "source_file": "STUDIO RED Workouts June 2026 06.01.26-06.30.2026.pdf p.19",
+      "cardio_note": "Members build into Hard effort with each distance marker, using the Moderate interval to recover just enough before pushing back into high intensity."
+    },
+    {
+      "date": "2026-06-20",
+      "format": "BENCHMARK · 3 ROUNDS",
+      "warmup": [
+        "Bootstrapper",
+        "Elbow to Instep Alt.",
+        "Bodyweight Curtsy Lunge",
+        "Explosive Jacks"
+      ],
+      "cardio": [
+        {
+          "rounds": "BENCHMARK TEST · MAX DISTANCE"
+        }
+      ],
+      "exercises": [
+        {
+          "name": "DB Deadlift",
+          "reps": "",
+          "station": "🏋️ Bench"
+        },
+        {
+          "name": "BW Reverse Lunge w/ Reach Alt.",
+          "reps": "",
+          "station": "🏋️ Bench"
+        },
+        {
+          "name": "DB Chest Press",
+          "reps": "",
+          "station": "🏋️ Bench"
+        },
+        {
+          "name": "KB Goblet Squat",
+          "reps": "",
+          "station": "🔵 Rack"
+        },
+        {
+          "name": "Down Dog with Foot Pedal",
+          "reps": "",
+          "station": "🔵 Rack"
+        },
+        {
+          "name": "TRX Seated Lat Pull",
+          "reps": "",
+          "station": "🔵 Rack"
+        }
+      ],
+      "source_file": "STUDIO RED Workouts June 2026 06.01.26-06.30.2026.pdf p.20",
+      "floor_note": "<strong>Benchmark Day · 3 rounds.</strong> Round 1 is a lighter warm-up; round 2 sets your working weight; <strong>round 3 is the round that counts</strong> — log reps for each main lift."
+    },
+    {
+      "date": "2026-06-21",
+      "format": "CIRCUIT · 9 MIN",
+      "warmup": [
+        "Bootstrapper",
+        "Elbow to Instep Alt.",
+        "Bodyweight Curtsy Lunge",
+        "BW Plank Row"
+      ],
+      "cardio": [
+        {
+          "time": "1:00",
+          "intensity": "Moderate 7/10",
+          "mz": "Green"
+        },
+        {
+          "time": "1:30",
+          "intensity": "Hard 8/10",
+          "mz": "Yellow"
+        },
+        {
+          "time": "1:00",
+          "intensity": "Moderate 7/10",
+          "mz": "Green"
+        },
+        {
+          "time": "2:00",
+          "intensity": "Hard 8/10",
+          "mz": "Yellow"
+        },
+        {
+          "time": "1:00",
+          "intensity": "Moderate 7/10",
+          "mz": "Green"
+        },
+        {
+          "time": "1:30",
+          "intensity": "Hard 8/10",
+          "mz": "Yellow"
+        },
+        {
+          "time": "1:00",
+          "intensity": "Moderate 7/10",
+          "mz": "Green"
+        }
+      ],
+      "exercises": [
+        {
+          "name": "DB Chest Press to Pullover",
+          "reps": "6 EACH SIDE",
+          "station": "🏋️ Bench"
+        },
+        {
+          "name": "DB Step Up",
+          "reps": "6 EACH SIDE",
+          "station": "🏋️ Bench"
+        },
+        {
+          "name": "DB Triceps Press",
+          "reps": "6 REPS",
+          "station": "🏋️ Bench"
+        },
+        {
+          "name": "KB SL Deadlift",
+          "reps": "6 EACH SIDE",
+          "station": "🔵 Rack"
+        },
+        {
+          "name": "KB Ballistic Row",
+          "reps": "6 EACH SIDE",
+          "station": "🔵 Rack"
+        },
+        {
+          "name": "Ball Rainbow Slam",
+          "reps": "6 EACH SIDE",
+          "station": "🔵 Rack"
+        }
+      ],
+      "source_file": "STUDIO RED Workouts June 2026 06.01.26-06.30.2026.pdf p.21",
+      "cardio_note": "Members build through progressively longer Hard intervals, with Moderate recovery between each push. The pyramid structure peaks at the center before stepping back down, challenging members to maintain effort as fatigue accumulates."
+    },
+    {
+      "date": "2026-06-22",
+      "format": "CIRCUIT · 9 MIN",
+      "warmup": [
+        "BW 3D Lunge",
+        "Leg Cradles Alt.",
+        "BW Good Morning",
+        "Explosive Jacks"
+      ],
+      "cardio": [
+        {
+          "time": "1:00",
+          "intensity": "Easy 6/10",
+          "mz": "Blue"
+        },
+        {
+          "time": ":30",
+          "intensity": "Max 9/10",
+          "mz": "Red"
+        },
+        {
+          "rounds": "× 5 rounds"
+        },
+        {
+          "time": "1:30",
+          "intensity": "Easy 6/10",
+          "mz": "Blue"
+        }
+      ],
+      "exercises": [
+        {
+          "name": "DB Single Leg Deadlift",
+          "reps": "6 EACH SIDE",
+          "station": "🏋️ Bench"
+        },
+        {
+          "name": "DB Bent Over Row Knee on Bench",
+          "reps": "6 EACH SIDE",
+          "station": "🏋️ Bench"
+        },
+        {
+          "name": "Fitband Crossover Y Raise",
+          "reps": "6 REPS",
+          "station": "🏋️ Bench"
+        },
+        {
+          "name": "KB Offset Rack Cossack Squat",
+          "reps": "6 EACH SIDE",
+          "station": "🔵 Rack"
+        },
+        {
+          "name": "Ball Push Ups",
+          "reps": "6 REPS",
+          "station": "🔵 Rack"
+        },
+        {
+          "name": "Ball Skater hops w/ Pause",
+          "reps": "6 EACH SIDE",
+          "station": "🔵 Rack"
+        }
+      ],
+      "source_file": "STUDIO RED Workouts June 2026 06.01.26-06.30.2026.pdf p.22",
+      "cardio_note": "Coach members to treat each Max burst like a race — everything they have for :30, then back off and breathe. The Easy minute is the reset, not the reward. Each round they should feel like they can go again."
+    },
+    {
+      "date": "2026-06-23",
+      "format": "EMOM · 9 MIN",
+      "warmup": [
+        "Bootstrapper",
+        "Elbow to Instep Alt.",
+        "Bodyweight Curtsy Lunge",
+        "Bodyweight Squat"
+      ],
+      "cardio": [
+        {
+          "time": "1:00",
+          "intensity": "Easy 6/10",
+          "mz": "Blue"
+        },
+        {
+          "time": ".2 miles",
+          "intensity": "Hard 8/10",
+          "mz": "Yellow"
+        }
+      ],
+      "exercises": [
+        {
+          "name": "DB Pullover to Chest Press to Sit Up on bench",
+          "reps": "",
+          "station": "🏋️ Bench"
+        },
+        {
+          "name": "DB 1 arm Thruster Alt.",
+          "reps": "",
+          "station": "🏋️ Bench"
+        },
+        {
+          "name": "Fitband Hip Thrusts",
+          "reps": "",
+          "station": "🏋️ Bench"
+        },
+        {
+          "name": "Ball Squat",
+          "reps": "",
+          "station": "🔵 Rack"
+        },
+        {
+          "name": "KB 3 Position SL RDL Alt.",
+          "reps": "",
+          "station": "🔵 Rack"
+        },
+        {
+          "name": "Ball Boulder Over",
+          "reps": "",
+          "station": "🔵 Rack"
+        }
+      ],
+      "source_file": "STUDIO RED Workouts June 2026 06.01.26-06.30.2026.pdf p.23",
+      "cardio_note": "The Easy interval allows heart rate to drop before members drive back into Hard effort — having a distance target to chase pushes strong output."
+    },
+    {
+      "date": "2026-06-24",
+      "format": "LADDER · 9 MIN",
+      "warmup": [
+        "Bodyweight Good Morning",
+        "Bodyweight Plank Row",
+        "Alt. Toe Touches",
+        "Drop Squat"
+      ],
+      "cardio": [
+        {
+          "time": ":45",
+          "intensity": "Easy 6/10",
+          "mz": "Blue"
+        },
+        {
+          "time": "1:00",
+          "intensity": "Moderate 7/10",
+          "mz": "Green"
+        },
+        {
+          "time": "1:15",
+          "intensity": "Hard 8/10",
+          "mz": "Yellow"
+        },
+        {
+          "rounds": "× 3 rounds"
+        }
+      ],
+      "exercises": [
+        {
+          "name": "DB Split Squat",
+          "reps": "LADDER 2→6 · EACH SIDE",
+          "station": "🏋️ Bench"
+        },
+        {
+          "name": "Push Up",
+          "reps": "LADDER 2→6",
+          "station": "🏋️ Bench"
+        },
+        {
+          "name": "DB Donkey Kicks on Bench",
+          "reps": "LADDER 2→6",
+          "station": "🏋️ Bench"
+        },
+        {
+          "name": "KB Anterior Good Morning",
+          "reps": "LADDER 2→6",
+          "station": "🔵 Rack"
+        },
+        {
+          "name": "KB Shoulder to Shoulder Press",
+          "reps": "LADDER 2→6 · EACH SIDE",
+          "station": "🔵 Rack"
+        },
+        {
+          "name": "KB alt. Woodchop to Halo",
+          "reps": "LADDER 2→6",
+          "station": "🔵 Rack"
+        }
+      ],
+      "source_file": "STUDIO RED Workouts June 2026 06.01.26-06.30.2026.pdf p.24",
+      "cardio_note": "Coach members to treat each round as a build — pushing through the final Hard interval under accumulated fatigue is what drives cardiovascular adaptation."
+    },
+    {
+      "date": "2026-06-25",
+      "format": "EMOM · 9 MIN",
+      "warmup": [
+        "BW 3D Lunge",
+        "Leg Cradles Alt.",
+        "BW Good Morning",
+        "Explosive Jacks"
+      ],
+      "cardio": [
+        {
+          "time": "2:00",
+          "intensity": "Moderate 7/10",
+          "mz": "Green"
+        },
+        {
+          "time": ".1mile",
+          "intensity": "Hard 8/10",
+          "mz": "Yellow"
+        }
+      ],
+      "exercises": [
+        {
+          "name": "DB Incline Chest Press x2reps alt.",
+          "reps": "",
+          "station": "🏋️ Bench"
+        },
+        {
+          "name": "DB Deadlift",
+          "reps": "",
+          "station": "🏋️ Bench"
+        },
+        {
+          "name": "Fitband Alt. Bicep Curl",
+          "reps": "",
+          "station": "🏋️ Bench"
+        },
+        {
+          "name": "Alt. Arm KB Swing",
+          "reps": "",
+          "station": "🔵 Rack"
+        },
+        {
+          "name": "TRX 3 Way Row",
+          "reps": "",
+          "station": "🔵 Rack"
+        },
+        {
+          "name": "Ball Slam to Squat Jump",
+          "reps": "",
+          "station": "🔵 Rack"
+        }
+      ],
+      "source_file": "STUDIO RED Workouts June 2026 06.01.26-06.30.2026.pdf p.25",
+      "cardio_note": "Members build from a longer Moderate distance into a shorter Hard push — the reduced target at Hard intensity makes the effort feel achievable while still driving cardiovascular output."
+    },
+    {
+      "date": "2026-06-26",
+      "format": "CIRCUIT · 9 MIN",
+      "warmup": [
+        "Bootstrapper",
+        "Elbow to Instep Alt.",
+        "Bodyweight Curtsy Lunge",
+        "Bodyweight Arm Circles Alt"
+      ],
+      "cardio": [
+        {
+          "time": "1:20",
+          "intensity": "Moderate 7/10",
+          "mz": "Green"
+        },
+        {
+          "time": ":40",
+          "intensity": "Hard 8/10",
+          "mz": "Yellow"
+        },
+        {
+          "time": "1:00",
+          "intensity": "Easy 6/10",
+          "mz": "Blue"
+        },
+        {
+          "rounds": "× 3 rounds"
+        }
+      ],
+      "exercises": [
+        {
+          "name": "DB 1 Arm Clean w/ Step",
+          "reps": "6 EACH SIDE",
+          "station": "🏋️ Bench"
+        },
+        {
+          "name": "DB Lateral Raise",
+          "reps": "6 REPS",
+          "station": "🏋️ Bench"
+        },
+        {
+          "name": "Band Fire Hydrants on Bench",
+          "reps": "6 EACH SIDE",
+          "station": "🏋️ Bench"
+        },
+        {
+          "name": "TRX Power Pull",
+          "reps": "6 EACH SIDE",
+          "station": "🔵 Rack"
+        },
+        {
+          "name": "KB 2arm Gunslinger Swing",
+          "reps": "6 REPS",
+          "station": "🔵 Rack"
+        },
+        {
+          "name": "TRX Ab Tuck to Pike",
+          "reps": "6 EACH SIDE",
+          "station": "🔵 Rack"
+        }
+      ],
+      "source_file": "STUDIO RED Workouts June 2026 06.01.26-06.30.2026.pdf p.26",
+      "cardio_note": "Coach members to use the Moderate interval to build into the effort — arriving at Hard already elevated means they can hit it hard and recover fully in the Easy before going again."
+    },
+    {
+      "date": "2026-06-27",
+      "format": "EMOM · 9 MIN",
+      "warmup": [
+        "Bodyweight Good Morning",
+        "Bodyweight Plank Row",
+        "Alt. Toe Touches",
+        "Drop Squat"
+      ],
+      "cardio": [
+        {
+          "time": "2:00",
+          "intensity": "Moderate 7/10",
+          "mz": "Green"
+        },
+        {
+          "time": "1:00",
+          "intensity": "Hard 8/10",
+          "mz": "Yellow"
+        },
+        {
+          "time": ":30",
+          "intensity": "Max 9/10",
+          "mz": "Red"
+        },
+        {
+          "time": "1:00",
+          "intensity": "Easy 6/10",
+          "mz": "Blue"
+        },
+        {
+          "rounds": "× 2 rounds"
+        }
+      ],
+      "exercises": [
+        {
+          "name": "DB Racked Side Lunge",
+          "reps": "",
+          "station": "🏋️ Bench"
+        },
+        {
+          "name": "Fitband Rotational Row 1arm",
+          "reps": "",
+          "station": "🏋️ Bench"
+        },
+        {
+          "name": "DB Sumo Deadlift",
+          "reps": "",
+          "station": "🏋️ Bench"
+        },
+        {
+          "name": "KB Wave Squat",
+          "reps": "",
+          "station": "🔵 Rack"
+        },
+        {
+          "name": "KB Push Press",
+          "reps": "",
+          "station": "🔵 Rack"
+        },
+        {
+          "name": "TRX I-Pull",
+          "reps": "",
+          "station": "🔵 Rack"
+        }
+      ],
+      "source_file": "STUDIO RED Workouts June 2026 06.01.26-06.30.2026.pdf p.27",
+      "cardio_note": "Coach members to use the Moderate to climb through Hard and arrive at Max already loaded — the :30 is short enough to give everything they have before resetting in the Easy."
+    },
+    {
+      "date": "2026-06-28",
+      "format": "CIRCUIT · 9 MIN",
+      "warmup": [
+        "BW 3D Lunge",
+        "Leg Cradles Alt.",
+        "BW Good Morning",
+        "Explosive Jacks"
+      ],
+      "cardio": [
+        {
+          "time": "1:30",
+          "intensity": "Moderate 7/10",
+          "mz": "Green"
+        },
+        {
+          "time": ":45",
+          "intensity": "Hard 8/10",
+          "mz": "Yellow"
+        },
+        {
+          "rounds": "× 4 rounds"
+        }
+      ],
+      "exercises": [
+        {
+          "name": "DB Push Press",
+          "reps": "6 REPS",
+          "station": "🏋️ Bench"
+        },
+        {
+          "name": "Box Jump",
+          "reps": "6 REPS",
+          "station": "🏋️ Bench"
+        },
+        {
+          "name": "DB Bent Over Fly",
+          "reps": "6 REPS",
+          "station": "🏋️ Bench"
+        },
+        {
+          "name": "KB Split Squat 1arm",
+          "reps": "6 EACH SIDE",
+          "station": "🔵 Rack"
+        },
+        {
+          "name": "TRX Oblique Crunch",
+          "reps": "6 EACH SIDE",
+          "station": "🔵 Rack"
+        },
+        {
+          "name": "KB T-Rex Swing",
+          "reps": "6 REPS",
+          "station": "🔵 Rack"
+        }
+      ],
+      "source_file": "STUDIO RED Workouts June 2026 06.01.26-06.30.2026.pdf p.28",
+      "cardio_note": "Short Hard bursts followed by longer Moderate recovery bring heart rate down enough that members can sustain quality effort through all four rounds."
+    },
+    {
+      "date": "2026-06-29",
+      "format": "EMOM · 9 MIN",
+      "warmup": [
+        "Bootstrapper",
+        "Elbow to Instep Alt.",
+        "Bodyweight Plank Row",
+        "Mummy Jacks"
+      ],
+      "cardio": [
+        {
+          "time": "1:30",
+          "intensity": "Easy 6/10",
+          "mz": "Blue"
+        },
+        {
+          "time": "10 cals",
+          "intensity": "Hard 8/10",
+          "mz": "Yellow"
+        }
+      ],
+      "exercises": [
+        {
+          "name": "Plank with Knee to Elbow",
+          "reps": "",
+          "station": "🏋️ Bench"
+        },
+        {
+          "name": "DB Chest Press to Pullover",
+          "reps": "",
+          "station": "🏋️ Bench"
+        },
+        {
+          "name": "Fitband Row to External Rotation",
+          "reps": "",
+          "station": "🏋️ Bench"
+        },
+        {
+          "name": "TRX I-Y-T",
+          "reps": "",
+          "station": "🔵 Rack"
+        },
+        {
+          "name": "Low Plank Squeeze on Ball",
+          "reps": "",
+          "station": "🔵 Rack"
+        },
+        {
+          "name": "Sprinter Burpee",
+          "reps": "",
+          "station": "🔵 Rack"
+        }
+      ],
+      "source_file": "STUDIO RED Workouts June 2026 06.01.26-06.30.2026.pdf p.29",
+      "cardio_note": "Coach members to bank their energy in the Easy interval — the calorie target at Hard is the work, so they should arrive ready to attack it."
+    },
+    {
+      "date": "2026-06-30",
+      "format": "LADDER · 9 MIN",
+      "warmup": [
+        "Bodyweight Good Morning",
+        "Bodyweight Plank Row",
+        "Alt. Toe Touches",
+        "Drop Squat"
+      ],
+      "cardio": [
+        {
+          "time": "2:00",
+          "intensity": "Moderate 7/10",
+          "mz": "Green"
+        },
+        {
+          "time": ":45",
+          "intensity": "Max 9/10",
+          "mz": "Red"
+        },
+        {
+          "rounds": "× 3 rounds"
+        },
+        {
+          "time": ":45",
+          "intensity": "Easy 6/10",
+          "mz": "Blue"
+        }
+      ],
+      "exercises": [
+        {
+          "name": "DB Rev Lunge to Swing",
+          "reps": "LADDER 3→6 · EACH SIDE",
+          "station": "🏋️ Bench"
+        },
+        {
+          "name": "DB Man Maker",
+          "reps": "LADDER 3→6",
+          "station": "🏋️ Bench"
+        },
+        {
+          "name": "DB SL Hip Thrust",
+          "reps": "LADDER 3→6 · EACH SIDE",
+          "station": "🏋️ Bench"
+        },
+        {
+          "name": "Split Squat Jump",
+          "reps": "LADDER 3→6 · EACH SIDE",
+          "station": "🔵 Rack"
+        },
+        {
+          "name": "TRX Mid Row Neutral Grip",
+          "reps": "LADDER 3→6",
+          "station": "🔵 Rack"
+        },
+        {
+          "name": "TRX Anti- Rotation Press",
+          "reps": "LADDER 3→6 · EACH SIDE",
+          "station": "🔵 Rack"
+        }
+      ],
+      "source_file": "STUDIO RED Workouts June 2026 06.01.26-06.30.2026.pdf p.30",
+      "cardio_note": "Push members to maintain effort through the Moderate so heart rate is already climbing when they hit Max — that's what turns a short burst into a true max effort."
     }
-  ],
-  "day_count": 9
+  ]
 }
