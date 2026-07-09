@@ -136,7 +136,7 @@
         "Triceps"
       ],
       "modifications": [],
-      "video": null,
+      "video": "https://www.dropbox.com/s/00mgnz90cnwsnvg/Suspension%20Low%20Fly.mp4?st=96ds00ih&dl=0",
       "video_is_search_fallback": false
     },
     {
@@ -249,7 +249,7 @@
           "text": "Reduce squat depth. Smaller drop step — keep stance narrower than full sumo."
         }
       ],
-      "video": null,
+      "video": "https://www.dropbox.com/scl/fi/kclty9gilgn7hnatqpovz/Dumbbell-Dropstep-Squat-2-Arm.mp4?rlkey=h1gsdj9yhwruwp2llx98rvu3e&st=x008btgp&dl=0",
       "video_is_search_fallback": false
     },
     {
@@ -6149,6 +6149,4298 @@
         }
       ],
       "video": "https://www.dropbox.com/s/5bjnci23cucaa49/Suspension%20Anti-Rotation%20Press.mp4?dl=0",
+      "video_is_search_fallback": false
+    },
+    {
+      "name": "DB Box Squat",
+      "movement": "Holding a DB in the front rack position, stand feet hip-width at the end of the bench. Control the body down into a squat to sit on the bench, then stand up and repeat.",
+      "cues": [
+        "\"Control the sit — don't just drop onto the bench\"",
+        "\"Chest tall the whole way down\"",
+        "\"Tap and go — light touch, not a rest\"",
+        "\"Drive through the heels to stand\""
+      ],
+      "muscles_primary": [
+        "Quads",
+        "Glutes"
+      ],
+      "muscles_secondary": [
+        "Hamstrings",
+        "Core"
+      ],
+      "modifications": [
+        {
+          "type": "Easier",
+          "text": "Use a higher surface or go bodyweight."
+        },
+        {
+          "type": "Harder",
+          "text": "Pause on the bench for 2 seconds before standing."
+        },
+        {
+          "type": "Knee Issues",
+          "text": "Limit depth to a pain-free range."
+        }
+      ],
+      "video": "https://youtu.be/n23APgiQRcM",
+      "video_is_search_fallback": false
+    },
+    {
+      "name": "Popcorn Squat",
+      "movement": "Feet hip-width, drop into a squat and add a small jump, staying down in the lower range. Keep holding the low squat stance and 'pop' continuously without standing all the way up.",
+      "cues": [
+        "\"Stay low — live in the bottom of the squat\"",
+        "\"Small, springy jumps — quick off the floor\"",
+        "\"Chest tall, weight in your heels\"",
+        "\"Soft landings — knees track over your toes\""
+      ],
+      "muscles_primary": [
+        "Quads",
+        "Glutes"
+      ],
+      "muscles_secondary": [
+        "Calves",
+        "Core"
+      ],
+      "modifications": [
+        {
+          "type": "Easier",
+          "text": "Skip the jump — pulse in the bottom of the squat instead."
+        },
+        {
+          "type": "Harder",
+          "text": "Drop lower or hold the position longer between pops."
+        },
+        {
+          "type": "Knee Issues",
+          "text": "Limit depth to a pain-free range and remove the jump."
+        }
+      ],
+      "video": "https://www.dropbox.com/s/5dbfd3hr6x5utnl/Bodyweight%20Popcorn%20Squat.mp4?dl=0",
+      "video_is_search_fallback": false
+    },
+    {
+      "name": "TRX Atomic Push Up",
+      "movement": "Starting in a high plank with feet in the stirrups, complete a push up. At the top, tuck the knees toward the chest, then extend back out. Repeat the combo.",
+      "cues": [
+        "\"Push up first, then tuck — two distinct moves\"",
+        "\"Hips stay level through both phases\"",
+        "\"Full extension before the next tuck\"",
+        "\"Strong plank the entire combo\""
+      ],
+      "muscles_primary": [
+        "Chest",
+        "Core"
+      ],
+      "muscles_secondary": [
+        "Shoulders",
+        "Hip Flexors"
+      ],
+      "modifications": [
+        {
+          "type": "Easier",
+          "text": "Push up from the knees, tuck from the floor."
+        },
+        {
+          "type": "Harder",
+          "text": "Slow the tuck-and-extend tempo."
+        },
+        {
+          "type": "Wrist Issues",
+          "text": "Push up on fists or a slight incline."
+        }
+      ],
+      "video": "https://www.dropbox.com/s/tmxotw75n6p9caf/Suspension%20Atomic%20Push%20Up.mp4?dl=0",
+      "video_is_search_fallback": false
+    },
+    {
+      "name": "KB Row In Lunge",
+      "movement": "Step back into a lunge position with a soft bend in the front leg and the back leg straight, leaning slightly forward with the free hand on the front thigh. Extend the KB toward the floor, then pull it toward the chest and back down. Alternate and complete on both sides.",
+      "cues": [
+        "\"Hold the lunge — the lower body is frozen\"",
+        "\"Row to the ribs, elbow tight\"",
+        "\"Flat back — chest just above the front thigh\"",
+        "\"Long arm at the bottom of every rep\""
+      ],
+      "muscles_primary": [
+        "Lats",
+        "Upper Back"
+      ],
+      "muscles_secondary": [
+        "Glutes",
+        "Core"
+      ],
+      "modifications": [
+        {
+          "type": "Easier",
+          "text": "Rest the working hand on the thigh between rows."
+        },
+        {
+          "type": "Harder",
+          "text": "Pause at the top of each row."
+        },
+        {
+          "type": "Lower Back Issues",
+          "text": "Stand taller in the lean and lighten the bell."
+        }
+      ],
+      "video": "https://www.dropbox.com/s/bcmva60ykgqflq4/Kettlebell%20Row%20in%20Lunge%201%20Arm.mp4?dl=0",
+      "video_is_search_fallback": false
+    },
+    {
+      "name": "TRX Bicep Clutch",
+      "movement": "Face the anchor point, palms holding the handles facing each other, arms fully extended. Pull yourself toward your hands, bringing palms toward the armpits, elbows out but not above shoulder height. Clutch and hold, then release and repeat.",
+      "cues": [
+        "\"Pull the body to the hands, not the hands to the body\"",
+        "\"Elbows stay below the shoulders\"",
+        "\"Squeeze and hold at the top\"",
+        "\"Control the release — don't just fall back\""
+      ],
+      "muscles_primary": [
+        "Biceps"
+      ],
+      "muscles_secondary": [
+        "Upper Back",
+        "Core"
+      ],
+      "modifications": [
+        {
+          "type": "Easier",
+          "text": "Walk the feet back to reduce the angle."
+        },
+        {
+          "type": "Harder",
+          "text": "Walk the feet forward or extend the hold."
+        },
+        {
+          "type": "Elbow Issues",
+          "text": "Shorten the range and skip the hold."
+        }
+      ],
+      "video": "https://www.dropbox.com/s/v0hdhjsi6evgmv7/Suspension%20Biceps%20Clutch.mp4?dl=0",
+      "video_is_search_fallback": false
+    },
+    {
+      "name": "DB Single Arm Deadlift",
+      "movement": "Feet hip-width, a DB in one hand held in front of the thighs, knees soft. Back straight, reach the butt to the rear wall as deep as comfortable, then drive through the heels to stand.",
+      "cues": [
+        "\"Hips back — the bell just rides down\"",
+        "\"Flat back, proud chest\"",
+        "\"Squeeze the glutes to stand\"",
+        "\"Keep the bell close to the leg\""
+      ],
+      "muscles_primary": [
+        "Hamstrings",
+        "Glutes"
+      ],
+      "muscles_secondary": [
+        "Lower Back",
+        "Core"
+      ],
+      "modifications": [
+        {
+          "type": "Easier",
+          "text": "Reduce depth or use both hands on one DB."
+        },
+        {
+          "type": "Harder",
+          "text": "Slow the lower to 3 seconds."
+        },
+        {
+          "type": "Lower Back Issues",
+          "text": "Shorten the range and lighten the load."
+        }
+      ],
+      "video": "https://www.dropbox.com/s/dcob49y3xa2ajxk/Dumbbell%20Single%20Arm%20Deadlift.mp4?dl=0",
+      "video_is_search_fallback": false
+    },
+    {
+      "name": "DB Incline Chest Fly Alt.",
+      "movement": "Lie on the incline bench, feet on the floor, holding the DBs above the chest with a slight bend in the elbows. Drop one arm at a time, opening it as though hugging the ceiling, then return and repeat on the opposite side.",
+      "cues": [
+        "\"One arm flies while the other holds steady\"",
+        "\"Soft elbows the whole way\"",
+        "\"Open wide, but don't overstretch the shoulder\"",
+        "\"Control the return — squeeze at the top\""
+      ],
+      "muscles_primary": [
+        "Chest",
+        "Front Delts"
+      ],
+      "muscles_secondary": [
+        "Shoulders",
+        "Core"
+      ],
+      "modifications": [
+        {
+          "type": "Easier",
+          "text": "Lighten the DBs or shorten the range."
+        },
+        {
+          "type": "Harder",
+          "text": "Both arms together for a bigger stretch load."
+        },
+        {
+          "type": "Shoulder Issues",
+          "text": "Reduce the fly depth to a comfortable range."
+        }
+      ],
+      "video": "https://www.dropbox.com/s/4ztogsh1hsum0p5/Dumbbell%20Incline%20Chest%20Fly%20Alternating.mp4?dl=0",
+      "video_is_search_fallback": false
+    },
+    {
+      "name": "Fitband Triceps Extension",
+      "movement": "Hands start overhead. Bend at the elbow as the hands come down behind the head. Press the hands away, extending the arms back to start, while maintaining a strong core position. ⚠️ Use the same setup as the video.",
+      "cues": [
+        "\"Elbows point to the ceiling, stay tight to the head\"",
+        "\"Only the forearms move\"",
+        "\"Full extension at the top\"",
+        "\"Brace the core — don't let the band pull you\""
+      ],
+      "muscles_primary": [
+        "Triceps"
+      ],
+      "muscles_secondary": [
+        "Core",
+        "Shoulders"
+      ],
+      "modifications": [
+        {
+          "type": "Easier",
+          "text": "Step toward the anchor to reduce tension."
+        },
+        {
+          "type": "Harder",
+          "text": "Step back, pause at full extension."
+        },
+        {
+          "type": "Shoulder Issues",
+          "text": "Reduce range — stop before full overhead."
+        }
+      ],
+      "video": "https://youtu.be/qNDEeE73WPo",
+      "video_is_search_fallback": false
+    },
+    {
+      "name": "TRX Crossing Balance",
+      "movement": "Begin feet hip-width, holding the TRX handles at 90 degrees. Step backward, crossing the knee behind the other leg, knee almost to the ground, torso upright. Return, switch legs, and repeat.",
+      "cues": [
+        "\"Cross behind — not straight back\"",
+        "\"Torso stays upright, don't lean into the straps\"",
+        "\"Knee hovers, doesn't slam down\"",
+        "\"Balance through the whole rep\""
+      ],
+      "muscles_primary": [
+        "Glutes",
+        "Quads"
+      ],
+      "muscles_secondary": [
+        "Core",
+        "Adductors"
+      ],
+      "modifications": [
+        {
+          "type": "Easier",
+          "text": "Shorten the cross-step and use the straps for more support."
+        },
+        {
+          "type": "Harder",
+          "text": "Reduce hand support and slow the tempo."
+        },
+        {
+          "type": "Knee Issues",
+          "text": "Limit depth to a pain-free range."
+        }
+      ],
+      "video": "https://www.dropbox.com/s/sc91jfiu0sqo4fz/Suspension%20Crossing%20Balance.mp4?dl=0",
+      "video_is_search_fallback": false
+    },
+    {
+      "name": "Bent Knee Alt. Leg Raise",
+      "movement": "Lying flat, hands under the glutes if needed, start with both legs straight up. Lower one leg at a time with a bent knee just before it taps down, then raise and switch sides, keeping the core engaged.",
+      "cues": [
+        "\"Low back glued down the whole set\"",
+        "\"Bend the knee as it lowers — shortens the lever\"",
+        "\"Hover, don't touch, before switching\"",
+        "\"Keep the working rhythm slow and controlled\""
+      ],
+      "muscles_primary": [
+        "Lower Abs",
+        "Core"
+      ],
+      "muscles_secondary": [
+        "Hip Flexors",
+        "Quads"
+      ],
+      "modifications": [
+        {
+          "type": "Easier",
+          "text": "Bend both knees more to shorten the range further."
+        },
+        {
+          "type": "Harder",
+          "text": "Straighten the legs more or add a pause at the bottom."
+        },
+        {
+          "type": "Lower Back Issues",
+          "text": "Shrink the range — keep the legs higher."
+        }
+      ],
+      "video": "https://www.dropbox.com/s/48qygyc8wnxd3n0/Bent%20Knee%20Alternating%20Leg%20Raise.mp4?dl=0",
+      "video_is_search_fallback": false
+    },
+    {
+      "name": "DB Crossbody Reverse Lunge 1arm",
+      "movement": "DB in one hand. Step back with that same leg into a reverse lunge and reach the DB across the body toward the front foot's ankle. As you stand, return the DB to your side. Complete reps on one side, then switch.",
+      "cues": [
+        "\"Reach across the body — feel the stretch through the hip\"",
+        "\"Front knee over the ankle, back knee drops straight down\"",
+        "\"Drive through the front heel to stand\"",
+        "\"Stay tall through the spine as you reach\""
+      ],
+      "muscles_primary": [
+        "Glutes",
+        "Quads"
+      ],
+      "muscles_secondary": [
+        "Core",
+        "Hamstrings"
+      ],
+      "modifications": [
+        {
+          "type": "Easier",
+          "text": "Reach toward the knee instead of the ankle, or use no weight."
+        },
+        {
+          "type": "Harder",
+          "text": "Slow the descent or increase the DB load."
+        },
+        {
+          "type": "Knee Issues",
+          "text": "Shorten the lunge and limit depth to a pain-free range."
+        }
+      ],
+      "video": "https://www.dropbox.com/s/k5b4mgpjbzwi1xi/Dumbbell%201%20Arm%20Crossbody%20Reverse%20Lunge.mp4?dl=0",
+      "video_is_search_fallback": false
+    },
+    {
+      "name": "KB Offset Front Rack Squat",
+      "movement": "Holding the KB in the front rack position on one side, complete a squat. Switch sides when it's time to switch.",
+      "cues": [
+        "\"Elbow tucked — the rack doesn't shift\"",
+        "\"Brace against the uneven load\"",
+        "\"Sit between the heels, chest tall\"",
+        "\"Don't let the bell pull you sideways\""
+      ],
+      "muscles_primary": [
+        "Quads",
+        "Glutes"
+      ],
+      "muscles_secondary": [
+        "Core",
+        "Obliques"
+      ],
+      "modifications": [
+        {
+          "type": "Easier",
+          "text": "Use a lighter bell or hold it in a goblet position instead."
+        },
+        {
+          "type": "Harder",
+          "text": "Pause at the bottom of each rep."
+        },
+        {
+          "type": "Knee Issues",
+          "text": "Limit depth to a pain-free range."
+        }
+      ],
+      "video": "https://www.dropbox.com/s/sb7uup613fjcp1s/Kettlebell%20Offset%20Front%20Rack%20Squat.mp4?dl=0",
+      "video_is_search_fallback": false
+    },
+    {
+      "name": "DB Goblet Bulgarian",
+      "movement": "Holding a DB in the goblet position, place one foot on the bench top behind you. Torso tall, drop into a lunge keeping the back knee under the hip, then drive through the front heel to stand.",
+      "cues": [
+        "\"Front foot far enough out — knee tracks over the ankle\"",
+        "\"Drop straight down — back knee under your hip\"",
+        "\"Chest tall — don't fold over the bell\"",
+        "\"Front heel does the work — push the floor away\""
+      ],
+      "muscles_primary": [
+        "Quads",
+        "Glutes"
+      ],
+      "muscles_secondary": [
+        "Hamstrings",
+        "Core"
+      ],
+      "modifications": [
+        {
+          "type": "Easier",
+          "text": "Use bodyweight only, or rear foot on a lower surface."
+        },
+        {
+          "type": "Harder",
+          "text": "Pause 2 seconds at the bottom of each rep."
+        },
+        {
+          "type": "Knee Issues",
+          "text": "Limit depth to a pain-free range and shorten the stance."
+        }
+      ],
+      "video": "https://www.dropbox.com/scl/fi/b7ws65lnjpeqfhibpibx0/Dumbbell-Goblet-Bulgarian-Split-Squat.mp4?rlkey=ob4vayl1gx395q6ffrfoldsza&st=m9hvxwil&dl=0",
+      "video_is_search_fallback": false
+    },
+    {
+      "name": "DB Overhead Press",
+      "movement": "Stand tall, core braced. Hold the DB or KB at or in front of the shoulders. Press the weight toward the ceiling, then return to the start.",
+      "cues": [
+        "\"Press straight up — finish with the bicep by the ear\"",
+        "\"Squeeze the glutes — no leaning back\"",
+        "\"Ribs down — brace before every press\"",
+        "\"Lower with control to the shoulder\""
+      ],
+      "muscles_primary": [
+        "Shoulders",
+        "Triceps"
+      ],
+      "muscles_secondary": [
+        "Upper Back",
+        "Core"
+      ],
+      "modifications": [
+        {
+          "type": "Easier",
+          "text": "Lighten the weight or press seated with back support."
+        },
+        {
+          "type": "Harder",
+          "text": "Slow the lower to 3 seconds."
+        },
+        {
+          "type": "Shoulder Issues",
+          "text": "Press to a comfortable height instead of full lockout."
+        }
+      ],
+      "video": "https://www.dropbox.com/s/phj9wv76df13li1/Dumbbell%20Overhead%20Press.mp4?dl=0",
+      "video_is_search_fallback": false
+    },
+    {
+      "name": "Fitband Flys in Lunge",
+      "movement": "Facing away from the inclined bench with bands attached to the bench top, one handle in each hand, arms open wide. Squeeze the hands toward each other in front of the chest, then control the return to open wide.",
+      "cues": [
+        "\"Slight bend in the elbows — hug a big tree\"",
+        "\"Squeeze the chest at the front — don't just touch hands\"",
+        "\"Control the return — slow is strong here\"",
+        "\"Tall posture — don't round the shoulders forward\""
+      ],
+      "muscles_primary": [
+        "Chest",
+        "Front Delts"
+      ],
+      "muscles_secondary": [
+        "Biceps",
+        "Core"
+      ],
+      "modifications": [
+        {
+          "type": "Easier",
+          "text": "Step toward the anchor to reduce tension."
+        },
+        {
+          "type": "Harder",
+          "text": "Step back for more tension, pause at the front."
+        },
+        {
+          "type": "Shoulder Issues",
+          "text": "Shorten the open-wide range."
+        }
+      ],
+      "video": "https://youtu.be/BSKJVSAefRQ",
+      "video_is_search_fallback": false
+    },
+    {
+      "name": "TRX Torso Rotation Short lever",
+      "movement": "Start standing sideways with the hands in the middle of the chest. Rotate the upper body to face the anchor point, keeping the hands close to the chest and arms tucked into the body. Rotate back to the side and repeat.",
+      "cues": [
+        "\"Short lever — hands stay glued to the chest\"",
+        "\"Rotate from the ribs, not just the arms\"",
+        "\"Feet stay planted — only the torso turns\"",
+        "\"Control both directions equally\""
+      ],
+      "muscles_primary": [
+        "Obliques",
+        "Core"
+      ],
+      "muscles_secondary": [
+        "Shoulders",
+        "Chest"
+      ],
+      "modifications": [
+        {
+          "type": "Easier",
+          "text": "Step toward the anchor and shrink the rotation."
+        },
+        {
+          "type": "Harder",
+          "text": "Step back for more resistance and pause at full rotation."
+        },
+        {
+          "type": "Lower Back Issues",
+          "text": "Slow the tempo and reduce the range."
+        }
+      ],
+      "video": "https://www.dropbox.com/s/lg4hjw1u6tnd88b/Suspension%20Torso%20Rotation%20Short%20Lever.mp4?dl=0",
+      "video_is_search_fallback": false
+    },
+    {
+      "name": "KB Sumo Deadlift",
+      "movement": "Feet wider than the shoulders, toes out. Sit the hips back with a flat back and pick up the KB by squeezing the glutes to stand tall. Send the hips back to return.",
+      "cues": [
+        "\"Knees out over the toes as you sit back\"",
+        "\"Chest proud — flat back start to finish\"",
+        "\"Stand by squeezing the glutes, not yanking the back\"",
+        "\"Bell travels straight up and down between the legs\""
+      ],
+      "muscles_primary": [
+        "Glutes",
+        "Quads"
+      ],
+      "muscles_secondary": [
+        "Hamstrings",
+        "Adductors"
+      ],
+      "modifications": [
+        {
+          "type": "Easier",
+          "text": "Elevate the bell on a riser to shorten the range."
+        },
+        {
+          "type": "Harder",
+          "text": "Pause at the bottom or slow the lower."
+        },
+        {
+          "type": "Lower Back Issues",
+          "text": "Reduce depth and lighten the load."
+        }
+      ],
+      "video": "https://www.dropbox.com/s/wziiq9bdxyqv5ov/Kettlebell%20Sumo%20Deadlift.mp4?dl=0",
+      "video_is_search_fallback": false
+    },
+    {
+      "name": "TRX T Pull",
+      "movement": "Start with arms extended, feet under the anchors. Keeping the arms straight, pull them apart to a T position, return, and repeat.",
+      "cues": [
+        "\"Straight arms — this is a raise, not a row\"",
+        "\"T goes wide, squeeze the blades\"",
+        "\"Plank body — no hip hinge to help\"",
+        "\"Control the return — full extension every rep\""
+      ],
+      "muscles_primary": [
+        "Rear Delts",
+        "Upper Back"
+      ],
+      "muscles_secondary": [
+        "Shoulders",
+        "Core"
+      ],
+      "modifications": [
+        {
+          "type": "Easier",
+          "text": "Walk the feet back to reduce the angle."
+        },
+        {
+          "type": "Harder",
+          "text": "Walk the feet forward, pause at the T."
+        },
+        {
+          "type": "Shoulder Issues",
+          "text": "Shorten the range of the pull."
+        }
+      ],
+      "video": "https://www.dropbox.com/s/rxkri2kxkrt8of9/Suspension%20T-Pull.mp4?dl=0",
+      "video_is_search_fallback": false
+    },
+    {
+      "name": "DB Thruster",
+      "movement": "Hold the DB in the front rack position. Sit back into a squat, chest tall. Drive the heels down and thrust the hips forward to standing, driving the weights to the ceiling. Return to start.",
+      "cues": [
+        "\"Squat first, then punch it overhead\"",
+        "\"Full squat before the drive — don't shortcut it\"",
+        "\"Stand tall before the press finishes\"",
+        "\"Catch soft on the way back down\""
+      ],
+      "muscles_primary": [
+        "Quads",
+        "Shoulders"
+      ],
+      "muscles_secondary": [
+        "Glutes",
+        "Core"
+      ],
+      "modifications": [
+        {
+          "type": "Easier",
+          "text": "Split the squat and press into two moves."
+        },
+        {
+          "type": "Harder",
+          "text": "Add a pause in the squat before driving up."
+        },
+        {
+          "type": "Shoulder Issues",
+          "text": "Press to a comfortable height instead of lockout."
+        }
+      ],
+      "video": "https://www.dropbox.com/s/y9zyb6vhdempjcx/Dumbbell%20Thruster.mp4?dl=0",
+      "video_is_search_fallback": false
+    },
+    {
+      "name": "DB Renegade Row",
+      "movement": "Plank on the DBs. Staying squared to the ground, drive one elbow back, pulling the DB to the hip. Return to the floor and repeat on the other side.",
+      "cues": [
+        "\"Squared hips — fight the twist the whole time\"",
+        "\"Row to the hip, elbow tight\"",
+        "\"Wide feet for a stable base\"",
+        "\"Slow lower — no dropping the DB\""
+      ],
+      "muscles_primary": [
+        "Upper Back",
+        "Core"
+      ],
+      "muscles_secondary": [
+        "Lats",
+        "Shoulders"
+      ],
+      "modifications": [
+        {
+          "type": "Easier",
+          "text": "Widen the feet further or drop to the knees."
+        },
+        {
+          "type": "Harder",
+          "text": "Narrow the stance or pause at the top of each row."
+        },
+        {
+          "type": "Wrist Issues",
+          "text": "Use hex DBs and keep the wrists neutral."
+        }
+      ],
+      "video": "https://www.dropbox.com/s/sugwh8ei4kg4e5n/Renegade%20Row.mp4?dl=0",
+      "video_is_search_fallback": false
+    },
+    {
+      "name": "Lying Leg Raise on Bench",
+      "movement": "Lying flat on the bench, hands under the glutes if needed, start with both legs straight up in the air. Lower them together with control until just before they tap the floor, then raise back to the top and repeat.",
+      "cues": [
+        "\"Press your low back into the bench the whole time\"",
+        "\"Control the lower — that's where the work is\"",
+        "\"Keep the legs long — only a soft bend in the knees\"",
+        "\"Stop the lower before your back arches off the bench\""
+      ],
+      "muscles_primary": [
+        "Lower Abs",
+        "Core"
+      ],
+      "muscles_secondary": [
+        "Hip Flexors",
+        "Quads"
+      ],
+      "modifications": [
+        {
+          "type": "Easier",
+          "text": "Bend the knees to 90° to shorten the lever."
+        },
+        {
+          "type": "Harder",
+          "text": "Pause 2 seconds with the legs just off the floor each rep."
+        },
+        {
+          "type": "Lower Back Issues",
+          "text": "Reduce the range and never let the back arch."
+        }
+      ],
+      "video": "https://www.dropbox.com/s/xipmht8q1qf7355/Lying%20Leg%20Raise.mp4?dl=0",
+      "video_is_search_fallback": false
+    },
+    {
+      "name": "TRX Single Leg Deadlift Alt.",
+      "movement": "Stand on one leg, hands in the handles, facing away from the anchor. Hinge at the hips and extend the other thigh up toward the ceiling. Extend the arms and align the body horizontal to the floor, then lower back to start. Switch legs and repeat.",
+      "cues": [
+        "\"Hinge, don't squat — the straps just assist balance\"",
+        "\"One line — ankle to head\"",
+        "\"Squeeze the standing glute to rise\"",
+        "\"Slow and controlled — balance is the challenge\""
+      ],
+      "muscles_primary": [
+        "Hamstrings",
+        "Glutes"
+      ],
+      "muscles_secondary": [
+        "Core",
+        "Shoulders"
+      ],
+      "modifications": [
+        {
+          "type": "Easier",
+          "text": "Keep more weight in the straps and reduce the hinge depth."
+        },
+        {
+          "type": "Harder",
+          "text": "Lean further out and rely less on the straps."
+        },
+        {
+          "type": "Balance Issues",
+          "text": "Keep the back toe lightly down for extra stability."
+        }
+      ],
+      "video": "https://www.dropbox.com/s/7cl3glndq46iu8h/Suspension%20Single%20Leg%20Deadlift.mp4?dl=0",
+      "video_is_search_fallback": false
+    },
+    {
+      "name": "TRX Ab Tuck",
+      "movement": "Feet secured in the TRX handles, hold a high plank with the core engaged. Pull the knees to the chest, then extend the legs back to start and repeat.",
+      "cues": [
+        "\"Tuck from the core, not the shoulders\"",
+        "\"Hips stay level — no piking or sagging\"",
+        "\"Shoulders stacked over the wrists\"",
+        "\"Control the extend — don't let the legs whip out\""
+      ],
+      "muscles_primary": [
+        "Core",
+        "Hip Flexors"
+      ],
+      "muscles_secondary": [
+        "Shoulders",
+        "Lower Abs"
+      ],
+      "modifications": [
+        {
+          "type": "Easier",
+          "text": "Tuck one knee at a time instead of both."
+        },
+        {
+          "type": "Harder",
+          "text": "Slow the tempo to a 3-second tuck and extend."
+        },
+        {
+          "type": "Shoulder Issues",
+          "text": "Floor-based tucks with feet on a slider instead."
+        }
+      ],
+      "video": "https://www.dropbox.com/s/q821naiupwpa1e3/Suspension%20Ab%20Tuck.mp4?st=zviikp41&dl=0",
+      "video_is_search_fallback": false
+    },
+    {
+      "name": "DB Romanian Deadlift",
+      "movement": "Feet hip-width, a DB in each hand held in front of the thighs, knees soft. Back straight, reach the butt to the rear wall as deep as comfortable.",
+      "cues": [
+        "\"Hips back, not down — this is a hinge\"",
+        "\"Slide the DBs down the thighs — keep them close\"",
+        "\"Flat back — proud chest at every depth\"",
+        "\"Squeeze the glutes to stand, don't pull with the back\""
+      ],
+      "muscles_primary": [
+        "Hamstrings",
+        "Glutes"
+      ],
+      "muscles_secondary": [
+        "Lower Back",
+        "Core"
+      ],
+      "modifications": [
+        {
+          "type": "Easier",
+          "text": "Reduce depth — stop where the back stays flat."
+        },
+        {
+          "type": "Harder",
+          "text": "Slow the lower to 3 seconds or pause at the bottom."
+        },
+        {
+          "type": "Lower Back Issues",
+          "text": "Shorten the range and lighten the load."
+        }
+      ],
+      "video": "https://www.dropbox.com/s/hq3it804y05xa9j/Dumbbell%20Romanian%20Deadlift.mp4?dl=0",
+      "video_is_search_fallback": false
+    },
+    {
+      "name": "Plank with Knee to both elbows",
+      "movement": "Holding a plank — elevate the hands to the bench top if needed — bring one knee to an elbow, straighten the same leg, then take the same knee to the opposite elbow. Repeat on the other leg.",
+      "cues": [
+        "\"Both elbows, one leg at a time — cross first, then same side\"",
+        "\"Hips stay low and level throughout\"",
+        "\"Push the floor away the whole time\"",
+        "\"Move slow and deliberate\""
+      ],
+      "muscles_primary": [
+        "Core",
+        "Obliques"
+      ],
+      "muscles_secondary": [
+        "Hip Flexors",
+        "Shoulders"
+      ],
+      "modifications": [
+        {
+          "type": "Easier",
+          "text": "Elevate the hands on the bench."
+        },
+        {
+          "type": "Harder",
+          "text": "Pause 2 seconds at each elbow."
+        },
+        {
+          "type": "Wrist Issues",
+          "text": "Drop to a forearm plank."
+        }
+      ],
+      "video": "https://www.dropbox.com/s/dsdh1s1dk1d0izg/Plank%20with%20Knee%20to%20Both%20Elbows.mp4?dl=0",
+      "video_is_search_fallback": false
+    },
+    {
+      "name": "Ball Push Up Hands on Ball",
+      "movement": "Start in a high plank with both hands on the med ball under the chest. Lower safely as low as you can toward the ground, then push back up to the start and repeat.",
+      "cues": [
+        "\"Both hands grip the ball — control the wobble\"",
+        "\"Chest drops level with the hands\"",
+        "\"Squeeze the glutes — one straight line\"",
+        "\"Push through the ball just as hard as the floor\""
+      ],
+      "muscles_primary": [
+        "Chest",
+        "Triceps"
+      ],
+      "muscles_secondary": [
+        "Shoulders",
+        "Core"
+      ],
+      "modifications": [
+        {
+          "type": "Easier",
+          "text": "Drop to the knees, keeping the same depth."
+        },
+        {
+          "type": "Harder",
+          "text": "Slow the lower or add a pause at the bottom."
+        },
+        {
+          "type": "Wrist Issues",
+          "text": "Use a wider grip on the ball, neutral wrists."
+        }
+      ],
+      "video": "https://www.dropbox.com/s/w4x1v25ojtm7r8c/Ball%20Pushup%20Hands%20on%20Ball.mp4?dl=0",
+      "video_is_search_fallback": false
+    },
+    {
+      "name": "TRX Mid Row Overhand Grip",
+      "movement": "Start with the arms extended, feet under the anchor, overhand grip. Pull the handles to the ribs, return, and repeat.",
+      "cues": [
+        "\"Palms down — pull to the ribs\"",
+        "\"Elbows graze the body on the way back\"",
+        "\"Squeeze the blades at the top\"",
+        "\"Long arms at the bottom of every rep\""
+      ],
+      "muscles_primary": [
+        "Lats",
+        "Upper Back"
+      ],
+      "muscles_secondary": [
+        "Biceps",
+        "Core"
+      ],
+      "modifications": [
+        {
+          "type": "Easier",
+          "text": "Walk the feet back to stand more upright."
+        },
+        {
+          "type": "Harder",
+          "text": "Walk the feet forward or pause at the top."
+        },
+        {
+          "type": "Elbow Issues",
+          "text": "Switch to a neutral grip."
+        }
+      ],
+      "video": "https://www.dropbox.com/s/t6k5d270fk32ue4/Suspension%20Mid%20Row%20Overhand%20Grip.mp4?dl=0",
+      "video_is_search_fallback": false
+    },
+    {
+      "name": "DB Squat",
+      "movement": "Stand feet hip-width, DBs on the shoulders with elbows in front of the body. Sit back, chest tall, as deep as possible. Stand squeezing the glutes, repeat.",
+      "cues": [
+        "\"Elbows up — keep the rack tight\"",
+        "\"Sit into it — chest tall the whole way down\"",
+        "\"Drive through the heels, squeeze at the top\"",
+        "\"Own the bottom — don't bounce out of it\""
+      ],
+      "muscles_primary": [
+        "Quads",
+        "Glutes"
+      ],
+      "muscles_secondary": [
+        "Hamstrings",
+        "Core"
+      ],
+      "modifications": [
+        {
+          "type": "Easier",
+          "text": "Reduce depth or go bodyweight."
+        },
+        {
+          "type": "Harder",
+          "text": "Pause 2 seconds at the bottom."
+        },
+        {
+          "type": "Knee Issues",
+          "text": "Limit depth to a pain-free range, toes slightly out."
+        }
+      ],
+      "video": "https://www.dropbox.com/s/4td6y40udjk5jr1/Dumbbell%20Squat.mp4?dl=0",
+      "video_is_search_fallback": false
+    },
+    {
+      "name": "DB Single Leg Hip Thrust",
+      "movement": "Upper back on the bench or floor, legs bent. Lift one leg. Drive the other heel into the ground and squeeze the glutes to lift the hips as high as possible. Lower with control. Alternate legs.",
+      "cues": [
+        "\"One heel drives — the other leg is just a passenger\"",
+        "\"Squeeze at the top — full hip lockout\"",
+        "\"Hips stay level — don't let the free side drop\"",
+        "\"Ribs down, chin tucked\""
+      ],
+      "muscles_primary": [
+        "Glutes",
+        "Hamstrings"
+      ],
+      "muscles_secondary": [
+        "Core",
+        "Quads"
+      ],
+      "modifications": [
+        {
+          "type": "Easier",
+          "text": "Two-leg hip thrust, or keep the free foot lightly down."
+        },
+        {
+          "type": "Harder",
+          "text": "Add a DB across the hips or pause at the top."
+        },
+        {
+          "type": "Lower Back Issues",
+          "text": "Reduce the range — no arch at the top."
+        }
+      ],
+      "video": "https://www.dropbox.com/s/1g8ve8rzf49bc9t/Dumbbell%20Hip%20Thrust%20Single%20Leg%20.mp4?dl=0",
+      "video_is_search_fallback": false
+    },
+    {
+      "name": "Push Up to Shoulder Tap",
+      "movement": "Complete a push up, then tap one shoulder with the opposite hand. Push up again and tap the other shoulder. Repeat the combo.",
+      "cues": [
+        "\"Push up first, tap second — don't rush the order\"",
+        "\"Widen the feet for a stable base\"",
+        "\"Hips stay square during the tap\"",
+        "\"Alternate sides every rep\""
+      ],
+      "muscles_primary": [
+        "Chest",
+        "Core"
+      ],
+      "muscles_secondary": [
+        "Shoulders",
+        "Obliques"
+      ],
+      "modifications": [
+        {
+          "type": "Easier",
+          "text": "Push up from the knees before tapping."
+        },
+        {
+          "type": "Harder",
+          "text": "Widen the base further or slow the push up."
+        },
+        {
+          "type": "Wrist Issues",
+          "text": "Push up on fists."
+        }
+      ],
+      "video": "https://www.dropbox.com/s/la1uf2xkrrz9v58/Bodyweight%20Pushup%20to%20Shoulder%20Tap.mp4?dl=0",
+      "video_is_search_fallback": false
+    },
+    {
+      "name": "DB Wood Chop",
+      "movement": "Hold the DB over one shoulder with arms straight. Lower it across the body to the opposite hip, as though swinging an axe to chop wood.",
+      "cues": [
+        "\"Chop on a diagonal — shoulder to opposite hip\"",
+        "\"Rotate from the ribs and hips, arms stay long\"",
+        "\"Control the swing both directions\"",
+        "\"Pivot the back foot as you chop through\""
+      ],
+      "muscles_primary": [
+        "Obliques",
+        "Core"
+      ],
+      "muscles_secondary": [
+        "Shoulders",
+        "Glutes"
+      ],
+      "modifications": [
+        {
+          "type": "Easier",
+          "text": "Shorten the arc — chest to hip instead of overhead."
+        },
+        {
+          "type": "Harder",
+          "text": "Add a squat as the weight travels down."
+        },
+        {
+          "type": "Lower Back Issues",
+          "text": "Slow the tempo and shrink the rotation range."
+        }
+      ],
+      "video": "https://www.dropbox.com/s/65qg623hs2tgwar/Woodchop.mp4?dl=0",
+      "video_is_search_fallback": false
+    },
+    {
+      "name": "TRX Bicep Curl",
+      "movement": "Hold the TRX handles, palms up, at shoulder height, body slightly angled away from the anchor. Keeping the elbows at shoulder height, curl the handles to the shoulders, then slowly extend the arms to complete.",
+      "cues": [
+        "\"Elbows stay high and still\"",
+        "\"Curl all the way, extend all the way\"",
+        "\"Lean into the straps for the resistance\"",
+        "\"Slow on the extend — control the straps\""
+      ],
+      "muscles_primary": [
+        "Biceps"
+      ],
+      "muscles_secondary": [
+        "Forearms",
+        "Core"
+      ],
+      "modifications": [
+        {
+          "type": "Easier",
+          "text": "Stand more upright to reduce resistance."
+        },
+        {
+          "type": "Harder",
+          "text": "Lean back further for more load."
+        },
+        {
+          "type": "Elbow Issues",
+          "text": "Shorten the range at full extension."
+        }
+      ],
+      "video": "https://www.dropbox.com/s/k2d3kd51q293z64/Suspension%20Bicep%20Curl.mp4?dl=0",
+      "video_is_search_fallback": false
+    },
+    {
+      "name": "TRX Triceps Press",
+      "movement": "Hands start out front. Bend at the elbow as the hands come toward the forehead. Press the hands away, extending the arms back to start, while maintaining a plank position.",
+      "cues": [
+        "\"Elbows stay pointed forward, not flared\"",
+        "\"Plank the whole time — hips don't sag\"",
+        "\"Full extension on the press\"",
+        "\"Control the bend — don't let the straps yank you\""
+      ],
+      "muscles_primary": [
+        "Triceps"
+      ],
+      "muscles_secondary": [
+        "Core",
+        "Shoulders"
+      ],
+      "modifications": [
+        {
+          "type": "Easier",
+          "text": "Walk the feet back to stand more upright."
+        },
+        {
+          "type": "Harder",
+          "text": "Walk the feet forward for more resistance."
+        },
+        {
+          "type": "Shoulder Issues",
+          "text": "Shorten the range near the forehead."
+        }
+      ],
+      "video": "https://www.dropbox.com/s/ctp5hri2qeiwl9a/Suspension%20Tricep%20Extension.mp4?dl=0",
+      "video_is_search_fallback": false
+    },
+    {
+      "name": "DB Goblet Cossack Squat Alt.",
+      "movement": "Very wide stance, toes straight ahead, DB in the goblet position. Sit the butt back to the right side, drive through the right heel to stand, then repeat on the left.",
+      "cues": [
+        "\"Sit into one hip — the other leg stays long, toes up\"",
+        "\"Bell held tight — don't let it pull you over\"",
+        "\"Chest tall as you sink\"",
+        "\"Push through the whole foot to come back up\""
+      ],
+      "muscles_primary": [
+        "Glutes",
+        "Quads"
+      ],
+      "muscles_secondary": [
+        "Adductors",
+        "Core"
+      ],
+      "modifications": [
+        {
+          "type": "Easier",
+          "text": "Bodyweight Cossack, holding a rack for balance."
+        },
+        {
+          "type": "Harder",
+          "text": "Deeper range or pause at the bottom."
+        },
+        {
+          "type": "Knee Issues",
+          "text": "Limit depth — a half-range Cossack still counts."
+        }
+      ],
+      "video": "https://www.dropbox.com/s/fs704saybkpx54i/Dumbbell%20Goblet%20Cossack%20Squat.mp4?dl=0",
+      "video_is_search_fallback": false
+    },
+    {
+      "name": "DB Incline fly and Press",
+      "movement": "Bench set to incline, a DB in each hand. Alternate between a chest fly and a chest press.",
+      "cues": [
+        "\"Press first, then fly — same rhythm every time\"",
+        "\"Soft elbows on the fly\"",
+        "\"Ribs down, low back gently on the bench\"",
+        "\"Same control on both — the fly is not a rest\""
+      ],
+      "muscles_primary": [
+        "Chest",
+        "Front Delts"
+      ],
+      "muscles_secondary": [
+        "Triceps",
+        "Core"
+      ],
+      "modifications": [
+        {
+          "type": "Easier",
+          "text": "Lighten the DBs — the fly is the limiter."
+        },
+        {
+          "type": "Harder",
+          "text": "Slow both lowers to 3 seconds."
+        },
+        {
+          "type": "Shoulder Issues",
+          "text": "Shorten the fly range."
+        }
+      ],
+      "video": "https://www.dropbox.com/scl/fi/xin4y0y9iwnxgnn62aujw/Dumbbell-Incline-Fly-and-Press.mp4?dl=0&rlkey=q65ov7fwcvwbprhc58knn5n7n",
+      "video_is_search_fallback": false
+    },
+    {
+      "name": "DB Row to Squat Thrust",
+      "movement": "DB in each hand, start in a plank position. Jump the feet up and outside the hips while bent over, soft bend in the knees, and complete a row, driving the elbows back toward the ceiling. Go back to plank and repeat the combo.",
+      "cues": [
+        "\"Jump the feet to a squat stance, then row\"",
+        "\"Row both bells to the hips together\"",
+        "\"Flat back through the whole combo\"",
+        "\"Jump back to plank with control\""
+      ],
+      "muscles_primary": [
+        "Upper Back",
+        "Quads"
+      ],
+      "muscles_secondary": [
+        "Lats",
+        "Core"
+      ],
+      "modifications": [
+        {
+          "type": "Easier",
+          "text": "Step instead of jump, and row one side at a time."
+        },
+        {
+          "type": "Harder",
+          "text": "Heavier DBs or a faster cycle."
+        },
+        {
+          "type": "Knee Issues",
+          "text": "Step the feet in rather than jumping."
+        }
+      ],
+      "video": "https://www.dropbox.com/s/kahjc9o65lh1ugq/Row%20to%20Squat%20Thrust.mp4?dl=0",
+      "video_is_search_fallback": false
+    },
+    {
+      "name": "Ball Slam to Burpee",
+      "movement": "Start feet under the hips, holding the med ball at the chest. Press it up overhead and slam it down to the ground. Drop the body down to complete a burpee, jump up, and repeat.",
+      "cues": [
+        "\"Full reach overhead before the slam\"",
+        "\"Chest to the floor on the burpee\"",
+        "\"Jump up with intent — full extension\"",
+        "\"Find a pace you can hold\""
+      ],
+      "muscles_primary": [
+        "Shoulders",
+        "Core"
+      ],
+      "muscles_secondary": [
+        "Quads",
+        "Chest"
+      ],
+      "modifications": [
+        {
+          "type": "Easier",
+          "text": "Step back and in for the burpee, skip the jump."
+        },
+        {
+          "type": "Harder",
+          "text": "Add a push up in the burpee."
+        },
+        {
+          "type": "Knee Issues",
+          "text": "Step through every phase — no jumping."
+        }
+      ],
+      "video": "https://www.dropbox.com/s/nmin9bjkvvogf9e/Ball%20Slam%20to%20Burpee.mp4?st=u4e8wf1f&dl=0",
+      "video_is_search_fallback": false
+    },
+    {
+      "name": "KB RDL To Row",
+      "movement": "Holding a KB in each hand, hinge the hips back. At the bottom of the hinge, complete a row by pulling the KBs into the hip pockets. Stand up and repeat.",
+      "cues": [
+        "\"Hinge first — the row happens at the bottom\"",
+        "\"Flat back through the whole movement\"",
+        "\"Row both bells to the hips together\"",
+        "\"Squeeze the glutes to stand\""
+      ],
+      "muscles_primary": [
+        "Hamstrings",
+        "Upper Back"
+      ],
+      "muscles_secondary": [
+        "Glutes",
+        "Lats"
+      ],
+      "modifications": [
+        {
+          "type": "Easier",
+          "text": "Reduce the hinge depth."
+        },
+        {
+          "type": "Harder",
+          "text": "Pause at the bottom before the row."
+        },
+        {
+          "type": "Lower Back Issues",
+          "text": "Shorten the hinge and lighten the bells."
+        }
+      ],
+      "video": "https://www.dropbox.com/s/ocojweyoowz9568/Kettlebell%20RDL%20to%20Bent%20Over%20Row.mp4?dl=0",
+      "video_is_search_fallback": false
+    },
+    {
+      "name": "Fitband Rotatoinal Row to Press",
+      "movement": "Standing at the side of the bench facing it, the arm furthest from the Fitband pulls and rows the band away from the anchor point. Switch hands and rotate at the hips as you press the arm up to fully extend.",
+      "cues": [
+        "\"Row and rotate together — pull through the ribs\"",
+        "\"Elbow drives back, hips stay low\"",
+        "\"Press finishes tall — full extension\"",
+        "\"Square up fully between reps\""
+      ],
+      "muscles_primary": [
+        "Lats",
+        "Obliques"
+      ],
+      "muscles_secondary": [
+        "Shoulders",
+        "Core"
+      ],
+      "modifications": [
+        {
+          "type": "Easier",
+          "text": "Row without the rotation and press."
+        },
+        {
+          "type": "Harder",
+          "text": "Step back for more tension, pause at the press."
+        },
+        {
+          "type": "Lower Back Issues",
+          "text": "Stand taller and shrink the rotation."
+        }
+      ],
+      "video": "https://www.dropbox.com/s/8llp944m7oeve4e/Fitband%20Rotational%20Row%20to%20Press.mp4?dl=0",
+      "video_is_search_fallback": false
+    },
+    {
+      "name": "Res. Band Pull Aparts",
+      "movement": "Hold the resistance band in front with both hands, arms straight. Squeeze the shoulder blades together and spread the band apart, then return with control.",
+      "cues": [
+        "\"Squeeze the blades — that's the whole rep\"",
+        "\"Arms stay straight the whole time\"",
+        "\"Slow the return — don't let the band snap you\"",
+        "\"Chest proud throughout\""
+      ],
+      "muscles_primary": [
+        "Rear Delts",
+        "Upper Back"
+      ],
+      "muscles_secondary": [
+        "Shoulders"
+      ],
+      "modifications": [
+        {
+          "type": "Easier",
+          "text": "Use a lighter band or narrower grip."
+        },
+        {
+          "type": "Harder",
+          "text": "Wider grip or pause at full spread."
+        },
+        {
+          "type": "Shoulder Issues",
+          "text": "Shorten the spread range."
+        }
+      ],
+      "video": "https://www.dropbox.com/s/d327g2h6grt44r1/Resistance%20Band%20Pull%20Aparts.mp4?st=4voas9pr&dl=0",
+      "video_is_search_fallback": false
+    },
+    {
+      "name": "KB Lateral Shift with hand switch",
+      "movement": "Standing tall, feet wide, KB in the left hand. Shift the weight to the right and take the KB toward the ground at the inside of the right ankle. As you stand, switch the KB to the right hand at the top and switch sides. Continue alternating.",
+      "cues": [
+        "\"Shift the hips, not just the arm\"",
+        "\"Switch hands at the top of the stand\"",
+        "\"Chest tall as you reach down\"",
+        "\"Keep the movement flowing side to side\""
+      ],
+      "muscles_primary": [
+        "Glutes",
+        "Adductors"
+      ],
+      "muscles_secondary": [
+        "Core",
+        "Quads"
+      ],
+      "modifications": [
+        {
+          "type": "Easier",
+          "text": "Reduce the shift range or go lighter."
+        },
+        {
+          "type": "Harder",
+          "text": "Deeper shift or heavier bell."
+        },
+        {
+          "type": "Knee Issues",
+          "text": "Limit depth to a pain-free range."
+        }
+      ],
+      "video": "https://www.dropbox.com/s/tax6pvku6kny0qe/Kettlebell%20Lateral%20Shift%20with%20Hand%20Switch.mp4?st=n4xbuuth&dl=0",
+      "video_is_search_fallback": false
+    },
+    {
+      "name": "Fitband External Rotations",
+      "movement": "Connect the Fitband to the top of the inclined bench, standing side-facing the bench with both hands holding the handle, arms fully extended in front of the body. Rotate the torso away from the bench, keeping the arms extended, then return and repeat.",
+      "cues": [
+        "\"Rotate from the ribs, arms stay long\"",
+        "\"Feet stay planted — only the torso turns\"",
+        "\"Control both directions equally\"",
+        "\"Keep tension on the band throughout\""
+      ],
+      "muscles_primary": [
+        "Obliques",
+        "Core"
+      ],
+      "muscles_secondary": [
+        "Shoulders",
+        "Chest"
+      ],
+      "modifications": [
+        {
+          "type": "Easier",
+          "text": "Step toward the anchor to reduce tension."
+        },
+        {
+          "type": "Harder",
+          "text": "Step back for more resistance."
+        },
+        {
+          "type": "Lower Back Issues",
+          "text": "Shrink the rotation range."
+        }
+      ],
+      "video": "https://youtu.be/yKxWf3dwJvg",
+      "video_is_search_fallback": false
+    },
+    {
+      "name": "DB Rotational Press",
+      "movement": "Hold the DB in the rack position on the left arm. Pivot on the left foot, rotating 90 degrees to the right while pressing the DB overhead. Reverse the motion until the DB is safely back in the rack position. Repeat, doing both sides.",
+      "cues": [
+        "\"Pivot and press together — one motion\"",
+        "\"Rotate from the hips and feet\"",
+        "\"Full lockout at the top of the press\"",
+        "\"Reverse with control back to the rack\""
+      ],
+      "muscles_primary": [
+        "Shoulders",
+        "Obliques"
+      ],
+      "muscles_secondary": [
+        "Quads",
+        "Core"
+      ],
+      "modifications": [
+        {
+          "type": "Easier",
+          "text": "Press straight up without the rotation."
+        },
+        {
+          "type": "Harder",
+          "text": "Add a slight knee bend on the pivot for more power."
+        },
+        {
+          "type": "Shoulder Issues",
+          "text": "Press to a comfortable height instead of lockout."
+        }
+      ],
+      "video": "https://www.dropbox.com/s/7hi26hulotarrjw/Dumbbell%20Rotational%20Press.mp4?dl=0",
+      "video_is_search_fallback": false
+    },
+    {
+      "name": "Fitband High Row",
+      "movement": "With arms extended and the body facing the band's attachment point, row the hands back toward the armpits. Slowly return to the starting position and repeat. ⚠️ Same Fitband setup as noted above.",
+      "cues": [
+        "\"Pull high — elbows drive back and wide\"",
+        "\"Squeeze the upper back at the top\"",
+        "\"Control the return — don't let the band snap forward\"",
+        "\"Stand tall the whole set\""
+      ],
+      "muscles_primary": [
+        "Upper Back",
+        "Rear Delts"
+      ],
+      "muscles_secondary": [
+        "Biceps",
+        "Shoulders"
+      ],
+      "modifications": [
+        {
+          "type": "Easier",
+          "text": "Step toward the anchor to reduce tension."
+        },
+        {
+          "type": "Harder",
+          "text": "Step back for more resistance."
+        },
+        {
+          "type": "Shoulder Issues",
+          "text": "Lower the pull to mid-row height."
+        }
+      ],
+      "video": "https://youtu.be/FsBUDsAalFk",
+      "video_is_search_fallback": false
+    },
+    {
+      "name": "KB Crossbody RDL 1 arm",
+      "movement": "KB in one hand, standing tall with feet under the hips. Hinge at the hips into an RDL while rotating to take the KB over the opposite foot at the bottom. Stand and return to the top.",
+      "cues": [
+        "\"Hinge first, then reach across\"",
+        "\"Flat back even as you rotate\"",
+        "\"The bell tracks to the opposite foot — slow and smooth\"",
+        "\"Squeeze the glutes to stand and unwind\""
+      ],
+      "muscles_primary": [
+        "Hamstrings",
+        "Glutes"
+      ],
+      "muscles_secondary": [
+        "Obliques",
+        "Lower Back"
+      ],
+      "modifications": [
+        {
+          "type": "Easier",
+          "text": "Reduce depth — reach to the opposite knee instead."
+        },
+        {
+          "type": "Harder",
+          "text": "Slow the lower to 3 seconds."
+        },
+        {
+          "type": "Lower Back Issues",
+          "text": "Shrink the rotation and keep the hinge shallow."
+        }
+      ],
+      "video": "https://www.dropbox.com/s/7h4rfrijzhi5nr7/Kettlebell%20Crossbody%20RDL%201arm.mp4?dl=0",
+      "video_is_search_fallback": false
+    },
+    {
+      "name": "Ball Single Leg Crunch Standing",
+      "movement": "Standing with the ball at the chest, press it overhead, then bring the ball and the right knee toward each other, crunching. Stand up tall, ball back overhead, and repeat on the other side.",
+      "cues": [
+        "\"Crunch the knee and ball together — meet in the middle\"",
+        "\"Stand tall and reset between reps\"",
+        "\"Balance through the standing leg\"",
+        "\"Full reach overhead each rep\""
+      ],
+      "muscles_primary": [
+        "Core",
+        "Hip Flexors"
+      ],
+      "muscles_secondary": [
+        "Shoulders",
+        "Obliques"
+      ],
+      "modifications": [
+        {
+          "type": "Easier",
+          "text": "Skip the overhead press, hold at the chest."
+        },
+        {
+          "type": "Harder",
+          "text": "Heavier ball or a slower crunch."
+        },
+        {
+          "type": "Balance Issues",
+          "text": "Lightly tap the working foot down between reps."
+        }
+      ],
+      "video": "https://www.dropbox.com/s/d626no0mi4r2knx/Ball%20Single%20Leg%20Crunch%20Standing.mp4?st=gek82939&dl=0",
+      "video_is_search_fallback": false
+    },
+    {
+      "name": "KB Side Lunge Alt.",
+      "movement": "Stand feet hip-width with a KB at the chest. Step one leg out to the side and sit back into that hip and heel, keeping the other leg straight. Press through the foot to return to standing, alternating sides.",
+      "cues": [
+        "\"Sit back into the hip — push the glute behind you\"",
+        "\"Working knee tracks over the toes, other leg stays long\"",
+        "\"Chest tall — don't fold over the bell\"",
+        "\"Drive through the whole foot to stand\""
+      ],
+      "muscles_primary": [
+        "Glutes",
+        "Quads"
+      ],
+      "muscles_secondary": [
+        "Adductors",
+        "Core"
+      ],
+      "modifications": [
+        {
+          "type": "Easier",
+          "text": "Reduce depth or hold the KB at the chest with no added load."
+        },
+        {
+          "type": "Harder",
+          "text": "Pause at the bottom or hold the bell lower in a goblet position."
+        },
+        {
+          "type": "Knee Issues",
+          "text": "Limit depth and keep the knee tracking behind the toes."
+        }
+      ],
+      "video": "https://youtu.be/eVsvV6BV5Aw",
+      "video_is_search_fallback": false
+    },
+    {
+      "name": "TRX Overhead Squat",
+      "movement": "Start with arms fully extended overhead and in the straps holding tension. Squat down keeping the arms overhead and tension in the straps, then stand and repeat.",
+      "cues": [
+        "\"Arms stay locked overhead the whole squat\"",
+        "\"Keep tension in the straps — don't let them go slack\"",
+        "\"Chest tall, sit between the heels\"",
+        "\"Full stand to reset\""
+      ],
+      "muscles_primary": [
+        "Quads",
+        "Shoulders"
+      ],
+      "muscles_secondary": [
+        "Core",
+        "Glutes"
+      ],
+      "modifications": [
+        {
+          "type": "Easier",
+          "text": "Reduce squat depth or lower the arm height slightly."
+        },
+        {
+          "type": "Harder",
+          "text": "Pause at the bottom of the squat."
+        },
+        {
+          "type": "Shoulder Issues",
+          "text": "Hold the arms at a comfortable height instead of full overhead."
+        }
+      ],
+      "video": "https://www.dropbox.com/s/r8gs9gs831a5n0y/Suspension%20Overhead%20Squat.mp4?dl=0",
+      "video_is_search_fallback": false
+    },
+    {
+      "name": "KB Alt. Halo to Woodchop",
+      "movement": "Hold the KB by the horns. Extend it to the left hip pocket, raise it to the right ear and around the head (halo), then extend to the right hip pocket and halo from the left ear. Repeat the pattern.",
+      "cues": [
+        "\"Chop to the pocket, circle the head, chop to the other pocket\"",
+        "\"Keep the bell close on the halo — tight circle\"",
+        "\"Rotate from the ribs on the chop\"",
+        "\"Slow and smooth — this is a control drill\""
+      ],
+      "muscles_primary": [
+        "Obliques",
+        "Shoulders"
+      ],
+      "muscles_secondary": [
+        "Core",
+        "Upper Back"
+      ],
+      "modifications": [
+        {
+          "type": "Easier",
+          "text": "Split it — all chops, then all halos."
+        },
+        {
+          "type": "Harder",
+          "text": "Heavier bell, slower circles."
+        },
+        {
+          "type": "Shoulder Issues",
+          "text": "Skip the halo — chop pocket to pocket only."
+        }
+      ],
+      "video": "https://youtu.be/VPsb8AG5yi8",
+      "video_is_search_fallback": false
+    },
+    {
+      "name": "DB Hip Thrust on Bench",
+      "movement": "Upper back on the bench, legs bent. Drive the heels into the ground and squeeze the glutes to lift the hips as high as possible. Lower with control.",
+      "cues": [
+        "\"Drive through the heels\"",
+        "\"Squeeze hard at the top — full lockout\"",
+        "\"Ribs down — no low-back arch to finish\"",
+        "\"Chin tucked, eyes over the knees\""
+      ],
+      "muscles_primary": [
+        "Glutes",
+        "Hamstrings"
+      ],
+      "muscles_secondary": [
+        "Core",
+        "Quads"
+      ],
+      "modifications": [
+        {
+          "type": "Easier",
+          "text": "Remove any added weight."
+        },
+        {
+          "type": "Harder",
+          "text": "Add a DB across the hips or pause at the top."
+        },
+        {
+          "type": "Lower Back Issues",
+          "text": "Reduce the range — lift only to a neutral hip line."
+        }
+      ],
+      "video": "https://www.dropbox.com/s/sz8rnpxp0il90sb/Dumbbell%20Hip%20Thrust%20on%20Box.mp4?dl=0",
+      "video_is_search_fallback": false
+    },
+    {
+      "name": "DB Arnold Press Seated",
+      "movement": "Sit tall on the end of the bench. Palms facing the shoulders, rotate the palms to face forward as the weight lifts with arms fully extended overhead. Lower and rotate back to the start. Repeat.",
+      "cues": [
+        "\"Rotate as you rise — palms turn through the press\"",
+        "\"Finish with biceps by the ears\"",
+        "\"Reverse the spiral on the way down\"",
+        "\"Sit tall — no leaning back on the bench\""
+      ],
+      "muscles_primary": [
+        "Shoulders",
+        "Front Delts"
+      ],
+      "muscles_secondary": [
+        "Triceps",
+        "Core"
+      ],
+      "modifications": [
+        {
+          "type": "Easier",
+          "text": "Lighten the DBs or press without the rotation."
+        },
+        {
+          "type": "Harder",
+          "text": "Slow the full rotation both directions."
+        },
+        {
+          "type": "Shoulder Issues",
+          "text": "Press in a neutral grip without the rotation."
+        }
+      ],
+      "video": "https://www.dropbox.com/scl/fi/yr10dqlfbnse85pisuwo3/Dumbbell-Arnold-Press-Seated.mp4?rlkey=cjvxspwlj21zf3qw9k1hmkjwr&st=51rkdos7&dl=0",
+      "video_is_search_fallback": false
+    },
+    {
+      "name": "Drop Squat",
+      "movement": "Stand with feet close together, jump out to slightly wider than shoulder-width while sitting back into a squat. Jump back up, bringing the feet together, chest tall.",
+      "cues": [
+        "\"Jump out and down — land already sitting\"",
+        "\"Chest tall through the landing\"",
+        "\"Quick reset — feet snap back together\"",
+        "\"Soft, quiet landings\""
+      ],
+      "muscles_primary": [
+        "Quads",
+        "Glutes"
+      ],
+      "muscles_secondary": [
+        "Calves",
+        "Core"
+      ],
+      "modifications": [
+        {
+          "type": "Easier",
+          "text": "Step the feet out instead of jumping."
+        },
+        {
+          "type": "Harder",
+          "text": "Land lower or jump wider."
+        },
+        {
+          "type": "Knee Issues",
+          "text": "Step-out squats only, no jumping."
+        }
+      ],
+      "video": "https://www.dropbox.com/s/qcyphagarv8w3gw/Bodyweight%20Drop%20Squat.mp4?dl=0",
+      "video_is_search_fallback": false
+    },
+    {
+      "name": "DB Goblet Squat 1.5 stance",
+      "movement": "DB held in the goblet position, stand in a staggered 1.5 stance and complete a squat. Then complete the same stance with the other foot slightly back and staggered.",
+      "cues": [
+        "\"Staggered stance — most of the weight stays centered\"",
+        "\"Chest tall through the whole squat\"",
+        "\"Full depth on the 1.5 rep\"",
+        "\"Switch the stagger evenly between sides\""
+      ],
+      "muscles_primary": [
+        "Quads",
+        "Glutes"
+      ],
+      "muscles_secondary": [
+        "Adductors",
+        "Core"
+      ],
+      "modifications": [
+        {
+          "type": "Easier",
+          "text": "Reduce depth or go bodyweight."
+        },
+        {
+          "type": "Harder",
+          "text": "Pause at the bottom of each 1.5 rep."
+        },
+        {
+          "type": "Knee Issues",
+          "text": "Limit depth to a pain-free range."
+        }
+      ],
+      "video": "https://www.dropbox.com/s/l02gt786w8zoee4/Dumbbell%20Goblet%20Squat%201.5%20Stance%20.mp4?dl=0",
+      "video_is_search_fallback": false
+    },
+    {
+      "name": "SL Calf Raise",
+      "movement": "Stand with feet under the hips on the lip of the bench (either end). Press up onto the toes on one leg, hold at the top, and release slow and controlled. Repeat for reps on both sides.",
+      "cues": [
+        "\"Press all the way up onto the toes\"",
+        "\"Hold the top — feel the calf squeeze\"",
+        "\"Slow lower — this is where the work is\"",
+        "\"Balance through the whole rep\""
+      ],
+      "muscles_primary": [
+        "Calves"
+      ],
+      "muscles_secondary": [
+        "Core"
+      ],
+      "modifications": [
+        {
+          "type": "Easier",
+          "text": "Hold a rack or wall for balance, both feet if needed."
+        },
+        {
+          "type": "Harder",
+          "text": "Add a pause at the bottom stretch."
+        },
+        {
+          "type": "Balance Issues",
+          "text": "Lightly hold a support the entire set."
+        }
+      ],
+      "video": "https://youtu.be/L6gTOZSchAE",
+      "video_is_search_fallback": false
+    },
+    {
+      "name": "Fitband Pec Fly",
+      "movement": "Stand in front of the bench, feet on the floor, holding the Fitbands attached low on the bench with a slight bend in the elbows above the chest. Open the arms as though hugging someone, then return to start.",
+      "cues": [
+        "\"Slight bend in the elbows — hug a big tree\"",
+        "\"Squeeze the chest at the front\"",
+        "\"Control the return — slow is strong\"",
+        "\"Tall posture the whole set\""
+      ],
+      "muscles_primary": [
+        "Chest",
+        "Front Delts"
+      ],
+      "muscles_secondary": [
+        "Biceps",
+        "Core"
+      ],
+      "modifications": [
+        {
+          "type": "Easier",
+          "text": "Step toward the anchor to reduce tension."
+        },
+        {
+          "type": "Harder",
+          "text": "Step back for more tension, pause at the front."
+        },
+        {
+          "type": "Shoulder Issues",
+          "text": "Shorten the open-wide range."
+        }
+      ],
+      "video": "https://www.dropbox.com/scl/fi/t0g7yo05vieagu6jnddjc/Fitband-Low-to-High-Pec-Fly.mp4?dl=0&rlkey=88gao134j5dujg5gh9dcg2d1p",
+      "video_is_search_fallback": false
+    },
+    {
+      "name": "DB incline Kennely Press",
+      "movement": "Back on the inclined bench, a DB in each hand, palms facing each other. Hinge the arms at the elbows, lowering the DBs next to the head, stopping before they tap the shoulder tops. Extend the DBs back up to start and repeat.",
+      "cues": [
+        "\"Elbows lead down, close to the head\"",
+        "\"Stop just short of the shoulders\"",
+        "\"Press back to full extension\"",
+        "\"Control every inch — no dropping\""
+      ],
+      "muscles_primary": [
+        "Triceps",
+        "Chest"
+      ],
+      "muscles_secondary": [
+        "Shoulders",
+        "Core"
+      ],
+      "modifications": [
+        {
+          "type": "Easier",
+          "text": "Lighten the DBs and shorten the range."
+        },
+        {
+          "type": "Harder",
+          "text": "Slow the lower to 3 seconds."
+        },
+        {
+          "type": "Elbow Issues",
+          "text": "Reduce the range near the shoulders."
+        }
+      ],
+      "video": "https://www.dropbox.com/s/h9n4tg86oirkb41/Dumbbell%20Incline%20Kennely%20Press.mp4?dl=0",
+      "video_is_search_fallback": false
+    },
+    {
+      "name": "KB SLRDL to Curtsy lunge",
+      "movement": "Holding the KB in one hand, complete a single-leg RDL with that same leg, then a curtsy lunge stepping that same leg back. Repeat the combo, then switch the KB for the other side.",
+      "cues": [
+        "\"Hinge first, then curtsy — two distinct moves\"",
+        "\"Flat back on the RDL\"",
+        "\"Step behind and across on the curtsy\"",
+        "\"Stand tall between each phase\""
+      ],
+      "muscles_primary": [
+        "Glutes",
+        "Hamstrings"
+      ],
+      "muscles_secondary": [
+        "Adductors",
+        "Core"
+      ],
+      "modifications": [
+        {
+          "type": "Easier",
+          "text": "Split the combo — all RDLs, then all curtsy lunges."
+        },
+        {
+          "type": "Harder",
+          "text": "Slow both phases and pause at each bottom."
+        },
+        {
+          "type": "Balance Issues",
+          "text": "Lightly tap the working foot down for stability."
+        }
+      ],
+      "video": "https://www.dropbox.com/s/b10hz3ewkf0d2hp/Kettlebell%20SLRDL%20to%20Curtsy%20Lunge.mp4?dl=0",
+      "video_is_search_fallback": false
+    },
+    {
+      "name": "KB Row in Gorilla 1arm",
+      "movement": "Wide stance, hips back, back straight, one arm hanging straight with the KB in the other hand. Row the KB to the ribs, return slowly, and repeat on the opposite side.",
+      "cues": [
+        "\"Hold the hinge — the torso doesn't bob\"",
+        "\"Row to the ribs, elbow past the back\"",
+        "\"Shoulders square — don't twist to lift\"",
+        "\"Slow return, quiet bell\""
+      ],
+      "muscles_primary": [
+        "Lats",
+        "Upper Back"
+      ],
+      "muscles_secondary": [
+        "Core",
+        "Hamstrings"
+      ],
+      "modifications": [
+        {
+          "type": "Easier",
+          "text": "Stagger one hand on a bench for support."
+        },
+        {
+          "type": "Harder",
+          "text": "Pause at the top of each row."
+        },
+        {
+          "type": "Lower Back Issues",
+          "text": "Raise the bell onto a riser to reduce the hinge depth."
+        }
+      ],
+      "video": "https://www.dropbox.com/s/zifhk2db17cjwmz/Dumbbell%20Row%20in%20Gorilla%201%20Arm.mp4?dl=0",
+      "video_is_search_fallback": false
+    },
+    {
+      "name": "DB Reverse Fly",
+      "movement": "Stand tall, then hinge back. Hold the DBs with palms facing each other. Squeeze the shoulder blades and raise the DBs to shoulder level, then lower with control. Repeat.",
+      "cues": [
+        "\"Hinge stays constant — only the arms move\"",
+        "\"Squeeze the blades together at the top\"",
+        "\"Lead with the elbows, not the hands\"",
+        "\"Slow lower — resist gravity\""
+      ],
+      "muscles_primary": [
+        "Rear Delts",
+        "Upper Back"
+      ],
+      "muscles_secondary": [
+        "Shoulders",
+        "Core"
+      ],
+      "modifications": [
+        {
+          "type": "Easier",
+          "text": "Lighten the DBs or stand taller in the hinge."
+        },
+        {
+          "type": "Harder",
+          "text": "Pause 2 seconds at the top."
+        },
+        {
+          "type": "Lower Back Issues",
+          "text": "Support the chest on an incline bench instead."
+        }
+      ],
+      "video": "https://www.dropbox.com/s/oo0006ijifegn4f/Reverse%20Fly.mp4?dl=0",
+      "video_is_search_fallback": false
+    },
+    {
+      "name": "Fitband Bicep Curls",
+      "movement": "Holding the handles while facing away from the bench, step back to put tension on the bands. Curl the palms to the shoulders, then return to the starting position. Repeat.",
+      "cues": [
+        "\"Elbows pinned to the ribs\"",
+        "\"Curl all the way up, lower all the way down\"",
+        "\"Slow on the way down — fight the band\"",
+        "\"No swinging — stand like a pillar\""
+      ],
+      "muscles_primary": [
+        "Biceps"
+      ],
+      "muscles_secondary": [
+        "Forearms",
+        "Core"
+      ],
+      "modifications": [
+        {
+          "type": "Easier",
+          "text": "Step toward the anchor to reduce tension."
+        },
+        {
+          "type": "Harder",
+          "text": "Step back further, pause at the top."
+        },
+        {
+          "type": "Elbow Issues",
+          "text": "Shorten the range — stop before full extension."
+        }
+      ],
+      "video": "https://youtu.be/Zz2mbJA18Pc",
+      "video_is_search_fallback": false
+    },
+    {
+      "name": "KB Halo Alt.",
+      "movement": "Standing, hold the KB by the horns at chest height. Circle it to the right, carrying it around the head, dropping behind the neck and around the left side back to the start. Reverse direction and repeat.",
+      "cues": [
+        "\"Tight circle — keep the bell close to the head\"",
+        "\"Duck slightly as it passes behind\"",
+        "\"Alternate directions evenly\"",
+        "\"Control the weight the whole circle\""
+      ],
+      "muscles_primary": [
+        "Shoulders",
+        "Core"
+      ],
+      "muscles_secondary": [
+        "Upper Back",
+        "Obliques"
+      ],
+      "modifications": [
+        {
+          "type": "Easier",
+          "text": "Use a lighter bell or a wider circle."
+        },
+        {
+          "type": "Harder",
+          "text": "Heavier bell, tighter circle."
+        },
+        {
+          "type": "Neck Issues",
+          "text": "Keep the circle higher, away from the neck."
+        }
+      ],
+      "video": "https://youtu.be/bHykTeeewuU?feature=shared",
+      "video_is_search_fallback": false
+    },
+    {
+      "name": "DB Step Through Clean",
+      "movement": "Stand feet shoulder-width, DB in the right hand in front of the shins. Drive the feet into the floor and thrust the hips forward, bringing the DB just above the shoulder while simultaneously tapping the opposite foot to the bench top. Return the DB and foot to the floor, then repeat on the second side.",
+      "cues": [
+        "\"Hips snap the bell up — the arm just guides\"",
+        "\"Tap the bench as the bell lands — one beat\"",
+        "\"Catch soft at the shoulder\"",
+        "\"Flat back every time you reach down\""
+      ],
+      "muscles_primary": [
+        "Glutes",
+        "Shoulders"
+      ],
+      "muscles_secondary": [
+        "Quads",
+        "Core"
+      ],
+      "modifications": [
+        {
+          "type": "Easier",
+          "text": "Clean without the foot tap."
+        },
+        {
+          "type": "Harder",
+          "text": "Heavier bell or quicker cycle."
+        },
+        {
+          "type": "Balance Issues",
+          "text": "Skip the tap and keep both feet planted."
+        }
+      ],
+      "video": "https://www.dropbox.com/scl/fi/e1kcchl87oj8fo9h2w99n/Dumbbell-Step-Through-Clean.mp4?rlkey=t2jzq1d9aosrkaipwvexmuf66&st=akblx8jh&dl=0",
+      "video_is_search_fallback": false
+    },
+    {
+      "name": "DB Row Neutral Grip on Bench",
+      "movement": "Left knee and hand on the bench, back flat, right foot on the floor. DB in the right hand with a neutral grip, pull the DB from under the shoulder up toward the armpit, then lower with control. Complete reps, then switch sides.",
+      "cues": [
+        "\"Flat back — body parallel to the floor\"",
+        "\"Pull to the hip pocket, elbow tight to your side\"",
+        "\"Squeeze the shoulder blade at the top\"",
+        "\"Don't twist — keep both hips square to the bench\""
+      ],
+      "muscles_primary": [
+        "Lats",
+        "Upper Back"
+      ],
+      "muscles_secondary": [
+        "Biceps",
+        "Core"
+      ],
+      "modifications": [
+        {
+          "type": "Easier",
+          "text": "Lighten the DB and reduce range to keep the back flat."
+        },
+        {
+          "type": "Harder",
+          "text": "Pause 1–2 seconds at the top of each row."
+        },
+        {
+          "type": "Lower Back Issues",
+          "text": "Keep the supported position and avoid rounding to reach lower."
+        }
+      ],
+      "video": "https://www.dropbox.com/s/ez3s85v67a9n3uv/Dumbbell%20Row%20Neutral%20Grip%20on%20Bench.mp4?dl=0",
+      "video_is_search_fallback": false
+    },
+    {
+      "name": "Elevated Bicycle",
+      "movement": "Lie flat on the bench, hands behind the head. Reach the right elbow to the left knee, return, then reach the left elbow to the right knee, return. Repeat.",
+      "cues": [
+        "\"Rotate from the ribs, not just the arms\"",
+        "\"Extend the resting leg long\"",
+        "\"Slow and controlled — no yanking the neck\"",
+        "\"Full rotation each side\""
+      ],
+      "muscles_primary": [
+        "Obliques",
+        "Core"
+      ],
+      "muscles_secondary": [
+        "Hip Flexors",
+        "Lower Abs"
+      ],
+      "modifications": [
+        {
+          "type": "Easier",
+          "text": "Slow the pace or keep the resting leg bent."
+        },
+        {
+          "type": "Harder",
+          "text": "Straighten the resting leg lower to the ground."
+        },
+        {
+          "type": "Lower Back Issues",
+          "text": "Keep the legs higher and shrink the range."
+        }
+      ],
+      "video": "https://www.dropbox.com/s/8z4bnza04saioaw/Bodyweight%20Elevated%20Bicycle%20Crunch.mp4?dl=0",
+      "video_is_search_fallback": false
+    },
+    {
+      "name": "KB Cossack Squat Low Load",
+      "movement": "Wide stance, toes straight ahead, holding a light weight in each hand at the sides. Sit the butt back to the right side, drive through the right heel to stand, then repeat on the left.",
+      "cues": [
+        "\"Sit into one hip, other leg stays long, toes up\"",
+        "\"Chest tall as you sink\"",
+        "\"Push through the whole foot to come back up\"",
+        "\"Light load — this one's about the range\""
+      ],
+      "muscles_primary": [
+        "Glutes",
+        "Quads"
+      ],
+      "muscles_secondary": [
+        "Adductors",
+        "Core"
+      ],
+      "modifications": [
+        {
+          "type": "Easier",
+          "text": "Bodyweight only, holding a rack for balance."
+        },
+        {
+          "type": "Harder",
+          "text": "Add a pause at the bottom."
+        },
+        {
+          "type": "Knee Issues",
+          "text": "Limit depth — a half-range Cossack still counts."
+        }
+      ],
+      "video": "https://www.dropbox.com/s/vlti4ib0qivub6y/Kettlebell%20Cossack%20Squat%20Low%20Load.mp4?dl=0",
+      "video_is_search_fallback": false
+    },
+    {
+      "name": "Res. Band Overhead Press",
+      "movement": "Stand on the band, feet hip-width, and press the band overhead with both hands. Lower with control, keeping the core and back straight.",
+      "cues": [
+        "\"Press straight up — full lockout\"",
+        "\"Brace the core the whole rep\"",
+        "\"No arching to finish the press\"",
+        "\"Control the lower — resist the band\""
+      ],
+      "muscles_primary": [
+        "Shoulders",
+        "Triceps"
+      ],
+      "muscles_secondary": [
+        "Core",
+        "Upper Back"
+      ],
+      "modifications": [
+        {
+          "type": "Easier",
+          "text": "Shorten the band stance or use a lighter band."
+        },
+        {
+          "type": "Harder",
+          "text": "Widen the stance for more tension."
+        },
+        {
+          "type": "Shoulder Issues",
+          "text": "Press to a comfortable height instead of lockout."
+        }
+      ],
+      "video": "https://www.dropbox.com/scl/fi/vwf7mu5gy2aypm1bgaq3b/Resistance-Band-Overhead-Press.mp4?rlkey=6eba2kjbb5c7e322rd0fk1nxa&st=9t9recuq&dl=0",
+      "video_is_search_fallback": false
+    },
+    {
+      "name": "Ball Rainbow Slam in Iso Split Squat",
+      "movement": "Standing in an isolated split squat stance, start with the med ball at the chest and complete a rainbow slam on either side of the front leg, alternating sides.",
+      "cues": [
+        "\"Hold the split stance — the legs don't move\"",
+        "\"Draw the rainbow — arc from side to side\"",
+        "\"Rotate from the ribs on the slam\"",
+        "\"Stay low through the whole set\""
+      ],
+      "muscles_primary": [
+        "Obliques",
+        "Quads"
+      ],
+      "muscles_secondary": [
+        "Core",
+        "Glutes"
+      ],
+      "modifications": [
+        {
+          "type": "Easier",
+          "text": "Shrink the arc and soften the slam."
+        },
+        {
+          "type": "Harder",
+          "text": "Heavier ball, continuous rhythm."
+        },
+        {
+          "type": "Knee Issues",
+          "text": "Shorten the split stance and limit depth."
+        }
+      ],
+      "video": "https://www.dropbox.com/s/zpxmd24ussmxa2h/Ball%20Rainbow%20Slam%20in%20Iso%20Split%20Squat.mp4?dl=0",
+      "video_is_search_fallback": false
+    },
+    {
+      "name": "DB Overhead Curtsy Lunge",
+      "movement": "Begin feet hip-width, DB in the overhead position. Step backward with the same-side leg, crossing the knee behind the other, knee touching the ground, torso upright. Return and repeat.",
+      "cues": [
+        "\"Arm stays locked overhead — don't let it drift\"",
+        "\"Step behind and across on the curtsy\"",
+        "\"Torso stays tall through the whole rep\"",
+        "\"Drive through the front heel to stand\""
+      ],
+      "muscles_primary": [
+        "Glutes",
+        "Shoulders"
+      ],
+      "muscles_secondary": [
+        "Core",
+        "Quads"
+      ],
+      "modifications": [
+        {
+          "type": "Easier",
+          "text": "Hold the DB at the chest instead of overhead."
+        },
+        {
+          "type": "Harder",
+          "text": "Deeper curtsy or pause at the bottom."
+        },
+        {
+          "type": "Knee Issues",
+          "text": "Shorten the step and limit depth."
+        }
+      ],
+      "video": "https://www.dropbox.com/s/wgl6saruxh93u9j/Dumbbell%20Overhead%20Curtsy%20Lunge.mp4?st=x9e4auff&dl=0",
+      "video_is_search_fallback": false
+    },
+    {
+      "name": "Triangle Push Up",
+      "movement": "Start in a high plank with the hands in a triangle shape under the chest, body in a straight line. Slowly lower the chest close to the floor, then push the floor away to come back up.",
+      "cues": [
+        "\"Triangle hands stay directly under the chest\"",
+        "\"Elbows track close to the ribs\"",
+        "\"One straight line — glutes tight\"",
+        "\"Slow lower — this targets the triceps\""
+      ],
+      "muscles_primary": [
+        "Triceps",
+        "Chest"
+      ],
+      "muscles_secondary": [
+        "Shoulders",
+        "Core"
+      ],
+      "modifications": [
+        {
+          "type": "Easier",
+          "text": "Drop to the knees, same hand position."
+        },
+        {
+          "type": "Harder",
+          "text": "Slow the lower to 3 seconds or elevate the feet."
+        },
+        {
+          "type": "Wrist Issues",
+          "text": "Use push-up handles or fists."
+        }
+      ],
+      "video": "https://www.dropbox.com/scl/fi/1tomcrm3br6q5o02a2e31/Triangle-Pushup.mp4?dl=0&rlkey=z8l6a88wvj6mhgcldw20ioee3",
+      "video_is_search_fallback": false
+    },
+    {
+      "name": "Bicycle Crunch on Bench",
+      "movement": "Lie flat on the bench, hands behind the head. Reach the right elbow to the left knee, return, then reach the left elbow to the right knee, return. Repeat.",
+      "cues": [
+        "\"Rotate from the ribs, not just the arms\"",
+        "\"Extend the resting leg long\"",
+        "\"Slow and controlled — no yanking the neck\"",
+        "\"Full rotation each side\""
+      ],
+      "muscles_primary": [
+        "Obliques",
+        "Core"
+      ],
+      "muscles_secondary": [
+        "Hip Flexors",
+        "Lower Abs"
+      ],
+      "modifications": [
+        {
+          "type": "Easier",
+          "text": "Slow the pace or keep the resting leg bent."
+        },
+        {
+          "type": "Harder",
+          "text": "Straighten the resting leg lower to the ground."
+        },
+        {
+          "type": "Lower Back Issues",
+          "text": "Keep the legs higher and shrink the range."
+        }
+      ],
+      "video": "https://www.dropbox.com/s/8z4bnza04saioaw/Bodyweight%20Elevated%20Bicycle%20Crunch.mp4?dl=0",
+      "video_is_search_fallback": false
+    },
+    {
+      "name": "Res. Band Overhead Squat",
+      "movement": "Stand on the band, feet hip-width, placing the band across the front of the shoulders. Sit into a squat, keeping the arms straight. Stand up.",
+      "cues": [
+        "\"Arms stay locked straight overhead\"",
+        "\"Sit between the heels, chest tall\"",
+        "\"Brace the core against the band tension\"",
+        "\"Full stand to reset\""
+      ],
+      "muscles_primary": [
+        "Quads",
+        "Shoulders"
+      ],
+      "muscles_secondary": [
+        "Core",
+        "Glutes"
+      ],
+      "modifications": [
+        {
+          "type": "Easier",
+          "text": "Reduce squat depth."
+        },
+        {
+          "type": "Harder",
+          "text": "Pause at the bottom of each squat."
+        },
+        {
+          "type": "Shoulder Issues",
+          "text": "Hold the band at a lower, comfortable height."
+        }
+      ],
+      "video": "https://www.dropbox.com/scl/fi/5ehvn5syghcbwtgaw4r02/Resistance-Band-Overhead-Squat.mp4?rlkey=aoixmu74sngxdrh7rly8g9f7c&st=ggsi16ya&dl=0",
+      "video_is_search_fallback": false
+    },
+    {
+      "name": "TRX Mtn. Climber",
+      "movement": "High plank position, feet in the TRX straps, hands under shoulders. Maintain a tight core and bring the right knee toward the chest, keeping the left leg extended. Switch legs quickly, bringing the left knee toward the chest and extending the right. Alternate.",
+      "cues": [
+        "\"Quick knees, but hips stay level\"",
+        "\"Shoulders stacked over the wrists\"",
+        "\"Keep the pace controlled — don't bounce\"",
+        "\"Strong plank the entire set\""
+      ],
+      "muscles_primary": [
+        "Core",
+        "Hip Flexors"
+      ],
+      "muscles_secondary": [
+        "Shoulders",
+        "Quads"
+      ],
+      "modifications": [
+        {
+          "type": "Easier",
+          "text": "Slow the cadence significantly."
+        },
+        {
+          "type": "Harder",
+          "text": "Speed up or add a small hop between switches."
+        },
+        {
+          "type": "Wrist Issues",
+          "text": "Floor-based mountain climbers instead."
+        }
+      ],
+      "video": "https://www.dropbox.com/s/cu03lyh9qzkcn4j/Suspension%20Mountain%20Climbers.mp4?dl=0",
+      "video_is_search_fallback": false
+    },
+    {
+      "name": "DB Goblet Reverse Lunge Alt.",
+      "movement": "Holding the DB in the goblet position, reverse lunge, stand, then repeat the reverse lunge on the other side.",
+      "cues": [
+        "\"Back knee drops straight down\"",
+        "\"Chest tall — don't fold over the bell\"",
+        "\"Drive through the front heel to stand\"",
+        "\"Alternate sides evenly\""
+      ],
+      "muscles_primary": [
+        "Quads",
+        "Glutes"
+      ],
+      "muscles_secondary": [
+        "Hamstrings",
+        "Core"
+      ],
+      "modifications": [
+        {
+          "type": "Easier",
+          "text": "Use bodyweight only or reduce depth."
+        },
+        {
+          "type": "Harder",
+          "text": "Pause at the bottom of each lunge."
+        },
+        {
+          "type": "Knee Issues",
+          "text": "Shorten the step and limit depth."
+        }
+      ],
+      "video": "https://www.dropbox.com/scl/fi/33bcbbgj89hgb6i10rvw7/Dumbbell-Goblet-Reverse-Lunge.mp4?rlkey=p59p7t9csb7ipoa0sggzq77t1&st=sf39tglt&dl=0",
+      "video_is_search_fallback": false
+    },
+    {
+      "name": "KB Deadstop Swing",
+      "movement": "KB on the floor slightly in front of you, feet shoulder-width. Slide the hips back, grab the handle, and hike it between the legs. Drive the hips forward and stand tall, letting the bell float, then drive it back between the legs to the start position, stop, and repeat.",
+      "cues": [
+        "\"Full stop between reps — reset the hinge\"",
+        "\"Hips snap it up — the arms just guide\"",
+        "\"Flat back on every hike\"",
+        "\"Control the stop, don't just let it crash\""
+      ],
+      "muscles_primary": [
+        "Glutes",
+        "Hamstrings"
+      ],
+      "muscles_secondary": [
+        "Core",
+        "Upper Back"
+      ],
+      "modifications": [
+        {
+          "type": "Easier",
+          "text": "Lighter bell, shorter backswing."
+        },
+        {
+          "type": "Harder",
+          "text": "Heavier bell, pause longer at the dead stop."
+        },
+        {
+          "type": "Lower Back Issues",
+          "text": "Reduce depth and lighten the load."
+        }
+      ],
+      "video": "https://www.dropbox.com/s/w4mvy0n542jux61/Kettlebell%20Deadstop%20Swing.mp4?dl=0",
+      "video_is_search_fallback": false
+    },
+    {
+      "name": "DB Chest Press 1arm Alt.",
+      "movement": "Lie on the bench, both DBs starting away from the body with arms fully extended. Lower one DB at a time, elbow down to the ribs, push it away from the body, then switch sides.",
+      "cues": [
+        "\"One arm presses while the other holds at lockout\"",
+        "\"Elbow about 45 degrees on the press\"",
+        "\"Brace — the single-arm work pulls you sideways\"",
+        "\"Control down, drive up\""
+      ],
+      "muscles_primary": [
+        "Chest",
+        "Triceps"
+      ],
+      "muscles_secondary": [
+        "Front Delts",
+        "Core"
+      ],
+      "modifications": [
+        {
+          "type": "Easier",
+          "text": "Press both arms together."
+        },
+        {
+          "type": "Harder",
+          "text": "Hold the resting arm at the bottom instead of lockout."
+        },
+        {
+          "type": "Shoulder Issues",
+          "text": "Use a neutral grip and shorten the lower."
+        }
+      ],
+      "video": "https://www.dropbox.com/scl/fi/ykiikbq2k90f29w1kpi35/Dumbbell-Chest-Press-1-Arm-Alternating-on-Bench.mp4?rlkey=k4msrki0ap3r34blfjevr1p81&st=j84jiyvp&dl=0",
+      "video_is_search_fallback": false
+    },
+    {
+      "name": "Res. Band Good Morning",
+      "movement": "Stand on the band, feet hip-width, and loop it around the back of the neck. Bend at the hips, then pull the hips through to stand. Drive the hips back to the start and repeat.",
+      "cues": [
+        "\"Hips back first — chest follows\"",
+        "\"Flat back — proud chest at the bottom\"",
+        "\"Squeeze the glutes through to stand\"",
+        "\"Keep the band snug on the neck the whole time\""
+      ],
+      "muscles_primary": [
+        "Hamstrings",
+        "Glutes"
+      ],
+      "muscles_secondary": [
+        "Lower Back",
+        "Core"
+      ],
+      "modifications": [
+        {
+          "type": "Easier",
+          "text": "Reduce depth or use a lighter band."
+        },
+        {
+          "type": "Harder",
+          "text": "Slow the descent to 3 seconds."
+        },
+        {
+          "type": "Lower Back Issues",
+          "text": "Shorten the hinge range."
+        }
+      ],
+      "video": "https://www.dropbox.com/s/cko0plu2lxwz684/Resistance%20Band%20Good%20Morning.mp4?st=34otadj6&dl=0",
+      "video_is_search_fallback": false
+    },
+    {
+      "name": "TRX Biceps Clutch",
+      "movement": "Face the anchor point, palms holding the handles facing each other, arms fully extended. Pull yourself toward your hands, bringing palms toward the armpits, elbows out but not above shoulder height. Clutch and hold, then release and repeat.",
+      "cues": [
+        "\"Pull the body to the hands, not the hands to the body\"",
+        "\"Elbows stay below the shoulders\"",
+        "\"Squeeze and hold at the top\"",
+        "\"Control the release — don't just fall back\""
+      ],
+      "muscles_primary": [
+        "Biceps"
+      ],
+      "muscles_secondary": [
+        "Upper Back",
+        "Core"
+      ],
+      "modifications": [
+        {
+          "type": "Easier",
+          "text": "Walk the feet back to reduce the angle."
+        },
+        {
+          "type": "Harder",
+          "text": "Walk the feet forward or extend the hold."
+        },
+        {
+          "type": "Elbow Issues",
+          "text": "Shorten the range and skip the hold."
+        }
+      ],
+      "video": "https://www.dropbox.com/s/v0hdhjsi6evgmv7/Suspension%20Biceps%20Clutch.mp4?dl=0",
+      "video_is_search_fallback": false
+    },
+    {
+      "name": "DB Zottman Curl",
+      "movement": "Stand tall, a DB in each hand, palms facing up. Curl to the shoulder, then flip the palms over and lower back down to the hips. Repeat.",
+      "cues": [
+        "\"Curl palms up, lower palms down\"",
+        "\"The flip happens right at the top\"",
+        "\"Slow the lower — that's the forearm work\"",
+        "\"Elbows stay pinned to the ribs\""
+      ],
+      "muscles_primary": [
+        "Biceps",
+        "Forearms"
+      ],
+      "muscles_secondary": [
+        "Core"
+      ],
+      "modifications": [
+        {
+          "type": "Easier",
+          "text": "Lighten the DBs or skip the flip on some reps."
+        },
+        {
+          "type": "Harder",
+          "text": "Slow the lower to 3 seconds after every flip."
+        },
+        {
+          "type": "Elbow Issues",
+          "text": "Shorten the range at the top."
+        }
+      ],
+      "video": "https://www.dropbox.com/scl/fi/h4daqdmr5yrwu2up887b5/Dumbbell-Zottman-Curl.mp4?rlkey=3mjrmiekpccxr6xz8zorpt80a&st=1cv2ceog&dl=0",
+      "video_is_search_fallback": false
+    },
+    {
+      "name": "Bench Hops",
+      "movement": "Begin with hands on the far end of the bench, hips over the bench, feet together. Jump both feet over and across the bench, landing softly. Alternate side to side.",
+      "cues": [
+        "\"Jump the whole body over — feet lead\"",
+        "\"Land soft and quiet\"",
+        "\"Hands stay planted the whole set\"",
+        "\"Quick and light — bounce right back over\""
+      ],
+      "muscles_primary": [
+        "Core",
+        "Quads"
+      ],
+      "muscles_secondary": [
+        "Shoulders",
+        "Calves"
+      ],
+      "modifications": [
+        {
+          "type": "Easier",
+          "text": "Step over instead of jumping."
+        },
+        {
+          "type": "Harder",
+          "text": "Speed up the pace."
+        },
+        {
+          "type": "Wrist Issues",
+          "text": "Use a lower support surface or fists."
+        }
+      ],
+      "video": "https://www.dropbox.com/s/kwhxidag3nos3da/Lateral%20Bench%20Hops%20-%20hand%20supported.mp4?dl=0",
+      "video_is_search_fallback": false
+    },
+    {
+      "name": "Ab Tuck",
+      "movement": "Lie on the bench, extend the legs and lean back, then pull the knees to the chest and reach for the ankles. Repeat.",
+      "cues": [
+        "\"Lean back, then crunch the knees in\"",
+        "\"Reach for the ankles at the top\"",
+        "\"Control the lean — don't just flop back\"",
+        "\"Exhale as the knees come in\""
+      ],
+      "muscles_primary": [
+        "Core",
+        "Lower Abs"
+      ],
+      "muscles_secondary": [
+        "Hip Flexors"
+      ],
+      "modifications": [
+        {
+          "type": "Easier",
+          "text": "Shrink the lean-back range."
+        },
+        {
+          "type": "Harder",
+          "text": "Lean back further or add a pause at the tuck."
+        },
+        {
+          "type": "Lower Back Issues",
+          "text": "Keep the lean shallow and controlled."
+        }
+      ],
+      "video": "https://www.dropbox.com/s/s14wgg41eysh9s3/Bodyweight%20Ab%20Tuck%20on%20Bench.mp4?dl=0",
+      "video_is_search_fallback": false
+    },
+    {
+      "name": "TRX Balance Lunge",
+      "movement": "Begin feet hip-width, holding the TRX handles at 90 degrees. Step backward, knee almost to the ground, torso upright. Return, switch legs, and repeat.",
+      "cues": [
+        "\"Torso stays upright — don't lean into the straps\"",
+        "\"Back knee hovers, doesn't slam down\"",
+        "\"Front heel drives the stand\"",
+        "\"Balance through the whole rep\""
+      ],
+      "muscles_primary": [
+        "Glutes",
+        "Quads"
+      ],
+      "muscles_secondary": [
+        "Core",
+        "Hamstrings"
+      ],
+      "modifications": [
+        {
+          "type": "Easier",
+          "text": "Use the straps for more support."
+        },
+        {
+          "type": "Harder",
+          "text": "Reduce hand support and slow the tempo."
+        },
+        {
+          "type": "Knee Issues",
+          "text": "Limit depth to a pain-free range."
+        }
+      ],
+      "video": "https://www.dropbox.com/s/0yunqwbb99q2x9i/Suspension%20Balance%20Lunge.mp4?dl=0",
+      "video_is_search_fallback": false
+    },
+    {
+      "name": "TRX Skaters",
+      "movement": "Hold the TRX handles with arms extended, feet shoulder-width apart. Lunge backward and slightly behind the front leg, knee almost to the ground. Drive through the front leg to stand and hop laterally to the other leg. Repeat on the other side.",
+      "cues": [
+        "\"Lunge back, then hop laterally\"",
+        "\"Land soft on the new leg\"",
+        "\"Straps help balance, not do the work\"",
+        "\"Stay low between hops\""
+      ],
+      "muscles_primary": [
+        "Glutes",
+        "Quads"
+      ],
+      "muscles_secondary": [
+        "Calves",
+        "Core"
+      ],
+      "modifications": [
+        {
+          "type": "Easier",
+          "text": "Step laterally instead of hopping."
+        },
+        {
+          "type": "Harder",
+          "text": "Bigger hops, deeper lunge."
+        },
+        {
+          "type": "Knee Issues",
+          "text": "Small lateral steps only — no hopping."
+        }
+      ],
+      "video": "https://www.dropbox.com/s/3kovxscnkxit9no/Suspension%20Skaters.mp4?dl=0",
+      "video_is_search_fallback": false
+    },
+    {
+      "name": "DB Chest Fly to Chest Press",
+      "movement": "Lying on the bench, complete a chest fly, then a chest press, alternating the two movements in one combo.",
+      "cues": [
+        "\"Fly first, then press — same rhythm every time\"",
+        "\"Soft elbows on the fly, don't lock out\"",
+        "\"Ribs down, low back gently on the bench\"",
+        "\"Same control on both — the fly is not a rest\""
+      ],
+      "muscles_primary": [
+        "Chest",
+        "Front Delts"
+      ],
+      "muscles_secondary": [
+        "Triceps",
+        "Core"
+      ],
+      "modifications": [
+        {
+          "type": "Easier",
+          "text": "Lighten the DBs — the fly is the limiter, size the weight to it."
+        },
+        {
+          "type": "Harder",
+          "text": "Slow both lowers to 3 seconds."
+        },
+        {
+          "type": "Shoulder Issues",
+          "text": "Shorten the fly range — keep the elbows above chest level."
+        }
+      ],
+      "video": "https://www.dropbox.com/s/yl7cg3gqhjvobob/Dumbbell%20Chest%20Fly%20to%20Chest%20Press%20.mp4?dl=0",
+      "video_is_search_fallback": false
+    },
+    {
+      "name": "Bodyweight Step Up Alt.",
+      "movement": "Stand feet hip-width behind the bench. Step up onto the bench keeping the chest high, then step back down. Repeat on the other side. Option to hold a DB in each hand.",
+      "cues": [
+        "\"The box leg does all the work\"",
+        "\"Full foot on the bench\"",
+        "\"Stand tall at the top — finish the hip\"",
+        "\"Slow, controlled step down\""
+      ],
+      "muscles_primary": [
+        "Quads",
+        "Glutes"
+      ],
+      "muscles_secondary": [
+        "Hamstrings",
+        "Calves"
+      ],
+      "modifications": [
+        {
+          "type": "Easier",
+          "text": "Lower box height."
+        },
+        {
+          "type": "Harder",
+          "text": "Add DBs at the sides."
+        },
+        {
+          "type": "Knee Issues",
+          "text": "Use a lower box and pain-free depth."
+        }
+      ],
+      "video": "https://youtu.be/ct5i1bc8ZqU",
+      "video_is_search_fallback": false
+    },
+    {
+      "name": "TRX Alligator Pull alt.",
+      "movement": "Face the anchor, hands in front, arms straight. The right arm goes overhead while the left arm pulls down. Return, flip the hands, and repeat.",
+      "cues": [
+        "\"One arm up, one arm down — opposite directions\"",
+        "\"Straight arms — pull from the shoulders\"",
+        "\"Flip cleanly between reps\"",
+        "\"Body stays square to the anchor\""
+      ],
+      "muscles_primary": [
+        "Upper Back",
+        "Shoulders"
+      ],
+      "muscles_secondary": [
+        "Lats",
+        "Core"
+      ],
+      "modifications": [
+        {
+          "type": "Easier",
+          "text": "Walk the feet back to reduce the angle."
+        },
+        {
+          "type": "Harder",
+          "text": "Walk the feet forward for more resistance."
+        },
+        {
+          "type": "Shoulder Issues",
+          "text": "Shorten the range near the top."
+        }
+      ],
+      "video": "https://www.dropbox.com/s/gumbq40f8d9un3r/Suspension%20Alligator%20Pull.mp4?dl=0",
+      "video_is_search_fallback": false
+    },
+    {
+      "name": "TRX Triceps Kick Back",
+      "movement": "Facing away from the anchor, hinge slightly at the hips. Extend the arms straight back behind you, squeezing the triceps, then bend the elbows to return. Repeat.",
+      "cues": [
+        "\"Elbows stay high and still — only the forearm moves\"",
+        "\"Full extension straight back\"",
+        "\"Hold the hinge the whole set\"",
+        "\"Squeeze at the back of every rep\""
+      ],
+      "muscles_primary": [
+        "Triceps"
+      ],
+      "muscles_secondary": [
+        "Core",
+        "Upper Back"
+      ],
+      "modifications": [
+        {
+          "type": "Easier",
+          "text": "Stand more upright to reduce resistance."
+        },
+        {
+          "type": "Harder",
+          "text": "Deepen the hinge for more tension."
+        },
+        {
+          "type": "Elbow Issues",
+          "text": "Shorten the range at full extension."
+        }
+      ],
+      "video": "https://www.dropbox.com/s/v8l3p27ic96o1s5/Suspension%20Triceps%20Kick%20Back.mp4?dl=0",
+      "video_is_search_fallback": false
+    },
+    {
+      "name": "DB 2arm Long Stance RDL",
+      "movement": "In a stance slightly longer than a split stance, hold one DB in each hand. Keep the front knee soft, back straight, and reach the butt to the rear wall as deep as comfortable with hands on either side of the front leg. Stand up and squeeze the glutes at the top. Repeat.",
+      "cues": [
+        "\"Long stance — front knee stays soft\"",
+        "\"Flat back the whole way down\"",
+        "\"Bells travel close along the front leg\"",
+        "\"Squeeze the glutes to stand\""
+      ],
+      "muscles_primary": [
+        "Hamstrings",
+        "Glutes"
+      ],
+      "muscles_secondary": [
+        "Lower Back",
+        "Core"
+      ],
+      "modifications": [
+        {
+          "type": "Easier",
+          "text": "Reduce depth or shorten the stance."
+        },
+        {
+          "type": "Harder",
+          "text": "Slow the lower to 3 seconds."
+        },
+        {
+          "type": "Lower Back Issues",
+          "text": "Shorten the range and lighten the load."
+        }
+      ],
+      "video": "https://www.dropbox.com/scl/fi/f53qs1zmkj0yxxfjlknjc/Dumbbell-2arm-Long-Stance-RDL.mp4?rlkey=cvpzf2vno0vkylatuze2cr6vw&st=2dplsb2u&dl=0",
+      "video_is_search_fallback": false
+    },
+    {
+      "name": "DB Skull Crusher",
+      "movement": "Lie flat on the bench, DBs held with palms facing each other. Keeping the elbows in, lower the DBs to the forehead, then press away.",
+      "cues": [
+        "\"Elbows stay pointed at the ceiling\"",
+        "\"Lower to the forehead, not the chest\"",
+        "\"Press to full lockout\"",
+        "\"Control the lower — this is a triceps stretch\""
+      ],
+      "muscles_primary": [
+        "Triceps"
+      ],
+      "muscles_secondary": [
+        "Chest",
+        "Core"
+      ],
+      "modifications": [
+        {
+          "type": "Easier",
+          "text": "Lighten the DBs or shorten the range."
+        },
+        {
+          "type": "Harder",
+          "text": "Slow the lower to 3 seconds."
+        },
+        {
+          "type": "Elbow Issues",
+          "text": "Stop the lower higher, above the forehead."
+        }
+      ],
+      "video": "https://www.dropbox.com/s/cjffb68v6svq1hn/Dumbbell%20Skull%20Crusher%20on%20Bench.mp4?dl=0",
+      "video_is_search_fallback": false
+    },
+    {
+      "name": "Sit Up on Bench",
+      "movement": "Lie flat on the bench, hands to either side of the head, complete a sit up. Lie back down with control and repeat.",
+      "cues": [
+        "\"Lead with the chest, not the neck\"",
+        "\"Full sit up — reach tall at the top\"",
+        "\"Slow lower — don't just flop back\"",
+        "\"Exhale as you rise\""
+      ],
+      "muscles_primary": [
+        "Core"
+      ],
+      "muscles_secondary": [
+        "Hip Flexors"
+      ],
+      "modifications": [
+        {
+          "type": "Easier",
+          "text": "Cross the arms over the chest instead of by the head."
+        },
+        {
+          "type": "Harder",
+          "text": "Hold a light weight at the chest."
+        },
+        {
+          "type": "Lower Back Issues",
+          "text": "Shorten the range and go slow."
+        }
+      ],
+      "video": "https://youtu.be/7eFl-0rqYvU",
+      "video_is_search_fallback": false
+    },
+    {
+      "name": "Fitband Anti- Rotation Press",
+      "movement": "Start standing sideways with the hands in the middle of the chest, holding the FitBand handles. Push the hand straight out, keeping the body from rotating, then bring the hands back to the chest and repeat.",
+      "cues": [
+        "\"Press out slow — the band wants to spin you\"",
+        "\"Squeeze the glutes — lock the hips square\"",
+        "\"The further out the hands, the harder it fights\"",
+        "\"Breathe out as you press\""
+      ],
+      "muscles_primary": [
+        "Core",
+        "Obliques"
+      ],
+      "muscles_secondary": [
+        "Shoulders",
+        "Chest"
+      ],
+      "modifications": [
+        {
+          "type": "Easier",
+          "text": "Step toward the anchor to reduce the pull."
+        },
+        {
+          "type": "Harder",
+          "text": "Step away, pause 3 seconds at full extension."
+        },
+        {
+          "type": "Shoulder Issues",
+          "text": "Shorten the press-out range."
+        }
+      ],
+      "video": "https://www.dropbox.com/scl/fi/0htj5h76ow6glokmpgora/Fitband-Anti-Rotation-Press.mp4?rlkey=akmb0yg8j3hnfywj0qo7y537a&st=25htnmb6&dl=0",
+      "video_is_search_fallback": false
+    },
+    {
+      "name": "DB Reverse Lunge with Asymmetrical Load",
+      "movement": "DB in the right hand. Complete a reverse lunge stepping back with the right leg, stand back to the top, and repeat. Switch hands and legs.",
+      "cues": [
+        "\"Uneven load — brace the core against the pull\"",
+        "\"Back knee drops straight down\"",
+        "\"Chest tall through the whole rep\"",
+        "\"Drive through the front heel to stand\""
+      ],
+      "muscles_primary": [
+        "Quads",
+        "Glutes"
+      ],
+      "muscles_secondary": [
+        "Core",
+        "Obliques"
+      ],
+      "modifications": [
+        {
+          "type": "Easier",
+          "text": "Lighten the DB or hold it at the chest instead."
+        },
+        {
+          "type": "Harder",
+          "text": "Increase the load or pause at the bottom."
+        },
+        {
+          "type": "Knee Issues",
+          "text": "Shorten the step and limit depth."
+        }
+      ],
+      "video": "https://www.dropbox.com/s/1uhzqu9tnbzp7ta/Reverse%20Lunge%20with%20Asymmetrical%20Loading.mp4?dl=0",
+      "video_is_search_fallback": false
+    },
+    {
+      "name": "DB Pullover",
+      "movement": "Lie on the bench, holding a DB with both hands over the chest. Lower it overhead keeping the ribs down, then pull it back to the starting position. Repeat.",
+      "cues": [
+        "\"Ribs down — don't let the back arch\"",
+        "\"Long arms, soft elbows\"",
+        "\"Feel the stretch through the lats\"",
+        "\"Pull back with the lats, not just the arms\""
+      ],
+      "muscles_primary": [
+        "Lats",
+        "Chest"
+      ],
+      "muscles_secondary": [
+        "Triceps",
+        "Core"
+      ],
+      "modifications": [
+        {
+          "type": "Easier",
+          "text": "Shorten the overhead range."
+        },
+        {
+          "type": "Harder",
+          "text": "Slow the lower to 3 seconds."
+        },
+        {
+          "type": "Shoulder Issues",
+          "text": "Reduce the overhead reach to a comfortable range."
+        }
+      ],
+      "video": "https://www.dropbox.com/scl/fi/b5ffarso85lromu92vafn/Dumbbell-Pullover.mp4?rlkey=lwugnkauuwwtzfl0huha2xve3&st=fvzd0enm&dl=0",
+      "video_is_search_fallback": false
+    },
+    {
+      "name": "KB Step Back Swing 1 arm",
+      "movement": "Start in a staggered stance, left foot back, KB in the left hand. Hinge at the hips to take the KB between the legs, then snap the hips forward, swinging the KB and stepping forward simultaneously. Step the leg back and let the KB fall back between the legs again, moving together. Repeat.",
+      "cues": [
+        "\"Step and swing together — one motion\"",
+        "\"Hips drive the swing, not the arm\"",
+        "\"Flat back on every hinge\"",
+        "\"Land the step as the bell floats\""
+      ],
+      "muscles_primary": [
+        "Glutes",
+        "Hamstrings"
+      ],
+      "muscles_secondary": [
+        "Core",
+        "Shoulders"
+      ],
+      "modifications": [
+        {
+          "type": "Easier",
+          "text": "Swing in place without the step."
+        },
+        {
+          "type": "Harder",
+          "text": "Bigger step, heavier bell."
+        },
+        {
+          "type": "Lower Back Issues",
+          "text": "Lighten the bell and shorten the backswing."
+        }
+      ],
+      "video": "https://www.dropbox.com/s/imf4swv1a5euuck/Kettlebell%20Step%20Back%20Swing%201arm.mp4?dl=0",
+      "video_is_search_fallback": false
+    },
+    {
+      "name": "Res. Band Split Stance Row Alt.",
+      "movement": "In a stance slightly longer than a split stance, set up with the resistance band under the front foot. Row each hand to the rib/hip area. Slowly return to the starting position. Repeat.",
+      "cues": [
+        "\"Hold the stance — the lower body stays still\"",
+        "\"Row to the ribs, elbow tight\"",
+        "\"Control the return — don't let the band snap you\"",
+        "\"Alternate hands smoothly\""
+      ],
+      "muscles_primary": [
+        "Upper Back",
+        "Lats"
+      ],
+      "muscles_secondary": [
+        "Biceps",
+        "Core"
+      ],
+      "modifications": [
+        {
+          "type": "Easier",
+          "text": "Shorten the band or stand more upright."
+        },
+        {
+          "type": "Harder",
+          "text": "Stand on more band for extra tension."
+        },
+        {
+          "type": "Lower Back Issues",
+          "text": "Stand taller and shorten the row range."
+        }
+      ],
+      "video": "https://www.dropbox.com/scl/fi/oe6x77t0z0i2nqhuu051y/Resistance-Band-Split-Stance-Row-Alt.mp4?rlkey=42busok7168qvnin8h0ofblv6&st=97wesk3x&dl=0",
+      "video_is_search_fallback": false
+    },
+    {
+      "name": "Band DB RDL",
+      "movement": "With the Fitband looped above the knees, stand feet hip-width, a DB in each hand held in front of the thighs, knees soft. Back straight, reach the butt to the rear wall as deep as comfortable.",
+      "cues": [
+        "\"Press the band out the whole rep\"",
+        "\"Hips back — the bells just ride down\"",
+        "\"Flat back, proud chest\"",
+        "\"Squeeze the glutes to stand\""
+      ],
+      "muscles_primary": [
+        "Hamstrings",
+        "Glutes"
+      ],
+      "muscles_secondary": [
+        "Adductors",
+        "Core"
+      ],
+      "modifications": [
+        {
+          "type": "Easier",
+          "text": "Remove the band or reduce depth."
+        },
+        {
+          "type": "Harder",
+          "text": "Slow the lower to 3 seconds."
+        },
+        {
+          "type": "Lower Back Issues",
+          "text": "Shorten the range and lighten the load."
+        }
+      ],
+      "video": "https://www.dropbox.com/s/7ns4u2l3vny1fl3/Dumbbell%20Romanian%20Deadlift.mp4?st=dem816is&dl=0",
+      "video_is_search_fallback": false
+    },
+    {
+      "name": "DB Pullover Hips Off Bench",
+      "movement": "Lie on the bench, holding a DB with both hands over the chest. Lower it overhead keeping the ribs down, then pull it back to the starting position. Repeat.",
+      "cues": [
+        "\"Ribs down — don't let the back arch\"",
+        "\"Long arms, soft elbows\"",
+        "\"Feel the stretch through the lats\"",
+        "\"Pull back with the lats, not just the arms\""
+      ],
+      "muscles_primary": [
+        "Lats",
+        "Chest"
+      ],
+      "muscles_secondary": [
+        "Triceps",
+        "Core"
+      ],
+      "modifications": [
+        {
+          "type": "Easier",
+          "text": "Shorten the overhead range."
+        },
+        {
+          "type": "Harder",
+          "text": "Slow the lower to 3 seconds."
+        },
+        {
+          "type": "Shoulder Issues",
+          "text": "Reduce the overhead reach to a comfortable range."
+        }
+      ],
+      "video": "https://www.dropbox.com/s/mayclcxkhle1z7n/Dumbbell%20Pullover%20-%20Hips%20Off%20Bench.mp4?dl=0",
+      "video_is_search_fallback": false
+    },
+    {
+      "name": "DB Russian Twist on Bench",
+      "movement": "Seated on the bench, chest high, hold the DB at the chest. Rotate and tap the weight to the floor, bring it back through center, and tap the other side.",
+      "cues": [
+        "\"Rotate from the ribs, chest stays high\"",
+        "\"Tap and go — don't rest at the floor\"",
+        "\"Control both directions equally\"",
+        "\"Feet can lift for an added challenge\""
+      ],
+      "muscles_primary": [
+        "Obliques",
+        "Core"
+      ],
+      "muscles_secondary": [
+        "Hip Flexors"
+      ],
+      "modifications": [
+        {
+          "type": "Easier",
+          "text": "Keep feet down and reduce the rotation range."
+        },
+        {
+          "type": "Harder",
+          "text": "Lift the feet off the floor."
+        },
+        {
+          "type": "Lower Back Issues",
+          "text": "Shrink the range and go slow."
+        }
+      ],
+      "video": "https://youtu.be/P1Zqd34dnTY",
+      "video_is_search_fallback": false
+    },
+    {
+      "name": "DB Chest Press on Bench",
+      "movement": "Lie on the bench, elbows coming down to the ribs, then push the DBs away from the body.",
+      "cues": [
+        "\"Elbows about 45 degrees — not flared to the ears\"",
+        "\"Touch the rib line, press to lockout\"",
+        "\"Feet planted, low back gently down\"",
+        "\"Control down, drive up\""
+      ],
+      "muscles_primary": [
+        "Chest",
+        "Triceps"
+      ],
+      "muscles_secondary": [
+        "Front Delts",
+        "Core"
+      ],
+      "modifications": [
+        {
+          "type": "Easier",
+          "text": "Lighten the bells or shorten the lower."
+        },
+        {
+          "type": "Harder",
+          "text": "Slow the lower to 3 seconds or pause at the bottom."
+        },
+        {
+          "type": "Shoulder Issues",
+          "text": "Use a neutral grip and stop the elbows at bench height."
+        }
+      ],
+      "video": "https://youtu.be/D16cGcmnmp0?si=2bU4gODP8lSyWSUA",
+      "video_is_search_fallback": false
+    },
+    {
+      "name": "DB 1.5 Stance Goblet Squat",
+      "movement": "DB held in the goblet position, stand in a staggered 1.5 stance and complete a squat. Then complete the same stance with the other foot slightly back and staggered.",
+      "cues": [
+        "\"Staggered stance — most of the weight stays centered\"",
+        "\"Chest tall through the whole squat\"",
+        "\"Full depth on the 1.5 rep\"",
+        "\"Switch the stagger evenly between sides\""
+      ],
+      "muscles_primary": [
+        "Quads",
+        "Glutes"
+      ],
+      "muscles_secondary": [
+        "Adductors",
+        "Core"
+      ],
+      "modifications": [
+        {
+          "type": "Easier",
+          "text": "Reduce depth or go bodyweight."
+        },
+        {
+          "type": "Harder",
+          "text": "Pause at the bottom of each 1.5 rep."
+        },
+        {
+          "type": "Knee Issues",
+          "text": "Limit depth to a pain-free range."
+        }
+      ],
+      "video": "https://www.dropbox.com/scl/fi/h94n6pu213ffojlggv0bg/Dumbbell-Goblet-Squat-1.5-Stance.mp4?rlkey=xzcu0iloql3pbiltbduvv5gmf&st=y48livtx&dl=0",
+      "video_is_search_fallback": false
+    },
+    {
+      "name": "Reverse Crunch on bench",
+      "movement": "Lie on the bench, grab the bench above the head. Legs as straight as possible, reach the feet to the ceiling, letting the hips come off the bench slightly, and repeat.",
+      "cues": [
+        "\"Hips lift, legs stay long\"",
+        "\"Small range — control beats height\"",
+        "\"Grip the bench for stability\"",
+        "\"Exhale as the hips lift\""
+      ],
+      "muscles_primary": [
+        "Lower Abs",
+        "Core"
+      ],
+      "muscles_secondary": [
+        "Hip Flexors"
+      ],
+      "modifications": [
+        {
+          "type": "Easier",
+          "text": "Bend the knees to shorten the lever."
+        },
+        {
+          "type": "Harder",
+          "text": "Slow the tempo and pause at the top."
+        },
+        {
+          "type": "Lower Back Issues",
+          "text": "Reduce the hip-lift range."
+        }
+      ],
+      "video": "https://youtu.be/uoZimNP36eA?si=wnx4-aocXYKJyR76",
+      "video_is_search_fallback": false
+    },
+    {
+      "name": "KB Deadlift to High Pull",
+      "movement": "Standing with feet shoulder-width, sit the butt back and grab the KB with both hands. As you stand, pull the elbows back until the bottom of the KB passes the belly button. Return to the start position.",
+      "cues": [
+        "\"Stand first, then pull high\"",
+        "\"Elbows lead the pull, above the hands\"",
+        "\"Flat back on the way down\"",
+        "\"Squeeze the upper back at the top\""
+      ],
+      "muscles_primary": [
+        "Glutes",
+        "Upper Back"
+      ],
+      "muscles_secondary": [
+        "Hamstrings",
+        "Shoulders"
+      ],
+      "modifications": [
+        {
+          "type": "Easier",
+          "text": "Deadlift only, skip the high pull."
+        },
+        {
+          "type": "Harder",
+          "text": "Pause at the top of the pull."
+        },
+        {
+          "type": "Lower Back Issues",
+          "text": "Reduce depth and lighten the load."
+        }
+      ],
+      "video": "https://www.dropbox.com/s/9y9cw6tqma1rqs4/Kettlebell%20Deadlift%20to%20High%20Pull.mp4?dl=0",
+      "video_is_search_fallback": false
+    },
+    {
+      "name": "DB Rear Delt Raise",
+      "movement": "Bend at the knees slightly and lean forward from the hips, maintaining a flat back. Lift the dumbbells up and out to the side, pause at the top, then slowly bring them back to the start.",
+      "cues": [
+        "\"Hinge stays constant — only the arms move\"",
+        "\"Lead with the elbows out to the sides\"",
+        "\"Pause and squeeze at the top\"",
+        "\"Slow lower — resist gravity\""
+      ],
+      "muscles_primary": [
+        "Rear Delts",
+        "Upper Back"
+      ],
+      "muscles_secondary": [
+        "Shoulders"
+      ],
+      "modifications": [
+        {
+          "type": "Easier",
+          "text": "Lighten the DBs or stand taller in the hinge."
+        },
+        {
+          "type": "Harder",
+          "text": "Pause 2 seconds at the top."
+        },
+        {
+          "type": "Lower Back Issues",
+          "text": "Support the chest on an incline bench instead."
+        }
+      ],
+      "video": "https://www.dropbox.com/s/e4ynpzxklk024iq/Dumbbell%20Rear%20Delt%20Raise.mp4?dl=0",
+      "video_is_search_fallback": false
+    },
+    {
+      "name": "Skull Crushers on Bench",
+      "movement": "Lie flat on the bench, DBs held with palms facing each other. Keeping the elbows in, lower the DBs to the forehead, then press away.",
+      "cues": [
+        "\"Elbows stay pointed at the ceiling\"",
+        "\"Lower to the forehead, not the chest\"",
+        "\"Press to full lockout\"",
+        "\"Control the lower — this is a triceps stretch\""
+      ],
+      "muscles_primary": [
+        "Triceps"
+      ],
+      "muscles_secondary": [
+        "Chest",
+        "Core"
+      ],
+      "modifications": [
+        {
+          "type": "Easier",
+          "text": "Lighten the DBs or shorten the range."
+        },
+        {
+          "type": "Harder",
+          "text": "Slow the lower to 3 seconds."
+        },
+        {
+          "type": "Elbow Issues",
+          "text": "Stop the lower higher, above the forehead."
+        }
+      ],
+      "video": "https://www.dropbox.com/s/cjffb68v6svq1hn/Dumbbell%20Skull%20Crusher%20on%20Bench.mp4?dl=0",
+      "video_is_search_fallback": false
+    },
+    {
+      "name": "DB Hammer Curls",
+      "movement": "Stand tall, DB in each hand at the sides, palms facing each other. Curl the DBs up to the shoulders and slowly lower back down.",
+      "cues": [
+        "\"Elbows pinned to the ribs\"",
+        "\"Neutral grip the whole rep — palms stay facing in\"",
+        "\"Slow the lower — fight gravity\"",
+        "\"No swinging — stand tall\""
+      ],
+      "muscles_primary": [
+        "Biceps",
+        "Forearms"
+      ],
+      "muscles_secondary": [
+        "Core"
+      ],
+      "modifications": [
+        {
+          "type": "Easier",
+          "text": "Lighten the DBs."
+        },
+        {
+          "type": "Harder",
+          "text": "Pause at the top or slow the lower further."
+        },
+        {
+          "type": "Elbow Issues",
+          "text": "Shorten the range at the top."
+        }
+      ],
+      "video": "https://www.dropbox.com/scl/fi/m0r59ito94uzgels5qv8l/Hammer-Curl.mp4?rlkey=mf9gyaxb35azfg045tnh8slna&st=h7oot0ph&dl=0",
+      "video_is_search_fallback": false
+    },
+    {
+      "name": "TRX Chest Fly",
+      "movement": "Grasp the TRX, palms facing each other. Start in the up position, lean forward, slightly bend the elbows, and open the arms to form a T with the body. Return to the up position, squeeze the muscles, and touch your hands together. Repeat.",
+      "cues": [
+        "\"Open to a T, soft elbows the whole way\"",
+        "\"Squeeze the chest to bring the hands together\"",
+        "\"Lean sets the resistance — adjust as needed\"",
+        "\"Control the open — don't let gravity win\""
+      ],
+      "muscles_primary": [
+        "Chest",
+        "Front Delts"
+      ],
+      "muscles_secondary": [
+        "Shoulders",
+        "Core"
+      ],
+      "modifications": [
+        {
+          "type": "Easier",
+          "text": "Stand more upright to reduce the lean."
+        },
+        {
+          "type": "Harder",
+          "text": "Lean further forward for more resistance."
+        },
+        {
+          "type": "Shoulder Issues",
+          "text": "Shorten the open-wide range."
+        }
+      ],
+      "video": "https://www.dropbox.com/s/49j6zod53hw0np6/Suspension%20Chest%20Fly%20Standing.mp4?dl=0",
+      "video_is_search_fallback": false
+    },
+    {
+      "name": "KB Deadlift",
+      "movement": "Stand with feet hip-width, weight in each hand held in front of the thighs, knees soft. Back straight, reach the butt to the rear wall as deep as comfortable, then stand tall.",
+      "cues": [
+        "\"Hips back — the bells just ride the legs down\"",
+        "\"Flat back, proud chest\"",
+        "\"Push the floor away to stand\"",
+        "\"Squeeze the glutes at the top\""
+      ],
+      "muscles_primary": [
+        "Hamstrings",
+        "Glutes"
+      ],
+      "muscles_secondary": [
+        "Lower Back",
+        "Core"
+      ],
+      "modifications": [
+        {
+          "type": "Easier",
+          "text": "Reduce depth — stop where the back stays flat."
+        },
+        {
+          "type": "Harder",
+          "text": "Slow the lower to 3 seconds."
+        },
+        {
+          "type": "Lower Back Issues",
+          "text": "Shorten the range and lighten the load."
+        }
+      ],
+      "video": "https://www.dropbox.com/s/r03364jbzyadl46/Kettlebell%20Deadlift.mp4?dl=0",
+      "video_is_search_fallback": false
+    },
+    {
+      "name": "DB Chest Press x2 to Pullover",
+      "movement": "Lie on the bench, holding one DB with both hands over the chest. Lower it to chest height and back up two times, then lower it overhead keeping the ribs down, and pull it back to the starting position. Repeat.",
+      "cues": [
+        "\"Two presses, then one pullover — count them\"",
+        "\"Ribs down on the pullover, no arching\"",
+        "\"Full lockout on the presses\"",
+        "\"Use the bell as a counterweight through the pullover\""
+      ],
+      "muscles_primary": [
+        "Chest",
+        "Lats"
+      ],
+      "muscles_secondary": [
+        "Triceps",
+        "Core"
+      ],
+      "modifications": [
+        {
+          "type": "Easier",
+          "text": "Lighter bell, or skip the second press."
+        },
+        {
+          "type": "Harder",
+          "text": "Slow the pullover phase to 3 seconds."
+        },
+        {
+          "type": "Shoulder Issues",
+          "text": "Shorten the overhead reach."
+        }
+      ],
+      "video": "https://www.dropbox.com/s/oraf2y0fmqxipxj/Dumbbell%20Chest%20Press%20x2%20to%20Pullover%20x1.mp4?dl=0",
+      "video_is_search_fallback": false
+    },
+    {
+      "name": "AB Tuck on Bench",
+      "movement": "Lie on the bench, extend the legs and lean back, then pull the knees to the chest and reach for the ankles. Repeat.",
+      "cues": [
+        "\"Lean back, then crunch the knees in\"",
+        "\"Reach for the ankles at the top\"",
+        "\"Control the lean — don't just flop back\"",
+        "\"Exhale as the knees come in\""
+      ],
+      "muscles_primary": [
+        "Core",
+        "Lower Abs"
+      ],
+      "muscles_secondary": [
+        "Hip Flexors"
+      ],
+      "modifications": [
+        {
+          "type": "Easier",
+          "text": "Shrink the lean-back range."
+        },
+        {
+          "type": "Harder",
+          "text": "Lean back further or add a pause at the tuck."
+        },
+        {
+          "type": "Lower Back Issues",
+          "text": "Keep the lean shallow and controlled."
+        }
+      ],
+      "video": "https://www.dropbox.com/s/s14wgg41eysh9s3/Bodyweight%20Ab%20Tuck%20on%20Bench.mp4?dl=0",
+      "video_is_search_fallback": false
+    },
+    {
+      "name": "KB Figure 8 Alt.",
+      "movement": "In an athletic position, pass the KB between the legs in a figure-8 pattern. Palms should face each other during each hand switch.",
+      "cues": [
+        "\"Athletic stance — knees soft the whole time\"",
+        "\"Smooth handoffs behind and between the legs\"",
+        "\"Keep the pattern flowing, not choppy\"",
+        "\"Chest stays up through the pattern\""
+      ],
+      "muscles_primary": [
+        "Core",
+        "Glutes"
+      ],
+      "muscles_secondary": [
+        "Forearms",
+        "Adductors"
+      ],
+      "modifications": [
+        {
+          "type": "Easier",
+          "text": "Slow the pattern and use a lighter bell."
+        },
+        {
+          "type": "Harder",
+          "text": "Speed up or use a heavier bell."
+        },
+        {
+          "type": "Lower Back Issues",
+          "text": "Stand taller and shrink the reach."
+        }
+      ],
+      "video": "https://youtu.be/TojZwnRMQEA?si=cfIezVVWzxn3Bb2F",
+      "video_is_search_fallback": false
+    },
+    {
+      "name": "Res. Band Hammer Curl",
+      "movement": "Stand tall on the resistance band, palms facing each other holding the band in each hand. Curl to the shoulder and back down to the hips. Repeat.",
+      "cues": [
+        "\"Neutral grip the whole rep\"",
+        "\"Elbows pinned to the ribs\"",
+        "\"Slow the lower — fight the band\"",
+        "\"Stand tall, no swinging\""
+      ],
+      "muscles_primary": [
+        "Biceps",
+        "Forearms"
+      ],
+      "muscles_secondary": [
+        "Core"
+      ],
+      "modifications": [
+        {
+          "type": "Easier",
+          "text": "Shorten the band or stand closer to the anchor."
+        },
+        {
+          "type": "Harder",
+          "text": "Stand on more band for extra tension."
+        },
+        {
+          "type": "Elbow Issues",
+          "text": "Shorten the range at the top."
+        }
+      ],
+      "video": "https://www.dropbox.com/scl/fi/cy86jmhobijjllpwjeg2t/Resistance-Band-Hammer-Curl.mp4?rlkey=gjifng4lk2u2cetjgksvqapp6&st=mt375e24&dl=0",
+      "video_is_search_fallback": false
+    },
+    {
+      "name": "DB Thruster 1 arm",
+      "movement": "Hold the DB in the front rack position. Sit back into a squat, chest tall. Drive the heels down and thrust the hips forward to standing, driving the weight to the ceiling. Return to start.",
+      "cues": [
+        "\"Squat first, then punch it overhead\"",
+        "\"Full squat before the drive\"",
+        "\"Stand tall before the press finishes\"",
+        "\"Catch soft on the way back down\""
+      ],
+      "muscles_primary": [
+        "Quads",
+        "Shoulders"
+      ],
+      "muscles_secondary": [
+        "Glutes",
+        "Core"
+      ],
+      "modifications": [
+        {
+          "type": "Easier",
+          "text": "Split the squat and press into two moves."
+        },
+        {
+          "type": "Harder",
+          "text": "Heavier DB or a pause in the squat."
+        },
+        {
+          "type": "Shoulder Issues",
+          "text": "Press to a comfortable height instead of lockout."
+        }
+      ],
+      "video": "https://www.dropbox.com/s/rs4r8idodp82ykf/Dumbbell%20%20Thruster%201%20Arm%20Alternating.mp4?dl=0",
+      "video_is_search_fallback": false
+    },
+    {
+      "name": "Reverse Sit Up on Bench",
+      "movement": "Lie on the bench, grab the bench above the head. Legs as straight as possible, reach the feet to the ceiling, letting the hips come off the bench slightly, and repeat.",
+      "cues": [
+        "\"Hips lift, legs stay long\"",
+        "\"Small range — control beats height\"",
+        "\"Grip the bench for stability\"",
+        "\"Exhale as the hips lift\""
+      ],
+      "muscles_primary": [
+        "Lower Abs",
+        "Core"
+      ],
+      "muscles_secondary": [
+        "Hip Flexors"
+      ],
+      "modifications": [
+        {
+          "type": "Easier",
+          "text": "Bend the knees to shorten the lever."
+        },
+        {
+          "type": "Harder",
+          "text": "Slow the tempo and pause at the top."
+        },
+        {
+          "type": "Lower Back Issues",
+          "text": "Reduce the hip-lift range."
+        }
+      ],
+      "video": "https://www.dropbox.com/s/4exqs0epbelywi5/Bodyweight%20Reverse%20Situp%20on%20Bench.mp4?dl=0",
+      "video_is_search_fallback": false
+    },
+    {
+      "name": "KB Goblet Reverse Lunge",
+      "movement": "Holding the KB in the goblet position, reverse lunge, stand, then repeat the reverse lunge on the other side.",
+      "cues": [
+        "\"Back knee drops straight down\"",
+        "\"Chest tall — don't fold over the bell\"",
+        "\"Drive through the front heel to stand\"",
+        "\"Alternate sides evenly\""
+      ],
+      "muscles_primary": [
+        "Quads",
+        "Glutes"
+      ],
+      "muscles_secondary": [
+        "Hamstrings",
+        "Core"
+      ],
+      "modifications": [
+        {
+          "type": "Easier",
+          "text": "Use bodyweight only or reduce depth."
+        },
+        {
+          "type": "Harder",
+          "text": "Pause at the bottom of each lunge."
+        },
+        {
+          "type": "Knee Issues",
+          "text": "Shorten the step and limit depth."
+        }
+      ],
+      "video": "https://www.dropbox.com/s/fsxgwv9h0w9x0qe/Kettlebell%20Goblet%20Reverse%20Lunge.mp4?dl=0",
+      "video_is_search_fallback": false
+    },
+    {
+      "name": "DB Lateral Lunge",
+      "movement": "Stand feet hip-width with DBs at the sides. Step laterally to one side and sit the hips back into an imaginary chair, torso upright. Drive through the heel to stand, switch legs, and repeat.",
+      "cues": [
+        "\"Sit back into the hip — push the glute behind you\"",
+        "\"Straight leg stays long, toes forward\"",
+        "\"Chest tall the whole way\"",
+        "\"Drive through the whole foot to stand\""
+      ],
+      "muscles_primary": [
+        "Glutes",
+        "Quads"
+      ],
+      "muscles_secondary": [
+        "Adductors",
+        "Core"
+      ],
+      "modifications": [
+        {
+          "type": "Easier",
+          "text": "Reduce depth or go bodyweight."
+        },
+        {
+          "type": "Harder",
+          "text": "Pause at the bottom of each lunge."
+        },
+        {
+          "type": "Knee Issues",
+          "text": "Limit depth and keep the knee tracking behind the toes."
+        }
+      ],
+      "video": "https://www.dropbox.com/s/91a8e6tl9kucag2/Dumbbell%20Lateral%20Lunge.mp4?dl=0",
+      "video_is_search_fallback": false
+    },
+    {
+      "name": "Inchworm Push Up",
+      "movement": "Start standing, hinge at the hips, taking the hands to the ground and walking out to a high plank. Complete a push up, then walk the hands back to the feet, stand up, and repeat.",
+      "cues": [
+        "\"Walk out slow — control every step\"",
+        "\"Full push up at the bottom of the walk\"",
+        "\"Flat back on the hinge to reach the floor\"",
+        "\"Stand tall to reset\""
+      ],
+      "muscles_primary": [
+        "Core",
+        "Chest"
+      ],
+      "muscles_secondary": [
+        "Hamstrings",
+        "Shoulders"
+      ],
+      "modifications": [
+        {
+          "type": "Easier",
+          "text": "Walk the hands out only partway, or drop the push up."
+        },
+        {
+          "type": "Harder",
+          "text": "Add a shoulder tap at the plank."
+        },
+        {
+          "type": "Wrist Issues",
+          "text": "Push up on fists."
+        }
+      ],
+      "video": "https://www.dropbox.com/scl/fi/0ll3xz1b8o4y8fxli5z4g/Bodyweight-Inchworm-with-Pushup.mp4?rlkey=xebebh5le6jokz65ceiswgn8p&st=goo7um5b&dl=0",
+      "video_is_search_fallback": false
+    },
+    {
+      "name": "DB Split Squat Pulse",
+      "movement": "Split stance, DBs at the sides or shoulders. Drop the back knee almost to the ground, torso tall, and drive through the heel to pulse in the bottom half of the range. Stand when reps are complete. Switch feet.",
+      "cues": [
+        "\"Small pulses at the bottom — stay low\"",
+        "\"Front knee tracks over the toes\"",
+        "\"Chest tall the whole time\"",
+        "\"Only stand at the very end of the set\""
+      ],
+      "muscles_primary": [
+        "Quads",
+        "Glutes"
+      ],
+      "muscles_secondary": [
+        "Hamstrings",
+        "Core"
+      ],
+      "modifications": [
+        {
+          "type": "Easier",
+          "text": "Pulse in a shallower range."
+        },
+        {
+          "type": "Harder",
+          "text": "Pulse deeper or hold DBs for added load."
+        },
+        {
+          "type": "Knee Issues",
+          "text": "Reduce depth to a pain-free range."
+        }
+      ],
+      "video": "https://www.dropbox.com/s/1u7575shgy6247k/Dumbbell%20Pulsing%20Split%20Squat.mp4?dl=0",
+      "video_is_search_fallback": false
+    },
+    {
+      "name": "TRX Pistol Squat",
+      "movement": "Hold the handles and face the anchor point. Take one leg straight out in front of you. Bend the supporting leg and sink down into a squat, keeping the heel firmly on the floor. As you drive up, explode off the supporting leg and jump upward, then land on the alternate leg.",
+      "cues": [
+        "\"Heel stays down the whole squat\"",
+        "\"Straps assist balance, not the lift\"",
+        "\"Explode up, land soft on the other leg\"",
+        "\"Chest tall through the descent\""
+      ],
+      "muscles_primary": [
+        "Quads",
+        "Glutes"
+      ],
+      "muscles_secondary": [
+        "Calves",
+        "Core"
+      ],
+      "modifications": [
+        {
+          "type": "Easier",
+          "text": "Skip the jump — step to the other leg instead."
+        },
+        {
+          "type": "Harder",
+          "text": "Rely less on the straps for support."
+        },
+        {
+          "type": "Knee Issues",
+          "text": "Limit depth to a pain-free range."
+        }
+      ],
+      "video": "https://www.dropbox.com/s/9we79enl623t6y5/Suspension%20Pistol%20Suqat.mp4?dl=0",
+      "video_is_search_fallback": false
+    },
+    {
+      "name": "TRX Mid Row Underhand",
+      "movement": "Start with arms extended, feet under the anchor, underhand grip with thumbs up. Pull the handles to the ribs, return, and repeat.",
+      "cues": [
+        "\"Palms up — pull to the ribs\"",
+        "\"Elbows graze the ribs on the way back\"",
+        "\"Squeeze the blades — don't just bend the arms\"",
+        "\"Long arms at the bottom of every rep\""
+      ],
+      "muscles_primary": [
+        "Lats",
+        "Biceps"
+      ],
+      "muscles_secondary": [
+        "Upper Back",
+        "Core"
+      ],
+      "modifications": [
+        {
+          "type": "Easier",
+          "text": "Walk the feet back to stand more upright."
+        },
+        {
+          "type": "Harder",
+          "text": "Walk the feet forward or pause at the top."
+        },
+        {
+          "type": "Elbow Issues",
+          "text": "Switch to a neutral grip."
+        }
+      ],
+      "video": "https://www.dropbox.com/s/o9ww94abqo1n9fw/Suspension%20Mid%20Row%20Underhand%20Grip.mp4?dl=0",
+      "video_is_search_fallback": false
+    },
+    {
+      "name": "Ball Toe Taps",
+      "movement": "Med ball toe taps, alternating feet with every tap.",
+      "cues": [
+        "\"Light, quick taps — stay on the balls of the feet\"",
+        "\"Keep the chest tall\"",
+        "\"Alternate feet evenly\"",
+        "\"Find a rhythm and hold it\""
+      ],
+      "muscles_primary": [
+        "Calves",
+        "Core"
+      ],
+      "muscles_secondary": [
+        "Hip Flexors",
+        "Quads"
+      ],
+      "modifications": [
+        {
+          "type": "Easier",
+          "text": "Slow the pace."
+        },
+        {
+          "type": "Harder",
+          "text": "Speed up the tap cadence."
+        },
+        {
+          "type": "Balance Issues",
+          "text": "Hold a nearby rack for support."
+        }
+      ],
+      "video": "https://www.dropbox.com/scl/fi/ug8yomm1u5gifg595p0c3/Ball-Toe-Taps.mp4?rlkey=iyrr7qtsqnmcnsiu43ws460p6&st=x8z2617y&dl=0",
+      "video_is_search_fallback": false
+    },
+    {
+      "name": "Push Up Sphinx",
+      "movement": "Start in a low plank, elbows stacked under the shoulders, fingers spread out. Push from the toes, shifting the weight forward while holding a tight plank, then back. Repeat.",
+      "cues": [
+        "\"Small shift — forward and back, not a full push up\"",
+        "\"Elbows stay stacked under the shoulders\"",
+        "\"Hips stay level the entire time\"",
+        "\"Brace like you're about to be poked\""
+      ],
+      "muscles_primary": [
+        "Shoulders",
+        "Core"
+      ],
+      "muscles_secondary": [
+        "Chest",
+        "Triceps"
+      ],
+      "modifications": [
+        {
+          "type": "Easier",
+          "text": "Drop to the knees, same forward-back shift."
+        },
+        {
+          "type": "Harder",
+          "text": "Increase the shift distance or slow the tempo."
+        },
+        {
+          "type": "Wrist Issues",
+          "text": "Stay on the forearms the entire set."
+        }
+      ],
+      "video": "https://www.dropbox.com/s/p0meqfco6erboms/Bodyweight%20Pushup%20Sphinx.mp4?dl=0",
+      "video_is_search_fallback": false
+    },
+    {
+      "name": "Ball Chop and Lift",
+      "movement": "Hold the med ball at the chest, squat down reaching the ball in front of one shin. As you stand, lift the ball overhead to the opposing side. Return to holding at the chest and repeat the combo on the other side.",
+      "cues": [
+        "\"Squat and reach low, then lift high and across\"",
+        "\"Rotate from the hips on the lift\"",
+        "\"Flat back on the reach down\"",
+        "\"Alternate sides evenly\""
+      ],
+      "muscles_primary": [
+        "Obliques",
+        "Quads"
+      ],
+      "muscles_secondary": [
+        "Shoulders",
+        "Core"
+      ],
+      "modifications": [
+        {
+          "type": "Easier",
+          "text": "Shrink the range and lighten the ball."
+        },
+        {
+          "type": "Harder",
+          "text": "Heavier ball, deeper squat."
+        },
+        {
+          "type": "Lower Back Issues",
+          "text": "Slow the tempo and reduce the reach."
+        }
+      ],
+      "video": "https://www.dropbox.com/scl/fi/6abwxcm6uic86fjlausz7/Ball-Chop-and-Lift.mp4?rlkey=68rx5wus3kre9awvbwkzvrncp&st=umx3skya&dl=0",
+      "video_is_search_fallback": false
+    },
+    {
+      "name": "DB Front Squat",
+      "movement": "Stand feet hip-width, DBs on the shoulders with elbows in front of the body. Sit back, chest tall, as deep as possible. Stand squeezing the glutes, repeat.",
+      "cues": [
+        "\"Elbows up — keep the rack tight\"",
+        "\"Sit into it — chest tall the whole way down\"",
+        "\"Drive through the heels, squeeze at the top\"",
+        "\"Own the bottom — don't bounce out of it\""
+      ],
+      "muscles_primary": [
+        "Quads",
+        "Glutes"
+      ],
+      "muscles_secondary": [
+        "Hamstrings",
+        "Core"
+      ],
+      "modifications": [
+        {
+          "type": "Easier",
+          "text": "Reduce depth or go bodyweight."
+        },
+        {
+          "type": "Harder",
+          "text": "Pause 2 seconds at the bottom."
+        },
+        {
+          "type": "Knee Issues",
+          "text": "Limit depth to a pain-free range, toes slightly out."
+        }
+      ],
+      "video": "https://www.dropbox.com/s/4td6y40udjk5jr1/Dumbbell%20Squat.mp4?dl=0",
+      "video_is_search_fallback": false
+    },
+    {
+      "name": "DB Fire Hydrant on Bench",
+      "movement": "In a tabletop position, raise one leg out to the side with a DB in the crook of the knee. Lower with control, complete the reps, then switch sides.",
+      "cues": [
+        "\"Lift the knee out and up — like a dog at a hydrant\"",
+        "\"Hips stay square — don't roll to lift higher\"",
+        "\"Hold the DB with the knee, don't let it slip\"",
+        "\"Slow lower — keep tension the whole set\""
+      ],
+      "muscles_primary": [
+        "Glutes"
+      ],
+      "muscles_secondary": [
+        "Core",
+        "Adductors"
+      ],
+      "modifications": [
+        {
+          "type": "Easier",
+          "text": "Remove the DB."
+        },
+        {
+          "type": "Harder",
+          "text": "Pause 2 seconds at the top of each lift."
+        },
+        {
+          "type": "Wrist Issues",
+          "text": "Drop to the forearms in tabletop."
+        }
+      ],
+      "video": "https://youtu.be/p7ApIrbSTtU?si=1DYib9c6gwRHcew7",
+      "video_is_search_fallback": false
+    },
+    {
+      "name": "Bench Dip",
+      "movement": "Sit on the floor, place the hands on the bench behind you, and use the arms to press away from the bench.",
+      "cues": [
+        "\"Elbows point straight back, not out\"",
+        "\"Lower with control — feel the triceps stretch\"",
+        "\"Press through the palms to rise\"",
+        "\"Keep the hips close to the bench\""
+      ],
+      "muscles_primary": [
+        "Triceps"
+      ],
+      "muscles_secondary": [
+        "Chest",
+        "Shoulders"
+      ],
+      "modifications": [
+        {
+          "type": "Easier",
+          "text": "Bend the knees more and keep the feet close."
+        },
+        {
+          "type": "Harder",
+          "text": "Straighten the legs or elevate the feet."
+        },
+        {
+          "type": "Shoulder Issues",
+          "text": "Shorten the dip range."
+        }
+      ],
+      "video": "https://youtu.be/4yGB13cqzNQ",
+      "video_is_search_fallback": false
+    },
+    {
+      "name": "KB 2 arm Sumo Deadlift",
+      "movement": "Feet wider than the shoulders, toes out. Sit the hips back with a flat back and pick up the KBs by squeezing the glutes to stand tall. Send the hips back to return.",
+      "cues": [
+        "\"Knees out over the toes as you sit back\"",
+        "\"Flat back, proud chest\"",
+        "\"Squeeze the glutes to stand — no back yank\"",
+        "\"Bells travel straight up the middle\""
+      ],
+      "muscles_primary": [
+        "Glutes",
+        "Quads"
+      ],
+      "muscles_secondary": [
+        "Hamstrings",
+        "Adductors"
+      ],
+      "modifications": [
+        {
+          "type": "Easier",
+          "text": "Elevate the bells on a riser."
+        },
+        {
+          "type": "Harder",
+          "text": "Pause at the bottom or slow the lower."
+        },
+        {
+          "type": "Lower Back Issues",
+          "text": "Reduce depth and lighten the load."
+        }
+      ],
+      "video": "https://www.dropbox.com/s/phy8c1w31gcvgws/Kettlebell%20Sumo%20Deadlift%202arm.mp4?dl=0",
+      "video_is_search_fallback": false
+    },
+    {
+      "name": "KB 2arm Row in Lunge",
+      "movement": "Step back into a lunge position with a soft bend in the front leg and the back leg straight, leaning slightly forward with the free hand on the front thigh. Extend the KBs toward the floor, then pull them toward the chest and back down.",
+      "cues": [
+        "\"Hold the lunge — the lower body is frozen\"",
+        "\"Row both bells to the chest together\"",
+        "\"Flat back — chest just above the front thigh\"",
+        "\"Long arms at the bottom of every rep\""
+      ],
+      "muscles_primary": [
+        "Lats",
+        "Upper Back"
+      ],
+      "muscles_secondary": [
+        "Glutes",
+        "Core"
+      ],
+      "modifications": [
+        {
+          "type": "Easier",
+          "text": "Row one arm at a time, resting the other hand on the thigh."
+        },
+        {
+          "type": "Harder",
+          "text": "Pause at the top of each row."
+        },
+        {
+          "type": "Lower Back Issues",
+          "text": "Stand taller in the lean and lighten the bells."
+        }
+      ],
+      "video": "https://www.dropbox.com/scl/fi/4df9ztrh32nqubod3gv2k/Kettlebell-2-Arm-Row-in-Lunge.mp4?rlkey=6o28njfsb1cfhrvyrsecx4fgc&st=d5ny25hj&dl=0",
+      "video_is_search_fallback": false
+    },
+    {
+      "name": "TRX Biceps Curls",
+      "movement": "Hold the TRX handles, palms up, at shoulder height, body slightly angled away from the anchor. Keeping the elbows at shoulder height, curl the handles to the shoulders, then slowly extend the arms to complete.",
+      "cues": [
+        "\"Elbows stay high and still\"",
+        "\"Curl all the way, extend all the way\"",
+        "\"Lean into the straps for the resistance\"",
+        "\"Slow on the extend — control the straps\""
+      ],
+      "muscles_primary": [
+        "Biceps"
+      ],
+      "muscles_secondary": [
+        "Forearms",
+        "Core"
+      ],
+      "modifications": [
+        {
+          "type": "Easier",
+          "text": "Stand more upright to reduce resistance."
+        },
+        {
+          "type": "Harder",
+          "text": "Lean back further for more load."
+        },
+        {
+          "type": "Elbow Issues",
+          "text": "Shorten the range at full extension."
+        }
+      ],
+      "video": "https://www.dropbox.com/s/j1obv116xqspzh3/Suspension%20Bicep%20Curl.mp4?st=9o8o25lp&dl=0",
       "video_is_search_fallback": false
     }
   ],

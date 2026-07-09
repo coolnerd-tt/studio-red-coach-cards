@@ -48,7 +48,7 @@ DEFAULT_MANIFESTS = ROOT / "data" / "day-manifests.json"
 # any reassembled "name" that carries coaching-copy keywords or runs too long.
 JUNK = re.compile(
     r"Coach|COOL DOWN|10s mark|same weight|weight for|Breathing|guidelines|"
-    r"Note how|stations equally|bodyweight|Restart|Ladder|Circuit|switching|recover"
+    r"Note how|stations equally|bodyweight|Restart|Ladder|Circuit|switching|recover|NOTES"
 )
 INT_WORD = {6: "Easy", 7: "Moderate", 8: "Hard", 9: "Max", 10: "Max"}
 
@@ -107,7 +107,7 @@ def col_exercises(lines, xlo, xhi, hy) -> list[tuple[str, str | None]]:
     frags = [
         (y, x, t)
         for x, y, t in lines
-        if xlo <= x <= xhi and 82 < y < hy and t not in ("BENCH", "RACK") and not t.startswith("**")
+        if xlo <= x <= xhi and 15 < y < hy and t not in ("BENCH", "RACK") and not t.startswith("**")
     ]
     frags.sort(key=lambda z: -z[0])
     clusters, cur = [], []
@@ -245,7 +245,7 @@ def parse_pdf(pdf_path: Path, canon) -> tuple[list[dict], list[str]]:
         rhy = header_y(L, "RACK", 380, 470)
 
         exs = []
-        for nm, rep in col_exercises(L, 40, 100, bhy):
+        for nm, rep in col_exercises(L, 35, 100, bhy):
             exs.append({"name": canon(nm), "reps": reptext(rep, kind, ladder), "station": "\U0001F3CB️ Bench"})
         for nm, rep in col_exercises(L, 305, 350, rhy):
             exs.append({"name": canon(nm), "reps": reptext(rep, kind, ladder), "station": "\U0001F535 Rack"})
