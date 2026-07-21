@@ -623,7 +623,7 @@
           "station": "🏋️ Bench"
         },
         {
-          "name": "Leg Raises on Bench",
+          "name": "Leg Raises on bench",
           "reps": "",
           "station": "🏋️ Bench"
         },
@@ -778,7 +778,7 @@
           "station": "🔵 Rack"
         },
         {
-          "name": "TRX Single Arm row",
+          "name": "TRX Single Arm Row",
           "reps": "15 EACH SIDE",
           "station": "🔵 Rack"
         }
@@ -900,7 +900,7 @@
           "station": "🏋️ Bench"
         },
         {
-          "name": "KB T-rex Swing",
+          "name": "KB T-Rex Swing",
           "reps": "12 REPS",
           "station": "🔵 Rack"
         },
@@ -2341,6 +2341,9 @@
           "mz": "Blue"
         },
         {
+          "rounds": "× 4 rounds"
+        },
+        {
           "time": "1:00",
           "intensity": "Moderate 7/10",
           "mz": "Green"
@@ -2911,7 +2914,7 @@
           "station": "🏋️ Bench"
         },
         {
-          "name": "KB Row in Lunge",
+          "name": "KB Row In Lunge",
           "reps": "LADDER 8→3 · EACH SIDE",
           "station": "🔵 Rack"
         },
@@ -3665,7 +3668,7 @@
       "cardio": [
         {
           "time": "1:00",
-          "intensity": "Easy 6/10",
+          "intensity": "Moderate 6/10",
           "mz": "Green"
         },
         {
@@ -3682,6 +3685,9 @@
           "time": "1:00",
           "intensity": "Easy 6/10",
           "mz": "Blue"
+        },
+        {
+          "rounds": "× 2 rounds"
         },
         {
           "time": "2:00",
@@ -3868,6 +3874,9 @@
           "time": "1:00",
           "intensity": "Easy 6/10",
           "mz": "Blue"
+        },
+        {
+          "rounds": "× 2 rounds"
         },
         {
           "time": "1:00",
@@ -4086,7 +4095,7 @@
           "station": "🏋️ Bench"
         },
         {
-          "name": "Res. Band good Morning",
+          "name": "Res. Band Good Morning",
           "reps": "10 REPS",
           "station": "🔵 Rack"
         },
@@ -4160,7 +4169,7 @@
           "station": "🔵 Rack"
         },
         {
-          "name": "TRX Torso Rotation Short Lever",
+          "name": "TRX Torso Rotation Short lever",
           "reps": "LADDER 8→12 · EACH SIDE",
           "station": "🔵 Rack"
         }
@@ -4273,7 +4282,7 @@
           "station": "🏋️ Bench"
         },
         {
-          "name": "Ab Tuck on Bench",
+          "name": "AB Tuck on Bench",
           "reps": "LADDER 15→12",
           "station": "🏋️ Bench"
         },
