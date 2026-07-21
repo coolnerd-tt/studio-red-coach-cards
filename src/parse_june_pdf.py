@@ -152,7 +152,11 @@ def intensity(s: str) -> str:
     if not m:
         return s.strip()
     n = int(m.group(1))
-    return f"{INT_WORD.get(n, 'Moderate')} {n}/10"
+    # Prefer the word actually printed on the sheet — it occasionally departs
+    # from the usual number mapping (e.g. a deliberate "Moderate – 6/10").
+    wm = re.search(r"(easy|moderate|hard|max)", s.lower())
+    word = wm.group(1).capitalize() if wm else INT_WORD.get(n, "Moderate")
+    return f"{word} {n}/10"
 
 
 def mz(s: str) -> str:
@@ -167,7 +171,11 @@ def parse_cardio(lines) -> list[dict]:
     )
     inten = [(y, t) for x, y, t in lines if 255 <= x <= 292 and 395 < y < 570]
     mzs = [(y, t) for x, y, t in lines if 458 <= x <= 488 and 395 < y < 570]
-    mult = [(y, t) for x, y, t in lines if 290 <= x <= 315 and 395 < y < 570 and re.search(r"x\s*\d", t.lower())]
+    # The sheet writes the round multiplier as either "x2" or "2x" — accept both.
+    mult = [
+        (y, t) for x, y, t in lines
+        if 290 <= x <= 315 and 395 < y < 570 and re.search(r"^x\s*\d+$|^\d+\s*x$", t.strip().lower())
+    ]
     rows = []
     for y, tt in times:
         iv = min(inten, key=lambda z: abs(z[0] - y))[1] if inten else ""
@@ -179,7 +187,7 @@ def parse_cardio(lines) -> list[dict]:
         nexty = rows[i + 1][0] if i + 1 < len(rows) else -999
         for my, mt in mult:
             if nexty < my < y:
-                m = re.search(r"x\s*(\d)", mt.lower())
+                m = re.search(r"(\d+)", mt)
                 if m:
                     out.append({"rounds": f"× {m.group(1)} rounds"})
     return out
