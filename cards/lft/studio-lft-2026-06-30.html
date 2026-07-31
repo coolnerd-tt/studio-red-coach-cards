@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+<title>Studio LFT · 06 / 30 / 2026</title>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600;700;900&family=Barlow:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --red: #D42B2B; --red-dark: #A01F1F; --black: #0F0F0F;
+    --card: #242424; --card2: #2E2E2E; --border: #3A3A3A;
+    --muted: #999; --yellow: #F5C842; --green: #4CAF50; --blue: #4A9EE8;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { background: var(--black); color: white; font-family: 'Barlow', sans-serif; font-size: 16px; min-height: 100vh; padding-bottom: 40px; }
+  a { color: inherit; }
+  .header { background: var(--red); padding: 14px 16px 12px; display: flex; align-items: center; justify-content: space-between; position: sticky; top: 0; z-index: 100; border-bottom: 3px solid var(--red-dark); }
+  .header-left { display: flex; align-items: center; gap: 10px; }
+  .logo-box { width: 36px; height: 36px; background: white; border-radius: 6px; display: flex; align-items: center; justify-content: center; font-family: 'Barlow Condensed', sans-serif; font-weight: 900; font-size: 22px; color: var(--red); letter-spacing: -1px; }
+  .header-title { font-family: 'Barlow Condensed', sans-serif; font-weight: 900; font-size: 22px; letter-spacing: 2px; color: white; text-transform: uppercase; }
+  .header-date { font-family: 'Barlow Condensed', sans-serif; font-weight: 600; font-size: 14px; color: white; letter-spacing: 1px; }
+  .header-week { font-family: 'Barlow Condensed', sans-serif; font-size: 11px; color: rgba(255,255,255,0.75); letter-spacing: 1px; text-transform: uppercase; }
+  .focus-badge { display: inline-block; margin-top: 3px; font-family: 'Barlow Condensed', sans-serif; font-weight: 800; font-size: 13px; letter-spacing: 1px; text-transform: uppercase; padding: 2px 10px; border-radius: 12px; background: rgba(255,255,255,0.18); color: white; }
+  .focus-lower { background: rgba(74,158,232,0.35); }
+  .focus-upper { background: rgba(245,200,66,0.3); color: #3a2e00; }
+  .focus-full { background: rgba(76,175,80,0.35); }
+
+  .lft-wrap { padding: 14px; max-width: 640px; margin: 0 auto; }
+  .session-notes { background: var(--card); border-left: 3px solid var(--red); border-radius: 0 8px 8px 0; padding: 11px 13px; font-size: 15px; color: #ddd; line-height: 1.5; margin-bottom: 16px; }
+
+  .lft-section { margin-bottom: 16px; }
+  .lft-section-head { display: flex; align-items: center; justify-content: space-between; background: #3d3d3d; border-radius: 8px; padding: 8px 12px; font-family: 'Barlow Condensed', sans-serif; font-weight: 800; font-size: 17px; letter-spacing: 1.5px; text-transform: uppercase; color: white; margin-bottom: 8px; }
+  .lft-time { font-family: 'Barlow Condensed', sans-serif; font-weight: 800; font-size: 15px; color: var(--yellow); letter-spacing: 0.5px; }
+  .lft-section-note { font-size: 13px; color: var(--muted); padding: 0 4px 8px; line-height: 1.4; }
+
+  .lft-ex-row { display: flex; gap: 10px; background: var(--card); border: 1px solid var(--border); border-radius: 10px; padding: 10px 12px; margin-bottom: 8px; }
+  .lft-ex-label { font-family: 'Barlow Condensed', sans-serif; font-weight: 800; font-size: 15px; color: var(--red); background: rgba(212,43,43,0.15); border-radius: 6px; padding: 2px 7px; align-self: flex-start; flex-shrink: 0; min-width: 20px; text-align: center; }
+  .lft-ex-body { flex: 1; min-width: 0; }
+  .lft-ex-top { display: flex; flex-wrap: wrap; align-items: baseline; gap: 8px; }
+  .lft-ex-name { font-weight: 700; font-size: 16px; text-decoration: none; border-bottom: 1px solid rgba(255,255,255,0.35); }
+  a.lft-ex-name:active { color: var(--yellow); }
+  .lft-ex-sr { font-family: 'Barlow Condensed', sans-serif; font-weight: 700; font-size: 15px; color: var(--yellow); letter-spacing: 0.5px; }
+  .lft-loc { font-size: 11px; font-weight: 700; letter-spacing: 0.5px; text-transform: uppercase; color: var(--blue); background: rgba(74,158,232,0.15); border-radius: 10px; padding: 1px 8px; }
+  .lft-ex-notes { font-size: 13.5px; color: #bbb; line-height: 1.45; margin-top: 4px; }
+
+  .lft-note-row { display: flex; align-items: flex-start; gap: 8px; background: rgba(245,200,66,0.08); border: 1px dashed rgba(245,200,66,0.4); border-radius: 8px; padding: 8px 12px; margin-bottom: 8px; font-size: 13.5px; color: var(--yellow); }
+  .lft-note-icon { flex-shrink: 0; }
+</style>
+</head>
+<body>
+
+<div class="header">
+  <div class="header-left">
+    <div class="logo-box">V</div>
+    <div>
+      <div class="header-title">Studio LFT</div>
+      <div class="header-date">06 / 30 / 2026</div>
+    </div>
+  </div>
+  <div style="text-align:right">
+    <div class="header-week">Benchmark</div>
+    <span class="focus-badge focus-full">Full</span>
+  </div>
+</div>
+
+<div class="lft-wrap">
+  <div class="session-notes">Use the workouts this week to practice your movement and test your strength. A week to test</div>
+
+  <div class="lft-section">
+    <div class="lft-section-head"><span>Training Prep</span><span class="lft-time">6:00</span></div>
+    <div class="lft-section-note">Focus on finding today’s range of motion and activating the supporting muscle groups for the big LFT</div>
+    <div class="lft-ex-row">
+      <div class="lft-ex-label">1a</div>
+      <div class="lft-ex-body">
+        <div class="lft-ex-top"><a class="lft-ex-name" href="https://www.dropbox.com/scl/fi/sqsqxrh8jeu8q8l2vdeac/Half-Kneeling-Hip-Flexor-Stretch.mov?rlkey=k57v4r55ox2rpxb9gcv8x4jjz&amp;st=bhhc3jas&amp;dl=0" target="_blank" rel="noopener">1/2 kneeling hip flexor</a><span class="lft-ex-sr">:45 per side</span></div>
+        <div class="lft-ex-notes">Gently rock into and out of stretch to open the front of the hips.</div>
+      </div>
+    </div>
+    <div class="lft-ex-row">
+      <div class="lft-ex-label">1b</div>
+      <div class="lft-ex-body">
+        <div class="lft-ex-top"><a class="lft-ex-name" href="https://www.dropbox.com/scl/fi/wcisg1x73bd7ufj2fmqhb/Dead-Bug-contralateral.mov?rlkey=qantm104aupf6hcb5tgvzsw2f&amp;st=uh56balp&amp;dl=0" target="_blank" rel="noopener">Contralateral Dead Bug</a><span class="lft-ex-sr">1:00</span></div>
+        <div class="lft-ex-notes">Engage the core and slowly lower opposite arm &amp; leg to the ground, keeping core engaged during return to starting position , repeat with other limbs.</div>
+      </div>
+    </div>
+    <div class="lft-ex-row">
+      <div class="lft-ex-label">1c</div>
+      <div class="lft-ex-body">
+        <div class="lft-ex-top"><a class="lft-ex-name" href="https://www.dropbox.com/scl/fi/hgcbkrfj0vqjg2pq3oph9/Pelvic-Tilts.mov?rlkey=mfyta8dah3gmc64r6u7mz7goh&amp;st=niteqt5q&amp;dl=0" target="_blank" rel="noopener">Pelvic Tilts</a><span class="lft-ex-sr">1:30</span></div>
+        <div class="lft-ex-notes">other limbs. Keep the core engaged while tucking the tailbone underneath. This bracing will apply to the Main LFT in the workout.</div>
+      </div>
+    </div>
+    <div class="lft-ex-row">
+      <div class="lft-ex-label">1d</div>
+      <div class="lft-ex-body">
+        <div class="lft-ex-top"><a class="lft-ex-name" href="https://www.dropbox.com/scl/fi/7tcvjmas3a6iklsvyazx1/Pause-Squat.mov?rlkey=rv1ltnw42ew2827pssbdl5xa3&amp;st=6r1esade&amp;dl=0" target="_blank" rel="noopener">Bodyweight Squat w/ Pause</a><span class="lft-ex-sr">1:00</span></div>
+        <div class="lft-ex-notes">the Main LFT in the workout. Slow continuous reps, pausing at the deepest position.</div>
+      </div>
+    </div>
+    <div class="lft-ex-row">
+      <div class="lft-ex-label">1e</div>
+      <div class="lft-ex-body">
+        <div class="lft-ex-top"><a class="lft-ex-name" href="https://www.dropbox.com/scl/fi/bshw8jbfuyb6poe8wpf9h/Drop-Squat-to-Pause.mov?rlkey=7smhdfqqytmfgkxsptuv7vuc6&amp;st=hi8wncwi&amp;dl=0" target="_blank" rel="noopener">Drop Squat to Pause</a><span class="lft-ex-sr">1:00</span></div>
+        <div class="lft-ex-notes">Land and hold position, Reset after each rep. Speeding the pattern up to prep for a big lift.</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="lft-section">
+    <div class="lft-section-head"><span>LFT 1</span><span class="lft-time">10:00</span></div>
+    <div class="lft-section-note">Create tension before every lift</div>
+    <div class="lft-ex-row">
+      <div class="lft-ex-label">2</div>
+      <div class="lft-ex-body">
+        <div class="lft-ex-top"><a class="lft-ex-name" href="https://www.dropbox.com/scl/fi/bqsf4zpwb4mgyc0lr2e8m/Barbell-Back-Squat.mov?rlkey=2zl269ulsc2l1ga93wov8lfmm&amp;st=dm70aymo&amp;dl=0" target="_blank" rel="noopener">Back/Front Squat</a><span class="lft-ex-sr">3-5RM</span></div>
+        <div class="lft-ex-notes">Build to a heavy 3 to 5 rep max. Let your ability to maintain good positioning be the indicator for loading. Choose between back or front squat</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="lft-section">
+    <div class="lft-section-head"><span>LFT 2</span><span class="lft-time">10:00</span></div>
+    <div class="lft-section-note">Push to an RIR of 1</div>
+    <div class="lft-ex-row">
+      <div class="lft-ex-label">3</div>
+      <div class="lft-ex-body">
+        <div class="lft-ex-top"><a class="lft-ex-name" href="https://www.dropbox.com/scl/fi/u1b7gjkmkfop6sl0mh0qg/Chin-Up.mov?rlkey=ra6mrzzc4zuiafnr8e49dd59q&amp;st=eljdkm74&amp;dl=0" target="_blank" rel="noopener">Pull Up/Chin Up</a><span class="lft-ex-sr">3, 3, 3, Max</span></div>
+        <div class="lft-ex-notes">Use as little assistance as need to build up to a max effort set. Be sure to drive the elbows into the ribs to get a big pull every time!</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="lft-section">
+    <div class="lft-section-head"><span>LFT 3</span><span class="lft-time">10:00</span></div>
+    <div class="lft-section-note">Push to an RIR of 1</div>
+    <div class="lft-ex-row">
+      <div class="lft-ex-label">4</div>
+      <div class="lft-ex-body">
+        <div class="lft-ex-top"><a class="lft-ex-name" href="https://www.dropbox.com/scl/fi/xg0ibwl2qcga322i4matr/DB-Reverse-Lunge.mov?rlkey=ea4crhu8t2ifhktqncdol9z8g&amp;st=zit96hdx&amp;dl=0" target="_blank" rel="noopener">DB Reverse Lunge</a><span class="lft-ex-sr">2- 4 x 8-12e</span></div>
+        <div class="lft-ex-notes">Hold DBs by sides. Step Back into lunge. Pick a weight that challenges the legs. Rest while partner works.</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="lft-section">
+    <div class="lft-section-head"><span>LFT 4</span><span class="lft-time">10:00</span></div>
+    <div class="lft-section-note">Push to an RIR of 1</div>
+    <div class="lft-ex-row">
+      <div class="lft-ex-label">4</div>
+      <div class="lft-ex-body">
+        <div class="lft-ex-top"><a class="lft-ex-name" href="https://www.dropbox.com/scl/fi/kvma40see181t147kumag/DB-chest-supported-row.mov?rlkey=fr2jipkcc8os4yergezjbv6yc&amp;st=66up8ed6&amp;dl=0" target="_blank" rel="noopener">DB Chest Supported Row</a><span class="lft-ex-sr">2- 4 x 8-12</span></div>
+        <div class="lft-ex-notes">Bench set to 30 degrees. Big pulls on each rep, getting the DBs towards the hips rather than armpits.</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="lft-section">
+    <div class="lft-section-head"><span>Finisher</span><span class="lft-time">4:00</span></div>
+    
+    <div class="lft-ex-row">
+      <div class="lft-ex-label">5</div>
+      <div class="lft-ex-body">
+        <div class="lft-ex-top"><a class="lft-ex-name" href="https://www.dropbox.com/scl/fi/4g1qu5fwxejfwzg7f3a89/KB-Curtis-P-Complex-Front-Rack-Squat-Lunge-R-Lunge-L-PushPress.mov?rlkey=j2oq28tx9nfcujeh9rkc0oour&amp;st=5yc33uao&amp;dl=0" target="_blank" rel="noopener">KB/DB Curtis P Complex Front Rack Squat -&gt; Lunge R-&gt; L Left -&gt; Push Press x1 each</a><span class="lft-ex-sr">2:00</span></div>
+        <div class="lft-ex-notes">Complete the complex and repeat for the time allotted. Pick a pace that allows you to move steadily without gassing out. 1 rep of each exercise.</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>
