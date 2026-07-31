@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+<title>VASA Studio Coach Cards</title>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600;700;900&family=Barlow:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --red: #D42B2B; --red-dark: #A01F1F; --black: #0F0F0F;
+    --card: #242424; --card2: #2E2E2E; --border: #3A3A3A; --muted: #999;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { background: var(--black); color: white; font-family: 'Barlow', sans-serif; min-height: 100vh; display: flex; align-items: center; justify-content: center; padding: 24px; }
+  .wrap { max-width: 460px; width: 100%; }
+  .brand { text-align: center; margin-bottom: 32px; }
+  .brand .v { width: 56px; height: 56px; background: var(--red); border-radius: 12px; display: flex; align-items: center; justify-content: center; font-family: 'Barlow Condensed', sans-serif; font-weight: 900; font-size: 32px; margin: 0 auto 12px; }
+  .brand h1 { font-family: 'Barlow Condensed', sans-serif; font-weight: 900; font-size: 26px; letter-spacing: 2px; text-transform: uppercase; }
+  .brand p { color: var(--muted); font-size: 14px; letter-spacing: 1px; text-transform: uppercase; margin-top: 4px; }
+  .tiles { display: flex; flex-direction: column; gap: 16px; }
+  .tile { display: block; text-decoration: none; background: var(--card); border: 1px solid var(--border); border-radius: 16px; padding: 22px 20px; transition: transform 0.15s, border-color 0.15s; }
+  .tile:active { transform: scale(0.98); border-color: var(--red); }
+  .tile-top { display: flex; align-items: center; justify-content: space-between; }
+  .tile-name { font-family: 'Barlow Condensed', sans-serif; font-weight: 900; font-size: 28px; letter-spacing: 1px; text-transform: uppercase; }
+  .tile-arrow { font-size: 26px; color: var(--muted); }
+  .tile-desc { color: var(--muted); font-size: 14.5px; margin-top: 6px; line-height: 1.4; }
+  .tile.red .tile-name { color: #FF5B5B; }
+  .tile.lft .tile-name { color: #F5C842; }
+  .tile-dot { display: inline-block; width: 10px; height: 10px; border-radius: 50%; margin-right: 8px; }
+  .tile.red .tile-dot { background: #FF5B5B; }
+  .tile.lft .tile-dot { background: #F5C842; }
+</style>
+</head>
+<body>
+
+<div class="wrap">
+  <div class="brand">
+    <div class="v">V</div>
+    <h1>VASA Studio Cards</h1>
+    <p>Pick a class</p>
+  </div>
+
+  <div class="tiles">
+    <a class="tile red" href="index.html">
+      <div class="tile-top">
+        <div class="tile-name"><span class="tile-dot"></span>Studio Red</div>
+        <span class="tile-arrow">›</span>
+      </div>
+      <div class="tile-desc">Cardio circuit &amp; conditioning coach cards — Bench/Rack stations, warm-up through cool-down.</div>
+    </a>
+
+    <a class="tile lft" href="lft/index.html">
+      <div class="tile-top">
+        <div class="tile-name"><span class="tile-dot"></span>Studio LFT</div>
+        <span class="tile-arrow">›</span>
+      </div>
+      <div class="tile-desc">Weightlifting programming — Lower / Upper / Full body build blocks and benchmark weeks.</div>
+    </a>
+  </div>
+</div>
+
+</body>
+</html>
