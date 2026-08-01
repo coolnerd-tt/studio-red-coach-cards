@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+<title>Studio LFT · 08 / 26 / 2026</title>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600;700;900&family=Barlow:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --red: #D42B2B; --red-dark: #A01F1F; --black: #0F0F0F;
+    --card: #242424; --card2: #2E2E2E; --border: #3A3A3A;
+    --muted: #999; --yellow: #F5C842; --green: #4CAF50; --blue: #4A9EE8;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { background: var(--black); color: white; font-family: 'Barlow', sans-serif; font-size: 18px; min-height: 100vh; padding-bottom: 40px; }
+  a { color: inherit; }
+  .header { background: var(--red); padding: 14px 16px 12px; display: flex; align-items: center; justify-content: space-between; position: sticky; top: 0; z-index: 100; border-bottom: 3px solid var(--red-dark); }
+  .header-left { display: flex; align-items: center; gap: 10px; }
+  .logo-box { width: 36px; height: 36px; background: white; border-radius: 6px; display: flex; align-items: center; justify-content: center; font-family: 'Barlow Condensed', sans-serif; font-weight: 900; font-size: 22px; color: var(--red); letter-spacing: -1px; }
+  .header-title { font-family: 'Barlow Condensed', sans-serif; font-weight: 900; font-size: 22px; letter-spacing: 2px; color: white; text-transform: uppercase; }
+  .header-date { font-family: 'Barlow Condensed', sans-serif; font-weight: 600; font-size: 14px; color: white; letter-spacing: 1px; }
+  .header-week { font-family: 'Barlow Condensed', sans-serif; font-size: 11px; color: rgba(255,255,255,0.75); letter-spacing: 1px; text-transform: uppercase; }
+  .focus-badge { display: inline-block; margin-top: 3px; font-family: 'Barlow Condensed', sans-serif; font-weight: 800; font-size: 13px; letter-spacing: 1px; text-transform: uppercase; padding: 2px 10px; border-radius: 12px; background: rgba(255,255,255,0.18); color: white; }
+  .focus-lower { background: rgba(74,158,232,0.35); }
+  .focus-upper { background: rgba(245,200,66,0.3); color: #3a2e00; }
+  .focus-full { background: rgba(76,175,80,0.35); }
+
+  .lft-wrap { padding: 14px; max-width: 640px; margin: 0 auto; }
+  .session-notes { background: var(--card); border-left: 3px solid var(--red); border-radius: 0 8px 8px 0; padding: 11px 13px; font-size: 17px; color: #ddd; line-height: 1.5; margin-bottom: 16px; }
+
+  .lft-section { margin-bottom: 16px; }
+  .lft-section-head { display: flex; align-items: center; justify-content: space-between; background: #3d3d3d; border-radius: 8px; padding: 8px 12px; font-family: 'Barlow Condensed', sans-serif; font-weight: 800; font-size: 19px; letter-spacing: 1.5px; text-transform: uppercase; color: white; margin-bottom: 8px; }
+  .lft-time { font-family: 'Barlow Condensed', sans-serif; font-weight: 800; font-size: 17px; color: var(--yellow); letter-spacing: 0.5px; }
+  .lft-section-note { font-size: 15px; color: var(--muted); padding: 0 4px 8px; line-height: 1.4; }
+
+  .lft-ex-row { display: flex; gap: 10px; background: var(--card); border: 1px solid var(--border); border-radius: 10px; padding: 10px 12px; margin-bottom: 8px; }
+  .lft-ex-label { font-family: 'Barlow Condensed', sans-serif; font-weight: 800; font-size: 17px; color: var(--red); background: rgba(212,43,43,0.15); border-radius: 6px; padding: 2px 7px; align-self: flex-start; flex-shrink: 0; min-width: 20px; text-align: center; }
+  .lft-ex-body { flex: 1; min-width: 0; }
+  .lft-ex-top { display: flex; flex-wrap: wrap; align-items: baseline; gap: 8px; }
+  .lft-ex-name { font-weight: 700; font-size: 18px; text-decoration: none; border-bottom: 1px solid rgba(255,255,255,0.35); }
+  a.lft-ex-name:active { color: var(--yellow); }
+  .lft-ex-sr { font-family: 'Barlow Condensed', sans-serif; font-weight: 700; font-size: 17px; color: var(--yellow); letter-spacing: 0.5px; }
+  .lft-loc { font-size: 13px; font-weight: 700; letter-spacing: 0.5px; text-transform: uppercase; color: var(--blue); background: rgba(74,158,232,0.15); border-radius: 10px; padding: 1px 8px; }
+  .lft-ex-notes { font-size: 15.5px; color: #bbb; line-height: 1.45; margin-top: 4px; }
+
+  .lft-note-row { display: flex; align-items: flex-start; gap: 8px; background: rgba(245,200,66,0.08); border: 1px dashed rgba(245,200,66,0.4); border-radius: 8px; padding: 8px 12px; margin-bottom: 8px; font-size: 15.5px; color: var(--yellow); }
+  .lft-note-icon { flex-shrink: 0; }
+</style>
+</head>
+<body>
+
+<div class="header">
+  <div class="header-left">
+    <div class="logo-box">V</div>
+    <div>
+      <div class="header-title">Studio LFT</div>
+      <div class="header-date">08 / 26 / 2026</div>
+    </div>
+  </div>
+  <div style="text-align:right">
+    <div class="header-week">Week 2</div>
+    <span class="focus-badge focus-upper">Upper</span>
+  </div>
+</div>
+
+<div class="lft-wrap">
+  <div class="session-notes">Using a tempo will give the muscles more TIME UNDER TENSION. Lighter weights will feel heavy when the lowering is slowed down. Back &amp; Bicep Focus (proper loading) with higher</div>
+
+  <div class="lft-section">
+    <div class="lft-section-head"><span>Training Prep</span><span class="lft-time">6:00</span></div>
+    <div class="lft-section-note">Focus on finding today’s range of motion and activating the supporting muscle groups for the big LFT</div>
+    <div class="lft-ex-row">
+      <div class="lft-ex-label">1a</div>
+      <div class="lft-ex-body">
+        <div class="lft-ex-top"><a class="lft-ex-name" href="https://www.dropbox.com/scl/fi/7k2cxx0591wo95336xvcp/Hinged-Over-SA-Lat-Stretch.mov?rlkey=yibyvzmx054c4tobugbe23rhc&amp;st=uqe8yrzz&amp;dl=0" target="_blank" rel="noopener">Hinged Over Single Arm Lat Stretch</a><span class="lft-ex-sr">:45 per side</span></div>
+        <div class="lft-ex-notes">Hold onto rack with 1 arm, thumbs down position. Shift the hips away from the stretching arm.</div>
+      </div>
+    </div>
+    <div class="lft-ex-row">
+      <div class="lft-ex-label">1b</div>
+      <div class="lft-ex-body">
+        <div class="lft-ex-top"><a class="lft-ex-name" href="https://www.dropbox.com/scl/fi/iglcaefiay2lrzbby9a8x/Band-Over-and-Back.mov?rlkey=qh5kdfh2b414yov3og0xbvqcw&amp;st=x09zmepi&amp;dl=0" target="_blank" rel="noopener">Band Over And Back</a><span class="lft-ex-sr">1:00</span></div>
+        <div class="lft-ex-notes">Take the band overhead with lateral tension, then straight down the spine rather than away from the back behind.</div>
+      </div>
+    </div>
+    <div class="lft-ex-row">
+      <div class="lft-ex-label">1c</div>
+      <div class="lft-ex-body">
+        <div class="lft-ex-top"><a class="lft-ex-name" href="https://www.dropbox.com/scl/fi/cluuljxzwc8kznfr3l3zh/Scap-pull-up.mp4?rlkey=ccuq9s8cm7d6w99zlyf3njg6e&amp;st=1rgucusw&amp;dl=0" target="_blank" rel="noopener">Hanging Scap Shrug</a><span class="lft-ex-sr">1:30</span></div>
+        <div class="lft-ex-notes">From hang position, pull shoulder blades down. Use lower body help by standing on box if hang is not possible. This bracing will apply to the Main LFT in the workout.</div>
+      </div>
+    </div>
+    <div class="lft-ex-row">
+      <div class="lft-ex-label">1d</div>
+      <div class="lft-ex-body">
+        <div class="lft-ex-top"><a class="lft-ex-name" href="https://www.dropbox.com/scl/fi/q0gp18xdlaxh5l26zl8rb/Band-Face-Pull.mov?rlkey=nn2fv5ag0n38sikgikim3ntrl&amp;st=j6dykfj3&amp;dl=0" target="_blank" rel="noopener">Band Face Pull</a><span class="lft-ex-sr">1:00</span></div>
+        <div class="lft-ex-notes">to the Main LFT in the workout. Move band to face height. Pull with both hands, keeping band in the fingers.</div>
+      </div>
+    </div>
+    <div class="lft-ex-row">
+      <div class="lft-ex-label">1e</div>
+      <div class="lft-ex-body">
+        <div class="lft-ex-top"><a class="lft-ex-name" href="https://www.dropbox.com/scl/fi/we54fh4lne9ot9spoq3tj/Med-Ball-Overhead-Slams.mp4?rlkey=wwh65t9a41ghl4j20rwffqyhi&amp;st=15x36q8a&amp;dl=0" target="_blank" rel="noopener">Ball Slam</a><span class="lft-ex-sr">1:00</span></div>
+        <div class="lft-ex-notes">Use your lats to slam the ball down.</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="lft-section">
+    <div class="lft-section-head"><span>Main LFT</span><span class="lft-time">15:00</span></div>
+    <div class="lft-section-note">Create tension before every lift</div>
+    <div class="lft-ex-row">
+      <div class="lft-ex-label">2a</div>
+      <div class="lft-ex-body">
+        <div class="lft-ex-top"><a class="lft-ex-name" href="https://www.dropbox.com/scl/fi/7b7388hxbsrvg37m8aod1/Barbell-Bent-Over-Row.mov?rlkey=doojfm65w1sfvo4bzuz3ktv5z&amp;st=xkxaravn&amp;dl=0" target="_blank" rel="noopener">Barbell Bent Over Row</a><span class="lft-ex-sr">6 @4211 tempo</span></div>
+        <div class="lft-ex-notes">Build to a challenging 6. keep core engaged during each rep. Slow tempo. Use catches to load and hold weight.</div>
+      </div>
+    </div>
+    <div class="lft-note-row">
+      <span class="lft-note-icon">↳</span>USE BENCH IN RACK
+    </div>
+  </div>
+
+  <div class="lft-section">
+    <div class="lft-section-head"><span>Accessory 1</span><span class="lft-time">12:00</span></div>
+    <div class="lft-section-note">Push to an RIR of 0</div>
+    <div class="lft-ex-row">
+      <div class="lft-ex-label">3a</div>
+      <div class="lft-ex-body">
+        <div class="lft-ex-top"><a class="lft-ex-name" href="https://www.dropbox.com/scl/fi/hdocxm9qyegviez9f2zjf/Single-Arm-Incline-DB-Bench-Press.mov?rlkey=z31qti2tu8w0j3hqtmhrohv30&amp;st=no43z326&amp;dl=0" target="_blank" rel="noopener">DB Single Arm Incline Press</a><span class="lft-ex-sr">2- 4 x 12e</span></div>
+        <div class="lft-ex-notes">Bench set to 45degrees. Engage core, press feet through floor to drive weight to ceiling.</div>
+      </div>
+    </div>
+    <div class="lft-ex-row">
+      <div class="lft-ex-label">3b</div>
+      <div class="lft-ex-body">
+        <div class="lft-ex-top"><a class="lft-ex-name" href="https://www.dropbox.com/scl/fi/vbhsy8gaesm1xzap5arup/Single-Arm-Bicep-Curls.mp4?rlkey=69s2ttd4n7fwfjd7f0flbpjr7&amp;st=ddg5x7af&amp;dl=0" target="_blank" rel="noopener">DB Single Arm Bicep Curl</a><span class="lft-ex-sr">2- 4 x 12e</span><span class="lft-loc">in the RACK</span></div>
+        <div class="lft-ex-notes">Hold DB in 1 arm. Curl to shoulder. Keep body still.</div>
+      </div>
+    </div>
+    <div class="lft-ex-row">
+      <div class="lft-ex-label">3c</div>
+      <div class="lft-ex-body">
+        <div class="lft-ex-top"><a class="lft-ex-name" href="https://www.dropbox.com/scl/fi/1wf1fn6q8epjtxe7mzi08/Half-Kneeling-SA-High-Angle-Band-Row.mov?rlkey=qhg03d7tcywcpk8o4m9wk4m8b&amp;st=vgu70fku&amp;dl=0" target="_blank" rel="noopener">High Angle Single arm Band Row</a><span class="lft-ex-sr">2- 4 x 12e</span><span class="lft-loc">in the GAP</span></div>
+        <div class="lft-ex-notes">Set up a band on upright. Pull with one hand in ½ kneeling position. Loop band around wrist to avoid irritating elbow/grip. Drive elbow back</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="lft-section">
+    <div class="lft-section-head"><span>Accessory 2</span><span class="lft-time">12:00</span></div>
+    <div class="lft-section-note">Push to an RIR of 0</div>
+    <div class="lft-ex-row">
+      <div class="lft-ex-label">4a</div>
+      <div class="lft-ex-body">
+        <div class="lft-ex-top"><a class="lft-ex-name" href="https://www.dropbox.com/scl/fi/wfmuu76xxwp7dh897cy7w/SA-Bench-Deadstop-Row.mov?rlkey=xuz46wlgpa9n14k3liphuft1c&amp;st=zto205oo&amp;dl=0" target="_blank" rel="noopener">DB Deadstop Row with Hand Support</a><span class="lft-ex-sr">2- 4 x 12e</span></div>
+        <div class="lft-ex-notes">Use bench for support, pull the DB from the ground on each rep.</div>
+      </div>
+    </div>
+    <div class="lft-ex-row">
+      <div class="lft-ex-label">4b</div>
+      <div class="lft-ex-body">
+        <div class="lft-ex-top"><a class="lft-ex-name" href="https://www.dropbox.com/scl/fi/wed59k0jkyva1q5latiso/Weighted-Dips.mov?rlkey=r03agdw3pa89ve2ttyfc6rhif&amp;st=751b3baq&amp;dl=0" target="_blank" rel="noopener">Box Dip</a><span class="lft-ex-sr">2- 4 x 12</span><span class="lft-loc">in the RACK</span></div>
+        <div class="lft-ex-notes">Hands on box, knees bent or straight. Manage depth so shoulders don’t get grumpy. Load</div>
+      </div>
+    </div>
+    <div class="lft-ex-row">
+      <div class="lft-ex-label">4c</div>
+      <div class="lft-ex-body">
+        <div class="lft-ex-top"><a class="lft-ex-name" href="https://www.dropbox.com/scl/fi/2qv9vfxxgwljm48nsruak/Bent-Over-Plate-Rear-Delt-Raise.mov?rlkey=76qv8bobp7pnoio1k42dn44bk&amp;st=a8trwkpd&amp;dl=0" target="_blank" rel="noopener">Bent Over Plate Raise</a><span class="lft-ex-sr">2- 4 x 12</span></div>
+        <div class="lft-ex-notes">with Plate as needed. Holding plates, hinge over, raise plates level with shoulders/upper back. .</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="lft-section">
+    <div class="lft-section-head"><span>Finisher</span><span class="lft-time">4:00</span></div>
+    
+    <div class="lft-ex-row">
+      <div class="lft-ex-label">5</div>
+      <div class="lft-ex-body">
+        <div class="lft-ex-top"><a class="lft-ex-name" href="https://www.dropbox.com/scl/fi/zeumxbwavg8u9oz505xyt/Dead-bug-med-ball-squeeze-arms.mov?rlkey=6ft21ijxmz2ean2vxikdz3xpz&amp;st=ys5c16hh&amp;dl=0" target="_blank" rel="noopener">Dead Bug Leg Raise with Upper body Ball Squeeze</a><span class="lft-ex-sr">2:00</span></div>
+        <div class="lft-ex-notes">Lying on back, squeeze ball with straight arms. Slowly raise and lower one leg at a time.</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>

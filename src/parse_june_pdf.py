@@ -52,6 +52,32 @@ JUNK = re.compile(
 )
 INT_WORD = {6: "Easy", 7: "Moderate", 8: "Hard", 9: "Max", 10: "Max"}
 
+# Vasa re-templated the sheet starting with the August 2026 PDF (page size
+# 540x720, a real bordered table) — everything before that is 612x792 with
+# free-flowing text columns. Same information, different absolute
+# coordinates, so pick a coordinate profile from the page's own width rather
+# than maintaining two parsers.
+LEGACY_PROFILE = {
+    "bench_name_x": (35, 100), "bench_header_x": (100, 200),
+    "rack_name_x": (305, 350), "rack_header_x": (380, 470),
+    "cardio_time_x": (100, 135), "cardio_intensity_x": (255, 292), "cardio_mz_x": (458, 488),
+    "cardio_mult_x": (290, 315), "cardio_y": (395, 570),
+    "warmup_x": (215, 242), "warmup_y0": 678,
+    "note_x": (33, 60),
+}
+V2_PROFILE = {
+    "bench_name_x": (19, 103), "bench_header_x": (100, 200),
+    "rack_name_x": (270, 353), "rack_header_x": (350, 470),
+    "cardio_time_x": (60, 150), "cardio_intensity_x": (200, 300), "cardio_mz_x": (400, 470),
+    "cardio_mult_x": (295, 330), "cardio_y": (370, 560),
+    "warmup_x": (186, 354), "warmup_y0": 627,
+    "note_x": (20, 50),
+}
+
+
+def profile_for(page) -> dict:
+    return LEGACY_PROFILE if page.width > 575 else V2_PROFILE
+
 
 # --------------------------------------------------------------------------- #
 # Library-assisted name canonicalisation
@@ -102,12 +128,26 @@ def header_y(lines, label, xlo, xhi) -> int:
     return max(ys) if ys else 345
 
 
+def floor_bottom_y(lines, hy) -> int:
+    """Where the closing NOTES paragraph starts, below the floor exercises.
+
+    Its exact wording varies by format (Ladder/Benchmark carry sentences the
+    JUNK keyword list doesn't cover), so instead of matching every possible
+    phrasing, just stop reading the floor column before the paragraph that
+    starts with "NOTES" begins.
+    """
+    ys = [y for x, y, t in lines if y < hy and re.match(r"^NOTES", t.strip(), re.I)]
+    return max(ys) - 1 if ys else 15
+
+
 def col_exercises(lines, xlo, xhi, hy) -> list[tuple[str, str | None]]:
     """[(name, rep_token)] top->bottom for one floor column, bounded above by hy."""
+    floor = floor_bottom_y(lines, hy)
     frags = [
         (y, x, t)
         for x, y, t in lines
-        if xlo <= x <= xhi and 15 < y < hy and t not in ("BENCH", "RACK") and not t.startswith("**")
+        if xlo <= x <= xhi and floor < y < hy and t not in ("BENCH", "RACK") and not t.startswith("**")
+        and not JUNK.search(t)
     ]
     frags.sort(key=lambda z: -z[0])
     clusters, cur = [], []
@@ -164,17 +204,22 @@ def mz(s: str) -> str:
     return "Red" if s.lower() == "max" else s.capitalize()
 
 
-def parse_cardio(lines) -> list[dict]:
+def parse_cardio(lines, prof) -> list[dict]:
+    ylo, yhi = prof["cardio_y"]
+    txlo, txhi = prof["cardio_time_x"]
+    ixlo, ixhi = prof["cardio_intensity_x"]
+    mxlo, mxhi = prof["cardio_mz_x"]
+    mulo, muhi = prof["cardio_mult_x"]
     times = sorted(
-        [(y, t) for x, y, t in lines if 100 <= x <= 135 and 395 < y < 570 and re.match(r"^[\.:]?\d", t)],
+        [(y, t) for x, y, t in lines if txlo <= x <= txhi and ylo < y < yhi and re.match(r"^[\.:]?\d", t)],
         key=lambda z: -z[0],
     )
-    inten = [(y, t) for x, y, t in lines if 255 <= x <= 292 and 395 < y < 570]
-    mzs = [(y, t) for x, y, t in lines if 458 <= x <= 488 and 395 < y < 570]
+    inten = [(y, t) for x, y, t in lines if ixlo <= x <= ixhi and ylo < y < yhi]
+    mzs = [(y, t) for x, y, t in lines if mxlo <= x <= mxhi and ylo < y < yhi]
     # The sheet writes the round multiplier as either "x2" or "2x" — accept both.
     mult = [
         (y, t) for x, y, t in lines
-        if 290 <= x <= 315 and 395 < y < 570 and re.search(r"^x\s*\d+$|^\d+\s*x$", t.strip().lower())
+        if mulo <= x <= muhi and ylo < y < yhi and re.search(r"^x\s*\d+$|^\d+\s*x$", t.strip().lower())
     ]
     rows = []
     for y, tt in times:
@@ -219,15 +264,17 @@ def parse_ladder(lines):
     return None
 
 
-def parse_warmup(lines) -> list[str]:
-    items = [(y, t) for x, y, t in lines if 215 <= x <= 242 and y >= 678 and t != "BENCH/RACK"]
+def parse_warmup(lines, prof) -> list[str]:
+    xlo, xhi = prof["warmup_x"]
+    items = [(y, t) for x, y, t in lines if xlo <= x <= xhi and y >= prof["warmup_y0"] and t != "BENCH/RACK"]
     items.sort(key=lambda z: -z[0])
     return [t for y, t in items]
 
 
-def parse_cardio_note(lines, bhy, top):
+def parse_cardio_note(lines, bhy, top, prof):
     # Sits between the cardio table bottom (top) and the BENCH header (bhy).
-    frags = [(y, t) for x, y, t in lines if 33 <= x <= 60 and bhy < y < top - 5]
+    xlo, xhi = prof["note_x"]
+    frags = [(y, t) for x, y, t in lines if xlo <= x <= xhi and bhy < y < top - 5]
     frags.sort(key=lambda z: -z[0])
     txt = re.sub(r"^NOTES:?\s*", "", " ".join(t for y, t in frags).strip())
     return txt if len(txt) >= 40 else None
@@ -240,6 +287,7 @@ def parse_pdf(pdf_path: Path, canon) -> tuple[list[dict], list[str]]:
     pages = list(extract_pages(str(pdf_path)))
     days, problems = [], []
     for i in range(1, len(pages)):  # page 0 is the cover; page i == day i
+        prof = profile_for(pages[i])
         L = page_lines(pages[i])
         alltext = " ".join(t for x, y, t in L)
         date = next((t[:10] for x, y, t in L if re.match(r"\d\d/\d\d/\d{4}", t)), None)
@@ -249,29 +297,31 @@ def parse_pdf(pdf_path: Path, canon) -> tuple[list[dict], list[str]]:
         iso = f"{yy}-{mm}-{dd}"
         fmt, kind = parse_format(L, alltext)
         ladder = parse_ladder(L) if kind == "LADDER" else None
-        bhy = header_y(L, "BENCH", 100, 200)
-        rhy = header_y(L, "RACK", 380, 470)
+        bhy = header_y(L, "BENCH", *prof["bench_header_x"])
+        rhy = header_y(L, "RACK", *prof["rack_header_x"])
 
         exs = []
-        for nm, rep in col_exercises(L, 35, 100, bhy):
+        for nm, rep in col_exercises(L, *prof["bench_name_x"], bhy):
             exs.append({"name": canon(nm), "reps": reptext(rep, kind, ladder), "station": "\U0001F3CB️ Bench"})
-        for nm, rep in col_exercises(L, 305, 350, rhy):
+        for nm, rep in col_exercises(L, *prof["rack_name_x"], rhy):
             exs.append({"name": canon(nm), "reps": reptext(rep, kind, ladder), "station": "\U0001F535 Rack"})
 
-        cardio = parse_cardio(L)
+        cardio = parse_cardio(L, prof)
         if kind == "BENCHMARK" and not cardio:
             cardio = [{"rounds": "BENCHMARK TEST · MAX DISTANCE"}]
 
         day = {
             "date": iso,
             "format": fmt,
-            "warmup": parse_warmup(L),
+            "warmup": parse_warmup(L, prof),
             "cardio": cardio,
             "exercises": exs,
             "source_file": f"{pdf_path.name} p.{i}",
         }
-        cardio_ys = [y for x, y, t in L if 100 <= x <= 135 and 395 < y < 570 and re.match(r"^[\.:]?\d", t)]
-        note = parse_cardio_note(L, bhy, min(cardio_ys) if cardio_ys else 430)
+        txlo, txhi = prof["cardio_time_x"]
+        ylo, yhi = prof["cardio_y"]
+        cardio_ys = [y for x, y, t in L if txlo <= x <= txhi and ylo < y < yhi and re.match(r"^[\.:]?\d", t)]
+        note = parse_cardio_note(L, bhy, min(cardio_ys) if cardio_ys else 430, prof)
         if note and kind != "BENCHMARK" and len(note) < 320:
             day["cardio_note"] = note
         if kind == "BENCHMARK":

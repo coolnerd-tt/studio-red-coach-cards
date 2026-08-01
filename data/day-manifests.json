@@ -4375,6 +4375,1878 @@
       ],
       "source_file": "STUDIO RED Workouts July 2026 07.01.26-07.31.2026.pdf p.31",
       "cardio_note": "Nine minutes of sustained aerobic work with no true rest — the Moderate intervals keep heart rate elevated while allowing just enough relief to maintain quality through the Hard effort. Cue members that the second moderate is not a cooldown; keep the effort consistent."
+    },
+    {
+      "date": "2026-08-01",
+      "format": "EMOM · 9 MIN",
+      "warmup": [
+        "Rev. Lunge w/ rotation",
+        "Prying Deep Squat",
+        "Overhead Squat",
+        "Explosive Jacks"
+      ],
+      "cardio": [
+        {
+          "time": "2:00",
+          "intensity": "Easy 6/10",
+          "mz": "Blue"
+        },
+        {
+          "time": ".3 mile",
+          "intensity": "Hard 8/10",
+          "mz": "Yellow"
+        }
+      ],
+      "exercises": [
+        {
+          "name": "DB Hip Thrust",
+          "reps": "",
+          "station": "🏋️ Bench"
+        },
+        {
+          "name": "Fitband Rotational Row alt.",
+          "reps": "",
+          "station": "🏋️ Bench"
+        },
+        {
+          "name": "Skater Hops",
+          "reps": "",
+          "station": "🏋️ Bench"
+        },
+        {
+          "name": "Ball Squat",
+          "reps": "",
+          "station": "🔵 Rack"
+        },
+        {
+          "name": "KB Halo",
+          "reps": "",
+          "station": "🔵 Rack"
+        },
+        {
+          "name": "Plank on Elbows",
+          "reps": "",
+          "station": "🔵 Rack"
+        }
+      ],
+      "source_file": "STUDIO RED HIIT Programming August 2026.pdf p.1",
+      "cardio_note": "The .3 mile cap gives everyone a fixed target to push through at their own pace, rather than a set time to fill. The full 2:00 recovery lets heart rate fully drop before the next repeat."
+    },
+    {
+      "date": "2026-08-02",
+      "format": "CIRCUIT · 9 MIN",
+      "warmup": [
+        "Arm Swings Alt.",
+        "BW Cossack Squat",
+        "Downward Dog to Plank",
+        "High Knees"
+      ],
+      "cardio": [
+        {
+          "time": "1:15",
+          "intensity": "Easy 6/10",
+          "mz": "Blue"
+        },
+        {
+          "time": "2:30",
+          "intensity": "Hard 8/10",
+          "mz": "Yellow"
+        },
+        {
+          "time": "1:15",
+          "intensity": "Moderate 7/10",
+          "mz": "Green"
+        },
+        {
+          "time": "2:30",
+          "intensity": "Hard 8/10",
+          "mz": "Yellow"
+        },
+        {
+          "time": "1:30",
+          "intensity": "Moderate 7/10",
+          "mz": "Green"
+        }
+      ],
+      "exercises": [
+        {
+          "name": "DB Front Loaded Good Morning",
+          "reps": "15 REPS",
+          "station": "🏋️ Bench"
+        },
+        {
+          "name": "Fitband Wall Sit Chest Press",
+          "reps": "15 REPS",
+          "station": "🏋️ Bench"
+        },
+        {
+          "name": "DB Wood Chop",
+          "reps": "15 EACH SIDE",
+          "station": "🏋️ Bench"
+        },
+        {
+          "name": "KB Dual Rack Front Squat",
+          "reps": "15 REPS",
+          "station": "🔵 Rack"
+        },
+        {
+          "name": "KB Gorilla Row Alt.",
+          "reps": "15 EACH SIDE",
+          "station": "🔵 Rack"
+        },
+        {
+          "name": "Plank w/Knee to Elbow",
+          "reps": "15 EACH SIDE",
+          "station": "🔵 Rack"
+        }
+      ],
+      "source_file": "STUDIO RED HIIT Programming August 2026.pdf p.2",
+      "cardio_note": "Recovery here is Moderate, not Easy, so lactate never fully clears before the next Hard push. That's what builds tolerance for working while already fatigued."
+    },
+    {
+      "date": "2026-08-03",
+      "format": "LADDER · 9 MIN",
+      "warmup": [
+        "Elbow to Instep Alt.",
+        "Kang Squat",
+        "Lateral Lunge w/ Reach Up",
+        "Butt Kicks"
+      ],
+      "cardio": [
+        {
+          "time": "2:00",
+          "intensity": "Moderate 7/10",
+          "mz": "Green"
+        },
+        {
+          "time": "2:00",
+          "intensity": "Hard 8/10",
+          "mz": "Yellow"
+        },
+        {
+          "time": "1:00",
+          "intensity": "Easy 6/10",
+          "mz": "Blue"
+        },
+        {
+          "time": "2:00",
+          "intensity": "Moderate 7/10",
+          "mz": "Green"
+        },
+        {
+          "time": "2:00",
+          "intensity": "Hard 8/10",
+          "mz": "Yellow"
+        }
+      ],
+      "exercises": [
+        {
+          "name": "DB 2arm Long Stance RDL",
+          "reps": "LADDER 12→15 · EACH SIDE",
+          "station": "🏋️ Bench"
+        },
+        {
+          "name": "DB Bird Dog Row",
+          "reps": "LADDER 12→15 · EACH SIDE",
+          "station": "🏋️ Bench"
+        },
+        {
+          "name": "DB Upright Row",
+          "reps": "LADDER 12→15",
+          "station": "🏋️ Bench"
+        },
+        {
+          "name": "KB 1.5 Stance Palm Hold Squat",
+          "reps": "LADDER 12→15",
+          "station": "🔵 Rack"
+        },
+        {
+          "name": "KB Shoulder to Shoulder Press",
+          "reps": "LADDER 12→15 · EACH SIDE",
+          "station": "🔵 Rack"
+        },
+        {
+          "name": "TRX Standing Rollout",
+          "reps": "LADDER 12→15",
+          "station": "🔵 Rack"
+        }
+      ],
+      "source_file": "STUDIO RED HIIT Programming August 2026.pdf p.3",
+      "cardio_note": "The 1-minute easy segment is only a partial reset, so the second Moderate/Hard wave starts already tired. That's the point — building the ability to push hard on legs that aren't fresh."
+    },
+    {
+      "date": "2026-08-04",
+      "format": "CIRCUIT · 9 MIN",
+      "warmup": [
+        "Rev. Lunge w/ rotation",
+        "Prying Deep Squat",
+        "Overhead Squat",
+        "Explosive Jacks"
+      ],
+      "cardio": [
+        {
+          "time": "1:20",
+          "intensity": "Moderate 7/10",
+          "mz": "Green"
+        },
+        {
+          "time": ":40",
+          "intensity": "Easy 6/10",
+          "mz": "Blue"
+        },
+        {
+          "time": "2:00",
+          "intensity": "Hard 8/10",
+          "mz": "Yellow"
+        },
+        {
+          "time": "1:00",
+          "intensity": "Moderate 7/10",
+          "mz": "Green"
+        }
+      ],
+      "exercises": [
+        {
+          "name": "Fitband Rotational Row Alt.",
+          "reps": "15 EACH SIDE",
+          "station": "🏋️ Bench"
+        },
+        {
+          "name": "DB 1arm Lunge to Knee Drive Curl",
+          "reps": "15 EACH SIDE",
+          "station": "🏋️ Bench"
+        },
+        {
+          "name": "Elevated Bicycle",
+          "reps": "15 EACH SIDE",
+          "station": "🏋️ Bench"
+        },
+        {
+          "name": "KB Swing",
+          "reps": "15 REPS",
+          "station": "🔵 Rack"
+        },
+        {
+          "name": "TRX Chest Fly Standing",
+          "reps": "15 REPS",
+          "station": "🔵 Rack"
+        },
+        {
+          "name": "TRX Oblique Crunch",
+          "reps": "15 EACH SIDE",
+          "station": "🔵 Rack"
+        }
+      ],
+      "source_file": "STUDIO RED HIIT Programming August 2026.pdf p.4",
+      "cardio_note": "Recovery is shorter than the work today, so members can't fully reset before the next push. It trains keeping intensity up without a full recovery."
+    },
+    {
+      "date": "2026-08-05",
+      "format": "EMOM · 9 MIN",
+      "warmup": [
+        "Arm Swings Alt.",
+        "BW Cossack Squat",
+        "Downward Dog to Plank",
+        "High Knees"
+      ],
+      "cardio": [
+        {
+          "time": "1:00",
+          "intensity": "Easy 6/10",
+          "mz": "Blue"
+        },
+        {
+          "time": "20 cals",
+          "intensity": "Hard 8/10",
+          "mz": "Yellow"
+        }
+      ],
+      "exercises": [
+        {
+          "name": "DB RDL",
+          "reps": "",
+          "station": "🏋️ Bench"
+        },
+        {
+          "name": "DB Arnold Press",
+          "reps": "",
+          "station": "🏋️ Bench"
+        },
+        {
+          "name": "Fitband Tricep Extension",
+          "reps": "",
+          "station": "🏋️ Bench"
+        },
+        {
+          "name": "TRX 3 Way Row",
+          "reps": "",
+          "station": "🔵 Rack"
+        },
+        {
+          "name": "Ball Adductor Squeeze Squat",
+          "reps": "",
+          "station": "🔵 Rack"
+        },
+        {
+          "name": "TRX Mtn. Climber",
+          "reps": "",
+          "station": "🔵 Rack"
+        }
+      ],
+      "source_file": "STUDIO RED HIIT Programming August 2026.pdf p.5",
+      "cardio_note": "A calorie target instead of a time means the hard push is set by effort, not a fixed duration — it takes as long as it takes to hit 20 calories at real intensity."
+    },
+    {
+      "date": "2026-08-06",
+      "format": "EMOM · 9 MIN",
+      "warmup": [
+        "Floor Sweep Stretch",
+        "Alt. Quad Stretch",
+        "Y-T-I in Hinge",
+        "Seal Jacks"
+      ],
+      "cardio": [
+        {
+          "time": ".1mile",
+          "intensity": "Moderate 7/10",
+          "mz": "Green"
+        },
+        {
+          "time": ".1mile",
+          "intensity": "Hard 8/10",
+          "mz": "Yellow"
+        }
+      ],
+      "exercises": [
+        {
+          "name": "DB Squat to Rev. Lunge",
+          "reps": "",
+          "station": "🏋️ Bench"
+        },
+        {
+          "name": "DB Chest Press to Pullover",
+          "reps": "",
+          "station": "🏋️ Bench"
+        },
+        {
+          "name": "Elevated Bicycle",
+          "reps": "",
+          "station": "🏋️ Bench"
+        },
+        {
+          "name": "KB Deadstop Swing",
+          "reps": "",
+          "station": "🔵 Rack"
+        },
+        {
+          "name": "Res. Band Diagonal Pull Apart Alt.",
+          "reps": "",
+          "station": "🔵 Rack"
+        },
+        {
+          "name": "TRX Skater Hops",
+          "reps": "",
+          "station": "🔵 Rack"
+        }
+      ],
+      "source_file": "STUDIO RED HIIT Programming August 2026.pdf p.6",
+      "cardio_note": "Distance-based work ties intensity to individual capability instead of a fixed pace. The Moderate/Hard alternation trains the body to recover while moving — a different adaptation than steady-state cardio."
+    },
+    {
+      "date": "2026-08-07",
+      "format": "EMOM · 9 MIN",
+      "warmup": [
+        "Rev. Lunge w/ rotation",
+        "Prying Deep Squat",
+        "Overhead Squat",
+        "Explosive Jacks"
+      ],
+      "cardio": [
+        {
+          "time": "2:00",
+          "intensity": "Moderate 7/10",
+          "mz": "Green"
+        },
+        {
+          "time": ".3 mile",
+          "intensity": "Hard 8/10",
+          "mz": "Yellow"
+        }
+      ],
+      "exercises": [
+        {
+          "name": "Fitbench Step Up Alt.",
+          "reps": "",
+          "station": "🏋️ Bench"
+        },
+        {
+          "name": "DB Chest Fly to Chest Press",
+          "reps": "",
+          "station": "🏋️ Bench"
+        },
+        {
+          "name": "Flutter Kicks on Bench",
+          "reps": "",
+          "station": "🏋️ Bench"
+        },
+        {
+          "name": "TRX Crossing Balance",
+          "reps": "",
+          "station": "🔵 Rack"
+        },
+        {
+          "name": "TRX I-Y-T",
+          "reps": "",
+          "station": "🔵 Rack"
+        },
+        {
+          "name": "Ball Toe Taps",
+          "reps": "",
+          "station": "🔵 Rack"
+        }
+      ],
+      "source_file": "STUDIO RED HIIT Programming August 2026.pdf p.7",
+      "cardio_note": "Moderate should feel steady and breathable — short phrases still come easy. Hard should feel like a controlled push right at the edge, where talking is challenging.  That repeated exposure trains the body to buffer fatigue faster and hold that edge longer over time."
+    },
+    {
+      "date": "2026-08-08",
+      "format": "CIRCUIT · 9 MIN",
+      "warmup": [
+        "Arm Swings Alt.",
+        "BW Cossack Squat",
+        "Downward Dog to Plank",
+        "High Knees"
+      ],
+      "cardio": [
+        {
+          "time": "1:00",
+          "intensity": "Easy 6/10",
+          "mz": "Blue"
+        },
+        {
+          "time": "2:00",
+          "intensity": "Hard 8/10",
+          "mz": "Yellow"
+        }
+      ],
+      "exercises": [
+        {
+          "name": "DB Pullover Hips Off Bench",
+          "reps": "12 REPS",
+          "station": "🏋️ Bench"
+        },
+        {
+          "name": "DB SL Deadlift",
+          "reps": "12 EACH SIDE",
+          "station": "🏋️ Bench"
+        },
+        {
+          "name": "Plank / shoulder tap",
+          "reps": "12 EACH SIDE",
+          "station": "🏋️ Bench"
+        },
+        {
+          "name": "KB Goblet 1.5 Squat Stance",
+          "reps": "12 EACH SIDE",
+          "station": "🔵 Rack"
+        },
+        {
+          "name": "TRX Power Pull",
+          "reps": "12 EACH SIDE",
+          "station": "🔵 Rack"
+        },
+        {
+          "name": "TRX Ab Tuck to Pike",
+          "reps": "12 REPS",
+          "station": "🔵 Rack"
+        }
+      ],
+      "source_file": "STUDIO RED HIIT Programming August 2026.pdf p.8",
+      "cardio_note": "Easy is a quick reset. Hard should feel like a controlled push right at the edge, sustainable for the full 2:00 but not comfortable. Repeating this 3x trains the body to recover fast and hit that edge repeatedly."
+    },
+    {
+      "date": "2026-08-09",
+      "format": "LADDER · 9 MIN",
+      "warmup": [
+        "Elbow to Instep Alt.",
+        "Kang Squat",
+        "Lateral Lunge w/ Reach Up",
+        "Butt Kicks"
+      ],
+      "cardio": [
+        {
+          "time": "1:30",
+          "intensity": "Easy 6/10",
+          "mz": "Blue"
+        },
+        {
+          "time": "2:30",
+          "intensity": "Hard 8/10",
+          "mz": "Yellow"
+        },
+        {
+          "time": "1:00",
+          "intensity": "Moderate 7/10",
+          "mz": "Green"
+        }
+      ],
+      "exercises": [
+        {
+          "name": "DB Goblet Dropstep Squat alt.",
+          "reps": "LADDER 12→16",
+          "station": "🏋️ Bench"
+        },
+        {
+          "name": "DB Row in Lunge 1 arm",
+          "reps": "LADDER 12→16 · EACH SIDE",
+          "station": "🏋️ Bench"
+        },
+        {
+          "name": "Sprinter Abs",
+          "reps": "LADDER 12→16 · EACH SIDE",
+          "station": "🏋️ Bench"
+        },
+        {
+          "name": "TRX Anti- Rotation Press",
+          "reps": "LADDER 12→16 · EACH SIDE",
+          "station": "🔵 Rack"
+        },
+        {
+          "name": "Alt. Arm KB Swing",
+          "reps": "LADDER 12→16",
+          "station": "🔵 Rack"
+        },
+        {
+          "name": "TRX Biceps Clutch",
+          "reps": "LADDER 12→16",
+          "station": "🔵 Rack"
+        }
+      ],
+      "source_file": "STUDIO RED HIIT Programming August 2026.pdf p.9",
+      "cardio_note": "2:30 is long enough that hard has to be paced, not sprinted — members learn to hold an edge rather than spike and fade. Finishing on moderate instead of easy keeps the legs working through the comedown, so recovery becomes active instead of a full stop."
+    },
+    {
+      "date": "2026-08-10",
+      "format": "CIRCUIT · 9 MIN",
+      "warmup": [
+        "Floor Sweep Stretch",
+        "Alt. Quad Stretch",
+        "Y-T-I in Hinge",
+        "Seal Jacks"
+      ],
+      "cardio": [
+        {
+          "time": ":45",
+          "intensity": "Moderate 7/10",
+          "mz": "Green"
+        },
+        {
+          "time": ":45",
+          "intensity": "Hard 8/10",
+          "mz": "Yellow"
+        },
+        {
+          "time": ":45",
+          "intensity": "Easy 7/10",
+          "mz": "Blue"
+        }
+      ],
+      "exercises": [
+        {
+          "name": "Side Lunge w/ Hop",
+          "reps": "6 EACH SIDE",
+          "station": "🏋️ Bench"
+        },
+        {
+          "name": "Fitband Rotational Row to Press",
+          "reps": "6 EACH SIDE",
+          "station": "🏋️ Bench"
+        },
+        {
+          "name": "Crunch Toe Touch on Bench",
+          "reps": "12 REPS",
+          "station": "🏋️ Bench"
+        },
+        {
+          "name": "Ball Racked Split Squat",
+          "reps": "6 EACH SIDE",
+          "station": "🔵 Rack"
+        },
+        {
+          "name": "Ball Offset Push Up",
+          "reps": "6 EACH SIDE",
+          "station": "🔵 Rack"
+        },
+        {
+          "name": "KB Swing w/ Lateral Step",
+          "reps": "12 REPS",
+          "station": "🔵 Rack"
+        }
+      ],
+      "source_file": "STUDIO RED HIIT Programming August 2026.pdf p.10",
+      "cardio_note": "Three quick shifts back to back force the body to switch fuel sources fast — aerobic for the steady stretches, anaerobic for the hard push — instead of settling into one system. That switching ability is what builds durable, well-rounded endurance over time."
+    },
+    {
+      "date": "2026-08-11",
+      "format": "EMOM · 9 MIN",
+      "warmup": [
+        "Arm Swings Alt.",
+        "BW Cossack Squat",
+        "Downward Dog to Plank",
+        "High Knees"
+      ],
+      "cardio": [
+        {
+          "time": "1:00",
+          "intensity": "Easy 6/10",
+          "mz": "Blue"
+        },
+        {
+          "time": "25 cals",
+          "intensity": "Hard 8/10",
+          "mz": "Yellow"
+        }
+      ],
+      "exercises": [
+        {
+          "name": "Squat to Split Jump",
+          "reps": "",
+          "station": "🏋️ Bench"
+        },
+        {
+          "name": "DB Power Clean",
+          "reps": "",
+          "station": "🏋️ Bench"
+        },
+        {
+          "name": "Sit Up on Bench",
+          "reps": "",
+          "station": "🏋️ Bench"
+        },
+        {
+          "name": "Ball Ground to Shoulder alt.",
+          "reps": "",
+          "station": "🔵 Rack"
+        },
+        {
+          "name": "KB Tactical Lunge",
+          "reps": "",
+          "station": "🔵 Rack"
+        },
+        {
+          "name": "Res. Band Shuffle Row",
+          "reps": "",
+          "station": "🔵 Rack"
+        }
+      ],
+      "source_file": "STUDIO RED HIIT Programming August 2026.pdf p.11",
+      "cardio_note": "Calorie-based hard efforts are self-paced — the harder someone pushes, the faster they hit 25 and the sooner the interval ends. This rewards real intensity instead of just holding on for a fixed time, and keeps effort honest since easing off only makes the work last longer."
+    },
+    {
+      "date": "2026-08-12",
+      "format": "BENCHMARK · 3 ROUNDS",
+      "warmup": [
+        "Bootstrapper",
+        "Elbow to Instep Alt.",
+        "Bodyweight Curtsy Lunge",
+        "Explosive Jacks"
+      ],
+      "cardio": [
+        {
+          "rounds": "BENCHMARK TEST · MAX DISTANCE"
+        }
+      ],
+      "exercises": [
+        {
+          "name": "DB Deadlift",
+          "reps": "",
+          "station": "🏋️ Bench"
+        },
+        {
+          "name": "BW Reverse Lunge w/ Reach Alt.",
+          "reps": "",
+          "station": "🏋️ Bench"
+        },
+        {
+          "name": "DB Chest Press",
+          "reps": "",
+          "station": "🏋️ Bench"
+        },
+        {
+          "name": "KB Goblet Squat",
+          "reps": "",
+          "station": "🔵 Rack"
+        },
+        {
+          "name": "Down Dog with Foot Pedal",
+          "reps": "",
+          "station": "🔵 Rack"
+        },
+        {
+          "name": "TRX Seated Lat Pull",
+          "reps": "",
+          "station": "🔵 Rack"
+        }
+      ],
+      "source_file": "STUDIO RED HIIT Programming August 2026.pdf p.12",
+      "floor_note": "<strong>Benchmark Day · 3 rounds.</strong> Round 1 is a lighter warm-up; round 2 sets your working weight; <strong>round 3 is the round that counts</strong> — log reps for each main lift."
+    },
+    {
+      "date": "2026-08-13",
+      "format": "LADDER · 9 MIN",
+      "warmup": [
+        "Elbow to Instep Alt.",
+        "Kang Squat",
+        "Lateral Lunge w/ Reach Up",
+        "Butt Kicks"
+      ],
+      "cardio": [
+        {
+          "time": "2:15",
+          "intensity": "Moderate 7/10",
+          "mz": "Green"
+        },
+        {
+          "time": "2:15",
+          "intensity": "Hard 8/10",
+          "mz": "Yellow"
+        }
+      ],
+      "exercises": [
+        {
+          "name": "Bodyweight Drop Squat",
+          "reps": "LADDER 15→12",
+          "station": "🏋️ Bench"
+        },
+        {
+          "name": "Inchworm Push Up",
+          "reps": "LADDER 15→12",
+          "station": "🏋️ Bench"
+        },
+        {
+          "name": "Scissors on Bench",
+          "reps": "LADDER 15→12 · EACH SIDE",
+          "station": "🏋️ Bench"
+        },
+        {
+          "name": "TRX Get Up",
+          "reps": "LADDER 15→12",
+          "station": "🔵 Rack"
+        },
+        {
+          "name": "KB 2arm Gunslinger Swing",
+          "reps": "LADDER 15→12",
+          "station": "🔵 Rack"
+        },
+        {
+          "name": "Kneel to Knee Drive",
+          "reps": "LADDER 15→12 · EACH SIDE",
+          "station": "🔵 Rack"
+        }
+      ],
+      "source_file": "STUDIO RED HIIT Programming August 2026.pdf p.13",
+      "cardio_note": "Equal work-to-work timing (no easy segment) means members shift straight from moderate into hard with no buffer, testing the ability to raise output on demand rather than ease into it."
+    },
+    {
+      "date": "2026-08-14",
+      "format": "CIRCUIT · 9 MIN",
+      "warmup": [
+        "Arm Swings Alt.",
+        "BW Cossack Squat",
+        "Downward Dog to Plank",
+        "High Knees"
+      ],
+      "cardio": [
+        {
+          "time": "1:00",
+          "intensity": "Easy 6/10",
+          "mz": "Blue"
+        },
+        {
+          "time": "1:00",
+          "intensity": "Moderate 7/10",
+          "mz": "Green"
+        },
+        {
+          "time": ":30",
+          "intensity": "Max 9/10",
+          "mz": "Red"
+        },
+        {
+          "time": "1:30",
+          "intensity": "Easy 6/10",
+          "mz": "Blue"
+        }
+      ],
+      "exercises": [
+        {
+          "name": "DB Forward to Reverse Lunge Alt.",
+          "reps": "6 EACH SIDE",
+          "station": "🏋️ Bench"
+        },
+        {
+          "name": "Explosive Bench Press Up",
+          "reps": "6 REPS",
+          "station": "🏋️ Bench"
+        },
+        {
+          "name": "Reverse Crunch on bench",
+          "reps": "6 REPS",
+          "station": "🏋️ Bench"
+        },
+        {
+          "name": "KB Sumo Deadlift 2arm",
+          "reps": "6 REPS",
+          "station": "🔵 Rack"
+        },
+        {
+          "name": "TRX Single Arm Row",
+          "reps": "6 EACH SIDE",
+          "station": "🔵 Rack"
+        },
+        {
+          "name": "Ball Slam",
+          "reps": "6 REPS",
+          "station": "🔵 Rack"
+        }
+      ],
+      "source_file": "STUDIO RED HIIT Programming August 2026.pdf p.14",
+      "cardio_note": "The :30 max should feel truly all-out — unsustainable past 30 seconds, which is what recruits maximum fuel and muscle fiber. That ceiling is what separates max from hard, and why it can only last a short burst."
+    },
+    {
+      "date": "2026-08-15",
+      "format": "BENCHMARK · 3 ROUNDS",
+      "warmup": [
+        "Bootstrapper",
+        "Elbow to Instep Alt.",
+        "Bodyweight Curtsy Lunge",
+        "Explosive Jacks"
+      ],
+      "cardio": [
+        {
+          "rounds": "BENCHMARK TEST · MAX DISTANCE"
+        }
+      ],
+      "exercises": [
+        {
+          "name": "DB Deadlift",
+          "reps": "",
+          "station": "🏋️ Bench"
+        },
+        {
+          "name": "BW Reverse Lunge w/ Reach Alt.",
+          "reps": "",
+          "station": "🏋️ Bench"
+        },
+        {
+          "name": "DB Chest Press",
+          "reps": "",
+          "station": "🏋️ Bench"
+        },
+        {
+          "name": "KB Goblet Squat",
+          "reps": "",
+          "station": "🔵 Rack"
+        },
+        {
+          "name": "Down Dog with Foot Pedal",
+          "reps": "",
+          "station": "🔵 Rack"
+        },
+        {
+          "name": "TRX Seated Lat Pull",
+          "reps": "",
+          "station": "🔵 Rack"
+        }
+      ],
+      "source_file": "STUDIO RED HIIT Programming August 2026.pdf p.15",
+      "floor_note": "<strong>Benchmark Day · 3 rounds.</strong> Round 1 is a lighter warm-up; round 2 sets your working weight; <strong>round 3 is the round that counts</strong> — log reps for each main lift."
+    },
+    {
+      "date": "2026-08-16",
+      "format": "LADDER · 9 MIN",
+      "warmup": [
+        "Forward Lunge w Rotation",
+        "Inchworm",
+        "Kang Squat",
+        "Explosive Jacks"
+      ],
+      "cardio": [
+        {
+          "time": ":45",
+          "intensity": "Moderate 7/10",
+          "mz": "Green"
+        },
+        {
+          "time": ":45",
+          "intensity": "Hard 8/10",
+          "mz": "Yell"
+        }
+      ],
+      "exercises": [
+        {
+          "name": "Bird Dog Row on Bench",
+          "reps": "LADDER 2→6 · EACH SIDE",
+          "station": "🏋️ Bench"
+        },
+        {
+          "name": "DB Box Squat",
+          "reps": "LADDER 2→6",
+          "station": "🏋️ Bench"
+        },
+        {
+          "name": "Push UP Diamond (elevate hands to bench if needed)",
+          "reps": "LADDER 2→6",
+          "station": "🏋️ Bench"
+        },
+        {
+          "name": "KB Suitcase Deadlift",
+          "reps": "LADDER 2→6 · EACH SIDE",
+          "station": "🔵 Rack"
+        },
+        {
+          "name": "TRX Lat Pull Seated",
+          "reps": "LADDER 2→6",
+          "station": "🔵 Rack"
+        },
+        {
+          "name": "Ball Rainbow Slam",
+          "reps": "LADDER 2→6 · EACH SIDE",
+          "station": "🔵 Rack"
+        }
+      ],
+      "source_file": "STUDIO RED HIIT Programming August 2026.pdf p.16",
+      "cardio_note": "Short, repeated moderate-hard shifts train members to raise and lower output quickly without a real reset, building a different kind of fitness than steady-state cardio — quick, responsive shifts in effort rather than one sustained pace."
+    },
+    {
+      "date": "2026-08-17",
+      "format": "EMOM · 9 MIN",
+      "warmup": [
+        "Arm Swings Alt.",
+        "BW Cossack Squat",
+        "Downward Dog to Plank",
+        "High Knees"
+      ],
+      "cardio": [
+        {
+          "time": "1:00",
+          "intensity": "Easy 6/10",
+          "mz": "Blue"
+        },
+        {
+          "time": "10 cals",
+          "intensity": "Max 9/10",
+          "mz": "Red"
+        }
+      ],
+      "exercises": [
+        {
+          "name": "DB Chest Press 1arm Alt.",
+          "reps": "",
+          "station": "🏋️ Bench"
+        },
+        {
+          "name": "DB Rev. Lunge Alt.",
+          "reps": "",
+          "station": "🏋️ Bench"
+        },
+        {
+          "name": "Triceps Dip on Bench",
+          "reps": "",
+          "station": "🏋️ Bench"
+        },
+        {
+          "name": "BW Popcorn Squat",
+          "reps": "",
+          "station": "🔵 Rack"
+        },
+        {
+          "name": "TRX Row to Bicep Curl",
+          "reps": "",
+          "station": "🔵 Rack"
+        },
+        {
+          "name": "KB alt. Woodchop to Halo",
+          "reps": "",
+          "station": "🔵 Rack"
+        }
+      ],
+      "source_file": "STUDIO RED HIIT Programming August 2026.pdf p.17",
+      "cardio_note": "A short calorie target at max effort means the push ends fast the harder someone works — rewarding true intensity over pacing it out. This trains the ability to spike output hard and briefly, then recover, rather than sustain a steady grind."
+    },
+    {
+      "date": "2026-08-18",
+      "format": "LADDER · 9 MIN",
+      "warmup": [
+        "Forward Lunge w Rotation",
+        "Inchworm",
+        "Kang Squat",
+        "Explosive Jacks"
+      ],
+      "cardio": [
+        {
+          "time": ".1 mile",
+          "intensity": "Moderate 7/10",
+          "mz": "Green"
+        },
+        {
+          "time": ".1 mile",
+          "intensity": "Hard 8/10",
+          "mz": "Yellow"
+        }
+      ],
+      "exercises": [
+        {
+          "name": "Bench Wall Sit Press",
+          "reps": "LADDER 6→1",
+          "station": "🏋️ Bench"
+        },
+        {
+          "name": "DB SLRDL to Curtsy",
+          "reps": "LADDER 6→1 · EACH SIDE",
+          "station": "🏋️ Bench"
+        },
+        {
+          "name": "Fitband External Rotations",
+          "reps": "LADDER 6→1 · EACH SIDE",
+          "station": "🏋️ Bench"
+        },
+        {
+          "name": "Ball Slam w/ Power Hop",
+          "reps": "LADDER 6→1",
+          "station": "🔵 Rack"
+        },
+        {
+          "name": "KB Deadlift High Pull",
+          "reps": "LADDER 6→1",
+          "station": "🔵 Rack"
+        },
+        {
+          "name": "TRX T Pull",
+          "reps": "LADDER 6→1",
+          "station": "🔵 Rack"
+        }
+      ],
+      "source_file": "STUDIO RED HIIT Programming August 2026.pdf p.18",
+      "cardio_note": "Equal distance at two intensities means the hard segment always demands more from the body in less time than the moderate one — training members to raise power output while covering the same ground. Since it's distance-based, effort scales to each person's own fitness rather than a fixed pace."
+    },
+    {
+      "date": "2026-08-19",
+      "format": "SUPERSET · 4:30 EA",
+      "warmup": [
+        "Floor Sweep Stretch",
+        "Alt. Quad Stretch",
+        "Y-T-I in Hinge",
+        "Seal Jacks"
+      ],
+      "cardio": [
+        {
+          "time": ":45",
+          "intensity": "Easy",
+          "mz": "Blue"
+        },
+        {
+          "time": "1:00",
+          "intensity": "Hard",
+          "mz": "Yellow"
+        },
+        {
+          "time": "1:15",
+          "intensity": "Moderate",
+          "mz": "Green"
+        }
+      ],
+      "exercises": [
+        {
+          "name": "DB Chest Press",
+          "reps": "6 REPS",
+          "station": "🏋️ Bench"
+        },
+        {
+          "name": "Bench Dip",
+          "reps": "10 REPS",
+          "station": "🏋️ Bench"
+        },
+        {
+          "name": "DB Step Up to Reverse Lunge",
+          "reps": "6 EACH SIDE",
+          "station": "🏋️ Bench"
+        },
+        {
+          "name": "V-Up to Jump",
+          "reps": "10 REPS",
+          "station": "🏋️ Bench"
+        },
+        {
+          "name": "Res. Band Bent Over Row",
+          "reps": "6 REPS",
+          "station": "🔵 Rack"
+        },
+        {
+          "name": "TRX Biceps Clutch",
+          "reps": "10 REPS",
+          "station": "🔵 Rack"
+        },
+        {
+          "name": "KB Goblet Squat",
+          "reps": "6 REPS",
+          "station": "🔵 Rack"
+        },
+        {
+          "name": "TRX Squat Jump",
+          "reps": "10 REPS",
+          "station": "🔵 Rack"
+        }
+      ],
+      "source_file": "STUDIO RED HIIT Programming August 2026.pdf p.19",
+      "cardio_note": "After the hard push, effort drops to moderate instead of easy, so members recover while still working rather than getting a full reset. This trains the ability to hold quality effort even when tired, instead of needing a complete break to bounce back."
+    },
+    {
+      "date": "2026-08-20",
+      "format": "CIRCUIT · 9 MIN",
+      "warmup": [
+        "Arm Swings Alt.",
+        "BW Cossack Squat",
+        "Downward Dog to Plank",
+        "High Knees"
+      ],
+      "cardio": [
+        {
+          "time": "1:20",
+          "intensity": "Moderate 7/10",
+          "mz": "Green"
+        },
+        {
+          "time": ":40",
+          "intensity": "Hard 8/10",
+          "mz": "Yellow"
+        },
+        {
+          "time": "1:00",
+          "intensity": "Easy 6/10",
+          "mz": "Blue"
+        }
+      ],
+      "exercises": [
+        {
+          "name": "DB Pullover Hips Off Bench",
+          "reps": "6 REPS",
+          "station": "🏋️ Bench"
+        },
+        {
+          "name": "DB Sumo Deadlift 2arm",
+          "reps": "6 REPS",
+          "station": "🏋️ Bench"
+        },
+        {
+          "name": "Sprinter Abs on Bench",
+          "reps": "6 EACH SIDE",
+          "station": "🏋️ Bench"
+        },
+        {
+          "name": "Slam Ball Roll Over Push Up",
+          "reps": "6 EACH SIDE",
+          "station": "🔵 Rack"
+        },
+        {
+          "name": "Ball Split Squat to Single Leg Deadlift",
+          "reps": "6 EACH SIDE",
+          "station": "🔵 Rack"
+        },
+        {
+          "name": "TRX Get Up",
+          "reps": "6 REPS",
+          "station": "🔵 Rack"
+        }
+      ],
+      "source_file": "STUDIO RED HIIT Programming August 2026.pdf p.20",
+      "cardio_note": "The longer moderate stretch builds aerobic capacity just below the limit, before the :40 hard push taps into anaerobic power for a real spike. The full easy reset lets the body recover completely, training a clean build-spike-recover cycle instead of stacking fatigue."
+    },
+    {
+      "date": "2026-08-21",
+      "format": "LADDER · 9 MIN",
+      "warmup": [
+        "Forward Lunge w Rotation",
+        "Inchworm",
+        "Kang Squat",
+        "Explosive Jacks"
+      ],
+      "cardio": [
+        {
+          "time": ":45",
+          "intensity": "Moderate 7/10",
+          "mz": "Green"
+        },
+        {
+          "time": ":45",
+          "intensity": "Easy 6/10",
+          "mz": "Blue"
+        },
+        {
+          "time": ":45",
+          "intensity": "Hard 8/10",
+          "mz": "Yellow"
+        }
+      ],
+      "exercises": [
+        {
+          "name": "DB Row to Squat Thrust",
+          "reps": "LADDER 2→-3",
+          "station": "🏋️ Bench"
+        },
+        {
+          "name": "Fitband Rotational Row 1arm",
+          "reps": "LADDER 2→-3",
+          "station": "🏋️ Bench"
+        },
+        {
+          "name": "DB Goblet Cossack Squat",
+          "reps": "LADDER 2→-3 · EACH SIDE",
+          "station": "🏋️ Bench"
+        },
+        {
+          "name": "Ball Clean to Press",
+          "reps": "LADDER 2→-3",
+          "station": "🔵 Rack"
+        },
+        {
+          "name": "KB Crossbody RDL 1 arm",
+          "reps": "LADDER 2→-3 · EACH SIDE",
+          "station": "🔵 Rack"
+        },
+        {
+          "name": "TRX Ab Tuck to Pike",
+          "reps": "LADDER 2→-3",
+          "station": "🔵 Rack"
+        }
+      ],
+      "source_file": "STUDIO RED HIIT Programming August 2026.pdf p.21",
+      "cardio_note": "Dropping to easy before the hard push means members hit that push from a recovered state rather than carrying fatigue into it, so the hard segment reflects true top-end output. This trains the ability to go from calm to a strong push quickly — a different demand than ramping up gradually."
+    },
+    {
+      "date": "2026-08-22",
+      "format": "CIRCUIT · 9 MIN",
+      "warmup": [
+        "Floor Sweep Stretch",
+        "Alt. Quad Stretch",
+        "Y-T-I in Hinge",
+        "Seal Jacks"
+      ],
+      "cardio": [
+        {
+          "time": "1:30",
+          "intensity": "Moderate 7/10",
+          "mz": "Green"
+        },
+        {
+          "time": ":45",
+          "intensity": "Hard 8/10",
+          "mz": "Yellow"
+        }
+      ],
+      "exercises": [
+        {
+          "name": "DB Thruster 1arm Alt.",
+          "reps": "6 EACH SIDE",
+          "station": "🏋️ Bench"
+        },
+        {
+          "name": "DB 1 Arm Clean w/ Step",
+          "reps": "6 EACH SIDE",
+          "station": "🏋️ Bench"
+        },
+        {
+          "name": "DB Wood Chop",
+          "reps": "6 EACH SIDE",
+          "station": "🏋️ Bench"
+        },
+        {
+          "name": "KB Halo",
+          "reps": "6 EACH SIDE",
+          "station": "🔵 Rack"
+        },
+        {
+          "name": "KB SLRDL to Curtsy lunge",
+          "reps": "6 EACH SIDE",
+          "station": "🔵 Rack"
+        },
+        {
+          "name": "TRX Anti- Rotation Press",
+          "reps": "6 EACH SIDE",
+          "station": "🔵 Rack"
+        }
+      ],
+      "source_file": "STUDIO RED HIIT Programming August 2026.pdf p.22",
+      "cardio_note": "The long moderate stretch keeps members just below their limit, building aerobic capacity before the :45 hard push spikes into anaerobic effort. This 2:1 ratio is repeatable enough to hold quality across multiple rounds without breaking down."
+    },
+    {
+      "date": "2026-08-23",
+      "format": "EMOM · 9 MIN",
+      "warmup": [
+        "Arm Swings Alt.",
+        "BW Cossack Squat",
+        "Downward Dog to Plank",
+        "High Knees"
+      ],
+      "cardio": [
+        {
+          "time": "1:30",
+          "intensity": "Easy 6/10",
+          "mz": "Blue"
+        },
+        {
+          "time": "10 cals",
+          "intensity": "Hard 8/10",
+          "mz": "Yellow"
+        }
+      ],
+      "exercises": [
+        {
+          "name": "DB RDL To Power Clean",
+          "reps": "",
+          "station": "🏋️ Bench"
+        },
+        {
+          "name": "Push Up to Down Dog",
+          "reps": "",
+          "station": "🏋️ Bench"
+        },
+        {
+          "name": "Leg Raise on Bench",
+          "reps": "",
+          "station": "🏋️ Bench"
+        },
+        {
+          "name": "KB Lateral Lunge Alt.",
+          "reps": "",
+          "station": "🔵 Rack"
+        },
+        {
+          "name": "TRX Alligator Pull",
+          "reps": "",
+          "station": "🔵 Rack"
+        },
+        {
+          "name": "Res. Band Lateral Shuffle",
+          "reps": "",
+          "station": "🔵 Rack"
+        }
+      ],
+      "source_file": "STUDIO RED HIIT Programming August 2026.pdf p.23",
+      "cardio_note": "A short calorie target at hard effort is self-paced — the harder someone pushes, the faster they hit 10 and the sooner the push ends. This rewards true intensity over pacing it out, while the full 1:30 easy lets the body recover completely before the next round."
+    },
+    {
+      "date": "2026-08-24",
+      "format": "LADDER · 9 MIN",
+      "warmup": [
+        "Forward Lunge w Rotation",
+        "Inchworm",
+        "Kang Squat",
+        "Explosive Jacks"
+      ],
+      "cardio": [
+        {
+          "time": "2:15",
+          "intensity": "Moderate 7/10",
+          "mz": "Green"
+        },
+        {
+          "time": ":45",
+          "intensity": "Max 9/10",
+          "mz": "Red"
+        }
+      ],
+      "exercises": [
+        {
+          "name": "DB 1arm Snatch w/ Foot on Bench",
+          "reps": "LADDER 3→-2 · EACH SIDE",
+          "station": "🏋️ Bench"
+        },
+        {
+          "name": "DB Row in Gorilla Alt.",
+          "reps": "LADDER 3→-2 · EACH SIDE",
+          "station": "🏋️ Bench"
+        },
+        {
+          "name": "Superman on Bench",
+          "reps": "LADDER 3→-2",
+          "station": "🏋️ Bench"
+        },
+        {
+          "name": "Alt. Arm KB Swing",
+          "reps": "LADDER 3→-2 · EACH SIDE",
+          "station": "🔵 Rack"
+        },
+        {
+          "name": "Ball Ground to Overhead",
+          "reps": "LADDER 3→-2",
+          "station": "🔵 Rack"
+        },
+        {
+          "name": "Sprinter Burpee",
+          "reps": "LADDER 3→-2",
+          "station": "🔵 Rack"
+        }
+      ],
+      "source_file": "STUDIO RED HIIT Programming August 2026.pdf p.24",
+      "cardio_note": "The pre-fatigue from the moderate stretch teaches members that \"tired\" isn't \"empty\" — there's still a reserve available even when legs feel worn down. Cue members to trust that reserve and push through instead of easing off when pushing through Max."
+    },
+    {
+      "date": "2026-08-25",
+      "format": "SUPERSET · 4:30 EA",
+      "warmup": [
+        "Floor Sweep Stretch",
+        "Alt. Quad Stretch",
+        "Y-T-I in Hinge",
+        "Seal Jacks"
+      ],
+      "cardio": [
+        {
+          "time": ":45",
+          "intensity": "Easy 6/10",
+          "mz": "Blue"
+        },
+        {
+          "time": ":45",
+          "intensity": "Moderate 7/10",
+          "mz": "Green"
+        },
+        {
+          "time": ":30",
+          "intensity": "Max 9/10",
+          "mz": "Red"
+        },
+        {
+          "time": "1:00",
+          "intensity": "Easy 6/10",
+          "mz": "Blue"
+        }
+      ],
+      "exercises": [
+        {
+          "name": "DB Bulgarian Split Squat",
+          "reps": "6 EACH SIDE",
+          "station": "🏋️ Bench"
+        },
+        {
+          "name": "DB Biceps Curl",
+          "reps": "10 REPS",
+          "station": "🏋️ Bench"
+        },
+        {
+          "name": "DB Chest Press to Pullover",
+          "reps": "6 REPS",
+          "station": "🏋️ Bench"
+        },
+        {
+          "name": "DB Bent over Triceps Kickback",
+          "reps": "10 REPS",
+          "station": "🏋️ Bench"
+        },
+        {
+          "name": "KB Step Back Swing 1 arm",
+          "reps": "6 EACH SIDE",
+          "station": "🔵 Rack"
+        },
+        {
+          "name": "TRX Oblique Crunch",
+          "reps": "10 EACH SIDE",
+          "station": "🔵 Rack"
+        },
+        {
+          "name": "TRX Inverted Row",
+          "reps": "6 REPS",
+          "station": "🔵 Rack"
+        },
+        {
+          "name": "Res. Band Good Morning",
+          "reps": "10 REPS",
+          "station": "🔵 Rack"
+        }
+      ],
+      "source_file": "STUDIO RED HIIT Programming August 2026.pdf p.25",
+      "cardio_note": "The gradual build primes the neuromuscular system in stages, so by the time members hit :30 max, the body is already firing efficiently and can recruit peak output faster. The 1:00 easy after clears fatigue fully before the next build, keeping quality consistent across all 4 rounds."
+    },
+    {
+      "date": "2026-08-26",
+      "format": "EMOM · 9 MIN",
+      "warmup": [
+        "Arm Swings Alt.",
+        "BW Cossack Squat",
+        "Downward Dog to Plank",
+        "High Knees"
+      ],
+      "cardio": [
+        {
+          "time": ".1mile",
+          "intensity": "Moderate 7/10",
+          "mz": "Green"
+        },
+        {
+          "time": ".1mile",
+          "intensity": "Hard 8/10",
+          "mz": "Yellow"
+        },
+        {
+          "time": ".1mile",
+          "intensity": "Easy 8/10",
+          "mz": "Blue"
+        }
+      ],
+      "exercises": [
+        {
+          "name": "DB Row to Squat Thrust",
+          "reps": "",
+          "station": "🏋️ Bench"
+        },
+        {
+          "name": "DB Chest Press and Fly Alt.",
+          "reps": "",
+          "station": "🏋️ Bench"
+        },
+        {
+          "name": "V Up Hold on Bench",
+          "reps": "",
+          "station": "🏋️ Bench"
+        },
+        {
+          "name": "Ball Reverse Lunge with Rotation and Lift Alt.",
+          "reps": "",
+          "station": "🔵 Rack"
+        },
+        {
+          "name": "TRX Alligator Pull alt.",
+          "reps": "",
+          "station": "🔵 Rack"
+        },
+        {
+          "name": "KB Deadlift to High Pull",
+          "reps": "",
+          "station": "🔵 Rack"
+        }
+      ],
+      "source_file": "STUDIO RED HIIT Programming August 2026.pdf p.26",
+      "cardio_note": "Repeating the same short pattern builds pacing accuracy — members learn exactly what each intensity should feel like and can replicate it round after round instead of guessing. That consistency makes it easy to spot true fatigue setting in, since the pattern stays the same even as it gets harder to hit."
+    },
+    {
+      "date": "2026-08-27",
+      "format": "LADDER · 9 MIN",
+      "warmup": [
+        "Forward Lunge w Rotation",
+        "Inchworm",
+        "Kang Squat",
+        "Explosive Jacks"
+      ],
+      "cardio": [
+        {
+          "time": "1:30",
+          "intensity": "Moderate 7/10",
+          "mz": "Green"
+        },
+        {
+          "time": "1:30",
+          "intensity": "Hard 8/10",
+          "mz": "Yellow"
+        }
+      ],
+      "exercises": [
+        {
+          "name": "DB Incline Press Alt.",
+          "reps": "LADDER 4→8 · EACH SIDE",
+          "station": "🏋️ Bench"
+        },
+        {
+          "name": "DB Curtsy Lunge",
+          "reps": "LADDER 4→8 · EACH SIDE",
+          "station": "🏋️ Bench"
+        },
+        {
+          "name": "Mountain Climber Cross Body",
+          "reps": "LADDER 4→8",
+          "station": "🏋️ Bench"
+        },
+        {
+          "name": "Ball Plank Toe Tap",
+          "reps": "LADDER 4→8 · EACH SIDE",
+          "station": "🔵 Rack"
+        },
+        {
+          "name": "TRX Mid Row Underhand Grip",
+          "reps": "LADDER 4→8",
+          "station": "🔵 Rack"
+        },
+        {
+          "name": "Ball Rainbow Slam",
+          "reps": "LADDER 4→8 · EACH SIDE",
+          "station": "🔵 Rack"
+        }
+      ],
+      "source_file": "STUDIO RED HIIT Programming August 2026.pdf p.27",
+      "cardio_note": "With no easy segment between them, the jump from moderate to hard has to happen on command, not eased into — that is the test. Since hard lasts a full 1:30, members have to pace it rather than spike and fade, building control at sustained high effort."
+    },
+    {
+      "date": "2026-08-28",
+      "format": "CIRCUIT · 9 MIN",
+      "warmup": [
+        "Floor Sweep Stretch",
+        "Alt. Quad Stretch",
+        "Y-T-I in Hinge",
+        "Seal Jacks"
+      ],
+      "cardio": [
+        {
+          "time": ":45",
+          "intensity": "Moderate 7/10",
+          "mz": "Green"
+        },
+        {
+          "time": "1:00",
+          "intensity": "Hard 8/10",
+          "mz": "Yellow"
+        },
+        {
+          "time": ":45",
+          "intensity": "Easy 6/10",
+          "mz": "Blue"
+        },
+        {
+          "time": ":45",
+          "intensity": "Max",
+          "mz": "Red"
+        },
+        {
+          "time": ":45",
+          "intensity": "Easy",
+          "mz": "Blue"
+        }
+      ],
+      "exercises": [
+        {
+          "name": "DB 1  arm Clean with Step Up",
+          "reps": "8 EACH SIDE",
+          "station": "🏋️ Bench"
+        },
+        {
+          "name": "Fitband Crossover Y Raise",
+          "reps": "8 REPS",
+          "station": "🏋️ Bench"
+        },
+        {
+          "name": "DB Push Up to Renegade Row",
+          "reps": "8 REPS",
+          "station": "🏋️ Bench"
+        },
+        {
+          "name": "TRX Power Pull",
+          "reps": "8 EACH SIDE",
+          "station": "🔵 Rack"
+        },
+        {
+          "name": "KB Sumo Deadlift 2-Arm",
+          "reps": "8 REPS",
+          "station": "🔵 Rack"
+        },
+        {
+          "name": "TRX Ab Tuck",
+          "reps": "8 REPS",
+          "station": "🔵 Rack"
+        }
+      ],
+      "source_file": "STUDIO RED HIIT Programming August 2026.pdf p.28",
+      "cardio_note": "Three rounds of moderate-hard-easy build pacing control before the closing :45 max, which tests what's still available after all that work. Cue members to give each hard effort everything it deserves, then trust that the body can still find more for that final max push."
+    },
+    {
+      "date": "2026-08-29",
+      "format": "EMOM · 9 MIN",
+      "warmup": [
+        "3d Lunge",
+        "Downward Dog to Plank",
+        "BW Good Morning",
+        "Ali Shuffle"
+      ],
+      "cardio": [
+        {
+          "time": "1:00",
+          "intensity": "Easy 6/10",
+          "mz": "Blue"
+        },
+        {
+          "time": "10 cals",
+          "intensity": "Hard 8/10",
+          "mz": "Yellow"
+        }
+      ],
+      "exercises": [
+        {
+          "name": "DB Racked Side Lunge alt.",
+          "reps": "",
+          "station": "🏋️ Bench"
+        },
+        {
+          "name": "DB Chest Press and Fly alt.",
+          "reps": "",
+          "station": "🏋️ Bench"
+        },
+        {
+          "name": "AB Tuck on Bench",
+          "reps": "",
+          "station": "🏋️ Bench"
+        },
+        {
+          "name": "Squat with Step (load if needed)",
+          "reps": "",
+          "station": "🔵 Rack"
+        },
+        {
+          "name": "TRX Row to Bicep Curl",
+          "reps": "",
+          "station": "🔵 Rack"
+        },
+        {
+          "name": "Ball Good Morning",
+          "reps": "",
+          "station": "🔵 Rack"
+        }
+      ],
+      "source_file": "STUDIO RED HIIT Programming August 2026.pdf p.29",
+      "cardio_note": "Because the target stays the same each round but fatigue builds, hitting 10 cals takes longer as the set goes on — a visible sign of accumulating fatigue rather than a fixed pace. This trains members to keep pushing for the same output even as it gets harder to produce."
+    },
+    {
+      "date": "2026-08-30",
+      "format": "LADDER · 9 MIN",
+      "warmup": [
+        "Forward Lunge w/Rotation",
+        "Inchworm",
+        "Kang Squat",
+        "Explosive Jacks"
+      ],
+      "cardio": [
+        {
+          "time": "1:30",
+          "intensity": "Moderate 7/10",
+          "mz": "Green"
+        },
+        {
+          "time": "1:30",
+          "intensity": "Hard 8/10",
+          "mz": "Yellow"
+        },
+        {
+          "time": "1:30",
+          "intensity": "Moderate 7/10",
+          "mz": "Green"
+        },
+        {
+          "time": "1:30",
+          "intensity": "Easy 6/10",
+          "mz": "Blue"
+        }
+      ],
+      "exercises": [
+        {
+          "name": "Push Up",
+          "reps": "LADDER 4→8",
+          "station": "🏋️ Bench"
+        },
+        {
+          "name": "DB Bird Dog Row",
+          "reps": "LADDER 4→8 · EACH SIDE",
+          "station": "🏋️ Bench"
+        },
+        {
+          "name": "Elevated Bicycle on bench",
+          "reps": "LADDER 4→8",
+          "station": "🏋️ Bench"
+        },
+        {
+          "name": "TRX Pistol Squat",
+          "reps": "LADDER 4→8 · EACH SIDE",
+          "station": "🔵 Rack"
+        },
+        {
+          "name": "TRX Ab Pike",
+          "reps": "LADDER 4→8",
+          "station": "🔵 Rack"
+        },
+        {
+          "name": "KB Step Back Swing 1 arm",
+          "reps": "LADDER 4→8",
+          "station": "🔵 Rack"
+        }
+      ],
+      "source_file": "STUDIO RED HIIT Programming August 2026.pdf p.30",
+      "cardio_note": "Repeating 1:30 hard efforts trains the body to buffer and clear lactate faster each round, raising the effort members can sustain before fatigue catches up. The closing moderate-to-easy taper eases heart rate down gradually instead of stopping cold, which helps the body recover more efficiently."
+    },
+    {
+      "date": "2026-08-31",
+      "format": "SUPERSET · 4:30 EA",
+      "warmup": [
+        "Floor Sweep Stretch",
+        "Alt. Quad Stretch",
+        "Y-T-I in Hinge",
+        "Seal Jacks"
+      ],
+      "cardio": [
+        {
+          "time": "1:15",
+          "intensity": "Moderate 7/10",
+          "mz": "Green"
+        },
+        {
+          "time": "1:00",
+          "intensity": "Hard 8/10",
+          "mz": "Yellow"
+        },
+        {
+          "time": ":45",
+          "intensity": "Easy 6/10",
+          "mz": "Blue"
+        }
+      ],
+      "exercises": [
+        {
+          "name": "DB Step Up to Rev. Lunge",
+          "reps": "8 EACH SIDE",
+          "station": "🏋️ Bench"
+        },
+        {
+          "name": "DB Alt. Arm Bicep Curl",
+          "reps": "12 EACH SIDE",
+          "station": "🏋️ Bench"
+        },
+        {
+          "name": "DB Bridge & Press on Bench",
+          "reps": "8 REPS",
+          "station": "🏋️ Bench"
+        },
+        {
+          "name": "Toe Touch Crunch on Bench",
+          "reps": "12 REPS",
+          "station": "🏋️ Bench"
+        },
+        {
+          "name": "Ball Squat",
+          "reps": "8 REPS",
+          "station": "🔵 Rack"
+        },
+        {
+          "name": "Ball Deadlift to Squat Jump",
+          "reps": "12 REPS",
+          "station": "🔵 Rack"
+        },
+        {
+          "name": "MB Slam",
+          "reps": "8 REPS",
+          "station": "🔵 Rack"
+        },
+        {
+          "name": "TRX Triceps Press",
+          "reps": "12 REPS",
+          "station": "🔵 Rack"
+        }
+      ],
+      "source_file": "STUDIO RED HIIT Programming August 2026.pdf p.31",
+      "cardio_note": "The moderate segment builds aerobic base before the hard push spikes into anaerobic effort, and the easy segment after lets the body clear lactate and heart rate drop before the pattern repeats. This full cycle trains build, spike, and recover as one complete unit"
     }
   ]
 }
