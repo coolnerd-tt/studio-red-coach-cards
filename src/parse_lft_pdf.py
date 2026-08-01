@@ -49,7 +49,11 @@ SETSREPS_X = (187, 270)
 NOTES_X = (270, 436)
 TIME_X = (436, 519)
 
-INSTRUCTION_RE = re.compile(r"^(Place|Keep|Bench stored)\b.*(Bench|Wall|GAP|RACK|ALLEY)", re.I)
+# Wording for the "where does the bench go" aside varies too much to
+# enumerate ("Place Bench Against Wall in the GAP", "Bench stored in the
+# GAP against Wall", "Bench in GAP against WALL") — just require "Bench"
+# and one of the station names to both appear somewhere in the row.
+INSTRUCTION_RE = re.compile(r"(?=.*\bBench\b)(?=.*\b(?:Wall|GAP|RACK|ALLEY)\b)", re.I)
 
 # A wrapped cell's last line can dip ~1pt past its row rect into the next
 # row (font descenders) — this specific "where's the bench" aside is the one
@@ -100,17 +104,24 @@ def parse_header(raw: str, year: int) -> dict:
         rest = m2.group(1)
         kind = "benchmark"
 
-    lm = re.search(r"(Build\s*B\d.*|Benchmark\s*Day\s*\d+)", rest, re.I)
+    # The block label has been "Build B<n>" every month so far, then a
+    # differently-named block ("Pump B<n>") showed up starting August —
+    # don't assume the word, just match "<Word> B<digit>...".
+    lm = re.search(r"([A-Za-z]+\s*B\d.*|Benchmark\s*Day\s*\d+)", rest, re.I)
     date_part = rest[: lm.start()].strip(" -–")
     label = re.sub(r"\s+", " ", lm.group(1).strip())
 
+    # Find every "day-group month" pair in the date portion directly, rather
+    # than splitting on a dash first — a cross-month range is sometimes
+    # dash-separated ("31 July – 01/02 Aug") and sometimes not ("31 Aug 01
+    # Sept"), and scanning for the pattern anywhere handles both the same way.
     dates = []
-    for chunk in re.split(r"\s*[-–]\s*", date_part):
-        cm = re.match(r"^([\d/]+)\s+([A-Za-z]+)$", chunk.strip())
-        if not cm:
-            raise ValueError(f"unparsable date chunk {chunk!r} in header {raw!r}")
-        mo = month_num(cm.group(2))
-        for d in cm.group(1).split("/"):
+    pairs = re.findall(r"([\d/]+)\s+([A-Za-z]+)", date_part)
+    if not pairs:
+        raise ValueError(f"unparsable date range {date_part!r} in header {raw!r}")
+    for days_str, month_str in pairs:
+        mo = month_num(month_str)
+        for d in days_str.split("/"):
             dates.append(f"{year:04d}-{mo:02d}-{int(d):02d}")
 
     focus_m = re.search(r"(Lower|Upper|Full)\s*$", label, re.I)
@@ -167,8 +178,7 @@ def find_row_rects(rects, lines, header_y: tuple[float, float]) -> list[tuple[st
     as one rect merged across the full row width instead — same detection,
     just a wider x0/x1 to accept.
     """
-    out = []
-    seen_y = set()
+    candidates = []
     for x0, x1, y0, y1 in rects:
         is_label_col = _near(x0, 20, 3) and _near(x1, 70, 3)
         is_full_width = _near(x0, 21, 3) and _near(x1, 519, 4) and (y1 - y0) < 25
@@ -176,11 +186,24 @@ def find_row_rects(rects, lines, header_y: tuple[float, float]) -> list[tuple[st
             continue
         if _near(y0, header_y[0]) and _near(y1, header_y[1]):
             continue  # the "BUILD" header cell itself
-        texts = [t for lx0, ly, lx1, t in lines if y0 - 0.5 <= ly <= y1 + 0.5 and lx0 < 70]
-        label = next((t.strip() for t in texts if re.match(r"^\d[a-e]?$", t.strip())), None)
-        if label and (y0, y1) not in seen_y:
-            out.append((label, y0, y1))
-            seen_y.add((y0, y1))
+        for lx0, ly, lx1, t in lines:
+            if lx0 < 70 and y0 - 0.5 <= ly <= y1 + 0.5 and re.match(r"^\d[a-e]?$", t.strip()):
+                candidates.append((t.strip(), y0, y1, ly))
+                break
+
+    # A label fragment sitting right at a shared rect boundary can satisfy
+    # two adjacent rects' tolerance padding at once (a rare rendering
+    # duplicate — two rects, one real label) — keep only the rect that
+    # contains it WITHOUT the padding, i.e. the one it actually belongs to,
+    # so the same row doesn't get parsed twice.
+    by_label_pos: dict[tuple[str, float], tuple[str, float, float, bool]] = {}
+    for label, y0, y1, ly in candidates:
+        key = (label, round(ly, 1))
+        exact = y0 <= ly <= y1
+        if key not in by_label_pos or (exact and not by_label_pos[key][3]):
+            by_label_pos[key] = (label, y0, y1, exact)
+
+    out = [(label, y0, y1) for label, y0, y1, exact in by_label_pos.values()]
     out.sort(key=lambda z: -z[1])
     return out
 
@@ -215,17 +238,50 @@ def find_time_rects(rects, header_y: tuple[float, float]) -> list[tuple[float, f
 # --------------------------------------------------------------------------- #
 # Row / section assembly
 # --------------------------------------------------------------------------- #
-def build_row(lines, label, y0, y1, canon, name_y_bounds=None) -> dict:
+def _dead_zone_floor(row_rects, ry0) -> float:
+    """Row rects don't always touch edge-to-edge — some pages leave a few
+    points of unclaimed space between one row and the next (no rect claims
+    it at all). A short aside's trailing word can land in that dead zone
+    rather than in either neighboring rect. Returns the y just above the
+    nearest row-rect below this one (or 0, the page floor, if there is
+    none) — safe to read down to, since by definition no OTHER labeled row
+    claims that space.
+    """
+    below = [r[2] for r in row_rects if r[2] <= ry0 + 0.5]
+    return max(below) if below else 0
+
+
+def build_row(lines, label, y0, y1, canon, name_y_bounds=None, row_rects=()) -> dict:
     name = col_text(lines, *NAME_X, y0, y1)
     setsreps_raw = col_text(lines, *SETSREPS_X, y0, y1)
     notes = col_text(lines, *NOTES_X, y0, y1)
 
-    combined = f"{name} {setsreps_raw}".strip()
-    if INSTRUCTION_RE.search(combined):
-        return {"label": label, "instruction": combined, "notes": notes}
+    # An instruction row's Sets x Reps cell never contains a digit — a real
+    # exercise's always does, even when a stray location fragment bleeds
+    # into it (e.g. "3-5RM (bench in GAP"), so gate on that first (see
+    # _looks_like_instruction). A few pages render the whole "where's the
+    # bench" aside shifted right into the Sets x Reps column instead of the
+    # Name column, so check both.
+    if (not re.search(r"\d", setsreps_raw) and "Bench" in f"{name} {setsreps_raw}"
+            and not INSTRUCTION_RE.search(f"{name} {setsreps_raw}")):
+        # Mentions "Bench" but not yet a station name — the station name may
+        # have dipped into an unclaimed dead zone below this row (see
+        # _dead_zone_floor). Retry with the floor extended that far.
+        floor = _dead_zone_floor(row_rects, y0)
+        if floor < y0:
+            setsreps_raw = col_text(lines, *SETSREPS_X, floor, y1)
+            name = col_text(lines, *NAME_X, floor, y1)
 
-    if not setsreps_raw and len(notes) < 20:
-        return None  # genuinely blank table row, left unused that day
+    if not re.search(r"\d", setsreps_raw) and INSTRUCTION_RE.search(f"{name} {setsreps_raw}"):
+        # The row above can dip its own name text down into this row's NAME
+        # cell (see _instruction_own_start_y) — trim anything above where
+        # the instruction's own text actually starts so that spillover
+        # doesn't get reported as part of the instruction.
+        instr_y = _instruction_own_start_y(lines, y0, y1)
+        if instr_y is not None:
+            name = col_text(lines, *NAME_X, y0, instr_y)
+        instruction = re.sub(r"\s+", " ", f"{name} {setsreps_raw}").strip()
+        return {"label": label, "instruction": instruction, "notes": notes}
 
     if name_y_bounds is not None:
         # A row's rect height follows its NOTES cell, which can be shorter
@@ -236,7 +292,34 @@ def build_row(lines, label, y0, y1, canon, name_y_bounds=None) -> dict:
         ny0, ny1 = name_y_bounds
         name = col_text(lines, *NAME_X, ny0, ny1)
 
+    # Rarely, the whole row (Name + Sets x Reps + start of Coaching Notes)
+    # renders as one fused PDF text line instead of three separate ones —
+    # recognizable because Sets x Reps then reads back completely empty even
+    # though the row clearly isn't blank. The real exercise name always ends
+    # right before the Sets x Reps token begins (either the word "Build" or
+    # a bare digit), so split there. Must run after the name_y_bounds
+    # correction above, since that re-reads the Name column from scratch and
+    # would otherwise pull the un-split fused text right back in.
+    if not setsreps_raw.strip():
+        fuse_m = re.search(r"^(.*?[a-z])\s+(Build\b.*|\d.*)$", name)
+        if fuse_m:
+            name, setsreps_raw = fuse_m.group(1), fuse_m.group(2)
+
+    if not setsreps_raw and len(name) + len(notes) < 20:
+        return None  # genuinely blank table row, left unused that day
+
     name = re.sub(r"\s+", " ", PLACEMENT_ASIDE_RE.sub("", name)).strip()
+
+    # Rarely, the PDF renders a Sets x Reps cell and the start of the
+    # Coaching Notes cell as one continuous text run instead of two. Genuine
+    # Sets x Reps values are always short, even the wordy ones ("Build to
+    # heavy 6", "Build to a heavy 4 for today"), so only treat this as a
+    # merged cell — and split the real notes sentence back out — when the
+    # cell is both long and carries a real multi-word sentence.
+    prose_m = re.search(r"\b[A-Z][a-z]+(?:\s+[a-z]+){3,}", setsreps_raw)
+    if prose_m and len(setsreps_raw) > 40:
+        notes = f"{setsreps_raw[prose_m.start():]} {notes}".strip()
+        setsreps_raw = setsreps_raw[: prose_m.start()].strip()
 
     loc_m = re.search(r"\(([^)]*)\)", setsreps_raw)
     location = loc_m.group(1).strip() if loc_m else None
@@ -252,24 +335,69 @@ def build_row(lines, label, y0, y1, canon, name_y_bounds=None) -> dict:
     }
 
 
-def _looks_like_instruction(content_lines, ry0, ry1) -> bool:
-    name = col_text(content_lines, *NAME_X, ry0, ry1)
+def _looks_like_instruction(content_lines, ry0, ry1, row_rects=()) -> bool:
+    # A real exercise sometimes has a stray location fragment bleed into its
+    # own Sets x Reps cell (e.g. "3-5RM (bench in GAP") — that still starts
+    # with a genuine reps value, unlike an instruction row's Sets x Reps
+    # cell, which never contains a digit even when the whole "where's the
+    # bench" aside renders shifted into that column instead of Name. Gate on
+    # that first so a real lift whose bled-in fragment happens to mention
+    # "Bench"+a station name doesn't get misclassified.
     setsreps_raw = col_text(content_lines, *SETSREPS_X, ry0, ry1)
-    return bool(INSTRUCTION_RE.search(f"{name} {setsreps_raw}".strip()))
+    if re.search(r"\d", setsreps_raw):
+        return False
+    name = col_text(content_lines, *NAME_X, ry0, ry1)
+    combined = f"{name} {setsreps_raw}"
+    if INSTRUCTION_RE.search(combined):
+        return True
+    if "Bench" in combined:
+        # The station name may have dipped into an unclaimed dead zone below
+        # this row (see _dead_zone_floor) — retry with the floor extended.
+        floor = _dead_zone_floor(row_rects, ry0)
+        if floor < ry0:
+            wide = f"{col_text(content_lines, *NAME_X, floor, ry1)} {col_text(content_lines, *SETSREPS_X, floor, ry1)}"
+            return bool(INSTRUCTION_RE.search(wide))
+    return False
 
 
 def _looks_empty(content_lines, ry0, ry1) -> bool:
     """A genuinely blank table row (left unused that day) has no Sets x Reps
-    and no real Coaching Notes — any text in its NAME/NOTES cells is just a
-    wrapped continuation line bleeding down from the row above (a single
-    trailing sentence fragment), not real content of its own.
+    and next to nothing in NAME/NOTES — any text there is just a wrapped
+    continuation line bleeding down from the row above (a single trailing
+    word or sentence fragment), not real content of its own. Checking NAME
+    too (not just NOTES) matters for instruction rows whose whole aside
+    lives in the NAME cell with nothing in NOTES at all.
     """
     setsreps_raw = col_text(content_lines, *SETSREPS_X, ry0, ry1)
+    name = col_text(content_lines, *NAME_X, ry0, ry1)
     notes = col_text(content_lines, *NOTES_X, ry0, ry1)
-    return not setsreps_raw and len(notes) < 20
+    return not setsreps_raw and len(name) + len(notes) < 20
 
 
-def _name_y_bounds_for_rows(rows_in_section, row_rects, is_instruction, is_empty, all_links) -> dict:
+def _instruction_own_start_y(content_lines, ry0, ry1) -> float | None:
+    """Within an instruction row, the instruction phrase itself is reliably
+    the LOWEST line(s) in its NAME cell — accumulate lines bottom-up until
+    they alone satisfy INSTRUCTION_RE. Anything still above that point is
+    spillover from the real exercise row above it (its name dipped past its
+    own row's bottom edge into this one — the same font-descender bleed
+    seen elsewhere, just bad enough here to cross a row boundary). Returns
+    the y of the topmost line that's part of the instruction's own text.
+    """
+    frags = sorted(
+        [(y, t) for x0, y, x1, t in content_lines
+         if NAME_X[0] <= x0 < NAME_X[1] and ry0 - 0.3 <= y <= ry1 + 0.3],
+        key=lambda z: z[0],
+    )
+    acc = []
+    for y, t in frags:
+        acc.append((y, t))
+        combined = re.sub(r"\s+", " ", " ".join(tt for _, tt in acc)).strip()
+        if INSTRUCTION_RE.search(combined):
+            return y
+    return None
+
+
+def _name_y_bounds_for_rows(rows_in_section, row_rects, is_instruction, is_empty, all_links, content_lines) -> dict:
     """Match this section's real (non-instruction, non-empty) rows to its
     video links ordinally, matched per-SECTION rather than per-page: a
     miscount in one section (an unusually-worded aside the instruction
@@ -292,14 +420,36 @@ def _name_y_bounds_for_rows(rows_in_section, row_rects, is_instruction, is_empty
     bounds = {}
     for i, (lbl, ry0, ry1) in enumerate(real_rows):
         top = link_ys[i]
-        bottom = link_ys[i + 1] if i + 1 < len(link_ys) else ry0
-        # An instruction row's own placement note sits between this exercise
-        # and the next one's link (which skips right over it, since
-        # instruction rows carry no video) — don't let the name window
-        # reach down into that row's own text.
-        intervening = [r for r in row_rects if bottom <= r[2] <= ry0 + 0.5 and is_instruction.get(r)]
-        if intervening:
-            bottom = max(bottom, max(r[2] for r in intervening) + 1)
+        if i + 1 < len(link_ys):
+            bottom = link_ys[i + 1]
+            # An instruction row's own placement note sits between this
+            # exercise and the next one's link (which skips right over it,
+            # since instruction rows carry no video) — don't let the name
+            # window reach down into that row's own text.
+            intervening = [r for r in row_rects if bottom <= r[2] <= ry0 + 0.5 and is_instruction.get(r)]
+            if intervening:
+                bottom = max(bottom, max(r[2] for r in intervening) + 1)
+        else:
+            # No next link within this section (this is its last real row).
+            # The row's own bottom edge (ry0) isn't a safe floor: this row's
+            # own name can dip a hair past it — same as the boundary between
+            # any two rows — but there's no next-row link in THIS section to
+            # bound against. Sections stack top-to-bottom with no
+            # interleaving, so the next video link anywhere on the page (the
+            # next section's first exercise) is still the right anchor.
+            below_global = [y for x, y, uri in all_links if y < top - 3]
+            bottom = max(below_global) if below_global else ry0
+            # If the row-rect immediately below (whatever its exact gap —
+            # some pages leave a few points of unclaimed space between rows
+            # instead of touching edge-to-edge) is an instruction, its own
+            # placement note may sit inside that gap — don't let the window
+            # reach past where ITS OWN text actually starts.
+            below_rects = [r for r in row_rects if r != (lbl, ry0, ry1) and r[2] <= ry0 + 0.5]
+            following = max(below_rects, key=lambda r: r[2]) if below_rects else None
+            if following and is_instruction.get(following):
+                instr_y = _instruction_own_start_y(content_lines, following[1], following[2])
+                if instr_y is not None:
+                    bottom = instr_y + 2
         bounds[(lbl, ry0, ry1)] = (bottom, top + 3)
     return bounds
 
@@ -331,7 +481,7 @@ def parse_page(page, canon, links: list[tuple[float, float, str]] | None = None)
     # keeps its exact bound since rows are edge-to-edge with zero gap.
     page_bottom_y0 = min((ry0 for _, ry0, ry1 in row_rects), default=None)
 
-    is_instruction = {(lbl, ry0, ry1): _looks_like_instruction(content_lines, ry0, ry1)
+    is_instruction = {(lbl, ry0, ry1): _looks_like_instruction(content_lines, ry0, ry1, row_rects)
                        for lbl, ry0, ry1 in row_rects}
     is_empty = {(lbl, ry0, ry1): _looks_empty(content_lines, ry0, ry1) for lbl, ry0, ry1 in row_rects}
     deduped_links = dedupe_links(links) if links else []
@@ -359,11 +509,12 @@ def parse_page(page, canon, links: list[tuple[float, float, str]] | None = None)
 
     for sec in sections:
         rows_in_section = sec.pop("_rows")
-        name_y_bounds = _name_y_bounds_for_rows(rows_in_section, row_rects, is_instruction, is_empty, deduped_links)
+        name_y_bounds = _name_y_bounds_for_rows(rows_in_section, row_rects, is_instruction, is_empty, deduped_links,
+                                                 content_lines)
         exercises = [
             row for row in (
                 build_row(content_lines, lbl, (0 if ry0 == page_bottom_y0 else ry0), ry1, canon,
-                          name_y_bounds.get((lbl, ry0, ry1)))
+                          name_y_bounds.get((lbl, ry0, ry1)), row_rects)
                 for lbl, ry0, ry1 in rows_in_section
             ) if row is not None  # drop genuinely blank table rows
         ]
