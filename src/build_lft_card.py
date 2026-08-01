@@ -249,7 +249,7 @@ STYLE = """
     --muted: #999; --yellow: #F5C842; --green: #4CAF50; --blue: #4A9EE8;
   }
   * { box-sizing: border-box; margin: 0; padding: 0; }
-  body { background: var(--black); color: white; font-family: 'Barlow', sans-serif; font-size: 18px; min-height: 100vh; padding-bottom: 40px; }
+  body { background: var(--black); color: white; font-family: 'Barlow', sans-serif; font-size: 20px; min-height: 100vh; padding-bottom: 40px; }
   a { color: inherit; }
   .header { background: var(--red); padding: 14px 16px 12px; display: flex; align-items: center; justify-content: space-between; position: sticky; top: 0; z-index: 100; border-bottom: 3px solid var(--red-dark); }
   .header-left { display: flex; align-items: center; gap: 10px; }
@@ -271,14 +271,14 @@ STYLE = """
   .lft-section-note { font-size: 15px; color: var(--muted); padding: 0 4px 8px; line-height: 1.4; }
 
   .lft-ex-row { display: flex; gap: 10px; background: var(--card); border: 1px solid var(--border); border-radius: 10px; padding: 10px 12px; margin-bottom: 8px; }
-  .lft-ex-label { font-family: 'Barlow Condensed', sans-serif; font-weight: 800; font-size: 17px; color: var(--red); background: rgba(212,43,43,0.15); border-radius: 6px; padding: 2px 7px; align-self: flex-start; flex-shrink: 0; min-width: 20px; text-align: center; }
+  .lft-ex-label { font-family: 'Barlow Condensed', sans-serif; font-weight: 800; font-size: 19px; color: var(--red); background: rgba(212,43,43,0.15); border-radius: 6px; padding: 2px 7px; align-self: flex-start; flex-shrink: 0; min-width: 20px; text-align: center; }
   .lft-ex-body { flex: 1; min-width: 0; }
   .lft-ex-top { display: flex; flex-wrap: wrap; align-items: baseline; gap: 8px; }
-  .lft-ex-name { font-weight: 700; font-size: 18px; text-decoration: none; border-bottom: 1px solid rgba(255,255,255,0.35); }
+  .lft-ex-name { font-weight: 700; font-size: 20px; text-decoration: none; border-bottom: 1px solid rgba(255,255,255,0.35); }
   a.lft-ex-name:active { color: var(--yellow); }
-  .lft-ex-sr { font-family: 'Barlow Condensed', sans-serif; font-weight: 700; font-size: 17px; color: var(--yellow); letter-spacing: 0.5px; }
+  .lft-ex-sr { font-family: 'Barlow Condensed', sans-serif; font-weight: 700; font-size: 19px; color: var(--yellow); letter-spacing: 0.5px; }
   .lft-loc { font-size: 13px; font-weight: 700; letter-spacing: 0.5px; text-transform: uppercase; color: var(--blue); background: rgba(74,158,232,0.15); border-radius: 10px; padding: 1px 8px; }
-  .lft-ex-notes { font-size: 15.5px; color: #bbb; line-height: 1.45; margin-top: 4px; }
+  .lft-ex-notes { font-size: 17.5px; color: #bbb; line-height: 1.45; margin-top: 4px; }
 
   .lft-note-row { display: flex; align-items: flex-start; gap: 8px; background: rgba(245,200,66,0.08); border: 1px dashed rgba(245,200,66,0.4); border-radius: 8px; padding: 8px 12px; margin-bottom: 8px; font-size: 15.5px; color: var(--yellow); }
   .lft-note-icon { flex-shrink: 0; }
