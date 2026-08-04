@@ -251,10 +251,68 @@ def _dead_zone_floor(row_rects, ry0) -> float:
     return max(below) if below else 0
 
 
-def build_row(lines, label, y0, y1, canon, name_y_bounds=None, row_rects=()) -> dict:
+def _col_spillover(content_lines, xlo, xhi, ry0, ry1, fallback_line_height=11.5, require_re=None,
+                    dip_threshold=3.0):
+    """A wrapped cell's last line or two can render just past its own row's
+    bottom edge, into the next row's own rect — the same font-descender-style
+    bleed already handled for the Name column (see name_y_bounds), but here
+    for a column with no video-link anchor to correct against (Sets x Reps,
+    Coaching Notes).
+
+    Many rows' genuine, complete text just doesn't happen to end with
+    sentence-ending punctuation (a short cue phrase, not always a full
+    sentence) — so "does the text look finished" isn't a safe signal on its
+    own, and neither is "is there a same-ish-sized gap to the next line
+    below": a legitimately different row can start close enough below to
+    fool a pure line-height comparison. The one thing that's reliably true
+    only for a genuine dip: the FIRST candidate line below sits within a
+    couple points of ry0 itself — this row's own drawn boundary — not
+    merely "close to the last line we kept". A different row's own content
+    starting fresh is a full line-height or more below that boundary.
+
+    require_re additionally requires that first line to match a pattern
+    (e.g. a location tag always starts with "(").
+
+    Returns (extra_text, claimed_y) — claimed_y is the y of the lowest
+    absorbed line (or None if nothing was absorbed), so the caller can keep
+    the row below from re-reading that same line as its own.
+    """
+    own = sorted(
+        [(y, t) for x0, y, x1, t in content_lines if xlo <= x0 < xhi and ry0 - 0.3 <= y <= ry1 + 0.3],
+        key=lambda z: -z[0],
+    )
+    line_height = (own[-2][0] - own[-1][0]) if len(own) >= 2 else fallback_line_height
+    if line_height <= 0:
+        line_height = fallback_line_height
+    below = sorted(
+        [(y, t) for x0, y, x1, t in content_lines
+         if xlo <= x0 < xhi and ry0 - line_height * 3 <= y < ry0 - 0.3],
+        key=lambda z: -z[0],
+    )
+    if not below or ry0 - below[0][0] > dip_threshold:
+        return "", None  # nothing sits right at the boundary — no dip here
+    if require_re and not require_re.match(below[0][1].strip()):
+        return "", None
+
+    # Absorb only this one line. A second line, even one that's gap-close,
+    # can't be told apart from the row below's own genuine second line of
+    # notes by gap alone (both happen within a normal line-height of each
+    # other) — chaining further risks swallowing a whole neighboring cell,
+    # so a single dipped line is the limit.
+    first_y, first_t = below[0]
+    return first_t, first_y
+
+
+def build_row(lines, label, y0, y1, canon, name_y_bounds=None, row_rects=(),
+              sr_ceiling=None, notes_ceiling=None) -> dict:
     name = col_text(lines, *NAME_X, y0, y1)
-    setsreps_raw = col_text(lines, *SETSREPS_X, y0, y1)
-    notes = col_text(lines, *NOTES_X, y0, y1)
+    # A line the row above already claimed as its own spillover (see
+    # _col_spillover) sits geometrically inside this row's rect too — cap
+    # the read just below it so it doesn't also show up here, duplicated.
+    sr_y1 = min(y1, sr_ceiling) if sr_ceiling is not None else y1
+    notes_y1 = min(y1, notes_ceiling) if notes_ceiling is not None else y1
+    setsreps_raw = col_text(lines, *SETSREPS_X, y0, sr_y1)
+    notes = col_text(lines, *NOTES_X, y0, notes_y1)
 
     # An instruction row's Sets x Reps cell never contains a digit — a real
     # exercise's always does, even when a stray location fragment bleeds
@@ -308,6 +366,17 @@ def build_row(lines, label, y0, y1, canon, name_y_bounds=None, row_rects=()) -> 
     if not setsreps_raw and len(name) + len(notes) < 20:
         return None  # genuinely blank table row, left unused that day
 
+    # A location tag ("(in the RACK)") is the one recurring thing that dips
+    # out of Sets x Reps into the next row — require the first absorbed
+    # fragment to actually look like one, so an unrelated nearby line at a
+    # similar gap doesn't get pulled in by coincidence.
+    sr_spill, sr_claim_y = _col_spillover(lines, *SETSREPS_X, y0, y1, require_re=re.compile(r"^\("))
+    if sr_spill:
+        setsreps_raw = f"{setsreps_raw} {sr_spill}".strip()
+    notes_spill, notes_claim_y = _col_spillover(lines, *NOTES_X, y0, y1)
+    if notes_spill:
+        notes = f"{notes} {notes_spill}".strip()
+
     name = re.sub(r"\s+", " ", PLACEMENT_ASIDE_RE.sub("", name)).strip()
 
     # Rarely, the PDF renders a Sets x Reps cell and the start of the
@@ -332,6 +401,8 @@ def build_row(lines, label, y0, y1, canon, name_y_bounds=None, row_rects=()) -> 
         "location": location,
         "notes": notes,
         "_y": (y0, y1),
+        "_sr_claim_y": sr_claim_y,
+        "_notes_claim_y": notes_claim_y,
     }
 
 
@@ -511,12 +582,26 @@ def parse_page(page, canon, links: list[tuple[float, float, str]] | None = None)
         rows_in_section = sec.pop("_rows")
         name_y_bounds = _name_y_bounds_for_rows(rows_in_section, row_rects, is_instruction, is_empty, deduped_links,
                                                  content_lines)
+        # Rows are built top-to-bottom (rows_in_section is already in that
+        # order) so a row that claims spillover from below can tell the NEXT
+        # row not to also read that same line as its own — otherwise it
+        # shows up duplicated on both cards (it sits inside both rows'
+        # rects, just semantically belongs to the one above).
+        built = []
+        sr_ceiling = notes_ceiling = None
+        for lbl, ry0, ry1 in rows_in_section:
+            row = build_row(content_lines, lbl, (0 if ry0 == page_bottom_y0 else ry0), ry1, canon,
+                             name_y_bounds.get((lbl, ry0, ry1)), row_rects, sr_ceiling, notes_ceiling)
+            sr_ceiling = notes_ceiling = None
+            if row is not None:
+                if row.get("_sr_claim_y") is not None:
+                    sr_ceiling = row["_sr_claim_y"] - 0.35
+                if row.get("_notes_claim_y") is not None:
+                    notes_ceiling = row["_notes_claim_y"] - 0.35
+                built.append(row)
         exercises = [
-            row for row in (
-                build_row(content_lines, lbl, (0 if ry0 == page_bottom_y0 else ry0), ry1, canon,
-                          name_y_bounds.get((lbl, ry0, ry1)), row_rects)
-                for lbl, ry0, ry1 in rows_in_section
-            ) if row is not None  # drop genuinely blank table rows
+            row for row in built
+            if row is not None  # drop genuinely blank table rows
         ]
 
         # Merged Time Allotted cell: it usually spans every row in the
@@ -542,7 +627,8 @@ def parse_page(page, canon, links: list[tuple[float, float, str]] | None = None)
 
         sec["time_allotted"] = time_allotted
         sec["time_note"] = re.sub(r"\s+", " ", time_note).strip()
-        sec["exercises"] = [{k: v for k, v in ex.items() if k != "_y"} for ex in exercises]
+        internal_keys = {"_y", "_sr_claim_y", "_notes_claim_y"}
+        sec["exercises"] = [{k: v for k, v in ex.items() if k not in internal_keys} for ex in exercises]
 
     return {"header": header, "session_notes": session_notes, "sections": sections}
 
