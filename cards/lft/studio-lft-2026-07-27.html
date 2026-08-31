@@ -25,7 +25,14 @@
   .focus-upper { background: rgba(245,200,66,0.3); color: #3a2e00; }
   .focus-full { background: rgba(76,175,80,0.35); }
 
+  .cycle-tag { display: inline-block; margin-left: 7px; font-family: 'Barlow Condensed', sans-serif; font-weight: 800; font-size: 12px; letter-spacing: 1px; text-transform: uppercase; padding: 1px 8px; border-radius: 10px; background: rgba(255,255,255,0.22); color: white; vertical-align: 1px; }
+
   .lft-wrap { padding: 14px; max-width: 640px; margin: 0 auto; }
+  .cycle-banner { background: var(--card); border-left: 3px solid var(--yellow); border-radius: 0 8px 8px 0; padding: 10px 13px; margin-bottom: 12px; }
+  .cycle-banner-head { font-family: 'Barlow Condensed', sans-serif; font-weight: 800; font-size: 19px; letter-spacing: 1px; text-transform: uppercase; color: var(--yellow); }
+  .cycle-type { color: #ffe9a3; font-weight: 700; }
+  .cycle-meta { display: inline-block; font-family: 'Barlow', sans-serif; font-weight: 600; font-size: 13.5px; letter-spacing: 0.3px; text-transform: none; color: var(--muted); margin-left: 6px; }
+  .cycle-banner-desc { font-size: 16px; color: #ccc; line-height: 1.45; margin-top: 4px; }
   .session-notes { background: var(--card); border-left: 3px solid var(--red); border-radius: 0 8px 8px 0; padding: 11px 13px; font-size: 17px; color: #ddd; line-height: 1.5; margin-bottom: 16px; }
 
   .lft-section { margin-bottom: 16px; }
@@ -58,12 +65,19 @@
     </div>
   </div>
   <div style="text-align:right">
-    <div class="header-week">Week 4</div>
+    <div class="header-week">Week 4<span class="cycle-tag">Build</span></div>
     <span class="focus-badge focus-lower">Lower</span>
   </div>
 </div>
 
 <div class="lft-wrap">
+  <div class="cycle-banner">
+    <div class="cycle-banner-head">Build Cycle · <span class="cycle-type">Strength</span>
+      <span class="cycle-meta">Block 2 · Week 4 of 6</span>
+    </div>
+    <div class="cycle-banner-desc">Basic strength training using common strength protocols to build a solid base of strength capacity.</div>
+  </div>
+
   <div class="session-notes">Application of greater concentric force to the traditional movements using straight sets. Hinge</div>
 
   <div class="lft-section">
@@ -127,14 +141,14 @@
     <div class="lft-ex-row">
       <div class="lft-ex-label">3a</div>
       <div class="lft-ex-body">
-        <div class="lft-ex-top"><a class="lft-ex-name" href="https://www.dropbox.com/scl/fi/t6i9cpfoiib2fubl1b71s/Barbell-Front-foot-elevated-slit-squat.mp4?rlkey=1wpv30pc4v534y0jpbu9i4dgf&amp;st=o0y18gpc&amp;dl=0" target="_blank" rel="noopener">Front Foot Elevated Barbell Split Squat</a><span class="lft-ex-sr">4 x 8e</span></div>
+        <div class="lft-ex-top"><a class="lft-ex-name" href="https://www.dropbox.com/scl/fi/t6i9cpfoiib2fubl1b71s/Barbell-Front-foot-elevated-slit-squat.mp4?rlkey=1wpv30pc4v534y0jpbu9i4dgf&amp;st=o0y18gpc&amp;dl=0" target="_blank" rel="noopener">Front Foot Elevated Barbell Split Squat</a><span class="lft-ex-sr">4 x 8e</span><span class="lft-loc">in the RACK</span></div>
         <div class="lft-ex-notes">2 warm up sets then into your working sets, Stand front foot on a 45lb plate, drop back knee to to ground.</div>
       </div>
     </div>
     <div class="lft-ex-row">
       <div class="lft-ex-label">3b</div>
       <div class="lft-ex-body">
-        <div class="lft-ex-top"><a class="lft-ex-name" href="https://www.dropbox.com/scl/fi/4ehhdtoc6x54lsy7uzbvs/Alternating-Anterior-Loaded-Dumbell-Lateral-Lunge.mp4?rlkey=or0rqpkb80d2fm3fjvr45nv6l&amp;st=6v9900f4&amp;dl=0" target="_blank" rel="noopener">2DB Lateral Lunge</a><span class="lft-ex-sr">4 x 8e</span><span class="lft-loc">in the RACK</span></div>
+        <div class="lft-ex-top"><a class="lft-ex-name" href="https://www.dropbox.com/scl/fi/4ehhdtoc6x54lsy7uzbvs/Alternating-Anterior-Loaded-Dumbell-Lateral-Lunge.mp4?rlkey=or0rqpkb80d2fm3fjvr45nv6l&amp;st=6v9900f4&amp;dl=0" target="_blank" rel="noopener">2DB Lateral Lunge</a><span class="lft-ex-sr">4 x 8e</span><span class="lft-loc">in the alley</span></div>
         <div class="lft-ex-notes">knee to to ground. 2 warm up sets then into your working sets, Hold DBs by sides, step to the side and sit hips back. You should feel a stretch on the straight leg. Complete 1 side at a time.</div>
       </div>
     </div>
@@ -149,15 +163,15 @@
     <div class="lft-ex-row">
       <div class="lft-ex-label">4a</div>
       <div class="lft-ex-body">
-        <div class="lft-ex-top"><a class="lft-ex-name" href="https://www.dropbox.com/scl/fi/denx56xv4h5cztq80d2st/Pause-Goblet-Squat.mov?rlkey=zfmz26g2fkmn6yrzt57tqgvk7&amp;st=t9rt5fyn&amp;dl=0" target="_blank" rel="noopener">DB Pause Goblet Squat</a><span class="lft-ex-sr">4 x 8</span></div>
+        <div class="lft-ex-top"><a class="lft-ex-name" href="https://www.dropbox.com/scl/fi/denx56xv4h5cztq80d2st/Pause-Goblet-Squat.mov?rlkey=zfmz26g2fkmn6yrzt57tqgvk7&amp;st=t9rt5fyn&amp;dl=0" target="_blank" rel="noopener">DB Pause Goblet Squat</a><span class="lft-ex-sr">4 x 8</span><span class="lft-loc">in the GAP</span></div>
         <div class="lft-ex-notes">Slowly lower to bottom of goblet squat (hold 3 seconds), stand back up with normal speed.</div>
       </div>
     </div>
     <div class="lft-ex-row">
       <div class="lft-ex-label">4b</div>
       <div class="lft-ex-body">
-        <div class="lft-ex-top"><a class="lft-ex-name" href="https://www.dropbox.com/scl/fi/dq9wld4v6wo842cz0z1a9/Hamstring-Body-Curls-2.mp4?rlkey=nhp4u6v1j3hxqj37nqb8lm4vm&amp;st=6xxab7gw&amp;dl=0" target="_blank" rel="noopener">Hamstring Body Curls</a><span class="lft-ex-sr">4 x 8</span><span class="lft-loc">in the GAP</span></div>
-        <div class="lft-ex-notes">Set up barbell to belly level. Pull box over. Hold body row position and curl body by pulling through heels on box to challenge</div>
+        <div class="lft-ex-top"><a class="lft-ex-name" href="https://www.dropbox.com/scl/fi/dq9wld4v6wo842cz0z1a9/Hamstring-Body-Curls-2.mp4?rlkey=nhp4u6v1j3hxqj37nqb8lm4vm&amp;st=6xxab7gw&amp;dl=0" target="_blank" rel="noopener">Hamstring Body Curls</a><span class="lft-ex-sr">4 x 8</span><span class="lft-loc">in the RACK</span></div>
+        <div class="lft-ex-notes">Set up barbell to belly level. Pull box over. Hold body row position and curl body by pulling through heels on box to challenge hamstrings.</div>
       </div>
     </div>
   </div>

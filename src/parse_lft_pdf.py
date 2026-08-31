@@ -41,13 +41,11 @@ MONTHS = {"jan": 1, "feb": 2, "mar": 3, "apr": 4, "may": 5, "jun": 6, "jul": 7,
 SECTION_NAMES = {"Training Prep", "Main LFT", "Accessory 1", "Accessory 2",
                   "Finisher", "LFT 1", "LFT 2", "LFT 3", "LFT 4"}
 
-# Column x-bands, calibrated against the table header row (Exercise / Sets x
-# Reps / Coaching Notes / Time Allotted at x~70/187/270/436).
-LABEL_X = (20, 70)
-NAME_X = (70, 187)
-SETSREPS_X = (187, 270)
-NOTES_X = (270, 436)
-TIME_X = (436, 519)
+# Column x-bands are NOT hardcoded: the table has shifted right and widened
+# between monthly exports (July/August start the Exercise column at x=70,
+# September at x=101), so they're read per page from the table's own drawn
+# header cells instead — see detect_columns().
+COL_NAMES = ("label", "name", "setsreps", "notes", "time")
 
 # Wording for the "where does the bench go" aside varies too much to
 # enumerate ("Place Bench Against Wall in the GAP", "Bench stored in the
@@ -137,13 +135,15 @@ def find_header_line(lines) -> str | None:
     return None
 
 
-def find_session_notes(lines, table_header_y0: float) -> str:
+def find_session_notes(lines, table_header_y0: float, cols) -> str:
     """The paragraph beside the 'Session / Notes' label, above the table header row."""
     # Bound above by the "Session"/"Notes" label itself — otherwise the
-    # "studio lft" logo text (also x0 >= 70, further up the page) leaks in.
-    label_ys = [y for x0, y, x1, t in lines if x0 < 70 and t.strip() in ("Session", "Notes")]
+    # "studio lft" logo text (also in the paragraph's column, further up the
+    # page) leaks in.
+    divider = cols["name"][0]
+    label_ys = [y for x0, y, x1, t in lines if x0 < divider and t.strip() in ("Session", "Notes")]
     ceiling = max(label_ys) + 8 if label_ys else 1e9
-    frags = [(y, t) for x0, y, x1, t in lines if x0 >= 70 and table_header_y0 + 5 < y < ceiling]
+    frags = [(y, t) for x0, y, x1, t in lines if x0 >= divider and table_header_y0 + 5 < y < ceiling]
     frags.sort(key=lambda z: -z[0])
     return re.sub(r"\s+", " ", " ".join(t for y, t in frags)).strip()
 
@@ -161,34 +161,61 @@ def col_text(lines, xlo, xhi, ylo, yhi) -> str:
 # --------------------------------------------------------------------------- #
 # Geometry: rows and sections from the drawn table gridlines
 # --------------------------------------------------------------------------- #
-def find_table_header_row(rects, lines) -> tuple[float, float]:
-    """The (y0, y1) of the 'Exercise / Sets x Reps / ...' header cell row."""
-    for x0, x1, y0, y1 in rects:
-        if _near(x0, 70) and _near(x1, 187):
-            texts = [t for lx0, ly, lx1, t in lines if y0 - 1 <= ly <= y1 + 1]
-            if any(t.strip() == "Exercise" for t in texts):
-                return (y0, y1)
+def detect_columns(rects, lines) -> tuple[dict, tuple[float, float]]:
+    """Column x-bands and the header row's (y0, y1), read from the table's
+    own drawn header cells.
+
+    These can't be hardcoded: the table has shifted right and widened
+    between monthly exports. But the header row is always drawn as five
+    cells — label / Exercise / Sets x Reps / Coaching Notes / Time
+    Allotted — so take the boundaries straight from those.
+    """
+    header_ys = sorted({round(ly, 2) for lx0, ly, lx1, t in lines if t.strip() == "Exercise"}, reverse=True)
+    for y in header_ys:
+        # The header label can sit a fraction of a point below its own cell
+        # (the same font-descender slop seen throughout), hence the padding.
+        spans: dict[tuple[float, float], tuple[float, float]] = {}
+        for x0, x1, y0, y1 in rects:
+            if y0 - 2 <= y <= y1 + 2 and 5 < (y1 - y0) < 40:
+                spans[(round(x0, 1), round(x1, 1))] = (y0, y1)
+        cells = sorted(spans)
+        # The page-border rect spans every column — drop anything that
+        # contains another candidate outright.
+        inner = [c for c in cells if not any(o != c and c[0] <= o[0] and o[1] <= c[1] for o in cells)]
+        if len(inner) == len(COL_NAMES):
+            return dict(zip(COL_NAMES, inner)), spans[inner[0]]
     raise ValueError("could not locate the table header row")
 
-def find_row_rects(rects, lines, header_y: tuple[float, float]) -> list[tuple[str, float, float]]:
+
+def find_row_rects(rects, lines, header_y: tuple[float, float], cols) -> list[tuple[str, float, float]]:
     """[(label, y0, y1)] for every genuine labeled row.
 
-    Most rows have their own narrow label-column cell rect (x~20-70). A few
+    Most rows have their own narrow label-column cell rect. A few
     "instruction" rows (e.g. "Place Bench Against Wall in the GAP") are drawn
     as one rect merged across the full row width instead — same detection,
     just a wider x0/x1 to accept.
     """
+    label_lo, label_hi = cols["label"]
+    table_hi = cols["time"][1]
     candidates = []
     for x0, x1, y0, y1 in rects:
-        is_label_col = _near(x0, 20, 3) and _near(x1, 70, 3)
-        is_full_width = _near(x0, 21, 3) and _near(x1, 519, 4) and (y1 - y0) < 25
+        is_label_col = _near(x0, label_lo, 3) and _near(x1, label_hi, 3)
+        is_full_width = _near(x0, label_lo, 3) and _near(x1, table_hi, 4) and (y1 - y0) < 25
         if not (is_label_col or is_full_width):
             continue
         if _near(y0, header_y[0]) and _near(y1, header_y[1]):
             continue  # the "BUILD" header cell itself
         for lx0, ly, lx1, t in lines:
-            if lx0 < 70 and y0 - 0.5 <= ly <= y1 + 0.5 and re.match(r"^\d[a-e]?$", t.strip()):
-                candidates.append((t.strip(), y0, y1, ly))
+            if lx0 >= label_hi or not (y0 - 0.5 <= ly <= y1 + 0.5):
+                continue
+            # Usually the label cell holds just "2a", but the PDF sometimes
+            # renders the label and the start of the exercise name as one
+            # fused text run ("2a Wide Grip Pull Up -") — match the label as
+            # a prefix so the row is still found (build_row recovers the
+            # name part).
+            m = re.match(r"^(\d[a-e]?)\b", t.strip())
+            if m:
+                candidates.append((m.group(1), y0, y1, ly))
                 break
 
     # A label fragment sitting right at a shared rect boundary can satisfy
@@ -224,11 +251,16 @@ def find_section_bars(lines, header_y: tuple[float, float]) -> list[tuple[str, f
     return out
 
 
-def find_time_rects(rects, header_y: tuple[float, float]) -> list[tuple[float, float]]:
+def find_time_rects(rects, header_y: tuple[float, float], cols) -> list[tuple[float, float]]:
     """[(y0, y1)] for merged 'Time Allotted' cells (one per section, spans its rows)."""
+    time_lo, time_hi = cols["time"]
+    width = time_hi - time_lo
     out = []
     for x0, x1, y0, y1 in rects:
-        if _near(x0, 436, 3) and _near(x1, 519, 3):
+        # The merged body cells don't always start exactly at the header
+        # cell's left edge — some pages inset them — so accept any rect that
+        # sits inside the column and covers most of its width.
+        if x0 >= time_lo - 4 and x1 <= time_hi + 4 and (x1 - x0) > width * 0.5:
             if _near(y0, header_y[0]) and _near(y1, header_y[1]):
                 continue
             out.append((y0, y1))
@@ -303,16 +335,16 @@ def _col_spillover(content_lines, xlo, xhi, ry0, ry1, fallback_line_height=11.5,
     return first_t, first_y
 
 
-def build_row(lines, label, y0, y1, canon, name_y_bounds=None, row_rects=(),
+def build_row(lines, label, y0, y1, canon, cols, name_y_bounds=None, row_rects=(),
               sr_ceiling=None, notes_ceiling=None) -> dict:
-    name = col_text(lines, *NAME_X, y0, y1)
+    name = col_text(lines, *cols["name"], y0, y1)
     # A line the row above already claimed as its own spillover (see
     # _col_spillover) sits geometrically inside this row's rect too — cap
     # the read just below it so it doesn't also show up here, duplicated.
     sr_y1 = min(y1, sr_ceiling) if sr_ceiling is not None else y1
     notes_y1 = min(y1, notes_ceiling) if notes_ceiling is not None else y1
-    setsreps_raw = col_text(lines, *SETSREPS_X, y0, sr_y1)
-    notes = col_text(lines, *NOTES_X, y0, notes_y1)
+    setsreps_raw = col_text(lines, *cols["setsreps"], y0, sr_y1)
+    notes = col_text(lines, *cols["notes"], y0, notes_y1)
 
     # An instruction row's Sets x Reps cell never contains a digit — a real
     # exercise's always does, even when a stray location fragment bleeds
@@ -327,17 +359,17 @@ def build_row(lines, label, y0, y1, canon, name_y_bounds=None, row_rects=(),
         # _dead_zone_floor). Retry with the floor extended that far.
         floor = _dead_zone_floor(row_rects, y0)
         if floor < y0:
-            setsreps_raw = col_text(lines, *SETSREPS_X, floor, y1)
-            name = col_text(lines, *NAME_X, floor, y1)
+            setsreps_raw = col_text(lines, *cols["setsreps"], floor, y1)
+            name = col_text(lines, *cols["name"], floor, y1)
 
     if not re.search(r"\d", setsreps_raw) and INSTRUCTION_RE.search(f"{name} {setsreps_raw}"):
         # The row above can dip its own name text down into this row's NAME
         # cell (see _instruction_own_start_y) — trim anything above where
         # the instruction's own text actually starts so that spillover
         # doesn't get reported as part of the instruction.
-        instr_y = _instruction_own_start_y(lines, y0, y1)
+        instr_y = _instruction_own_start_y(lines, y0, y1, cols)
         if instr_y is not None:
-            name = col_text(lines, *NAME_X, y0, instr_y)
+            name = col_text(lines, *cols["name"], y0, instr_y)
         instruction = re.sub(r"\s+", " ", f"{name} {setsreps_raw}").strip()
         return {"label": label, "instruction": instruction, "notes": notes}
 
@@ -348,7 +380,16 @@ def build_row(lines, label, y0, y1, canon, name_y_bounds=None, row_rects=(),
         # video link though, so its Y position (and the next exercise's)
         # bounds the true name text regardless of the row rect's height.
         ny0, ny1 = name_y_bounds
-        name = col_text(lines, *NAME_X, ny0, ny1)
+        name = col_text(lines, *cols["name"], ny0, ny1)
+
+    # The label cell sometimes carries the first line of the exercise name
+    # fused onto the label itself ("2a Wide Grip Pull Up -"); that text
+    # never reaches the Name column, so pull it back out here. Runs after
+    # the name_y_bounds correction, which re-reads the Name column and would
+    # otherwise drop it again.
+    fused_label = re.match(r"^\d[a-e]?\s+(\S.*)$", col_text(lines, *cols["label"], y0, y1))
+    if fused_label:
+        name = f"{fused_label.group(1)} {name}".strip()
 
     # Rarely, the whole row (Name + Sets x Reps + start of Coaching Notes)
     # renders as one fused PDF text line instead of three separate ones —
@@ -370,10 +411,10 @@ def build_row(lines, label, y0, y1, canon, name_y_bounds=None, row_rects=(),
     # out of Sets x Reps into the next row — require the first absorbed
     # fragment to actually look like one, so an unrelated nearby line at a
     # similar gap doesn't get pulled in by coincidence.
-    sr_spill, sr_claim_y = _col_spillover(lines, *SETSREPS_X, y0, y1, require_re=re.compile(r"^\("))
+    sr_spill, sr_claim_y = _col_spillover(lines, *cols["setsreps"], y0, y1, require_re=re.compile(r"^\("))
     if sr_spill:
         setsreps_raw = f"{setsreps_raw} {sr_spill}".strip()
-    notes_spill, notes_claim_y = _col_spillover(lines, *NOTES_X, y0, y1)
+    notes_spill, notes_claim_y = _col_spillover(lines, *cols["notes"], y0, y1)
     if notes_spill:
         notes = f"{notes} {notes_spill}".strip()
 
@@ -406,7 +447,7 @@ def build_row(lines, label, y0, y1, canon, name_y_bounds=None, row_rects=(),
     }
 
 
-def _looks_like_instruction(content_lines, ry0, ry1, row_rects=()) -> bool:
+def _looks_like_instruction(content_lines, ry0, ry1, cols, row_rects=()) -> bool:
     # A real exercise sometimes has a stray location fragment bleed into its
     # own Sets x Reps cell (e.g. "3-5RM (bench in GAP") — that still starts
     # with a genuine reps value, unlike an instruction row's Sets x Reps
@@ -414,10 +455,10 @@ def _looks_like_instruction(content_lines, ry0, ry1, row_rects=()) -> bool:
     # bench" aside renders shifted into that column instead of Name. Gate on
     # that first so a real lift whose bled-in fragment happens to mention
     # "Bench"+a station name doesn't get misclassified.
-    setsreps_raw = col_text(content_lines, *SETSREPS_X, ry0, ry1)
+    setsreps_raw = col_text(content_lines, *cols["setsreps"], ry0, ry1)
     if re.search(r"\d", setsreps_raw):
         return False
-    name = col_text(content_lines, *NAME_X, ry0, ry1)
+    name = col_text(content_lines, *cols["name"], ry0, ry1)
     combined = f"{name} {setsreps_raw}"
     if INSTRUCTION_RE.search(combined):
         return True
@@ -426,12 +467,13 @@ def _looks_like_instruction(content_lines, ry0, ry1, row_rects=()) -> bool:
         # this row (see _dead_zone_floor) — retry with the floor extended.
         floor = _dead_zone_floor(row_rects, ry0)
         if floor < ry0:
-            wide = f"{col_text(content_lines, *NAME_X, floor, ry1)} {col_text(content_lines, *SETSREPS_X, floor, ry1)}"
-            return bool(INSTRUCTION_RE.search(wide))
+            wide_name = col_text(content_lines, *cols["name"], floor, ry1)
+            wide_sr = col_text(content_lines, *cols["setsreps"], floor, ry1)
+            return bool(INSTRUCTION_RE.search(f"{wide_name} {wide_sr}"))
     return False
 
 
-def _looks_empty(content_lines, ry0, ry1) -> bool:
+def _looks_empty(content_lines, ry0, ry1, cols) -> bool:
     """A genuinely blank table row (left unused that day) has no Sets x Reps
     and next to nothing in NAME/NOTES — any text there is just a wrapped
     continuation line bleeding down from the row above (a single trailing
@@ -439,13 +481,13 @@ def _looks_empty(content_lines, ry0, ry1) -> bool:
     too (not just NOTES) matters for instruction rows whose whole aside
     lives in the NAME cell with nothing in NOTES at all.
     """
-    setsreps_raw = col_text(content_lines, *SETSREPS_X, ry0, ry1)
-    name = col_text(content_lines, *NAME_X, ry0, ry1)
-    notes = col_text(content_lines, *NOTES_X, ry0, ry1)
+    setsreps_raw = col_text(content_lines, *cols["setsreps"], ry0, ry1)
+    name = col_text(content_lines, *cols["name"], ry0, ry1)
+    notes = col_text(content_lines, *cols["notes"], ry0, ry1)
     return not setsreps_raw and len(name) + len(notes) < 20
 
 
-def _instruction_own_start_y(content_lines, ry0, ry1) -> float | None:
+def _instruction_own_start_y(content_lines, ry0, ry1, cols) -> float | None:
     """Within an instruction row, the instruction phrase itself is reliably
     the LOWEST line(s) in its NAME cell — accumulate lines bottom-up until
     they alone satisfy INSTRUCTION_RE. Anything still above that point is
@@ -456,7 +498,7 @@ def _instruction_own_start_y(content_lines, ry0, ry1) -> float | None:
     """
     frags = sorted(
         [(y, t) for x0, y, x1, t in content_lines
-         if NAME_X[0] <= x0 < NAME_X[1] and ry0 - 0.3 <= y <= ry1 + 0.3],
+         if cols["name"][0] <= x0 < cols["name"][1] and ry0 - 0.3 <= y <= ry1 + 0.3],
         key=lambda z: z[0],
     )
     acc = []
@@ -468,7 +510,7 @@ def _instruction_own_start_y(content_lines, ry0, ry1) -> float | None:
     return None
 
 
-def _name_y_bounds_for_rows(rows_in_section, row_rects, is_instruction, is_empty, all_links, content_lines) -> dict:
+def _name_y_bounds_for_rows(rows_in_section, row_rects, is_instruction, is_empty, all_links, content_lines, cols) -> dict:
     """Match this section's real (non-instruction, non-empty) rows to its
     video links ordinally, matched per-SECTION rather than per-page: a
     miscount in one section (an unusually-worded aside the instruction
@@ -518,7 +560,7 @@ def _name_y_bounds_for_rows(rows_in_section, row_rects, is_instruction, is_empty
             below_rects = [r for r in row_rects if r != (lbl, ry0, ry1) and r[2] <= ry0 + 0.5]
             following = max(below_rects, key=lambda r: r[2]) if below_rects else None
             if following and is_instruction.get(following):
-                instr_y = _instruction_own_start_y(content_lines, following[1], following[2])
+                instr_y = _instruction_own_start_y(content_lines, following[1], following[2], cols)
                 if instr_y is not None:
                     bottom = instr_y + 2
         bounds[(lbl, ry0, ry1)] = (bottom, top + 3)
@@ -539,12 +581,12 @@ def parse_page(page, canon, links: list[tuple[float, float, str]] | None = None)
     content_lines = [l for l in lines if l[3].strip() not in SECTION_NAMES]
 
     rects = page_rects(page)
-    table_header_y = find_table_header_row(rects, lines)
-    session_notes = find_session_notes(lines, table_header_y[1])
+    cols, table_header_y = detect_columns(rects, lines)
+    session_notes = find_session_notes(lines, table_header_y[1], cols)
 
-    row_rects = find_row_rects(rects, lines, table_header_y)
+    row_rects = find_row_rects(rects, lines, table_header_y, cols)
     section_bars = find_section_bars(lines, table_header_y)
-    time_rects = find_time_rects(rects, table_header_y)
+    time_rects = find_time_rects(rects, table_header_y, cols)
 
     # The very last row on the page has no sibling below it, so its bottom
     # edge is safe to extend — a wrapped cell's final line can dip a couple
@@ -552,9 +594,9 @@ def parse_page(page, canon, links: list[tuple[float, float, str]] | None = None)
     # keeps its exact bound since rows are edge-to-edge with zero gap.
     page_bottom_y0 = min((ry0 for _, ry0, ry1 in row_rects), default=None)
 
-    is_instruction = {(lbl, ry0, ry1): _looks_like_instruction(content_lines, ry0, ry1, row_rects)
+    is_instruction = {(lbl, ry0, ry1): _looks_like_instruction(content_lines, ry0, ry1, cols, row_rects)
                        for lbl, ry0, ry1 in row_rects}
-    is_empty = {(lbl, ry0, ry1): _looks_empty(content_lines, ry0, ry1) for lbl, ry0, ry1 in row_rects}
+    is_empty = {(lbl, ry0, ry1): _looks_empty(content_lines, ry0, ry1, cols) for lbl, ry0, ry1 in row_rects}
     deduped_links = dedupe_links(links) if links else []
 
     # Walk rows and section anchors together in top-to-bottom (descending y)
@@ -581,7 +623,7 @@ def parse_page(page, canon, links: list[tuple[float, float, str]] | None = None)
     for sec in sections:
         rows_in_section = sec.pop("_rows")
         name_y_bounds = _name_y_bounds_for_rows(rows_in_section, row_rects, is_instruction, is_empty, deduped_links,
-                                                 content_lines)
+                                                 content_lines, cols)
         # Rows are built top-to-bottom (rows_in_section is already in that
         # order) so a row that claims spillover from below can tell the NEXT
         # row not to also read that same line as its own — otherwise it
@@ -590,7 +632,7 @@ def parse_page(page, canon, links: list[tuple[float, float, str]] | None = None)
         built = []
         sr_ceiling = notes_ceiling = None
         for lbl, ry0, ry1 in rows_in_section:
-            row = build_row(content_lines, lbl, (0 if ry0 == page_bottom_y0 else ry0), ry1, canon,
+            row = build_row(content_lines, lbl, (0 if ry0 == page_bottom_y0 else ry0), ry1, canon, cols,
                              name_y_bounds.get((lbl, ry0, ry1)), row_rects, sr_ceiling, notes_ceiling)
             sr_ceiling = notes_ceiling = None
             if row is not None:
@@ -616,7 +658,7 @@ def parse_page(page, canon, links: list[tuple[float, float, str]] | None = None)
             for ty0, ty1 in time_rects:
                 if ty0 <= span_y1 + 2 and ty1 >= span_y0 - 2:
                     tf = [(y, t) for x0, y, x1, t in content_lines
-                          if TIME_X[0] <= x0 < TIME_X[1] and ty0 - 1 <= y <= ty1 + 1]
+                          if cols["time"][0] <= x0 < cols["time"][1] and ty0 - 1 <= y <= ty1 + 1]
                     tf.sort(key=lambda z: -z[0])
                     for y, t in tf:
                         if time_allotted is None and re.match(r"^\d+:\d\d$", t.strip()):
@@ -630,7 +672,7 @@ def parse_page(page, canon, links: list[tuple[float, float, str]] | None = None)
         internal_keys = {"_y", "_sr_claim_y", "_notes_claim_y"}
         sec["exercises"] = [{k: v for k, v in ex.items() if k not in internal_keys} for ex in exercises]
 
-    return {"header": header, "session_notes": session_notes, "sections": sections}
+    return {"header": header, "session_notes": session_notes, "sections": sections, "_cols": cols}
 
 
 # --------------------------------------------------------------------------- #
@@ -675,13 +717,13 @@ def dedupe_links(links: list[tuple[float, float, str]]) -> list[tuple[float, flo
     return deduped
 
 
-def attach_videos(parsed: dict, deduped_links: list[tuple[float, float, str]]) -> None:
+def attach_videos(parsed: dict, deduped_links: list[tuple[float, float, str]], cols) -> None:
     remaining = list(deduped_links)
     for sec in parsed["sections"]:
         for ex in sec["exercises"]:
             if not ex.get("name"):
                 continue
-            candidates = [l for l in remaining if NAME_X[0] - 5 <= l[0] <= NAME_X[1] + 40]
+            candidates = [l for l in remaining if cols["name"][0] - 5 <= l[0] <= cols["name"][1] + 40]
             if not candidates:
                 continue
             best = max(candidates, key=lambda l: l[1])  # topmost remaining candidate
@@ -715,7 +757,7 @@ def parse_pdf(pdf_path: Path, canon) -> list[dict]:
         parsed = parse_page(page, canon, page_links)
         if not parsed:
             continue
-        attach_videos(parsed, dedupe_links(page_links))
+        attach_videos(parsed, dedupe_links(page_links), parsed.pop("_cols"))
         days.extend(build_day_entries(parsed, f"{pdf_path.name} p.{i + 1}"))
     return days
 

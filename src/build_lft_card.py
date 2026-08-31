@@ -18,6 +18,7 @@ from __future__ import annotations
 import argparse
 import calendar
 import json
+import re
 from datetime import date
 from html import escape
 from pathlib import Path
@@ -30,6 +31,43 @@ FOCUS_COLOR = {"Lower": "lower", "Upper": "upper", "Full": "full"}
 MONTH_NAMES = ["", "January", "February", "March", "April", "May", "June",
                "July", "August", "September", "October", "November", "December"]
 WEEKDAY_INITIALS = ["S", "M", "T", "W", "T", "F", "S"]
+
+# HQ periodizes Studio LFT in 6-week cycles that rotate Build → Pump →
+# Power → Brawn (every 13th week is a testing/technique week instead, which
+# is what the benchmark days are). The day's header label carries which one
+# it is, e.g. "Pump B2 – W3 Day 2 Upper" = Pump cycle, block 2, week 3.
+CYCLE_LENGTH_WEEKS = 6
+CYCLES = {
+    "build": ("Build", "Strength",
+              "Basic strength training using common strength protocols to build a solid base of "
+              "strength capacity."),
+    "pump": ("Pump", "Hypertrophy",
+             "Muscle-building phase focusing on increased volume and some isolation work."),
+    "power": ("Power", None,
+              "An athletic phase that includes explosive and powerlifting-based protocols to "
+              "increase rate of force production."),
+    "brawn": ("Brawn", "Advanced Strength",
+              "Building on the strength cycle using more advanced protocols to continue to drive "
+              "strength gains."),
+}
+CYCLE_LABEL_RE = re.compile(r"^([A-Za-z]+)\s*B(\d+)\s*[-–]?\s*Wk?\s*(\d+)", re.I)
+
+
+def cycle_for(day: dict) -> dict | None:
+    """The training cycle a day belongs to, from its header label.
+
+    Benchmark weeks aren't part of a cycle (they're the testing week), and
+    an unrecognized cycle name is left off rather than guessed at.
+    """
+    m = CYCLE_LABEL_RE.match(day.get("label") or "")
+    if not m or day.get("kind") == "benchmark":
+        return None
+    entry = CYCLES.get(m.group(1).lower())
+    if not entry:
+        return None
+    name, phase_type, description = entry
+    return {"name": name, "type": phase_type, "description": description,
+            "block": int(m.group(2)), "week": int(m.group(3))}
 
 
 # --------------------------------------------------------------------------- #
@@ -97,6 +135,20 @@ def render_card(day: dict) -> str:
     title = f"Studio LFT · {fmt_date_slashes(day['date'])}"
     sections_html = "\n\n".join(render_section(s) for s in day["sections"])
 
+    cycle = cycle_for(day)
+    cycle_tag = f'<span class="cycle-tag">{escape(cycle["name"])}</span>' if cycle else ""
+    cycle_banner = ""
+    if cycle:
+        phase_type = f' · <span class="cycle-type">{escape(cycle["type"])}</span>' if cycle["type"] else ""
+        cycle_banner = f"""  <div class="cycle-banner">
+    <div class="cycle-banner-head">{escape(cycle["name"])} Cycle{phase_type}
+      <span class="cycle-meta">Block {cycle["block"]} · Week {cycle["week"]} of {CYCLE_LENGTH_WEEKS}</span>
+    </div>
+    <div class="cycle-banner-desc">{escape(cycle["description"])}</div>
+  </div>
+
+"""
+
     return f"""<!DOCTYPE html>
 <html lang="en">
 <head>
@@ -117,13 +169,13 @@ def render_card(day: dict) -> str:
     </div>
   </div>
   <div style="text-align:right">
-    <div class="header-week">{escape(week_label)}</div>
+    <div class="header-week">{escape(week_label)}{cycle_tag}</div>
     <span class="focus-badge focus-{focus_cls}">{escape(focus)}</span>
   </div>
 </div>
 
 <div class="lft-wrap">
-  <div class="session-notes">{escape(day.get("session_notes", ""))}</div>
+{cycle_banner}  <div class="session-notes">{escape(day.get("session_notes", ""))}</div>
 
 {sections_html}
 </div>
@@ -262,7 +314,14 @@ STYLE = """
   .focus-upper { background: rgba(245,200,66,0.3); color: #3a2e00; }
   .focus-full { background: rgba(76,175,80,0.35); }
 
+  .cycle-tag { display: inline-block; margin-left: 7px; font-family: 'Barlow Condensed', sans-serif; font-weight: 800; font-size: 12px; letter-spacing: 1px; text-transform: uppercase; padding: 1px 8px; border-radius: 10px; background: rgba(255,255,255,0.22); color: white; vertical-align: 1px; }
+
   .lft-wrap { padding: 14px; max-width: 640px; margin: 0 auto; }
+  .cycle-banner { background: var(--card); border-left: 3px solid var(--yellow); border-radius: 0 8px 8px 0; padding: 10px 13px; margin-bottom: 12px; }
+  .cycle-banner-head { font-family: 'Barlow Condensed', sans-serif; font-weight: 800; font-size: 19px; letter-spacing: 1px; text-transform: uppercase; color: var(--yellow); }
+  .cycle-type { color: #ffe9a3; font-weight: 700; }
+  .cycle-meta { display: inline-block; font-family: 'Barlow', sans-serif; font-weight: 600; font-size: 13.5px; letter-spacing: 0.3px; text-transform: none; color: var(--muted); margin-left: 6px; }
+  .cycle-banner-desc { font-size: 16px; color: #ccc; line-height: 1.45; margin-top: 4px; }
   .session-notes { background: var(--card); border-left: 3px solid var(--red); border-radius: 0 8px 8px 0; padding: 11px 13px; font-size: 17px; color: #ddd; line-height: 1.5; margin-bottom: 16px; }
 
   .lft-section { margin-bottom: 16px; }
