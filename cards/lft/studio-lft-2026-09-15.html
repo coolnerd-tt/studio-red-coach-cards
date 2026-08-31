@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+<title>Studio LFT · 09 / 15 / 2026</title>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600;700;900&family=Barlow:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --red: #D42B2B; --red-dark: #A01F1F; --black: #0F0F0F;
+    --card: #242424; --card2: #2E2E2E; --border: #3A3A3A;
+    --muted: #999; --yellow: #F5C842; --green: #4CAF50; --blue: #4A9EE8;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { background: var(--black); color: white; font-family: 'Barlow', sans-serif; font-size: 20px; min-height: 100vh; padding-bottom: 40px; }
+  a { color: inherit; }
+  .header { background: var(--red); padding: 14px 16px 12px; display: flex; align-items: center; justify-content: space-between; position: sticky; top: 0; z-index: 100; border-bottom: 3px solid var(--red-dark); }
+  .header-left { display: flex; align-items: center; gap: 10px; }
+  .logo-box { width: 36px; height: 36px; background: white; border-radius: 6px; display: flex; align-items: center; justify-content: center; font-family: 'Barlow Condensed', sans-serif; font-weight: 900; font-size: 22px; color: var(--red); letter-spacing: -1px; }
+  .header-title { font-family: 'Barlow Condensed', sans-serif; font-weight: 900; font-size: 22px; letter-spacing: 2px; color: white; text-transform: uppercase; }
+  .header-date { font-family: 'Barlow Condensed', sans-serif; font-weight: 600; font-size: 14px; color: white; letter-spacing: 1px; }
+  .header-week { font-family: 'Barlow Condensed', sans-serif; font-size: 11px; color: rgba(255,255,255,0.75); letter-spacing: 1px; text-transform: uppercase; }
+  .focus-badge { display: inline-block; margin-top: 3px; font-family: 'Barlow Condensed', sans-serif; font-weight: 800; font-size: 13px; letter-spacing: 1px; text-transform: uppercase; padding: 2px 10px; border-radius: 12px; background: rgba(255,255,255,0.18); color: white; }
+  .focus-lower { background: rgba(74,158,232,0.35); }
+  .focus-upper { background: rgba(245,200,66,0.3); color: #3a2e00; }
+  .focus-full { background: rgba(76,175,80,0.35); }
+
+  .cycle-tag { display: inline-block; margin-left: 7px; font-family: 'Barlow Condensed', sans-serif; font-weight: 800; font-size: 12px; letter-spacing: 1px; text-transform: uppercase; padding: 1px 8px; border-radius: 10px; background: rgba(255,255,255,0.22); color: white; vertical-align: 1px; }
+
+  .lft-wrap { padding: 14px; max-width: 640px; margin: 0 auto; }
+  .cycle-banner { background: var(--card); border-left: 3px solid var(--yellow); border-radius: 0 8px 8px 0; padding: 10px 13px; margin-bottom: 12px; }
+  .cycle-banner-head { font-family: 'Barlow Condensed', sans-serif; font-weight: 800; font-size: 19px; letter-spacing: 1px; text-transform: uppercase; color: var(--yellow); }
+  .cycle-type { color: #ffe9a3; font-weight: 700; }
+  .cycle-meta { display: inline-block; font-family: 'Barlow', sans-serif; font-weight: 600; font-size: 13.5px; letter-spacing: 0.3px; text-transform: none; color: var(--muted); margin-left: 6px; }
+  .cycle-banner-desc { font-size: 16px; color: #ccc; line-height: 1.45; margin-top: 4px; }
+  .session-notes { background: var(--card); border-left: 3px solid var(--red); border-radius: 0 8px 8px 0; padding: 11px 13px; font-size: 17px; color: #ddd; line-height: 1.5; margin-bottom: 16px; }
+
+  .lft-section { margin-bottom: 16px; }
+  .lft-section-head { display: flex; align-items: center; justify-content: space-between; background: #3d3d3d; border-radius: 8px; padding: 8px 12px; font-family: 'Barlow Condensed', sans-serif; font-weight: 800; font-size: 19px; letter-spacing: 1.5px; text-transform: uppercase; color: white; margin-bottom: 8px; }
+  .lft-time { font-family: 'Barlow Condensed', sans-serif; font-weight: 800; font-size: 17px; color: var(--yellow); letter-spacing: 0.5px; }
+  .lft-section-note { font-size: 15px; color: var(--muted); padding: 0 4px 8px; line-height: 1.4; }
+
+  .lft-ex-row { display: flex; gap: 10px; background: var(--card); border: 1px solid var(--border); border-radius: 10px; padding: 10px 12px; margin-bottom: 8px; }
+  .lft-ex-label { font-family: 'Barlow Condensed', sans-serif; font-weight: 800; font-size: 19px; color: var(--red); background: rgba(212,43,43,0.15); border-radius: 6px; padding: 2px 7px; align-self: flex-start; flex-shrink: 0; min-width: 20px; text-align: center; }
+  .lft-ex-body { flex: 1; min-width: 0; }
+  .lft-ex-top { display: flex; flex-wrap: wrap; align-items: baseline; gap: 8px; }
+  .lft-ex-name { font-weight: 700; font-size: 20px; text-decoration: none; border-bottom: 1px solid rgba(255,255,255,0.35); }
+  a.lft-ex-name:active { color: var(--yellow); }
+  .lft-ex-sr { font-family: 'Barlow Condensed', sans-serif; font-weight: 700; font-size: 19px; color: var(--yellow); letter-spacing: 0.5px; }
+  .lft-loc { font-size: 13px; font-weight: 700; letter-spacing: 0.5px; text-transform: uppercase; color: var(--blue); background: rgba(74,158,232,0.15); border-radius: 10px; padding: 1px 8px; }
+  .lft-ex-notes { font-size: 17.5px; color: #bbb; line-height: 1.45; margin-top: 4px; }
+
+  .lft-note-row { display: flex; align-items: flex-start; gap: 8px; background: rgba(245,200,66,0.08); border: 1px dashed rgba(245,200,66,0.4); border-radius: 8px; padding: 8px 12px; margin-bottom: 8px; font-size: 15.5px; color: var(--yellow); }
+  .lft-note-icon { flex-shrink: 0; }
+</style>
+</head>
+<body>
+
+<div class="header">
+  <div class="header-left">
+    <div class="logo-box">V</div>
+    <div>
+      <div class="header-title">Studio LFT</div>
+      <div class="header-date">09 / 15 / 2026</div>
+    </div>
+  </div>
+  <div style="text-align:right">
+    <div class="header-week">Week 5<span class="cycle-tag">Pump</span></div>
+    <span class="focus-badge focus-lower">Lower</span>
+  </div>
+</div>
+
+<div class="lft-wrap">
+  <div class="cycle-banner">
+    <div class="cycle-banner-head">Pump Cycle · <span class="cycle-type">Hypertrophy</span>
+      <span class="cycle-meta">Block 2 · Week 5 of 6</span>
+    </div>
+    <div class="cycle-banner-desc">Muscle-building phase focusing on increased volume and some isolation work.</div>
+  </div>
+
+  <div class="session-notes">Clusters will give the muscles more reps at heavier weights. Use loads that could be used for 2-3 more reps if done as a straight set. Glute Focus (proper loading) with higher accessory</div>
+
+  <div class="lft-section">
+    <div class="lft-section-head"><span>Training Prep</span><span class="lft-time">6:00</span></div>
+    <div class="lft-section-note">Focus on finding today’s range of motion and activating the supporting muscle groups for the big LFT</div>
+    <div class="lft-ex-row">
+      <div class="lft-ex-label">1a</div>
+      <div class="lft-ex-body">
+        <div class="lft-ex-top"><span class="lft-ex-name">Rack ASLR HS Stretch</span><span class="lft-ex-sr">:45 per side</span></div>
+        <div class="lft-ex-notes">Prop one leg against rack upright while lying on floor. Press heel into upright</div>
+      </div>
+    </div>
+    <div class="lft-ex-row">
+      <div class="lft-ex-label">1b</div>
+      <div class="lft-ex-body">
+        <div class="lft-ex-top"><span class="lft-ex-name">Dead Bug Leg Raise with Upper body Ball Squeeze</span><span class="lft-ex-sr">1:00</span></div>
+        <div class="lft-ex-notes">Lying on back, squeeze ball with straight arms. Slowly raise and lower one leg at a time.</div>
+      </div>
+    </div>
+    <div class="lft-ex-row">
+      <div class="lft-ex-label">1c</div>
+      <div class="lft-ex-body">
+        <div class="lft-ex-top"><span class="lft-ex-name">Quadruped Hip Extensions</span><span class="lft-ex-sr">:45 per side</span></div>
+        <div class="lft-ex-notes">Tabletop position, slowly lift one leg towards the ceiling, keeping a neutral spine. . . This bracing will apply to the Main LFT in the workout.</div>
+      </div>
+    </div>
+    <div class="lft-ex-row">
+      <div class="lft-ex-label">1d</div>
+      <div class="lft-ex-body">
+        <div class="lft-ex-top"><span class="lft-ex-name">KB anterior Loaded Good Morning</span><span class="lft-ex-sr">1:00</span></div>
+        <div class="lft-ex-notes">workout. Create tension, slowly hinge into GM, lower with control and lift repeatedly. Reset every 3- 5 reps.</div>
+      </div>
+    </div>
+    <div class="lft-ex-row">
+      <div class="lft-ex-label">1e</div>
+      <div class="lft-ex-body">
+        <div class="lft-ex-top"><span class="lft-ex-name">KB Lateral Shift Swing 2hand</span><span class="lft-ex-sr">1:00</span></div>
+        <div class="lft-ex-notes">Wide side, shift to one side as the KB goes under the butt, stand up as you shift back to center and KB is swung. Repeat on other side.</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="lft-section">
+    <div class="lft-section-head"><span>Main LFT</span><span class="lft-time">15:00</span></div>
+    <div class="lft-section-note">Create tension before every lift</div>
+    <div class="lft-ex-row">
+      <div class="lft-ex-label">2a</div>
+      <div class="lft-ex-body">
+        <div class="lft-ex-top"><span class="lft-ex-name">Snatch Grip Elevated Deadlift</span><span class="lft-ex-sr">3-4 sets of 6-6</span></div>
+        <div class="lft-ex-notes">Use a moderately heavy weight; 1 set = 6 reps + 10s rest + 6 reps + only setting the bar down quickly during 10s to reset grip. Snatch grip is hands as close to collars of barbell as possible. Feet underneath hips. Use the catches at their lowest position to lift from.</div>
+      </div>
+    </div>
+    <div class="lft-note-row">
+      <span class="lft-note-icon">↳</span>Bench in GAP against WALL
+    </div>
+  </div>
+
+  <div class="lft-section">
+    <div class="lft-section-head"><span>Accessory 1</span><span class="lft-time">12:00</span></div>
+    <div class="lft-section-note">Push to an RIR of 1</div>
+    <div class="lft-ex-row">
+      <div class="lft-ex-label">3a</div>
+      <div class="lft-ex-body">
+        <div class="lft-ex-top"><span class="lft-ex-name">1DB Lateral Lunge</span><span class="lft-ex-sr">2- 4 x 12e</span><span class="lft-loc">in the GAP</span></div>
+        <div class="lft-ex-notes">DB in goblet position, sitting deep into squat while maintaining neutral spine. Toes pointed straight ahead.</div>
+      </div>
+    </div>
+    <div class="lft-ex-row">
+      <div class="lft-ex-label">3b</div>
+      <div class="lft-ex-body">
+        <div class="lft-ex-top"><span class="lft-ex-name">Copenhagen March</span><span class="lft-ex-sr">2- 4 x 12e</span><span class="lft-loc">in the ALLEY</span></div>
+        <div class="lft-ex-notes">straight ahead. Tall side plank position with top leg on box, bottom leg in bent position. Drop hip to ground. Shorten top leg position as needed.</div>
+      </div>
+    </div>
+    <div class="lft-ex-row">
+      <div class="lft-ex-label">3c</div>
+      <div class="lft-ex-body">
+        <div class="lft-ex-top"><span class="lft-ex-name">Standing Band Hamstring Curl</span><span class="lft-ex-sr">2- 4 x 12e</span><span class="lft-loc">in the RACK</span></div>
+        <div class="lft-ex-notes">Keep catches at lowest position, place band across. Stand with band against back of legs. One leg at a time, curl heel to butt against band resistance. Use rack for support.</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="lft-section">
+    <div class="lft-section-head"><span>Accessory 2</span><span class="lft-time">12:00</span></div>
+    <div class="lft-section-note">Push to an RIR of 1</div>
+    <div class="lft-ex-row">
+      <div class="lft-ex-label">4a</div>
+      <div class="lft-ex-body">
+        <div class="lft-ex-top"><span class="lft-ex-name">Kickstand 2DB RDL</span><span class="lft-ex-sr">2- 4 x 12</span><span class="lft-loc">in the GAP</span></div>
+        <div class="lft-ex-notes">Holding weight in each hand, most of weight on plant leg. Hinge back as you shave the DBs down the front of the body.</div>
+      </div>
+    </div>
+    <div class="lft-ex-row">
+      <div class="lft-ex-label">4b</div>
+      <div class="lft-ex-body">
+        <div class="lft-ex-top"><span class="lft-ex-name">Band Assisted Reverse Nordic</span><span class="lft-ex-sr">2- 4 x 12</span><span class="lft-loc">in the RACK</span></div>
+        <div class="lft-ex-notes">down the front of the body. High band attachment; hold band as you lean backwards, press shins through floor to return to top.</div>
+      </div>
+    </div>
+    <div class="lft-ex-row">
+      <div class="lft-ex-label">4c</div>
+      <div class="lft-ex-body">
+        <div class="lft-ex-top"><span class="lft-ex-name">Seated Deficit Calf Raise</span><span class="lft-ex-sr">2- 4 x 12</span><span class="lft-loc">in the ALLEY</span></div>
+        <div class="lft-ex-notes">to top. Sitting on Box with plate under forefoot place KB on each knee, drop the heel then raise.</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="lft-section">
+    <div class="lft-section-head"><span>Finisher</span><span class="lft-time">4:00</span></div>
+    
+    <div class="lft-ex-row">
+      <div class="lft-ex-label">5</div>
+      <div class="lft-ex-body">
+        <div class="lft-ex-top"><span class="lft-ex-name">Front Foot elevated Split Squat</span><span class="lft-ex-sr">2:00</span></div>
+        <div class="lft-ex-notes">Bodyweight or LIGHTLY loaded. Sets of 10 per side. Moving for the entire 2mins, 10s breaks only as needed.</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>

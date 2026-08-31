@@ -6247,6 +6247,2090 @@
       ],
       "source_file": "STUDIO RED HIIT Programming August 2026.pdf p.31",
       "cardio_note": "The moderate segment builds aerobic base before the hard push spikes into anaerobic effort, and the easy segment after lets the body clear lactate and heart rate drop before the pattern repeats. This full cycle trains build, spike, and recover as one complete unit"
+    },
+    {
+      "date": "2026-09-01",
+      "format": "EMOM · 9 MIN",
+      "warmup": [
+        "Forward Lunge w Rotation",
+        "Inchworm",
+        "Kang Squat"
+      ],
+      "cardio": [
+        {
+          "time": "1:00",
+          "intensity": "Easy 6/10",
+          "mz": "Blue"
+        },
+        {
+          "time": ".2 mile",
+          "intensity": "Hard 8/10",
+          "mz": "Yellow"
+        }
+      ],
+      "exercises": [
+        {
+          "name": "V-Up to Jump",
+          "reps": "",
+          "station": "🏋️ Bench"
+        },
+        {
+          "name": "DB Plank Row",
+          "reps": "",
+          "station": "🏋️ Bench"
+        },
+        {
+          "name": "DB Russian Twist on Bench",
+          "reps": "",
+          "station": "🏋️ Bench"
+        },
+        {
+          "name": "Ball 3 Squat Press 3 Chest Slam",
+          "reps": "",
+          "station": "🔵 Rack"
+        },
+        {
+          "name": "KB Sumo Deadlift",
+          "reps": "",
+          "station": "🔵 Rack"
+        },
+        {
+          "name": "KB Cossack Squat Low Load",
+          "reps": "",
+          "station": "🔵 Rack"
+        }
+      ],
+      "source_file": "STUDIO RED HIIT Programming September 2026.pdf p.1",
+      "cardio_note": "Distance Challenge. Goal is to complete the .2Mile faster each cycle. Bikes will finish more rounds than the treads. Long recovery period so really challenge the hard interval."
+    },
+    {
+      "date": "2026-09-02",
+      "format": "CIRCUIT · 9 MIN",
+      "warmup": [
+        "3d Lunge",
+        "Downward Dog to Plank",
+        "BW Good Morning"
+      ],
+      "cardio": [
+        {
+          "time": "1:00",
+          "intensity": "Moderate 7/10",
+          "mz": "Green"
+        },
+        {
+          "time": "1:00",
+          "intensity": "Hard 8/10",
+          "mz": "Yellow"
+        },
+        {
+          "time": "1:00",
+          "intensity": "Easy 6/10",
+          "mz": "Blue"
+        },
+        {
+          "rounds": "× 3 rounds"
+        }
+      ],
+      "exercises": [
+        {
+          "name": "DB Box Squat to Overhead Press",
+          "reps": "8 REPS",
+          "station": "🏋️ Bench"
+        },
+        {
+          "name": "Fitband Split Stance Incline Press alt.",
+          "reps": "8 EACH SIDE",
+          "station": "🏋️ Bench"
+        },
+        {
+          "name": "DB Rear Delt Fly",
+          "reps": "8 REPS",
+          "station": "🏋️ Bench"
+        },
+        {
+          "name": "KB Deadstop Swing",
+          "reps": "8 REPS",
+          "station": "🔵 Rack"
+        },
+        {
+          "name": "KB Row In Lunge",
+          "reps": "8 EACH SIDE",
+          "station": "🔵 Rack"
+        },
+        {
+          "name": "Ball Plank Walk",
+          "reps": "8 REPS",
+          "station": "🔵 Rack"
+        }
+      ],
+      "source_file": "STUDIO RED HIIT Programming September 2026.pdf p.2",
+      "cardio_note": "More Aerobic focus. Consistent paces gradually building throughout the 2 minutes. Coach up soft shoulders and quick steps especially as fatigue sets in. Coach posture on bike."
+    },
+    {
+      "date": "2026-09-03",
+      "format": "CIRCUIT · 9 MIN",
+      "warmup": [
+        "Floor Sweep Stretch",
+        "Alt. Quad Stretch",
+        "Y-T-I in Hinge"
+      ],
+      "cardio": [
+        {
+          "time": "1:30",
+          "intensity": "Moderate 7/10",
+          "mz": "Green"
+        },
+        {
+          "time": "1:00",
+          "intensity": "Hard 8/10",
+          "mz": "Yellow"
+        },
+        {
+          "time": "1:30",
+          "intensity": "Moderate 7/10",
+          "mz": "Green"
+        },
+        {
+          "time": "1:00",
+          "intensity": "Easy 6/10",
+          "mz": "Blue"
+        },
+        {
+          "time": "2:00",
+          "intensity": "Moderate 7/10",
+          "mz": "Green"
+        },
+        {
+          "time": "1:00",
+          "intensity": "Max 9/10",
+          "mz": "Red"
+        },
+        {
+          "time": "1:00",
+          "intensity": "Easy 6/10",
+          "mz": "Blue"
+        }
+      ],
+      "exercises": [
+        {
+          "name": "DB Rev. Lunge",
+          "reps": "8 EACH SIDE",
+          "station": "🏋️ Bench"
+        },
+        {
+          "name": "DB Skull Crusher",
+          "reps": "8 REPS",
+          "station": "🏋️ Bench"
+        },
+        {
+          "name": "Bench Lateral Hops",
+          "reps": "8 EACH SIDE",
+          "station": "🏋️ Bench"
+        },
+        {
+          "name": "TRX Low Fly",
+          "reps": "8 REPS",
+          "station": "🔵 Rack"
+        },
+        {
+          "name": "KB Deadlift High Pull",
+          "reps": "8 REPS",
+          "station": "🔵 Rack"
+        },
+        {
+          "name": "TRX Squat Jump",
+          "reps": "8 REPS",
+          "station": "🔵 Rack"
+        }
+      ],
+      "source_file": "STUDIO RED HIIT Programming September 2026.pdf p.3",
+      "cardio_note": "Highly aerobic cardio focus. 4 min total for first cardio block before first easy. Set a base and continue to push yourself. Breaks as needed but encourage to push through."
+    },
+    {
+      "date": "2026-09-04",
+      "format": "EMOM · 9 MIN",
+      "warmup": [
+        "Forward Lunge w Rotation",
+        "Inchworm",
+        "Kang Squat"
+      ],
+      "cardio": [
+        {
+          "time": "1:00",
+          "intensity": "Easy 6/10",
+          "mz": "Blue"
+        },
+        {
+          "time": "15 cals",
+          "intensity": "Hard 8/10",
+          "mz": "Yellow"
+        }
+      ],
+      "exercises": [
+        {
+          "name": "Incline Push Up",
+          "reps": "",
+          "station": "🏋️ Bench"
+        },
+        {
+          "name": "DB Goblet Squat",
+          "reps": "",
+          "station": "🏋️ Bench"
+        },
+        {
+          "name": "Sprinter Abs on Bench",
+          "reps": "",
+          "station": "🏋️ Bench"
+        },
+        {
+          "name": "KB Vertical Clean",
+          "reps": "",
+          "station": "🔵 Rack"
+        },
+        {
+          "name": "KB alt. Woodchop to Halo",
+          "reps": "",
+          "station": "🔵 Rack"
+        },
+        {
+          "name": "Ball Seated Squat Jump",
+          "reps": "",
+          "station": "🔵 Rack"
+        }
+      ],
+      "source_file": "STUDIO RED HIIT Programming September 2026.pdf p.4",
+      "cardio_note": "Time trial challenge. Coach to how fast they can get 15 cals each cycle. Timing themselves and trying to get a shorter time each cycle. Cals will be slightly faster on bikes depending on club equipment."
+    },
+    {
+      "date": "2026-09-05",
+      "format": "LADDER · 9 MIN",
+      "warmup": [
+        "3d Lunge",
+        "Downward Dog to Plank",
+        "BW Good Morning"
+      ],
+      "cardio": [
+        {
+          "time": "1:00",
+          "intensity": "Moderate 7/10",
+          "mz": "Green"
+        },
+        {
+          "time": "1:00",
+          "intensity": "Hard 8/10",
+          "mz": "Yellow"
+        },
+        {
+          "time": "1:00",
+          "intensity": "Easy 6/10",
+          "mz": "Blue"
+        },
+        {
+          "rounds": "× 2 rounds"
+        },
+        {
+          "time": "1:30",
+          "intensity": "Hard 8/10",
+          "mz": "Yellow"
+        },
+        {
+          "time": "1:00",
+          "intensity": "Max 9/10",
+          "mz": "Red"
+        },
+        {
+          "time": ":30",
+          "intensity": "Easy 6/10",
+          "mz": "Blue"
+        }
+      ],
+      "exercises": [
+        {
+          "name": "DB Hip Thrust",
+          "reps": "LADDER 8→4",
+          "station": "🏋️ Bench"
+        },
+        {
+          "name": "DB Push Press",
+          "reps": "LADDER 8→4",
+          "station": "🏋️ Bench"
+        },
+        {
+          "name": "Step Up to Knee Drive",
+          "reps": "LADDER 8→4 · EACH SIDE",
+          "station": "🏋️ Bench"
+        },
+        {
+          "name": "Ball Clean to Press",
+          "reps": "LADDER 8→4",
+          "station": "🔵 Rack"
+        },
+        {
+          "name": "TRX T Pull",
+          "reps": "LADDER 8→4",
+          "station": "🔵 Rack"
+        },
+        {
+          "name": "TRX Oblique Crunch",
+          "reps": "LADDER 8→4",
+          "station": "🔵 Rack"
+        }
+      ],
+      "source_file": "STUDIO RED HIIT Programming September 2026.pdf p.5",
+      "cardio_note": "Anearobic conditioning. Repeating similar block 3 x. Track speed and wattage and push to go above that each cycle."
+    },
+    {
+      "date": "2026-09-06",
+      "format": "SUPERSET · 4:30 EA",
+      "warmup": [
+        "Floor Sweep Stretch",
+        "Alt. Quad Stretch",
+        "Y-T-I in Hinge"
+      ],
+      "cardio": [
+        {
+          "time": "1:00",
+          "intensity": "Moderate 7/10",
+          "mz": "Green"
+        },
+        {
+          "time": "1:00",
+          "intensity": "Hard 8/10",
+          "mz": "Yellow"
+        },
+        {
+          "time": ":30",
+          "intensity": "Easy 6/10",
+          "mz": "Blue"
+        },
+        {
+          "rounds": "× 3 rounds"
+        },
+        {
+          "time": "1:00",
+          "intensity": "Hard 8/10",
+          "mz": "Yellow"
+        },
+        {
+          "time": ":30",
+          "intensity": "Easy 6/10",
+          "mz": "Blue"
+        }
+      ],
+      "exercises": [
+        {
+          "name": "DB Bent Over Row",
+          "reps": "8 REPS",
+          "station": "🏋️ Bench"
+        },
+        {
+          "name": "DB Front Raise",
+          "reps": "8 REPS",
+          "station": "🏋️ Bench"
+        },
+        {
+          "name": "DB SL RDL",
+          "reps": "8 EACH SIDE",
+          "station": "🏋️ Bench"
+        },
+        {
+          "name": "AB Tuck on Bench",
+          "reps": "8 REPS",
+          "station": "🏋️ Bench"
+        },
+        {
+          "name": "Ball Racked Split Squat",
+          "reps": "8 EACH SIDE",
+          "station": "🔵 Rack"
+        },
+        {
+          "name": "Ball Adductor Squeeze Squat",
+          "reps": "8 REPS",
+          "station": "🔵 Rack"
+        },
+        {
+          "name": "Plank w/ Side Toe Tap",
+          "reps": "8 EACH SIDE",
+          "station": "🔵 Rack"
+        },
+        {
+          "name": "Hip Bridge w/March",
+          "reps": "8 EACH SIDE",
+          "station": "🔵 Rack"
+        }
+      ],
+      "source_file": "STUDIO RED HIIT Programming September 2026.pdf p.6",
+      "cardio_note": "Anearobic conditioning. Smaller recovery blocks. Challenging lactate clearing and HR regulation. Repeating similar block 3 x. Track speed and wattage and push to go above that each cycle."
+    },
+    {
+      "date": "2026-09-07",
+      "format": "EMOM · 9 MIN",
+      "warmup": [
+        "Forward Lunge w Rotation",
+        "Inchworm",
+        "Kang Squat"
+      ],
+      "cardio": [
+        {
+          "time": "1:00",
+          "intensity": "Easy 6/10",
+          "mz": "Blue"
+        },
+        {
+          "time": ".2 mile",
+          "intensity": "Hard 8/10",
+          "mz": "Yellow"
+        }
+      ],
+      "exercises": [
+        {
+          "name": "DB Squat to Press",
+          "reps": "",
+          "station": "🏋️ Bench"
+        },
+        {
+          "name": "DB Reverse Lunge with Rotation alt.",
+          "reps": "",
+          "station": "🏋️ Bench"
+        },
+        {
+          "name": "Elevated Bicycle Crunch",
+          "reps": "",
+          "station": "🏋️ Bench"
+        },
+        {
+          "name": "KB American Swing",
+          "reps": "",
+          "station": "🔵 Rack"
+        },
+        {
+          "name": "TRX Inverted Row",
+          "reps": "",
+          "station": "🔵 Rack"
+        },
+        {
+          "name": "KB Halo Alt.",
+          "reps": "",
+          "station": "🔵 Rack"
+        }
+      ],
+      "source_file": "STUDIO RED HIIT Programming September 2026.pdf p.7",
+      "cardio_note": "Distance Challenge. Goal is to complete the .2Mile faster each cycle. Cue 3-5 on treads and 4-7 on bikes. (Depending on your club equipment. Adjust coaching accordingly)"
+    },
+    {
+      "date": "2026-09-08",
+      "format": "CIRCUIT · 9 MIN",
+      "warmup": [
+        "3d Lunge",
+        "Downward Dog to Plank",
+        "BW Good Morning"
+      ],
+      "cardio": [
+        {
+          "time": "1:00",
+          "intensity": "Moderate 7/10",
+          "mz": "Green"
+        },
+        {
+          "time": "1:30",
+          "intensity": "Hard 8/10",
+          "mz": "Yellow"
+        },
+        {
+          "time": "1:00",
+          "intensity": "Easy 6/10",
+          "mz": "Blue"
+        },
+        {
+          "time": "1:00",
+          "intensity": "Moderate 7/10",
+          "mz": "Green"
+        },
+        {
+          "time": "1:30",
+          "intensity": "Hard 8/10",
+          "mz": "Yellow"
+        },
+        {
+          "time": "1:00",
+          "intensity": "Easy 6/10",
+          "mz": "Blue"
+        },
+        {
+          "time": "1:00",
+          "intensity": "Max 9/10",
+          "mz": "Red"
+        }
+      ],
+      "exercises": [
+        {
+          "name": "DB Sumo Deadlift 2arm",
+          "reps": "8 REPS",
+          "station": "🏋️ Bench"
+        },
+        {
+          "name": "Fitband High Rows",
+          "reps": "8 REPS",
+          "station": "🏋️ Bench"
+        },
+        {
+          "name": "Fitband External Rotations",
+          "reps": "8 EACH SIDE",
+          "station": "🏋️ Bench"
+        },
+        {
+          "name": "KB offset Reverse Lunge",
+          "reps": "8 EACH SIDE",
+          "station": "🔵 Rack"
+        },
+        {
+          "name": "Ball Offset Push Up",
+          "reps": "8 EACH SIDE",
+          "station": "🔵 Rack"
+        },
+        {
+          "name": "Ball Chop and Lift",
+          "reps": "8 EACH SIDE",
+          "station": "🔵 Rack"
+        }
+      ],
+      "source_file": "STUDIO RED HIIT Programming September 2026.pdf p.8",
+      "cardio_note": "Coach to more Anaerobic conditioning and higher paces with more recovery blocks. Last cycle finishes on a MAX!!"
+    },
+    {
+      "date": "2026-09-09",
+      "format": "LADDER · 9 MIN",
+      "warmup": [
+        "Forward Lunge w Rotation",
+        "Inchworm",
+        "Kang Squat"
+      ],
+      "cardio": [
+        {
+          "time": "1:30",
+          "intensity": "Moderate 7/10",
+          "mz": "Green"
+        },
+        {
+          "time": "1:00",
+          "intensity": "Hard 8/10",
+          "mz": "Yellow"
+        },
+        {
+          "time": ":30",
+          "intensity": "Max 9/10",
+          "mz": "Red"
+        },
+        {
+          "time": "1:00",
+          "intensity": "Easy 6/10",
+          "mz": "Blue"
+        },
+        {
+          "rounds": "× 2 rounds"
+        },
+        {
+          "time": ":30",
+          "intensity": "Max 9/10",
+          "mz": "Red"
+        },
+        {
+          "time": ":30",
+          "intensity": "Easy 6/10",
+          "mz": "Blue"
+        }
+      ],
+      "exercises": [
+        {
+          "name": "DB 1arm Crossbody Rev. Lunge",
+          "reps": "LADDER 8→3 · EACH SIDE",
+          "station": "🏋️ Bench"
+        },
+        {
+          "name": "Push Up Sphinx",
+          "reps": "LADDER 8→3",
+          "station": "🏋️ Bench"
+        },
+        {
+          "name": "DB Preacher Curl 1 Arm",
+          "reps": "LADDER 8→3 · EACH SIDE",
+          "station": "🏋️ Bench"
+        },
+        {
+          "name": "KB Deadstop Swing",
+          "reps": "LADDER 8→3",
+          "station": "🔵 Rack"
+        },
+        {
+          "name": "TRX Seated Lat Pull",
+          "reps": "LADDER 8→3",
+          "station": "🔵 Rack"
+        },
+        {
+          "name": "Ball Boulder Over",
+          "reps": "LADDER 8→3 · EACH SIDE",
+          "station": "🔵 Rack"
+        }
+      ],
+      "source_file": "STUDIO RED HIIT Programming September 2026.pdf p.9",
+      "cardio_note": "Anearobic focus for the day. Several Max efforts throughout the cardio side. What is their top speed and watts? Can they beat that each time they hit a MAX effort."
+    },
+    {
+      "date": "2026-09-10",
+      "format": "EMOM · 9 MIN",
+      "warmup": [
+        "Bootstrapper",
+        "Butt kicks",
+        "Bodyweight Plank Row"
+      ],
+      "cardio": [
+        {
+          "time": "2:00",
+          "intensity": "Moderate 7/10",
+          "mz": "Green"
+        },
+        {
+          "time": "15 cals",
+          "intensity": "Hard 8/10",
+          "mz": "Yellow"
+        },
+        {
+          "time": ":30",
+          "intensity": "Easy 6/10",
+          "mz": "Blue"
+        }
+      ],
+      "exercises": [
+        {
+          "name": "DB Cossack Squat – alt.",
+          "reps": "",
+          "station": "🏋️ Bench"
+        },
+        {
+          "name": "Spider Push Up – alt.",
+          "reps": "",
+          "station": "🏋️ Bench"
+        },
+        {
+          "name": "Flutter Kicks on Bench",
+          "reps": "",
+          "station": "🏋️ Bench"
+        },
+        {
+          "name": "Ball Sumo Squat to Squat Jump",
+          "reps": "",
+          "station": "🔵 Rack"
+        },
+        {
+          "name": "TRX Ab Tuck",
+          "reps": "",
+          "station": "🔵 Rack"
+        },
+        {
+          "name": "TRX Alligator Pull alt.",
+          "reps": "",
+          "station": "🔵 Rack"
+        }
+      ],
+      "source_file": "STUDIO RED HIIT Programming September 2026.pdf p.10",
+      "cardio_note": "Lactate tolerance cardio session. Can you hold a moderate pace and still be able to go up?! Also short recovery period. Work on HR regulating, recovering and then right back into the Moderte pace. This is Member let. Coach check in and ensure everyone understands they are timing and tracking themselves."
+    },
+    {
+      "date": "2026-09-11",
+      "format": "LADDER · 9 MIN",
+      "warmup": [
+        "Elbow to Instep Alt.",
+        "Kang Squat",
+        "Lateral Lunge w/ Reach Up"
+      ],
+      "cardio": [
+        {
+          "time": ":45",
+          "intensity": "Easy 6/10",
+          "mz": "Blue"
+        },
+        {
+          "time": ":45",
+          "intensity": "Moderate 7/10",
+          "mz": "Green"
+        },
+        {
+          "time": "1:15",
+          "intensity": "Hard 8/10",
+          "mz": "Yellow"
+        },
+        {
+          "rounds": "× 3 rounds"
+        },
+        {
+          "time": ":45",
+          "intensity": "Easy 6/10",
+          "mz": "Blue"
+        }
+      ],
+      "exercises": [
+        {
+          "name": "DB Squat to Press",
+          "reps": "LADDER 8→3",
+          "station": "🏋️ Bench"
+        },
+        {
+          "name": "DB Racked Side Lunge",
+          "reps": "LADDER 8→3",
+          "station": "🏋️ Bench"
+        },
+        {
+          "name": "Rev. Crunch on Bench",
+          "reps": "LADDER 8→3",
+          "station": "🏋️ Bench"
+        },
+        {
+          "name": "KB Good Morning",
+          "reps": "LADDER 8→3",
+          "station": "🔵 Rack"
+        },
+        {
+          "name": "TRX Inverted Row",
+          "reps": "LADDER 8→3",
+          "station": "🔵 Rack"
+        },
+        {
+          "name": "TRX Standing Rollout",
+          "reps": "LADDER 8→3",
+          "station": "🔵 Rack"
+        }
+      ],
+      "source_file": "STUDIO RED HIIT Programming September 2026.pdf p.11",
+      "cardio_note": "Aerobic focus. Longer time intervals and shorter rest. Use the recovery so they can push till the end of the Hard efforts."
+    },
+    {
+      "date": "2026-09-12",
+      "format": "SUPERSET · 4:30 EA",
+      "warmup": [
+        "Arm Swings Alt.",
+        "BW Cossack Squat",
+        "Downward Dog to Plank"
+      ],
+      "cardio": [
+        {
+          "time": "2:00",
+          "intensity": "Moderate 7/10",
+          "mz": "Green"
+        },
+        {
+          "time": "2:00",
+          "intensity": "Hard 8/10",
+          "mz": "Yellow"
+        },
+        {
+          "time": "1:00",
+          "intensity": "Easy 6/10",
+          "mz": "Blue"
+        },
+        {
+          "time": "2:00",
+          "intensity": "Moderate 7/10",
+          "mz": "Green"
+        },
+        {
+          "time": "1:30",
+          "intensity": "Hard 8/10",
+          "mz": "Yellow"
+        },
+        {
+          "time": ":30",
+          "intensity": "Hard 8/10",
+          "mz": "Blue"
+        }
+      ],
+      "exercises": [
+        {
+          "name": "DB Chest Press Neutral Grip",
+          "reps": "10 REPS",
+          "station": "🏋️ Bench"
+        },
+        {
+          "name": "Triceps Dip on Bench",
+          "reps": "10 REPS",
+          "station": "🏋️ Bench"
+        },
+        {
+          "name": "Alt. Lying Leg Raise",
+          "reps": "10 EACH SIDE",
+          "station": "🏋️ Bench"
+        },
+        {
+          "name": "DB Lateral Raise",
+          "reps": "10 REPS",
+          "station": "🏋️ Bench"
+        },
+        {
+          "name": "TRX Mid Row Overhand Grip",
+          "reps": "10 REPS",
+          "station": "🔵 Rack"
+        },
+        {
+          "name": "KB Good Morning",
+          "reps": "10 REPS",
+          "station": "🔵 Rack"
+        },
+        {
+          "name": "KB T-Rex Swing",
+          "reps": "10 REPS",
+          "station": "🔵 Rack"
+        },
+        {
+          "name": "KB Halo",
+          "reps": "10 REPS",
+          "station": "🔵 Rack"
+        }
+      ],
+      "source_file": "STUDIO RED HIIT Programming September 2026.pdf p.12",
+      "cardio_note": "Long Paces. Adjust accordingly. Work to hold the pace and slowly accumulate, instead of jumping out too fast too early."
+    },
+    {
+      "date": "2026-09-13",
+      "format": "EMOM · 9 MIN",
+      "warmup": [
+        "Bootstrapper",
+        "Butt kicks",
+        "Bodyweight Plank Row"
+      ],
+      "cardio": [
+        {
+          "time": "1:00",
+          "intensity": "Easy 6/10",
+          "mz": "Blue"
+        },
+        {
+          "time": ".3 mile",
+          "intensity": "Hard 8/10",
+          "mz": "Yellow"
+        }
+      ],
+      "exercises": [
+        {
+          "name": "DB Bridge & Press on Bench",
+          "reps": "",
+          "station": "🏋️ Bench"
+        },
+        {
+          "name": "DB Clean 1 arm",
+          "reps": "",
+          "station": "🏋️ Bench"
+        },
+        {
+          "name": "DB Rear Delt Raise Seated",
+          "reps": "",
+          "station": "🏋️ Bench"
+        },
+        {
+          "name": "TRX Mid Row Underhand Grip",
+          "reps": "",
+          "station": "🔵 Rack"
+        },
+        {
+          "name": "Alt. Arm KB Swing",
+          "reps": "",
+          "station": "🔵 Rack"
+        },
+        {
+          "name": "Ball Skater Hop w/Pause",
+          "reps": "",
+          "station": "🔵 Rack"
+        }
+      ],
+      "source_file": "STUDIO RED HIIT Programming September 2026.pdf p.13",
+      "cardio_note": "Distance challenge. Coach to remember time for each distance and try to beat on the next interval. Bikes will get through more cycles than tread. Should push harder as the rest is the same for each side of cardio."
+    },
+    {
+      "date": "2026-09-14",
+      "format": "CIRCUIT · 9 MIN",
+      "warmup": [
+        "Elbow to Instep Alt.",
+        "Kang Squat",
+        "Lateral Lunge w/ Reach Up"
+      ],
+      "cardio": [
+        {
+          "time": ":45",
+          "intensity": "Moderate 7/10",
+          "mz": "Green"
+        },
+        {
+          "time": "1:30",
+          "intensity": "Hard 8/10",
+          "mz": "Yellow"
+        },
+        {
+          "time": ":45",
+          "intensity": "Easy 6/10",
+          "mz": "Blue"
+        },
+        {
+          "rounds": "× 2 rounds"
+        },
+        {
+          "time": "2:00",
+          "intensity": "Hard 8/10",
+          "mz": "Yellow"
+        },
+        {
+          "time": "1:00",
+          "intensity": "Easy 6/10",
+          "mz": "Blue"
+        }
+      ],
+      "exercises": [
+        {
+          "name": "DB Bird Dog Row",
+          "reps": "10 EACH SIDE",
+          "station": "🏋️ Bench"
+        },
+        {
+          "name": "DB Chest Fly",
+          "reps": "10 REPS",
+          "station": "🏋️ Bench"
+        },
+        {
+          "name": "Alt. DB Snatch",
+          "reps": "10 EACH SIDE",
+          "station": "🏋️ Bench"
+        },
+        {
+          "name": "TRX Alligator Row",
+          "reps": "10 EACH SIDE",
+          "station": "🔵 Rack"
+        },
+        {
+          "name": "TRX Squat Jumps",
+          "reps": "10 REPS",
+          "station": "🔵 Rack"
+        },
+        {
+          "name": "TRX Pike",
+          "reps": "10 REPS",
+          "station": "🔵 Rack"
+        }
+      ],
+      "source_file": "STUDIO RED HIIT Programming September 2026.pdf p.14",
+      "cardio_note": "Aerobic focus. Longer time intervals and shorter rest. Use the recovery so they can push till the end of the Hard efforts."
+    },
+    {
+      "date": "2026-09-15",
+      "format": "LADDER · 9 MIN",
+      "warmup": [
+        "Arm Swings Alt.",
+        "BW Cossack Squat",
+        "Downward Dog to Plank"
+      ],
+      "cardio": [
+        {
+          "time": "1:00",
+          "intensity": "Easy 6/10",
+          "mz": "Blue"
+        },
+        {
+          "time": "1:30",
+          "intensity": "Moderate 7/10",
+          "mz": "Green"
+        },
+        {
+          "time": "1:00",
+          "intensity": "Hard 8/10",
+          "mz": "Yellow"
+        },
+        {
+          "time": ":30",
+          "intensity": "Max 9/10",
+          "mz": "Red"
+        },
+        {
+          "rounds": "× 2 rounds"
+        },
+        {
+          "time": "1:00",
+          "intensity": "Easy 6/10",
+          "mz": "Blue"
+        }
+      ],
+      "exercises": [
+        {
+          "name": "DB Thruster",
+          "reps": "LADDER 8→3",
+          "station": "🏋️ Bench"
+        },
+        {
+          "name": "Single Leg Bench Hop Alt. Hand Supported",
+          "reps": "LADDER 8→3",
+          "station": "🏋️ Bench"
+        },
+        {
+          "name": "Plank Thrust",
+          "reps": "LADDER 8→3",
+          "station": "🏋️ Bench"
+        },
+        {
+          "name": "KB Sumo Deadlift",
+          "reps": "LADDER 8→3",
+          "station": "🔵 Rack"
+        },
+        {
+          "name": "TRX Get Up",
+          "reps": "LADDER 8→3",
+          "station": "🔵 Rack"
+        },
+        {
+          "name": "Ball Overhead Slam",
+          "reps": "LADDER 8→3",
+          "station": "🔵 Rack"
+        }
+      ],
+      "source_file": "STUDIO RED HIIT Programming September 2026.pdf p.15",
+      "cardio_note": "Aerobic focus. Adjust pacing to still push to MAX in each cardio cycle. Longer time intervals and shorter rest. Use the recovery so they can push till the end of the Hard efforts."
+    },
+    {
+      "date": "2026-09-16",
+      "format": "CIRCUIT · 9 MIN",
+      "warmup": [
+        "Bootstrapper",
+        "Butt kicks",
+        "Bodyweight Plank Row"
+      ],
+      "cardio": [
+        {
+          "time": ":45",
+          "intensity": "Easy 6/10",
+          "mz": "Blue"
+        },
+        {
+          "time": ":45",
+          "intensity": "Moderate 7/10",
+          "mz": "Green"
+        },
+        {
+          "time": "1:00",
+          "intensity": "Hard 8/10",
+          "mz": "Yellow"
+        },
+        {
+          "rounds": "× 3 rounds"
+        },
+        {
+          "time": ":30",
+          "intensity": "Easy 6/10",
+          "mz": "Blue"
+        },
+        {
+          "time": ":30",
+          "intensity": "Max 9/10",
+          "mz": "Red"
+        },
+        {
+          "time": ":30",
+          "intensity": "Easy 6/10",
+          "mz": "Blue"
+        }
+      ],
+      "exercises": [
+        {
+          "name": "DB Incline Chest Press Neutral Grip",
+          "reps": "10 REPS",
+          "station": "🏋️ Bench"
+        },
+        {
+          "name": "DB Deadlift",
+          "reps": "10 REPS",
+          "station": "🏋️ Bench"
+        },
+        {
+          "name": "Plank Row",
+          "reps": "10 REPS",
+          "station": "🏋️ Bench"
+        },
+        {
+          "name": "KB Goblet Squat",
+          "reps": "10 REPS",
+          "station": "🔵 Rack"
+        },
+        {
+          "name": "TRX Power Pull",
+          "reps": "10 EACH SIDE",
+          "station": "🔵 Rack"
+        },
+        {
+          "name": "Plank w/ Rainbow Toe Tap",
+          "reps": "10 EACH SIDE",
+          "station": "🔵 Rack"
+        }
+      ],
+      "source_file": "STUDIO RED HIIT Programming September 2026.pdf p.16",
+      "cardio_note": "Anearobic focus. Short repeat bouts. Speeds and watts should be high especially on last MAX effort!"
+    },
+    {
+      "date": "2026-09-17",
+      "format": "LADDER · 9 MIN",
+      "warmup": [
+        "Elbow to Instep Alt.",
+        "Kang Squat",
+        "Lateral Lunge w/ Reach Up"
+      ],
+      "cardio": [
+        {
+          "time": "1:00",
+          "intensity": "Easy 6/10",
+          "mz": "Blue"
+        },
+        {
+          "time": "1:30",
+          "intensity": "Moderate 7/10",
+          "mz": "Green"
+        },
+        {
+          "time": "2:00",
+          "intensity": "Hard 6/10",
+          "mz": "Yellow"
+        },
+        {
+          "time": "1:00",
+          "intensity": "Easy 6/10",
+          "mz": "Blue"
+        },
+        {
+          "time": "1:30",
+          "intensity": "Moderate 7/10",
+          "mz": "Green"
+        },
+        {
+          "time": "1:00",
+          "intensity": "Max 9/10",
+          "mz": "Red"
+        },
+        {
+          "time": "1:00",
+          "intensity": "Easy 6/10",
+          "mz": "Blue"
+        }
+      ],
+      "exercises": [
+        {
+          "name": "DB Hip Thrust",
+          "reps": "LADDER 12→7",
+          "station": "🏋️ Bench"
+        },
+        {
+          "name": "DB Plank Row",
+          "reps": "LADDER 12→7",
+          "station": "🏋️ Bench"
+        },
+        {
+          "name": "DB Tate Press",
+          "reps": "LADDER 12→7",
+          "station": "🏋️ Bench"
+        },
+        {
+          "name": "KB Thruster",
+          "reps": "LADDER 12→7",
+          "station": "🔵 Rack"
+        },
+        {
+          "name": "KB Deadlift High Pull",
+          "reps": "LADDER 12→7",
+          "station": "🔵 Rack"
+        },
+        {
+          "name": "Ball Power Slam w/ Hop",
+          "reps": "LADDER 12→7",
+          "station": "🔵 Rack"
+        }
+      ],
+      "source_file": "STUDIO RED HIIT Programming September 2026.pdf p.17",
+      "cardio_note": "Cardio focus and solid 1-2 min blocks with a consistent increase in effort. The 2:00 hard should feel like it finishes at almost Max. Full minute easy recovery before second block. Use this easy as a reset before second interval block."
+    },
+    {
+      "date": "2026-09-18",
+      "format": "SUPERSET · 4:30 EA",
+      "warmup": [
+        "Arm Swings Alt.",
+        "BW Cossack Squat",
+        "Downward Dog to Plank"
+      ],
+      "cardio": [
+        {
+          "time": ":45",
+          "intensity": "Moderate 7/10",
+          "mz": "Green"
+        },
+        {
+          "time": ":45",
+          "intensity": "Hard 8/10",
+          "mz": "Yellow"
+        },
+        {
+          "time": ":45",
+          "intensity": "Max 9/10",
+          "mz": "Red"
+        },
+        {
+          "time": ":45",
+          "intensity": "Easy 6/10",
+          "mz": "Blue"
+        },
+        {
+          "rounds": "× 3 rounds"
+        }
+      ],
+      "exercises": [
+        {
+          "name": "DB Bridge & Press",
+          "reps": "10 REPS",
+          "station": "🏋️ Bench"
+        },
+        {
+          "name": "Bench Lateral Hops",
+          "reps": "10 EACH SIDE",
+          "station": "🏋️ Bench"
+        },
+        {
+          "name": "DB Rev Lunge to Swing",
+          "reps": "10 EACH SIDE",
+          "station": "🏋️ Bench"
+        },
+        {
+          "name": "Bear Hold Shoulder Taps",
+          "reps": "10 EACH SIDE",
+          "station": "🏋️ Bench"
+        },
+        {
+          "name": "KB SL Deadlift",
+          "reps": "10 EACH SIDE",
+          "station": "🔵 Rack"
+        },
+        {
+          "name": "TRX I-Pull",
+          "reps": "10 REPS",
+          "station": "🔵 Rack"
+        },
+        {
+          "name": "KB Wave Squat",
+          "reps": "10 REPS",
+          "station": "🔵 Rack"
+        },
+        {
+          "name": "TRX Power Pull",
+          "reps": "10 EACH SIDE",
+          "station": "🔵 Rack"
+        }
+      ],
+      "source_file": "STUDIO RED HIIT Programming September 2026.pdf p.18",
+      "cardio_note": "Repeating cardio block, will repeat 3 x. Coach the goal to be each cycle through is a slightly higher speat than the previous. The 3rd Max should be everything they've got!"
+    },
+    {
+      "date": "2026-09-19",
+      "format": "EMOM · 9 MIN",
+      "warmup": [
+        "Bootstrapper",
+        "Butt kicks",
+        "Bodyweight Plank Row"
+      ],
+      "cardio": [
+        {
+          "time": "1:00",
+          "intensity": "Easy 6/10",
+          "mz": "Blue"
+        },
+        {
+          "time": ".3mi",
+          "intensity": "Hard 8/10",
+          "mz": "Yellow"
+        }
+      ],
+      "exercises": [
+        {
+          "name": "DB Curtsy Lunges Alternating",
+          "reps": "",
+          "station": "🏋️ Bench"
+        },
+        {
+          "name": "Box Jump",
+          "reps": "",
+          "station": "🏋️ Bench"
+        },
+        {
+          "name": "Bear Hold Shoulder Taps",
+          "reps": "",
+          "station": "🏋️ Bench"
+        },
+        {
+          "name": "TRX Y Pull",
+          "reps": "",
+          "station": "🔵 Rack"
+        },
+        {
+          "name": "Ball Clean to Press",
+          "reps": "",
+          "station": "🔵 Rack"
+        },
+        {
+          "name": "Push Up to Toe Touch",
+          "reps": "",
+          "station": "🔵 Rack"
+        }
+      ],
+      "source_file": "STUDIO RED HIIT Programming September 2026.pdf p.19",
+      "cardio_note": "Coach to track their time to complete the distance. Goal would be to complete 2-5 cycles during the cardio block. Bikes will complete more cycles than treads. Start at moderate effort. Increase effort throughout the distance and finish at Max."
+    },
+    {
+      "date": "2026-09-20",
+      "format": "CIRCUIT · 9 MIN",
+      "warmup": [
+        "Elbow to Instep Alt.",
+        "Kang Squat",
+        "Lateral Lunge w/ Reach Up"
+      ],
+      "cardio": [
+        {
+          "time": "1:30",
+          "intensity": "Easy 6/10",
+          "mz": "Blue"
+        },
+        {
+          "time": "1:30",
+          "intensity": "Hard 8/10",
+          "mz": "Yellow"
+        },
+        {
+          "rounds": "× 2 rounds"
+        },
+        {
+          "time": "1:00",
+          "intensity": "Easy 6/10",
+          "mz": "Blue"
+        },
+        {
+          "time": ":30",
+          "intensity": "Hard 8/10",
+          "mz": "Yellow"
+        },
+        {
+          "time": ":30",
+          "intensity": "Max 9/10",
+          "mz": "Red"
+        },
+        {
+          "time": "1:00",
+          "intensity": "Easy 6/10",
+          "mz": "Blue"
+        }
+      ],
+      "exercises": [
+        {
+          "name": "DB Sumo Deadlift",
+          "reps": "12 REPS",
+          "station": "🏋️ Bench"
+        },
+        {
+          "name": "DB Row to Squat Thrust",
+          "reps": "12 REPS",
+          "station": "🏋️ Bench"
+        },
+        {
+          "name": "DB Russian Twist on Bench",
+          "reps": "12 EACH SIDE",
+          "station": "🏋️ Bench"
+        },
+        {
+          "name": "TRX High Row",
+          "reps": "12 REPS",
+          "station": "🔵 Rack"
+        },
+        {
+          "name": "KB Lateral Lunge",
+          "reps": "12 REPS",
+          "station": "🔵 Rack"
+        },
+        {
+          "name": "Ball Rainbow Slam",
+          "reps": "12 REPS",
+          "station": "🔵 Rack"
+        }
+      ],
+      "source_file": "STUDIO RED HIIT Programming September 2026.pdf p.20",
+      "cardio_note": "Longer Easy time duration.  Set a solid pace and tempo here. Use first 30 seconds to recover and then get to the 6/10 RPE. Goal to maintain pace and RPE throughout the 1:30."
+    },
+    {
+      "date": "2026-09-21",
+      "format": "LADDER · 9 MIN",
+      "warmup": [
+        "Arm Swings Alt.",
+        "BW Cossack Squat",
+        "Downward Dog to Plank"
+      ],
+      "cardio": [
+        {
+          "time": "1:30",
+          "intensity": "Moderate 7/10",
+          "mz": "Green"
+        },
+        {
+          "time": "1:00",
+          "intensity": "Hard 8/10",
+          "mz": "Yellow"
+        },
+        {
+          "time": "1:00",
+          "intensity": "Easy 6/10",
+          "mz": "Blue"
+        },
+        {
+          "rounds": "× 2 rounds"
+        },
+        {
+          "time": "1:00",
+          "intensity": "Moderate 7/10",
+          "mz": "Green"
+        },
+        {
+          "time": ":30",
+          "intensity": "Hard 8/10",
+          "mz": "Yellow"
+        },
+        {
+          "time": ":30",
+          "intensity": "Hard 8/10",
+          "mz": "Yellow"
+        }
+      ],
+      "exercises": [
+        {
+          "name": "DB incline Chest Press",
+          "reps": "LADDER 12→7",
+          "station": "🏋️ Bench"
+        },
+        {
+          "name": "DB Bent over Row Single Arm",
+          "reps": "LADDER 12→7 · EACH SIDE",
+          "station": "🏋️ Bench"
+        },
+        {
+          "name": "Fitband Incline Reverse Fly",
+          "reps": "LADDER 12→7",
+          "station": "🏋️ Bench"
+        },
+        {
+          "name": "KB Cossack Squat Low Load",
+          "reps": "LADDER 12→7 · EACH SIDE",
+          "station": "🔵 Rack"
+        },
+        {
+          "name": "Ball Clean to Press",
+          "reps": "LADDER 12→7",
+          "station": "🔵 Rack"
+        },
+        {
+          "name": "Ball Plank Walk",
+          "reps": "LADDER 12→7",
+          "station": "🔵 Rack"
+        }
+      ],
+      "source_file": "STUDIO RED HIIT Programming September 2026.pdf p.21",
+      "cardio_note": "Moderate to hard blocks with a rest interval built in. Last block is almost the same with the recovery built into the rotation. 2-2:30 of total work before a rest. Coach to maintain that RPE and slowly built into the intervals."
+    },
+    {
+      "date": "2026-09-22",
+      "format": "CIRCUIT · 9 MIN",
+      "warmup": [
+        "Bootstrapper",
+        "Butt kicks",
+        "Bodyweight Plank Row"
+      ],
+      "cardio": [
+        {
+          "time": "1:00",
+          "intensity": "Easy 6/10",
+          "mz": "Blue"
+        },
+        {
+          "time": "1:00",
+          "intensity": "Moderate 7/10",
+          "mz": "Green"
+        },
+        {
+          "time": "1:00",
+          "intensity": "Hard 8/10",
+          "mz": "Yellow"
+        },
+        {
+          "time": "1:00",
+          "intensity": "Max 9/10",
+          "mz": "Red"
+        },
+        {
+          "rounds": "× 2 rounds"
+        },
+        {
+          "time": "1:00",
+          "intensity": "Easy 6/10",
+          "mz": "Blue"
+        }
+      ],
+      "exercises": [
+        {
+          "name": "DB Squeeze Press",
+          "reps": "8 REPS",
+          "station": "🏋️ Bench"
+        },
+        {
+          "name": "DB Row on Bench Neutral Grip",
+          "reps": "10 EACH SIDE",
+          "station": "🏋️ Bench"
+        },
+        {
+          "name": "Alt. Lying Leg Raise on Bench",
+          "reps": "12 EACH SIDE",
+          "station": "🏋️ Bench"
+        },
+        {
+          "name": "KB Curtsy Lunge 1arm",
+          "reps": "8 EACH SIDE",
+          "station": "🔵 Rack"
+        },
+        {
+          "name": "KB 1.5 Stance Ant. Good Morning",
+          "reps": "10 EACH SIDE",
+          "station": "🔵 Rack"
+        },
+        {
+          "name": "Ball slam Burpee",
+          "reps": "12 REPS",
+          "station": "🔵 Rack"
+        }
+      ],
+      "source_file": "STUDIO RED HIIT Programming September 2026.pdf p.22",
+      "cardio_note": "4 Minute ascending  cardio block. Goal is to continually increase speed and RPE, coach to start at a point you can continue to increase. 1 min easy to recover before rotating."
+    },
+    {
+      "date": "2026-09-23",
+      "format": "EMOM · 9 MIN",
+      "warmup": [
+        "Elbow to Instep Alt.",
+        "Kang Squat",
+        "Lateral Lunge w/ Reach Up"
+      ],
+      "cardio": [
+        {
+          "time": ":45",
+          "intensity": "Easy 6/10",
+          "mz": "Blue"
+        },
+        {
+          "time": "15 cals",
+          "intensity": "Hard 8/10",
+          "mz": "Yellow"
+        }
+      ],
+      "exercises": [
+        {
+          "name": "DB Rev. Fly",
+          "reps": "",
+          "station": "🏋️ Bench"
+        },
+        {
+          "name": "Fitband Triceps Extension",
+          "reps": "",
+          "station": "🏋️ Bench"
+        },
+        {
+          "name": "V Up Hold on Bench",
+          "reps": "",
+          "station": "🏋️ Bench"
+        },
+        {
+          "name": "BW Popcorn Squat",
+          "reps": "",
+          "station": "🔵 Rack"
+        },
+        {
+          "name": "KB Deadlift",
+          "reps": "",
+          "station": "🔵 Rack"
+        },
+        {
+          "name": "TRX Alligator Pull",
+          "reps": "",
+          "station": "🔵 Rack"
+        }
+      ],
+      "source_file": "STUDIO RED HIIT Programming September 2026.pdf p.23"
+    },
+    {
+      "date": "2026-09-24",
+      "format": "SUPERSET · 4:30 EA",
+      "warmup": [
+        "Standing Figure 4 Alt.",
+        "Alt Arm Circles",
+        "Around the World Lunge"
+      ],
+      "cardio": [
+        {
+          "time": "1:00",
+          "intensity": "Easy 6/10",
+          "mz": "Blue"
+        },
+        {
+          "time": "1:00",
+          "intensity": "Moderate 7/10",
+          "mz": "Green"
+        },
+        {
+          "time": "2:00",
+          "intensity": "Hard 8/10",
+          "mz": "Yellow"
+        },
+        {
+          "rounds": "× 2 rounds"
+        },
+        {
+          "time": "1:00",
+          "intensity": "Moderate  – /10",
+          "mz": "Yellow"
+        }
+      ],
+      "exercises": [
+        {
+          "name": "DB Sumo Deadlift",
+          "reps": "15 REPS",
+          "station": "🏋️ Bench"
+        },
+        {
+          "name": "Sit Up on Bench",
+          "reps": "15 REPS",
+          "station": "🏋️ Bench"
+        },
+        {
+          "name": "DB Row in Lunge",
+          "reps": "15 EACH SIDE",
+          "station": "🏋️ Bench"
+        },
+        {
+          "name": "DB Triceps Press",
+          "reps": "15 REPS",
+          "station": "🏋️ Bench"
+        },
+        {
+          "name": "KB Rev. Lunge 1 Arm",
+          "reps": "15 EACH SIDE",
+          "station": "🔵 Rack"
+        },
+        {
+          "name": "Skater Hops",
+          "reps": "15 EACH SIDE",
+          "station": "🔵 Rack"
+        },
+        {
+          "name": "TRX Chest Press",
+          "reps": "15 REPS",
+          "station": "🔵 Rack"
+        },
+        {
+          "name": "TRX Biceps Clutch",
+          "reps": "15 REPS",
+          "station": "🔵 Rack"
+        }
+      ],
+      "source_file": "STUDIO RED HIIT Programming September 2026.pdf p.24",
+      "cardio_note": "High Aerobic session. CHALLENGE to come off last HARD effort into a Moderate. Can they train their system to recover will still at a HARD effort. Adjust that last HARD effort accordingly."
+    },
+    {
+      "date": "2026-09-25",
+      "format": "EMOM · 9 MIN",
+      "warmup": [
+        "Bootstrapper Stretch",
+        "Downward Dog w Opp Leg Reach",
+        "Bodyweight Good Morning"
+      ],
+      "cardio": [
+        {
+          "time": "1:00",
+          "intensity": "Easy 6/10",
+          "mz": "Blue"
+        },
+        {
+          "time": ".3Mi",
+          "intensity": "Hard 8/10",
+          "mz": "Yellow"
+        }
+      ],
+      "exercises": [
+        {
+          "name": "DB Hip Thrust",
+          "reps": "",
+          "station": "🏋️ Bench"
+        },
+        {
+          "name": "DB Chest Press 1arm Alt.",
+          "reps": "",
+          "station": "🏋️ Bench"
+        },
+        {
+          "name": "Mtn. Climber Crossbody",
+          "reps": "",
+          "station": "🏋️ Bench"
+        },
+        {
+          "name": "Ball Adductor Squeeze Squat",
+          "reps": "",
+          "station": "🔵 Rack"
+        },
+        {
+          "name": "TRX High Row",
+          "reps": "",
+          "station": "🔵 Rack"
+        },
+        {
+          "name": "TRX Standing Rollout",
+          "reps": "",
+          "station": "🔵 Rack"
+        }
+      ],
+      "source_file": "STUDIO RED HIIT Programming September 2026.pdf p.25",
+      "cardio_note": "Coach to track their time to complete the distance. Goal would be to complete 2-5 cycles during the cardio block. Bikes will complete more cycles than treads. Start at moderate effort. Increase effort throughout the distance and finish at Max."
+    },
+    {
+      "date": "2026-09-26",
+      "format": "CIRCUIT · 9 MIN",
+      "warmup": [
+        "Kang Squat",
+        "Inchworm",
+        "Leg Cradles Alt."
+      ],
+      "cardio": [
+        {
+          "time": "2:00",
+          "intensity": "Moderate 7/10",
+          "mz": "Green"
+        },
+        {
+          "time": "3:00",
+          "intensity": "Hard 8/10",
+          "mz": "Yellow"
+        },
+        {
+          "time": "1:00",
+          "intensity": "Easy 6/10",
+          "mz": "Blue"
+        },
+        {
+          "time": "2:30",
+          "intensity": "Hard 8/10",
+          "mz": "Yellow"
+        },
+        {
+          "time": ":30",
+          "intensity": "Easy 6/10",
+          "mz": "Blue"
+        }
+      ],
+      "exercises": [
+        {
+          "name": "DB RDL",
+          "reps": "15 REPS",
+          "station": "🏋️ Bench"
+        },
+        {
+          "name": "Fitband Flys in Lunge",
+          "reps": "15 REPS",
+          "station": "🏋️ Bench"
+        },
+        {
+          "name": "Fitband Step out Press Out",
+          "reps": "15 EACH SIDE",
+          "station": "🏋️ Bench"
+        },
+        {
+          "name": "KB Split Squat 1arm",
+          "reps": "15 EACH SIDE",
+          "station": "🔵 Rack"
+        },
+        {
+          "name": "KB Shoulder to Shoulder Press",
+          "reps": "15 EACH SIDE",
+          "station": "🔵 Rack"
+        },
+        {
+          "name": "Ball Woodchop",
+          "reps": "15 EACH SIDE",
+          "station": "🔵 Rack"
+        }
+      ],
+      "source_file": "STUDIO RED HIIT Programming September 2026.pdf p.26",
+      "cardio_note": "Coach to an aerobic focus for the day! May be slightly lower paces than normal due to the length of the blocks."
+    },
+    {
+      "date": "2026-09-27",
+      "format": "LADDER · 9 MIN",
+      "warmup": [
+        "Standing Figure 4 Alt.",
+        "Alt Arm Circles",
+        "Around the World Lunge"
+      ],
+      "cardio": [
+        {
+          "time": ":45",
+          "intensity": "Easy 6/10",
+          "mz": "Blue"
+        },
+        {
+          "time": "1:15",
+          "intensity": "Moderate 6/10",
+          "mz": "Green"
+        },
+        {
+          "time": ":45",
+          "intensity": "Max 9/10",
+          "mz": "Red"
+        },
+        {
+          "rounds": "× 3 rounds"
+        },
+        {
+          "time": ":45",
+          "intensity": "Easy 6/10",
+          "mz": "Blue"
+        }
+      ],
+      "exercises": [
+        {
+          "name": "Popcorn Squat",
+          "reps": "LADDER 10→5",
+          "station": "🏋️ Bench"
+        },
+        {
+          "name": "Fitband Rotational Row alt.",
+          "reps": "LADDER 10→5 · EACH SIDE",
+          "station": "🏋️ Bench"
+        },
+        {
+          "name": "Elevated Bicycle Crunch",
+          "reps": "LADDER 10→5 · EACH SIDE",
+          "station": "🏋️ Bench"
+        },
+        {
+          "name": "Ball Racked Rev. Lunge",
+          "reps": "LADDER 10→5 · EACH SIDE",
+          "station": "🔵 Rack"
+        },
+        {
+          "name": "Ball Chest Slam",
+          "reps": "LADDER 10→5",
+          "station": "🔵 Rack"
+        },
+        {
+          "name": "Ball Toe Tap",
+          "reps": "LADDER 10→5",
+          "station": "🔵 Rack"
+        }
+      ],
+      "source_file": "STUDIO RED HIIT Programming September 2026.pdf p.27",
+      "cardio_note": "Coach to an anaerobic focus! High exertion with several recovery blocks. Moderate should build up but leave room to increase to a MAX effort for each cycle. Recovery built in before rotating."
+    },
+    {
+      "date": "2026-09-28",
+      "format": "CIRCUIT · 9 MIN",
+      "warmup": [
+        "Bootstrapper Stretch",
+        "Downward Dog w Opp Leg Reach",
+        "Bodyweight Good Morning"
+      ],
+      "cardio": [
+        {
+          "time": "2:00",
+          "intensity": "Moderate 7/10",
+          "mz": "Green"
+        },
+        {
+          "time": "2:00",
+          "intensity": "Hard 8/10",
+          "mz": "Yellow"
+        },
+        {
+          "time": "1:00",
+          "intensity": "Easy 6/10",
+          "mz": "Blue"
+        },
+        {
+          "time": "2:00",
+          "intensity": "Moderate 7/10",
+          "mz": "Green"
+        },
+        {
+          "time": "1:30",
+          "intensity": "Hard 8/10",
+          "mz": "Yellow"
+        },
+        {
+          "time": ":30",
+          "intensity": "Easy 6/10",
+          "mz": "Blue"
+        }
+      ],
+      "exercises": [
+        {
+          "name": "DB Curtsy Lunge",
+          "reps": "12 EACH SIDE",
+          "station": "🏋️ Bench"
+        },
+        {
+          "name": "Decline Push Up",
+          "reps": "12 REPS",
+          "station": "🏋️ Bench"
+        },
+        {
+          "name": "Fitband Single Arm Lateral Raise",
+          "reps": "12 EACH SIDE",
+          "station": "🏋️ Bench"
+        },
+        {
+          "name": "KB Swing",
+          "reps": "12 REPS",
+          "station": "🔵 Rack"
+        },
+        {
+          "name": "KB Upright Row 2hand",
+          "reps": "12 REPS",
+          "station": "🔵 Rack"
+        },
+        {
+          "name": "TRX Skater Hops",
+          "reps": "12 EACH SIDE",
+          "station": "🔵 Rack"
+        }
+      ],
+      "source_file": "STUDIO RED HIIT Programming September 2026.pdf p.28",
+      "cardio_note": "Coach to an aerobic focus for the day! Use running cues for soft shoulders and short quicker strides. Especially at the end of Hard efforts as members fatigue. May be slightly lower paces than normal due to the length of the blocks."
+    },
+    {
+      "date": "2026-09-29",
+      "format": "EMOM · 9 MIN",
+      "warmup": [
+        "Kang Squat",
+        "Inchworm",
+        "Leg Cradles Alt."
+      ],
+      "cardio": [
+        {
+          "time": ":45",
+          "intensity": "Easy 6/10",
+          "mz": "Blue"
+        },
+        {
+          "time": "20 Cals",
+          "intensity": "Hard 8/10",
+          "mz": "Yellow"
+        }
+      ],
+      "exercises": [
+        {
+          "name": "Renegade Row",
+          "reps": "",
+          "station": "🏋️ Bench"
+        },
+        {
+          "name": "DB Goblet Squat",
+          "reps": "",
+          "station": "🏋️ Bench"
+        },
+        {
+          "name": "DB Russian Twist on Bench",
+          "reps": "",
+          "station": "🏋️ Bench"
+        },
+        {
+          "name": "TRX Get Up",
+          "reps": "",
+          "station": "🔵 Rack"
+        },
+        {
+          "name": "KB Sumo Deadlift",
+          "reps": "",
+          "station": "🔵 Rack"
+        },
+        {
+          "name": "KB Farmer Carry Knee Raise in Place",
+          "reps": "",
+          "station": "🔵 Rack"
+        }
+      ],
+      "source_file": "STUDIO RED HIIT Programming September 2026.pdf p.29",
+      "cardio_note": "Anearobic endurance focus. How fast can you finish the 20 Cals and how many rounds can you get in the 9 minute block. Bikes will get more cycles than the Treads."
+    },
+    {
+      "date": "2026-09-30",
+      "format": "LADDER · 9 MIN",
+      "warmup": [
+        "Standing Figure 4 Alt.",
+        "Alt Arm Circles",
+        "Around the World Lunge"
+      ],
+      "cardio": [
+        {
+          "time": "1:20",
+          "intensity": "Moderate 7/10",
+          "mz": "Green"
+        },
+        {
+          "time": ":40",
+          "intensity": "Easy 6/10",
+          "mz": "Blue"
+        },
+        {
+          "time": "2:00",
+          "intensity": "Hard 8/10",
+          "mz": "Yellow"
+        },
+        {
+          "time": ":30",
+          "intensity": "Easy 6/10",
+          "mz": "Blue"
+        },
+        {
+          "rounds": "× 2 rounds"
+        }
+      ],
+      "exercises": [
+        {
+          "name": "DB Goblet Squat 1.5 stance",
+          "reps": "LADDER 12→7 · EACH SIDE",
+          "station": "🏋️ Bench"
+        },
+        {
+          "name": "DB Rear Delt Raise",
+          "reps": "LADDER 12→7",
+          "station": "🏋️ Bench"
+        },
+        {
+          "name": "DB Devils Press",
+          "reps": "LADDER 12→7",
+          "station": "🏋️ Bench"
+        },
+        {
+          "name": "KB Anterior Good Morning",
+          "reps": "LADDER 12→7",
+          "station": "🔵 Rack"
+        },
+        {
+          "name": "Split Jumps",
+          "reps": "LADDER 12→7 · EACH SIDE",
+          "station": "🔵 Rack"
+        },
+        {
+          "name": "TRX I-Pull",
+          "reps": "LADDER 12→7",
+          "station": "🔵 Rack"
+        }
+      ],
+      "source_file": "STUDIO RED HIIT Programming September 2026.pdf p.30",
+      "cardio_note": "Shorter working efforts and quick recoveries. Members should be able to hold higher paces in the moderate and hard efforts since they have more recovery built in after each effort."
     }
   ]
 }
