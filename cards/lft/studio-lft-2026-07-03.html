@@ -28,6 +28,19 @@
   .cycle-tag { display: inline-block; margin-left: 7px; font-family: 'Barlow Condensed', sans-serif; font-weight: 800; font-size: 12px; letter-spacing: 1px; text-transform: uppercase; padding: 1px 8px; border-radius: 10px; background: rgba(255,255,255,0.22); color: white; vertical-align: 1px; }
 
   .lft-wrap { padding: 14px; max-width: 640px; margin: 0 auto; }
+
+  .intro-drawer { background: var(--card); border: 1px solid var(--border); border-radius: 10px; margin-bottom: 12px; overflow: hidden; }
+  .intro-drawer > summary { list-style: none; cursor: pointer; padding: 12px 14px; font-family: 'Barlow Condensed', sans-serif; font-weight: 800; font-size: 18px; letter-spacing: 1px; text-transform: uppercase; color: #ddd; display: flex; align-items: center; gap: 9px; }
+  .intro-drawer > summary::-webkit-details-marker { display: none; }
+  .intro-drawer > summary:active { background: var(--card2); }
+  .intro-chev { color: var(--red); font-size: 15px; transition: transform 0.15s; display: inline-block; }
+  .intro-drawer[open] .intro-chev { transform: rotate(90deg); }
+  .intro-body { padding: 2px 14px 12px; border-top: 1px solid var(--border); }
+  .intro-line { font-size: 16.5px; color: #ddd; line-height: 1.45; margin-top: 10px; }
+  .intro-line b { color: var(--yellow); font-weight: 700; }
+  .intro-label { display: block; font-family: 'Barlow Condensed', sans-serif; font-weight: 700; font-size: 13px; letter-spacing: 1.2px; text-transform: uppercase; color: var(--muted); margin-bottom: 1px; }
+  .intro-blank { color: var(--muted); border-bottom: 1px dashed var(--muted); font-style: italic; }
+
   .cycle-banner { background: var(--card); border-left: 3px solid var(--yellow); border-radius: 0 8px 8px 0; padding: 10px 13px; margin-bottom: 12px; }
   .cycle-banner-head { font-family: 'Barlow Condensed', sans-serif; font-weight: 800; font-size: 19px; letter-spacing: 1px; text-transform: uppercase; color: var(--yellow); }
   .cycle-type { color: #ffe9a3; font-weight: 700; }
@@ -49,6 +62,10 @@
   .lft-ex-sr { font-family: 'Barlow Condensed', sans-serif; font-weight: 700; font-size: 19px; color: var(--yellow); letter-spacing: 0.5px; }
   .lft-loc { font-size: 13px; font-weight: 700; letter-spacing: 0.5px; text-transform: uppercase; color: var(--blue); background: rgba(74,158,232,0.15); border-radius: 10px; padding: 1px 8px; }
   .lft-ex-notes { font-size: 17.5px; color: #bbb; line-height: 1.45; margin-top: 4px; }
+  .lft-ex-cues { list-style: none; margin: 7px 0 0; padding: 7px 0 0; border-top: 1px solid var(--border); }
+  .lft-ex-cues li { position: relative; padding-left: 16px; font-size: 16px; font-style: italic; color: var(--yellow); line-height: 1.4; margin-top: 3px; }
+  .lft-ex-cues li::before { content: '“'; position: absolute; left: 0; top: 1px; font-style: normal; font-weight: 700; color: rgba(245,200,66,0.55); }
+  .lft-ex-cues li::after { content: '”'; font-style: normal; color: rgba(245,200,66,0.55); }
 
   .lft-note-row { display: flex; align-items: flex-start; gap: 8px; background: rgba(245,200,66,0.08); border: 1px dashed rgba(245,200,66,0.4); border-radius: 8px; padding: 8px 12px; margin-bottom: 8px; font-size: 15.5px; color: var(--yellow); }
   .lft-note-icon { flex-shrink: 0; }
@@ -71,6 +88,18 @@
 </div>
 
 <div class="lft-wrap">
+  <details class="intro-drawer">
+    <summary><span class="intro-chev">▸</span>Coach intro &amp; talk track</summary>
+    <div class="intro-body">
+      <div class="intro-line"><span class="intro-label">Welcome</span>Welcome to STUDIO LFT! My name is <span class="intro-blank">your name</span>.</div>
+      <div class="intro-line"><span class="intro-label">Today&#x27;s plan</span>Today's focus is <b>Full Body</b> and this is a <b>benchmark week</b>, so we're testing where your strength is at.</div>
+      <div class="intro-line"><span class="intro-label">Safety</span>Please use the catches and spot your partner. If you don't have a partner today, call me over and I'll spot you.</div>
+      <div class="intro-line"><span class="intro-label">Main lift</span>The main movement today is <b>Bench Press</b> — I'll walk you through it right after training prep.</div>
+      <div class="intro-line"><span class="intro-label">Modifications</span>If you need a modification on anything as we go, call me over — there's an option for everyone.</div>
+      <div class="intro-line"><span class="intro-label">Let&#x27;s go</span>Alright — let's get pumped up to LFT!</div>
+    </div>
+  </details>
+
   <div class="session-notes">Use the workouts this week to practice your movement and test your strength. A week to test</div>
 
   <div class="lft-section">
@@ -81,6 +110,7 @@
       <div class="lft-ex-body">
         <div class="lft-ex-top"><a class="lft-ex-name" href="https://www.dropbox.com/scl/fi/7k2cxx0591wo95336xvcp/Hinged-Over-SA-Lat-Stretch.mov?rlkey=yibyvzmx054c4tobugbe23rhc&amp;st=uqe8yrzz&amp;dl=0" target="_blank" rel="noopener">Hinged Over Single Arm Lat Stretch</a><span class="lft-ex-sr">:45 per side</span></div>
         <div class="lft-ex-notes">Hold onto rack with 1 arm, thumbs down position. Shift the hips away from the stretching arm.</div>
+        <ul class="lft-ex-cues"><li>Thumb down, hips shift away</li><li>Let the ribs open as you breathe</li></ul>
       </div>
     </div>
     <div class="lft-ex-row">
@@ -88,6 +118,7 @@
       <div class="lft-ex-body">
         <div class="lft-ex-top"><a class="lft-ex-name" href="https://www.dropbox.com/scl/fi/iglcaefiay2lrzbby9a8x/Band-Over-and-Back.mov?rlkey=qh5kdfh2b414yov3og0xbvqcw&amp;st=x09zmepi&amp;dl=0" target="_blank" rel="noopener">Band Over And Back</a><span class="lft-ex-sr">1:00</span></div>
         <div class="lft-ex-notes">Take the band overhead with lateral tension, then straight down the spine rather than away from the back behind.</div>
+        <ul class="lft-ex-cues"><li>Keep tension wide the whole way</li><li>Go only as wide as the shoulders allow</li></ul>
       </div>
     </div>
     <div class="lft-ex-row">
@@ -95,6 +126,7 @@
       <div class="lft-ex-body">
         <div class="lft-ex-top"><a class="lft-ex-name" href="https://www.dropbox.com/scl/fi/5ixi3207nws1wgc6qwuxx/Banded-T-Spine-Rotation.mov?rlkey=74nramv5da3wpk2hc4c42v2am&amp;st=p8gc891s&amp;dl=0" target="_blank" rel="noopener">Banded T-spine Rotation</a><span class="lft-ex-sr">:45 per side</span></div>
         <div class="lft-ex-notes">Hook same band on rack, in tabletop position. Let band pull you under, then squeeze shoulder blade to get back to neutral. This movement will apply to the Main LFT in the workout.</div>
+        <ul class="lft-ex-cues"><li>Let the band pull you under, then squeeze back</li><li>Rotation comes from the upper back</li></ul>
       </div>
     </div>
     <div class="lft-ex-row">
@@ -102,6 +134,7 @@
       <div class="lft-ex-body">
         <div class="lft-ex-top"><a class="lft-ex-name" href="https://www.dropbox.com/scl/fi/q0gp18xdlaxh5l26zl8rb/Band-Face-Pull.mov?rlkey=nn2fv5ag0n38sikgikim3ntrl&amp;st=j6dykfj3&amp;dl=0" target="_blank" rel="noopener">Face Pull</a><span class="lft-ex-sr">1:00</span></div>
         <div class="lft-ex-notes">workout. Move band to face height. Pull with both hands, keeping band in the fingers.</div>
+        <ul class="lft-ex-cues"><li>Pull to face height, elbows high</li><li>Band stays in the fingers</li></ul>
       </div>
     </div>
     <div class="lft-ex-row">
@@ -109,6 +142,7 @@
       <div class="lft-ex-body">
         <div class="lft-ex-top"><a class="lft-ex-name" href="https://www.dropbox.com/scl/fi/jxr8a8gzpjm8c8il4lq1v/Explosive-Horizontal-Band-Press.mov?rlkey=pm8l7sbw22h3eam3gb2uqqg7u&amp;st=gurm4eeg&amp;dl=0" target="_blank" rel="noopener">Explosive Horizontal Band Press</a><span class="lft-ex-sr">:30 per side</span></div>
         <div class="lft-ex-notes">Use same band set up, keep tension on the band. Punch out on each rep. switch sides after :30</div>
+        <ul class="lft-ex-cues"><li>Keep tension on the band the whole set</li><li>Punch out, control back</li></ul>
       </div>
     </div>
   </div>
@@ -121,6 +155,7 @@
       <div class="lft-ex-body">
         <div class="lft-ex-top"><a class="lft-ex-name" href="https://www.dropbox.com/scl/fi/jh81nqm1jant1ws2h06dw/Barbell-Bench-Press.mov?rlkey=8z9tpak7kuhfxhyuwlhjhdqpe&amp;st=m3dlshck&amp;dl=0" target="_blank" rel="noopener">Bench Press</a><span class="lft-ex-sr">3-5RM</span></div>
         <div class="lft-ex-notes">Build to a heavy 3 to 5 rep max. Let your ability to maintain good positioning be the indicator for loading. Bench goes back to Alley at end</div>
+        <ul class="lft-ex-cues"><li>Shoulder blades pinched and down</li><li>Drive the feet into the floor</li></ul>
       </div>
     </div>
   </div>
@@ -133,6 +168,7 @@
       <div class="lft-ex-body">
         <div class="lft-ex-top"><a class="lft-ex-name" href="https://www.dropbox.com/scl/fi/7p56e38nerqxni1ra23lz/RNT-Barbell-RDL.mp4?rlkey=lcasti0xkv26yheo0svx3ir9a&amp;st=h005teas&amp;dl=0" target="_blank" rel="noopener">BB RNT RDL</a><span class="lft-ex-sr">2 - 4 x 8-12</span><span class="lft-loc">in the RACK</span></div>
         <div class="lft-ex-notes">Use a light band to reinforce proper hinging mechanics. Be sure to pull bar into the body!</div>
+        <ul class="lft-ex-cues"><li>Pull the bar into your body the whole way</li><li>Let the band remind you to hinge back</li></ul>
       </div>
     </div>
   </div>
@@ -145,6 +181,7 @@
       <div class="lft-ex-body">
         <div class="lft-ex-top"><a class="lft-ex-name" href="https://www.dropbox.com/scl/fi/f3wxdzp6s51uykyfi1ca3/SA-Bench-Deadstop-Row.mp4?rlkey=es14s93mafqlrew51etcry070&amp;st=2ue3u7t4&amp;dl=0" target="_blank" rel="noopener">Single Arm Bench Deadstop Row</a><span class="lft-ex-sr">2- 4 x 8-12e</span><span class="lft-loc">in the GAP</span></div>
         <div class="lft-ex-notes">Let the DB rest on the ground between reps, emphasize a big pull , allowing for some rotation thru the trunk.</div>
+        <ul class="lft-ex-cues"><li>Full rest on the ground between reps</li><li>Big pull — let the trunk rotate a little</li></ul>
       </div>
     </div>
   </div>
@@ -157,6 +194,7 @@
       <div class="lft-ex-body">
         <div class="lft-ex-top"><a class="lft-ex-name" href="https://www.dropbox.com/scl/fi/xg0ibwl2qcga322i4matr/DB-Reverse-Lunge.mov?rlkey=ea4crhu8t2ifhktqncdol9z8g&amp;st=n45lba2t&amp;dl=0" target="_blank" rel="noopener">DB Reverse Lunge</a><span class="lft-ex-sr">2- 4 x 8-12e</span><span class="lft-loc">in the ALLEY</span></div>
         <div class="lft-ex-notes">One leg at a time. Focus on driving thru the front foot and lowering with control.</div>
+        <ul class="lft-ex-cues"><li>Torso stays tall — don&#x27;t lean forward</li><li>Back knee down, drive through the front heel</li></ul>
       </div>
     </div>
   </div>
@@ -169,6 +207,7 @@
       <div class="lft-ex-body">
         <div class="lft-ex-top"><a class="lft-ex-name" href="https://www.dropbox.com/scl/fi/esyaz6vtvpz74auyvgg30/KB-Complex-in-BSS-2-Hand-Clean-Squat-RDL-Hop-3-Each.mov?rlkey=dsf6fecu1ylief8bfnuc037di&amp;st=0hj1s4bf&amp;dl=0" target="_blank" rel="noopener">Double Trouble: KB clean, KB squat, KB RDL, Hop x 3e from BSS</a><span class="lft-ex-sr">2:00</span><span class="lft-loc">one in RACK, one on GAP</span></div>
         <div class="lft-ex-notes">1 partner on roller, 1 partner on box. Or share the box</div>
+        <ul class="lft-ex-cues"><li>Pick a pace you can hold for the whole complex</li><li>Reset your grip between movements</li></ul>
       </div>
     </div>
   </div>

@@ -28,6 +28,19 @@
   .cycle-tag { display: inline-block; margin-left: 7px; font-family: 'Barlow Condensed', sans-serif; font-weight: 800; font-size: 12px; letter-spacing: 1px; text-transform: uppercase; padding: 1px 8px; border-radius: 10px; background: rgba(255,255,255,0.22); color: white; vertical-align: 1px; }
 
   .lft-wrap { padding: 14px; max-width: 640px; margin: 0 auto; }
+
+  .intro-drawer { background: var(--card); border: 1px solid var(--border); border-radius: 10px; margin-bottom: 12px; overflow: hidden; }
+  .intro-drawer > summary { list-style: none; cursor: pointer; padding: 12px 14px; font-family: 'Barlow Condensed', sans-serif; font-weight: 800; font-size: 18px; letter-spacing: 1px; text-transform: uppercase; color: #ddd; display: flex; align-items: center; gap: 9px; }
+  .intro-drawer > summary::-webkit-details-marker { display: none; }
+  .intro-drawer > summary:active { background: var(--card2); }
+  .intro-chev { color: var(--red); font-size: 15px; transition: transform 0.15s; display: inline-block; }
+  .intro-drawer[open] .intro-chev { transform: rotate(90deg); }
+  .intro-body { padding: 2px 14px 12px; border-top: 1px solid var(--border); }
+  .intro-line { font-size: 16.5px; color: #ddd; line-height: 1.45; margin-top: 10px; }
+  .intro-line b { color: var(--yellow); font-weight: 700; }
+  .intro-label { display: block; font-family: 'Barlow Condensed', sans-serif; font-weight: 700; font-size: 13px; letter-spacing: 1.2px; text-transform: uppercase; color: var(--muted); margin-bottom: 1px; }
+  .intro-blank { color: var(--muted); border-bottom: 1px dashed var(--muted); font-style: italic; }
+
   .cycle-banner { background: var(--card); border-left: 3px solid var(--yellow); border-radius: 0 8px 8px 0; padding: 10px 13px; margin-bottom: 12px; }
   .cycle-banner-head { font-family: 'Barlow Condensed', sans-serif; font-weight: 800; font-size: 19px; letter-spacing: 1px; text-transform: uppercase; color: var(--yellow); }
   .cycle-type { color: #ffe9a3; font-weight: 700; }
@@ -49,6 +62,10 @@
   .lft-ex-sr { font-family: 'Barlow Condensed', sans-serif; font-weight: 700; font-size: 19px; color: var(--yellow); letter-spacing: 0.5px; }
   .lft-loc { font-size: 13px; font-weight: 700; letter-spacing: 0.5px; text-transform: uppercase; color: var(--blue); background: rgba(74,158,232,0.15); border-radius: 10px; padding: 1px 8px; }
   .lft-ex-notes { font-size: 17.5px; color: #bbb; line-height: 1.45; margin-top: 4px; }
+  .lft-ex-cues { list-style: none; margin: 7px 0 0; padding: 7px 0 0; border-top: 1px solid var(--border); }
+  .lft-ex-cues li { position: relative; padding-left: 16px; font-size: 16px; font-style: italic; color: var(--yellow); line-height: 1.4; margin-top: 3px; }
+  .lft-ex-cues li::before { content: '“'; position: absolute; left: 0; top: 1px; font-style: normal; font-weight: 700; color: rgba(245,200,66,0.55); }
+  .lft-ex-cues li::after { content: '”'; font-style: normal; color: rgba(245,200,66,0.55); }
 
   .lft-note-row { display: flex; align-items: flex-start; gap: 8px; background: rgba(245,200,66,0.08); border: 1px dashed rgba(245,200,66,0.4); border-radius: 8px; padding: 8px 12px; margin-bottom: 8px; font-size: 15.5px; color: var(--yellow); }
   .lft-note-icon { flex-shrink: 0; }
@@ -71,6 +88,18 @@
 </div>
 
 <div class="lft-wrap">
+  <details class="intro-drawer">
+    <summary><span class="intro-chev">▸</span>Coach intro &amp; talk track</summary>
+    <div class="intro-body">
+      <div class="intro-line"><span class="intro-label">Welcome</span>Welcome to STUDIO LFT! My name is <span class="intro-blank">your name</span>.</div>
+      <div class="intro-line"><span class="intro-label">Today&#x27;s plan</span>Today's focus is <b>Full Body</b> and we're in the <b>Build</b> training cycle, week 4 of 6.</div>
+      <div class="intro-line"><span class="intro-label">Safety</span>Please use the catches and spot your partner. If you don't have a partner today, call me over and I'll spot you.</div>
+      <div class="intro-line"><span class="intro-label">Main lift</span>The main movement today is <b>Front Squat and Loaded Push Up</b> — I'll walk you through it right after training prep.</div>
+      <div class="intro-line"><span class="intro-label">Modifications</span>If you need a modification on anything as we go, call me over — there's an option for everyone.</div>
+      <div class="intro-line"><span class="intro-label">Let&#x27;s go</span>Alright — let's get pumped up to LFT!</div>
+    </div>
+  </details>
+
   <div class="cycle-banner">
     <div class="cycle-banner-head">Build Cycle · <span class="cycle-type">Strength</span>
       <span class="cycle-meta">Block 2 · Week 4 of 6</span>
@@ -88,6 +117,7 @@
       <div class="lft-ex-body">
         <div class="lft-ex-top"><a class="lft-ex-name" href="https://www.dropbox.com/scl/fi/0k7xm7wa2dj03edsziyhh/Dynamic-Pigeon.mov?rlkey=47arfmurob8x5uz2czxr1h6e8&amp;st=rsfb3b0e&amp;dl=0" target="_blank" rel="noopener">Dynamic Pigeon</a><span class="lft-ex-sr">:45 per side</span></div>
         <div class="lft-ex-notes">Keep the back leg active and straight, focus on rotating the hips around the leg bone.</div>
+        <ul class="lft-ex-cues"><li>Back leg stays long and active</li><li>Rotate the hips around the back leg</li></ul>
       </div>
     </div>
     <div class="lft-ex-row">
@@ -95,6 +125,7 @@
       <div class="lft-ex-body">
         <div class="lft-ex-top"><a class="lft-ex-name" href="https://www.dropbox.com/scl/fi/6qo4qbm279pu7og85xo7w/Bird-Dog-Contralateral.mov?rlkey=6yxvcsg5x2mo26saue4ih4xsd&amp;st=5opem84c&amp;dl=0" target="_blank" rel="noopener">Bird Dog Contra-laterals</a><span class="lft-ex-sr">1:00</span></div>
         <div class="lft-ex-notes">Keep the core engaged and move slowly</div>
+        <ul class="lft-ex-cues"><li>Drag the toe along the floor to wake the glute</li><li>Hips stay level — no rocking</li></ul>
       </div>
     </div>
     <div class="lft-ex-row">
@@ -102,6 +133,7 @@
       <div class="lft-ex-body">
         <div class="lft-ex-top"><a class="lft-ex-name" href="https://www.dropbox.com/scl/fi/cuh1tuilim6p22x76nuhw/Glute-Bridge-Pull-Apart.mov?rlkey=if5xeq3er9ujcgj3vkp1op9jh&amp;st=gkipv64n&amp;dl=0" target="_blank" rel="noopener">Glute Bridge Pull Apart</a><span class="lft-ex-sr">1:30</span></div>
         <div class="lft-ex-notes">Bridge up, keep glutes tight, pull band apart. Let fists touch the floor</div>
+        <ul class="lft-ex-cues"><li>Glutes stay tight the whole set</li><li>Let the fists touch the floor</li></ul>
       </div>
     </div>
     <div class="lft-ex-row">
@@ -109,6 +141,7 @@
       <div class="lft-ex-body">
         <div class="lft-ex-top"><a class="lft-ex-name" href="https://www.dropbox.com/scl/fi/x0egre03pev9j11575zl5/Prisoner-Good-Morning.mov?rlkey=ko1n7d8rllqv6d7kcux1e7lo3&amp;st=62tg5b0l&amp;dl=0" target="_blank" rel="noopener">Prisoner Good Morning</a><span class="lft-ex-sr">1:00</span></div>
         <div class="lft-ex-notes">Let fists touch the floor Butt goes back, squeeze to stand up.</div>
+        <ul class="lft-ex-cues"><li>Butt goes back, chest stays proud</li><li>Squeeze the glutes to stand tall</li></ul>
       </div>
     </div>
     <div class="lft-ex-row">
@@ -116,6 +149,7 @@
       <div class="lft-ex-body">
         <div class="lft-ex-top"><a class="lft-ex-name" href="https://www.dropbox.com/scl/fi/14kq7mdisw9gnyg8umznt/Tuck-Jump.mov?rlkey=c4juy6t8vbsuzgsfsatohv3qc&amp;st=0q7ypwob&amp;dl=0" target="_blank" rel="noopener">Tuck Jump</a><span class="lft-ex-sr">1:00</span></div>
         <div class="lft-ex-notes">Jump up as up high as possible, bringing knees towards chest. Landing softly in squat position, owning each landing, reset before jumping again.</div>
+        <ul class="lft-ex-cues"><li>Knees to the chest, land soft</li><li>Own every landing before the next</li></ul>
       </div>
     </div>
   </div>
@@ -128,6 +162,7 @@
       <div class="lft-ex-body">
         <div class="lft-ex-top"><a class="lft-ex-name" href="https://www.dropbox.com/scl/fi/t9nivphkohyjabaftz8l4/Barbell-Front-Squat.mov?rlkey=xibjx6ktbc66xmvyzn48ztdzx&amp;st=6i717ixe&amp;dl=0" target="_blank" rel="noopener">Front Squat</a><span class="lft-ex-sr">4</span><span class="lft-loc">in the RACK</span></div>
         <div class="lft-ex-notes">90s rest between sets minimum, build to a heavy set of 4 for today. Keep elbows high in front rack position. Sit straight down, keeping torso tall through the entire movement.</div>
+        <ul class="lft-ex-cues"><li>Elbows high in the front rack</li><li>Chest up, sit straight down</li></ul>
       </div>
     </div>
     <div class="lft-ex-row">
@@ -135,6 +170,7 @@
       <div class="lft-ex-body">
         <div class="lft-ex-top"><a class="lft-ex-name" href="https://www.dropbox.com/scl/fi/tt3npnwo4ldnsixidiw6o/Loaded-Push-Ups.mp4?rlkey=1ebphpioze8kkq53a7j8qels1&amp;st=w8ewezr3&amp;dl=0" target="_blank" rel="noopener">Loaded Push Up</a><span class="lft-ex-sr">4</span><span class="lft-loc">in the ALLEY</span></div>
         <div class="lft-ex-notes">movement. Set up for push up with hands outside shoulder width and middle fingers pointed straight ahead. Place plate on middle of back. Lower and press away with control. Elevate the hands as needed on box.</div>
+        <ul class="lft-ex-cues"><li>Hands outside the shoulders, fingers forward</li><li>Body moves as one straight line</li></ul>
       </div>
     </div>
   </div>
@@ -147,6 +183,7 @@
       <div class="lft-ex-body">
         <div class="lft-ex-top"><a class="lft-ex-name" href="https://www.dropbox.com/scl/fi/1z8ck4ell2xdifbkm5nkt/Barbell-Zercher-Split-Squat.mp4?rlkey=vfah18jxwevw78tuu8pp5ao8s&amp;st=jorpag1b&amp;dl=0" target="_blank" rel="noopener">Barbell Zercher Split Squat</a><span class="lft-ex-sr">4 x 8e</span><span class="lft-loc">in the RACK</span></div>
         <div class="lft-ex-notes">Hold BB in crook of elbows. Set up in split squat position. Drop knee to ground, keeping a slight forward lean to engage the glutes.</div>
+        <ul class="lft-ex-cues"><li>Slight forward lean to load the glutes</li><li>Elbows stay high, bar stays tight to you</li></ul>
       </div>
     </div>
     <div class="lft-ex-row">
@@ -154,6 +191,7 @@
       <div class="lft-ex-body">
         <div class="lft-ex-top"><a class="lft-ex-name" href="https://www.dropbox.com/scl/fi/3erlskgi8sge33yus4gbd/Dumbell-Rotational-Row-and-Lunge.mp4?rlkey=peqyb995f4r2qfpgfzv2gqw15&amp;st=ikcv87r8&amp;dl=0" target="_blank" rel="noopener">DB Rotational Row in Lunge</a><span class="lft-ex-sr">4 x 8e</span><span class="lft-loc">in the GAP</span></div>
         <div class="lft-ex-notes">Set up in lunge position, pull DB from ground with slight rotation at the top and bottom. Lower body stays static, upper back is where rotation comes from.</div>
+        <ul class="lft-ex-cues"><li>Lower body stays still — rotate the upper back</li><li>Pull the DB from the floor each rep</li></ul>
       </div>
     </div>
     <div class="lft-note-row">
@@ -169,6 +207,7 @@
       <div class="lft-ex-body">
         <div class="lft-ex-top"><a class="lft-ex-name" href="https://www.dropbox.com/scl/fi/9m25rvzyrjmy2hipyjyh5/Kettle-Bell-Kick-Stand-Cross-Body-RDLs.mov?rlkey=i4d6aockp350c293adrlhb7vq&amp;st=gwcw85ph&amp;dl=0" target="_blank" rel="noopener">1KB Kickstand Crossbody RDL</a><span class="lft-ex-sr">4 x 8e</span><span class="lft-loc">in the ALLEY</span></div>
         <div class="lft-ex-notes">Set up in 1.5/kickstand stance. Hold weight opposite of planted foot. Rotation through the trunk as you hinge and lower the weight towards your opposite pinky toe. Use glutes and upper back to rotate back to standing.</div>
+        <ul class="lft-ex-cues"><li>Most of the weight stays on the planted leg</li><li>Rotate through the ribs, not the low back</li></ul>
       </div>
     </div>
     <div class="lft-ex-row">
@@ -176,6 +215,7 @@
       <div class="lft-ex-body">
         <div class="lft-ex-top"><a class="lft-ex-name" href="https://www.dropbox.com/scl/fi/6qt96hi7rkj1nc2sbz9jb/Dumbell-Fly-Press.mp4?rlkey=60ro2xjm9eitmlr2elscllvj3&amp;st=xjbtmarv&amp;dl=0" target="_blank" rel="noopener">DB Fly Press</a><span class="lft-ex-sr">4 x 8</span><span class="lft-loc">in the GAP</span></div>
         <div class="lft-ex-notes">and upper back to rotate back to standing. Lie on bench, lower and slightly bend elbows into field goal position at bottom of movement. Get a big stretch on pecs and press back up.</div>
+        <ul class="lft-ex-cues"><li>Field goal arms at the bottom</li><li>Big stretch on the chest, then press</li></ul>
       </div>
     </div>
   </div>
@@ -188,6 +228,7 @@
       <div class="lft-ex-body">
         <div class="lft-ex-top"><a class="lft-ex-name" href="https://www.dropbox.com/scl/fi/o90d72w3rk9r1ar30okwk/Band-Plank-Row.mov?rlkey=7f8v94rfhvi3axdaooreo67ir&amp;st=mis28mdp&amp;dl=0" target="_blank" rel="noopener">Band Plank Row</a><span class="lft-ex-sr">2:00</span></div>
         <div class="lft-ex-notes">Switch sides when tired, continue moving/planking for entire time.</div>
+        <ul class="lft-ex-cues"><li>Hips stay square — no rocking</li><li>Row to the ribs, not the shoulder</li></ul>
       </div>
     </div>
   </div>
