@@ -9569,35 +9569,39 @@
               "sets_reps": ":45 per side",
               "location": null,
               "notes": "Hold onto rack with 1 arm, thumbs down position. Shift the hips away from the stretching arm.",
-              "video": "https://www.dropbox.com/scl/fi/q0gp18xdlaxh5l26zl8rb/Band-Face-Pull.mov?rlkey=nn2fv5ag0n38sikgikim3ntrl&st=j6dykfj3&dl=0"
+              "video": "https://www.dropbox.com/scl/fi/7k2cxx0591wo95336xvcp/Hinged-Over-SA-Lat-Stretch.mov?rlkey=yibyvzmx054c4tobugbe23rhc&st=uqe8yrzz&dl=0"
             },
             {
               "label": "1b",
               "name": "Band Over And Back",
               "sets_reps": "1:00",
               "location": null,
-              "notes": "Take the band overhead with lateral tension, then straight down the spine rather than away from the back behind."
+              "notes": "Take the band overhead with lateral tension, then straight down the spine rather than away from the back behind.",
+              "video": "https://www.dropbox.com/scl/fi/iglcaefiay2lrzbby9a8x/Band-Over-and-Back.mov?rlkey=qh5kdfh2b414yov3og0xbvqcw&st=x09zmepi&dl=0"
             },
             {
               "label": "1c",
               "name": "Hanging Scap Shrug",
               "sets_reps": "1:30",
               "location": null,
-              "notes": "From hang position, pull shoulder blades down. Use lower body help by standing on box if hang is not possible. This bracing will apply to the Main LFT in the workout."
+              "notes": "From hang position, pull shoulder blades down. Use lower body help by standing on box if hang is not possible. This bracing will apply to the Main LFT in the workout.",
+              "video": "https://www.dropbox.com/scl/fi/cluuljxzwc8kznfr3l3zh/Scap-pull-up.mp4?rlkey=ccuq9s8cm7d6w99zlyf3njg6e&st=1rgucusw&dl=0"
             },
             {
               "label": "1d",
               "name": "Band Face Pull",
               "sets_reps": "1:00",
               "location": null,
-              "notes": "to the Main LFT in the workout. Move band to face height. Pull with both hands, keeping band in the fingers."
+              "notes": "to the Main LFT in the workout. Move band to face height. Pull with both hands, keeping band in the fingers.",
+              "video": "https://www.dropbox.com/scl/fi/q0gp18xdlaxh5l26zl8rb/Band-Face-Pull.mov?rlkey=nn2fv5ag0n38sikgikim3ntrl&st=j6dykfj3&dl=0"
             },
             {
               "label": "1e",
               "name": "Ball Slam",
               "sets_reps": "1:00",
               "location": null,
-              "notes": "Use your lats to slam the ball down."
+              "notes": "Use your lats to slam the ball down.",
+              "video": "https://www.dropbox.com/scl/fi/we54fh4lne9ot9spoq3tj/Med-Ball-Overhead-Slams.mp4?rlkey=wwh65t9a41ghl4j20rwffqyhi&st=15x36q8a&dl=0"
             }
           ]
         },
@@ -9608,10 +9612,11 @@
           "exercises": [
             {
               "label": "2a",
-              "name": "Wide Grip Pull Up - assisted as needed",
+              "name": "Barbell Bent Over Row",
               "sets_reps": "6 @4211 tempo",
               "location": null,
-              "notes": "Build to a challenging 6. keep core engaged during each rep. Hands should be outside shoulder width."
+              "notes": "Build to a challenging 6. keep core engaged during each rep. Slow tempo. Use catches to load and hold weight.",
+              "video": "https://www.dropbox.com/scl/fi/7b7388hxbsrvg37m8aod1/Barbell-Bent-Over-Row.mov?rlkey=doojfm65w1sfvo4bzuz3ktv5z&st=xkxaravn&dl=0"
             },
             {
               "label": "2b",
@@ -9628,23 +9633,26 @@
             {
               "label": "3a",
               "name": "DB Single Arm Incline Press",
-              "sets_reps": "2- 4 x 9e",
+              "sets_reps": "2- 4 x 12e",
               "location": "in the RACK",
-              "notes": "Bench set to 45degrees. Engage core, press feet through floor to drive weight to ceiling."
+              "notes": "Bench set to 45degrees. Engage core, press feet through floor to drive weight to ceiling.",
+              "video": "https://www.dropbox.com/scl/fi/hdocxm9qyegviez9f2zjf/Single-Arm-Incline-DB-Bench-Press.mov?rlkey=z31qti2tu8w0j3hqtmhrohv30&st=no43z326&dl=0"
             },
             {
               "label": "3b",
               "name": "DB Single Arm Bicep Curl",
-              "sets_reps": "2- 4 x 9e",
+              "sets_reps": "2- 4 x 12e",
               "location": "in the Alley",
-              "notes": "Hold DB in 1 arm. Curl to shoulder. Keep body still."
+              "notes": "Hold DB in 1 arm. Curl to shoulder. Keep body still.",
+              "video": "https://www.dropbox.com/scl/fi/vbhsy8gaesm1xzap5arup/Single-Arm-Bicep-Curls.mp4?rlkey=69s2ttd4n7fwfjd7f0flbpjr7&st=ddg5x7af&dl=0"
             },
             {
               "label": "3c",
               "name": "High Angle Single arm Band Row",
-              "sets_reps": "2- 4 x 9e",
+              "sets_reps": "2- 4 x 12e",
               "location": "in the GAP",
-              "notes": "Set up a band on upright. Pull with one hand in ½ kneeling position. Loop band around wrist to avoid irritating elbow/grip. Drive elbow back with force on each rep."
+              "notes": "Set up a band on upright. Pull with one hand in ½ kneeling position. Loop band around wrist to avoid irritating elbow/grip. Drive elbow back with force on each rep.",
+              "video": "https://www.dropbox.com/scl/fi/1wf1fn6q8epjtxe7mzi08/Half-Kneeling-SA-High-Angle-Band-Row.mov?rlkey=qhg03d7tcywcpk8o4m9wk4m8b&st=vgu70fku&dl=0"
             }
           ]
         },
@@ -9656,23 +9664,26 @@
             {
               "label": "4a",
               "name": "DB Deadstop Row with Hand Support",
-              "sets_reps": "2- 4 x 9e",
+              "sets_reps": "2- 4 x 12e",
               "location": "in the RACK",
-              "notes": "Use bench for support, pull the DB from the ground on each rep."
+              "notes": "Use bench for support, pull the DB from the ground on each rep.",
+              "video": "https://www.dropbox.com/scl/fi/wfmuu76xxwp7dh897cy7w/SA-Bench-Deadstop-Row.mov?rlkey=xuz46wlgpa9n14k3liphuft1c&st=zto205oo&dl=0"
             },
             {
               "label": "4b",
               "name": "Box Dip",
-              "sets_reps": "2- 4 x 9",
+              "sets_reps": "2- 4 x 12",
               "location": "in the alley",
-              "notes": "Hands on box, knees bent or straight. Manage depth so shoulders don’t get grumpy. Load with Plate as needed."
+              "notes": "Hands on box, knees bent or straight. Manage depth so shoulders don’t get grumpy. Load with Plate as needed.",
+              "video": "https://www.dropbox.com/scl/fi/wed59k0jkyva1q5latiso/Weighted-Dips.mov?rlkey=r03agdw3pa89ve2ttyfc6rhif&st=751b3baq&dl=0"
             },
             {
               "label": "4c",
               "name": "Bent Over Plate Raise",
-              "sets_reps": "2- 4 x 9",
+              "sets_reps": "2- 4 x 12",
               "location": "in the GAP",
-              "notes": "with Plate as needed. Holding plates, hinge over, raise plates level with shoulders/upper back. ."
+              "notes": "Holding plates, hinge over, raise plates level with shoulders/upper back. .",
+              "video": "https://www.dropbox.com/scl/fi/2qv9vfxxgwljm48nsruak/Bent-Over-Plate-Rear-Delt-Raise.mov?rlkey=76qv8bobp7pnoio1k42dn44bk&st=a8trwkpd&dl=0"
             }
           ]
         },
@@ -9683,15 +9694,20 @@
           "exercises": [
             {
               "label": "5",
-              "name": "Active Straight Leg Raise with Ball Squeeze",
+              "name": "Dead Bug Leg Raise with Upper body Ball Squeeze",
               "sets_reps": "2:00",
               "location": null,
-              "notes": "Squeeze the ball as hard as possible between hands as legs slowly raise and lower 1 at a time."
+              "notes": "Lying on back, squeeze ball with straight arms. Slowly raise and lower one leg at a time.",
+              "video": "https://www.dropbox.com/scl/fi/zeumxbwavg8u9oz505xyt/Dead-bug-med-ball-squeeze-arms.mov?rlkey=6ft21ijxmz2ean2vxikdz3xpz&st=ys5c16hh&dl=0"
             }
           ]
         }
       ],
-      "source_file": "STUDIO LFT Programming September 2026.pdf p.1"
+      "source_file": "STUDIO LFT Programming September 2026.pdf p.1",
+      "correction": {
+        "copy_workout_from": "2026-08-26",
+        "note": "The published Pump B2 W3 Day 2 Upper session was wrong; these days run the same workout as Aug 26/27."
+      }
     },
     {
       "date": "2026-09-03",
@@ -9712,35 +9728,39 @@
               "sets_reps": ":45 per side",
               "location": null,
               "notes": "Hold onto rack with 1 arm, thumbs down position. Shift the hips away from the stretching arm.",
-              "video": "https://www.dropbox.com/scl/fi/q0gp18xdlaxh5l26zl8rb/Band-Face-Pull.mov?rlkey=nn2fv5ag0n38sikgikim3ntrl&st=j6dykfj3&dl=0"
+              "video": "https://www.dropbox.com/scl/fi/7k2cxx0591wo95336xvcp/Hinged-Over-SA-Lat-Stretch.mov?rlkey=yibyvzmx054c4tobugbe23rhc&st=uqe8yrzz&dl=0"
             },
             {
               "label": "1b",
               "name": "Band Over And Back",
               "sets_reps": "1:00",
               "location": null,
-              "notes": "Take the band overhead with lateral tension, then straight down the spine rather than away from the back behind."
+              "notes": "Take the band overhead with lateral tension, then straight down the spine rather than away from the back behind.",
+              "video": "https://www.dropbox.com/scl/fi/iglcaefiay2lrzbby9a8x/Band-Over-and-Back.mov?rlkey=qh5kdfh2b414yov3og0xbvqcw&st=x09zmepi&dl=0"
             },
             {
               "label": "1c",
               "name": "Hanging Scap Shrug",
               "sets_reps": "1:30",
               "location": null,
-              "notes": "From hang position, pull shoulder blades down. Use lower body help by standing on box if hang is not possible. This bracing will apply to the Main LFT in the workout."
+              "notes": "From hang position, pull shoulder blades down. Use lower body help by standing on box if hang is not possible. This bracing will apply to the Main LFT in the workout.",
+              "video": "https://www.dropbox.com/scl/fi/cluuljxzwc8kznfr3l3zh/Scap-pull-up.mp4?rlkey=ccuq9s8cm7d6w99zlyf3njg6e&st=1rgucusw&dl=0"
             },
             {
               "label": "1d",
               "name": "Band Face Pull",
               "sets_reps": "1:00",
               "location": null,
-              "notes": "to the Main LFT in the workout. Move band to face height. Pull with both hands, keeping band in the fingers."
+              "notes": "to the Main LFT in the workout. Move band to face height. Pull with both hands, keeping band in the fingers.",
+              "video": "https://www.dropbox.com/scl/fi/q0gp18xdlaxh5l26zl8rb/Band-Face-Pull.mov?rlkey=nn2fv5ag0n38sikgikim3ntrl&st=j6dykfj3&dl=0"
             },
             {
               "label": "1e",
               "name": "Ball Slam",
               "sets_reps": "1:00",
               "location": null,
-              "notes": "Use your lats to slam the ball down."
+              "notes": "Use your lats to slam the ball down.",
+              "video": "https://www.dropbox.com/scl/fi/we54fh4lne9ot9spoq3tj/Med-Ball-Overhead-Slams.mp4?rlkey=wwh65t9a41ghl4j20rwffqyhi&st=15x36q8a&dl=0"
             }
           ]
         },
@@ -9751,10 +9771,11 @@
           "exercises": [
             {
               "label": "2a",
-              "name": "Wide Grip Pull Up - assisted as needed",
+              "name": "Barbell Bent Over Row",
               "sets_reps": "6 @4211 tempo",
               "location": null,
-              "notes": "Build to a challenging 6. keep core engaged during each rep. Hands should be outside shoulder width."
+              "notes": "Build to a challenging 6. keep core engaged during each rep. Slow tempo. Use catches to load and hold weight.",
+              "video": "https://www.dropbox.com/scl/fi/7b7388hxbsrvg37m8aod1/Barbell-Bent-Over-Row.mov?rlkey=doojfm65w1sfvo4bzuz3ktv5z&st=xkxaravn&dl=0"
             },
             {
               "label": "2b",
@@ -9771,23 +9792,26 @@
             {
               "label": "3a",
               "name": "DB Single Arm Incline Press",
-              "sets_reps": "2- 4 x 9e",
+              "sets_reps": "2- 4 x 12e",
               "location": "in the RACK",
-              "notes": "Bench set to 45degrees. Engage core, press feet through floor to drive weight to ceiling."
+              "notes": "Bench set to 45degrees. Engage core, press feet through floor to drive weight to ceiling.",
+              "video": "https://www.dropbox.com/scl/fi/hdocxm9qyegviez9f2zjf/Single-Arm-Incline-DB-Bench-Press.mov?rlkey=z31qti2tu8w0j3hqtmhrohv30&st=no43z326&dl=0"
             },
             {
               "label": "3b",
               "name": "DB Single Arm Bicep Curl",
-              "sets_reps": "2- 4 x 9e",
+              "sets_reps": "2- 4 x 12e",
               "location": "in the Alley",
-              "notes": "Hold DB in 1 arm. Curl to shoulder. Keep body still."
+              "notes": "Hold DB in 1 arm. Curl to shoulder. Keep body still.",
+              "video": "https://www.dropbox.com/scl/fi/vbhsy8gaesm1xzap5arup/Single-Arm-Bicep-Curls.mp4?rlkey=69s2ttd4n7fwfjd7f0flbpjr7&st=ddg5x7af&dl=0"
             },
             {
               "label": "3c",
               "name": "High Angle Single arm Band Row",
-              "sets_reps": "2- 4 x 9e",
+              "sets_reps": "2- 4 x 12e",
               "location": "in the GAP",
-              "notes": "Set up a band on upright. Pull with one hand in ½ kneeling position. Loop band around wrist to avoid irritating elbow/grip. Drive elbow back with force on each rep."
+              "notes": "Set up a band on upright. Pull with one hand in ½ kneeling position. Loop band around wrist to avoid irritating elbow/grip. Drive elbow back with force on each rep.",
+              "video": "https://www.dropbox.com/scl/fi/1wf1fn6q8epjtxe7mzi08/Half-Kneeling-SA-High-Angle-Band-Row.mov?rlkey=qhg03d7tcywcpk8o4m9wk4m8b&st=vgu70fku&dl=0"
             }
           ]
         },
@@ -9799,23 +9823,26 @@
             {
               "label": "4a",
               "name": "DB Deadstop Row with Hand Support",
-              "sets_reps": "2- 4 x 9e",
+              "sets_reps": "2- 4 x 12e",
               "location": "in the RACK",
-              "notes": "Use bench for support, pull the DB from the ground on each rep."
+              "notes": "Use bench for support, pull the DB from the ground on each rep.",
+              "video": "https://www.dropbox.com/scl/fi/wfmuu76xxwp7dh897cy7w/SA-Bench-Deadstop-Row.mov?rlkey=xuz46wlgpa9n14k3liphuft1c&st=zto205oo&dl=0"
             },
             {
               "label": "4b",
               "name": "Box Dip",
-              "sets_reps": "2- 4 x 9",
+              "sets_reps": "2- 4 x 12",
               "location": "in the alley",
-              "notes": "Hands on box, knees bent or straight. Manage depth so shoulders don’t get grumpy. Load with Plate as needed."
+              "notes": "Hands on box, knees bent or straight. Manage depth so shoulders don’t get grumpy. Load with Plate as needed.",
+              "video": "https://www.dropbox.com/scl/fi/wed59k0jkyva1q5latiso/Weighted-Dips.mov?rlkey=r03agdw3pa89ve2ttyfc6rhif&st=751b3baq&dl=0"
             },
             {
               "label": "4c",
               "name": "Bent Over Plate Raise",
-              "sets_reps": "2- 4 x 9",
+              "sets_reps": "2- 4 x 12",
               "location": "in the GAP",
-              "notes": "with Plate as needed. Holding plates, hinge over, raise plates level with shoulders/upper back. ."
+              "notes": "Holding plates, hinge over, raise plates level with shoulders/upper back. .",
+              "video": "https://www.dropbox.com/scl/fi/2qv9vfxxgwljm48nsruak/Bent-Over-Plate-Rear-Delt-Raise.mov?rlkey=76qv8bobp7pnoio1k42dn44bk&st=a8trwkpd&dl=0"
             }
           ]
         },
@@ -9826,15 +9853,20 @@
           "exercises": [
             {
               "label": "5",
-              "name": "Active Straight Leg Raise with Ball Squeeze",
+              "name": "Dead Bug Leg Raise with Upper body Ball Squeeze",
               "sets_reps": "2:00",
               "location": null,
-              "notes": "Squeeze the ball as hard as possible between hands as legs slowly raise and lower 1 at a time."
+              "notes": "Lying on back, squeeze ball with straight arms. Slowly raise and lower one leg at a time.",
+              "video": "https://www.dropbox.com/scl/fi/zeumxbwavg8u9oz505xyt/Dead-bug-med-ball-squeeze-arms.mov?rlkey=6ft21ijxmz2ean2vxikdz3xpz&st=ys5c16hh&dl=0"
             }
           ]
         }
       ],
-      "source_file": "STUDIO LFT Programming September 2026.pdf p.1"
+      "source_file": "STUDIO LFT Programming September 2026.pdf p.1",
+      "correction": {
+        "copy_workout_from": "2026-08-26",
+        "note": "The published Pump B2 W3 Day 2 Upper session was wrong; these days run the same workout as Aug 26/27."
+      }
     },
     {
       "date": "2026-09-04",

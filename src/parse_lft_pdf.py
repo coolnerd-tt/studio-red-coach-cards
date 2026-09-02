@@ -24,6 +24,7 @@ Usage:
 from __future__ import annotations
 
 import argparse
+import copy
 import json
 import re
 from pathlib import Path
@@ -34,6 +35,7 @@ from pdfminer.layout import LTTextContainer, LTTextLine, LTRect
 
 ROOT = Path(__file__).resolve().parent.parent
 DEFAULT_MANIFESTS = ROOT / "data" / "lft-day-manifests.json"
+DEFAULT_CORRECTIONS = ROOT / "data" / "lft-day-corrections.json"
 
 MONTHS = {"jan": 1, "feb": 2, "mar": 3, "apr": 4, "may": 5, "jun": 6, "jul": 7,
           "aug": 8, "sep": 9, "oct": 10, "nov": 11, "dec": 12}
@@ -766,13 +768,50 @@ def _identity_canon(name: str) -> str:
     return name
 
 
-def merge_into_manifests(new_days: list[dict], manifests_path: Path) -> int:
+def apply_corrections(days: list[dict], corrections_path: Path) -> int:
+    """Re-apply the known corrections to the published programming.
+
+    HQ sometimes publishes the wrong session for a date and the studio only
+    finds out later. Editing the manifest by hand wouldn't survive the next
+    re-parse of that month, so the corrections live in their own file and
+    are re-applied here on every merge. A correction swaps in another
+    date's workout and leaves this date's own week, cycle label and focus
+    alone — those belong to the calendar slot, not to the session.
+    """
+    if not corrections_path.exists():
+        return 0
+    spec = json.loads(corrections_path.read_text(encoding="utf-8"))
+    by_date = {d["date"]: d for d in days}
+    applied = 0
+    for corr in spec.get("corrections", []):
+        source = by_date.get(corr["copy_workout_from"])
+        if source is None:
+            # The source month hasn't been merged yet — leave it for a
+            # later merge rather than half-applying the correction.
+            print(f"  ⚠ correction source {corr['copy_workout_from']} not in manifest yet — skipped")
+            continue
+        for date in corr["dates"]:
+            day = by_date.get(date)
+            if day is None:
+                continue
+            day["session_notes"] = source["session_notes"]
+            day["sections"] = copy.deepcopy(source["sections"])
+            day["correction"] = {"copy_workout_from": corr["copy_workout_from"], "note": corr.get("note", "")}
+            applied += 1
+    return applied
+
+
+def merge_into_manifests(new_days: list[dict], manifests_path: Path,
+                          corrections_path: Path = DEFAULT_CORRECTIONS) -> int:
     existing = {"days": []}
     if manifests_path.exists():
         existing = json.loads(manifests_path.read_text(encoding="utf-8"))
     new_dates = {d["date"] for d in new_days}
     kept = [d for d in existing["days"] if d["date"] not in new_dates]
     alldays = sorted(kept + new_days, key=lambda d: d["date"])
+    n = apply_corrections(alldays, corrections_path)
+    if n:
+        print(f"  ✎ re-applied {n} published-programming correction(s)")
     manifests_path.write_text(json.dumps({"days": alldays}, ensure_ascii=False, indent=2), encoding="utf-8")
     return len(alldays)
 

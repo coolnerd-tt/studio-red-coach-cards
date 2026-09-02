@@ -1,0 +1,10 @@
+{
+  "_comment": "Corrections to the published Studio LFT programming. HQ occasionally publishes the wrong session for a date and the studio finds out afterwards. These are re-applied automatically on every merge (see apply_corrections in src/parse_lft_pdf.py), so re-parsing a month's PDF can't silently undo them. Each entry replaces the listed dates' workout (sections + session notes) with another date's, leaving the date's own week / cycle label / focus alone.",
+  "corrections": [
+    {
+      "dates": ["2026-09-02", "2026-09-03"],
+      "copy_workout_from": "2026-08-26",
+      "note": "The published Pump B2 W3 Day 2 Upper session was wrong; these days run the same workout as Aug 26/27."
+    }
+  ]
+}
