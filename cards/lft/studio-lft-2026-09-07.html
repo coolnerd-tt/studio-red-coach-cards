@@ -28,6 +28,19 @@
   .cycle-tag { display: inline-block; margin-left: 7px; font-family: 'Barlow Condensed', sans-serif; font-weight: 800; font-size: 12px; letter-spacing: 1px; text-transform: uppercase; padding: 1px 8px; border-radius: 10px; background: rgba(255,255,255,0.22); color: white; vertical-align: 1px; }
 
   .lft-wrap { padding: 14px; max-width: 640px; margin: 0 auto; }
+
+  .intro-drawer { background: var(--card); border: 1px solid var(--border); border-radius: 10px; margin-bottom: 12px; overflow: hidden; }
+  .intro-drawer > summary { list-style: none; cursor: pointer; padding: 12px 14px; font-family: 'Barlow Condensed', sans-serif; font-weight: 800; font-size: 18px; letter-spacing: 1px; text-transform: uppercase; color: #ddd; display: flex; align-items: center; gap: 9px; }
+  .intro-drawer > summary::-webkit-details-marker { display: none; }
+  .intro-drawer > summary:active { background: var(--card2); }
+  .intro-chev { color: var(--red); font-size: 15px; transition: transform 0.15s; display: inline-block; }
+  .intro-drawer[open] .intro-chev { transform: rotate(90deg); }
+  .intro-body { padding: 2px 14px 12px; border-top: 1px solid var(--border); }
+  .intro-line { font-size: 16.5px; color: #ddd; line-height: 1.45; margin-top: 10px; }
+  .intro-line b { color: var(--yellow); font-weight: 700; }
+  .intro-label { display: block; font-family: 'Barlow Condensed', sans-serif; font-weight: 700; font-size: 13px; letter-spacing: 1.2px; text-transform: uppercase; color: var(--muted); margin-bottom: 1px; }
+  .intro-blank { color: var(--muted); border-bottom: 1px dashed var(--muted); font-style: italic; }
+
   .cycle-banner { background: var(--card); border-left: 3px solid var(--yellow); border-radius: 0 8px 8px 0; padding: 10px 13px; margin-bottom: 12px; }
   .cycle-banner-head { font-family: 'Barlow Condensed', sans-serif; font-weight: 800; font-size: 19px; letter-spacing: 1px; text-transform: uppercase; color: var(--yellow); }
   .cycle-type { color: #ffe9a3; font-weight: 700; }
@@ -49,6 +62,10 @@
   .lft-ex-sr { font-family: 'Barlow Condensed', sans-serif; font-weight: 700; font-size: 19px; color: var(--yellow); letter-spacing: 0.5px; }
   .lft-loc { font-size: 13px; font-weight: 700; letter-spacing: 0.5px; text-transform: uppercase; color: var(--blue); background: rgba(74,158,232,0.15); border-radius: 10px; padding: 1px 8px; }
   .lft-ex-notes { font-size: 17.5px; color: #bbb; line-height: 1.45; margin-top: 4px; }
+  .lft-ex-cues { list-style: none; margin: 7px 0 0; padding: 7px 0 0; border-top: 1px solid var(--border); }
+  .lft-ex-cues li { position: relative; padding-left: 16px; font-size: 16px; font-style: italic; color: var(--yellow); line-height: 1.4; margin-top: 3px; }
+  .lft-ex-cues li::before { content: '“'; position: absolute; left: 0; top: 1px; font-style: normal; font-weight: 700; color: rgba(245,200,66,0.55); }
+  .lft-ex-cues li::after { content: '”'; font-style: normal; color: rgba(245,200,66,0.55); }
 
   .lft-note-row { display: flex; align-items: flex-start; gap: 8px; background: rgba(245,200,66,0.08); border: 1px dashed rgba(245,200,66,0.4); border-radius: 8px; padding: 8px 12px; margin-bottom: 8px; font-size: 15.5px; color: var(--yellow); }
   .lft-note-icon { flex-shrink: 0; }
@@ -71,6 +88,18 @@
 </div>
 
 <div class="lft-wrap">
+  <details class="intro-drawer">
+    <summary><span class="intro-chev">▸</span>Coach intro &amp; talk track</summary>
+    <div class="intro-body">
+      <div class="intro-line"><span class="intro-label">Welcome</span>Welcome to STUDIO LFT! My name is <span class="intro-blank">your name</span>.</div>
+      <div class="intro-line"><span class="intro-label">Today&#x27;s plan</span>Today's focus is <b>Lower Body</b> and we're in the <b>Pump</b> training cycle, week 4 of 6.</div>
+      <div class="intro-line"><span class="intro-label">Safety</span>Please use the catches and spot your partner. If you don't have a partner today, call me over and I'll spot you.</div>
+      <div class="intro-line"><span class="intro-label">Main lift</span>The main movement today is <b>Snatch Grip Elevated Deadlift</b> — I'll walk you through it right after training prep.</div>
+      <div class="intro-line"><span class="intro-label">Modifications</span>If you need a modification on anything as we go, call me over — there's an option for everyone.</div>
+      <div class="intro-line"><span class="intro-label">Let&#x27;s go</span>Alright — let's get pumped up to LFT!</div>
+    </div>
+  </details>
+
   <div class="cycle-banner">
     <div class="cycle-banner-head">Pump Cycle · <span class="cycle-type">Hypertrophy</span>
       <span class="cycle-meta">Block 2 · Week 4 of 6</span>
@@ -88,6 +117,7 @@
       <div class="lft-ex-body">
         <div class="lft-ex-top"><span class="lft-ex-name">Rack ASLR HS Stretch</span><span class="lft-ex-sr">:45 per side</span></div>
         <div class="lft-ex-notes">Prop one leg against rack upright while lying on floor. Press heel into upright</div>
+        <ul class="lft-ex-cues"><li>Press the heel into the upright</li><li>Other leg stays flat on the floor</li></ul>
       </div>
     </div>
     <div class="lft-ex-row">
@@ -95,6 +125,7 @@
       <div class="lft-ex-body">
         <div class="lft-ex-top"><span class="lft-ex-name">Dead Bug Leg Raise with Upper body Ball Squeeze</span><span class="lft-ex-sr">1:00</span></div>
         <div class="lft-ex-notes">Lying on back, squeeze ball with straight arms. Slowly raise and lower one leg at a time.</div>
+        <ul class="lft-ex-cues"><li>Squeeze the ball hard with straight arms</li><li>Low back stays flat as the leg lowers</li></ul>
       </div>
     </div>
     <div class="lft-ex-row">
@@ -102,6 +133,7 @@
       <div class="lft-ex-body">
         <div class="lft-ex-top"><span class="lft-ex-name">Quadruped Hip Extensions</span><span class="lft-ex-sr">:45 per side</span></div>
         <div class="lft-ex-notes">Tabletop position, slowly lift one leg towards the ceiling, keeping a neutral spine. . . This bracing will apply to the Main LFT in the workout.</div>
+        <ul class="lft-ex-cues"><li>Lift with the glute, spine stays neutral</li><li>Slow up, slow down</li></ul>
       </div>
     </div>
     <div class="lft-ex-row">
@@ -109,6 +141,7 @@
       <div class="lft-ex-body">
         <div class="lft-ex-top"><span class="lft-ex-name">KB anterior Loaded Good Morning</span><span class="lft-ex-sr">1:00</span></div>
         <div class="lft-ex-notes">Create tension, slowly hinge into GM, lower with control and lift repeatedly. Reset every 3-5 reps.</div>
+        <ul class="lft-ex-cues"><li>Hinge back, chest points to the floor</li><li>Squeeze the glutes to stand</li></ul>
       </div>
     </div>
     <div class="lft-ex-row">
@@ -116,6 +149,7 @@
       <div class="lft-ex-body">
         <div class="lft-ex-top"><span class="lft-ex-name">KB Lateral Shift Swing 2hand</span><span class="lft-ex-sr">1:00</span></div>
         <div class="lft-ex-notes">Wide side, shift to one side as the KB goes under the butt, stand up as you shift back to center and KB is swung. Repeat on other side. These are not meant to be heavy, just fast.</div>
+        <ul class="lft-ex-cues"><li>Shift as the bell goes under the hips</li><li>Stand tall as it comes back to center</li></ul>
       </div>
     </div>
   </div>
@@ -128,6 +162,7 @@
       <div class="lft-ex-body">
         <div class="lft-ex-top"><span class="lft-ex-name">Snatch Grip Elevated Deadlift</span><span class="lft-ex-sr">3-4 sets of 5+5</span></div>
         <div class="lft-ex-notes">Use a moderately heavy weight; 1 set = 5 reps + 10s rest + 5 reps only setting the bar down quickly during 10s to reset grip. Snatch grip is hands as close to collars of barbell as possible. Feet underneath hips. Use the catches at their lowest position to lift from.</div>
+        <ul class="lft-ex-cues"><li>Wide grip, chest up, back flat</li><li>Only set the bar down during the rest</li></ul>
       </div>
     </div>
     <div class="lft-note-row">
@@ -143,6 +178,7 @@
       <div class="lft-ex-body">
         <div class="lft-ex-top"><span class="lft-ex-name">Heels Elevated Goblet Squat</span><span class="lft-ex-sr">2- 4 x 12</span><span class="lft-loc">in the GAP</span></div>
         <div class="lft-ex-notes">DB in goblet position, sitting deep into squat while maintaining neutral spine. Toes pointed straight ahead.</div>
+        <ul class="lft-ex-cues"><li>Chest tall, sit straight down</li><li>Only set the DB down during the rest</li></ul>
       </div>
     </div>
     <div class="lft-ex-row">
@@ -150,6 +186,7 @@
       <div class="lft-ex-body">
         <div class="lft-ex-top"><span class="lft-ex-name">Copenhagen March</span><span class="lft-ex-sr">2- 4 x 12e</span><span class="lft-loc">in the ALLEY</span></div>
         <div class="lft-ex-notes">ahead. Tall side plank position with top leg on box, bottom leg in bent position. Drop hip to ground. Shorten top leg position as needed.</div>
+        <ul class="lft-ex-cues"><li>Drive the top leg down into the box</li><li>Hips stay stacked, don&#x27;t roll back</li></ul>
       </div>
     </div>
     <div class="lft-ex-row">
@@ -157,6 +194,7 @@
       <div class="lft-ex-body">
         <div class="lft-ex-top"><span class="lft-ex-name">Standing Band Hamstring Curl</span><span class="lft-ex-sr">2- 4 x 12e</span><span class="lft-loc">in the RACK</span></div>
         <div class="lft-ex-notes">Keep catches at lowest position, place band across. Stand with band against back of legs. One leg at a time, curl heel to butt against band resistance. Use rack for support.</div>
+        <ul class="lft-ex-cues"><li>Pull the heel to the butt</li><li>Hips stay square, torso still</li></ul>
       </div>
     </div>
   </div>
@@ -169,6 +207,7 @@
       <div class="lft-ex-body">
         <div class="lft-ex-top"><span class="lft-ex-name">Kickstand 2DB RDL</span><span class="lft-ex-sr">2- 4 x 12</span><span class="lft-loc">in the GAP</span></div>
         <div class="lft-ex-notes">Holding weight in each hand, most of weight on plant leg. Hinge back as you shave the DBs down the front of the body.</div>
+        <ul class="lft-ex-cues"><li>Most of the weight on the front leg</li><li>Shave the DBs down the front of the leg</li></ul>
       </div>
     </div>
     <div class="lft-ex-row">
@@ -176,6 +215,7 @@
       <div class="lft-ex-body">
         <div class="lft-ex-top"><span class="lft-ex-name">Band Assisted Reverse Nordic</span><span class="lft-ex-sr">2- 4 x 12</span><span class="lft-loc">in the RACK</span></div>
         <div class="lft-ex-notes">the front of the body. High band attachment; hold band as you lean backwards, press shins through floor/bench to return to top.</div>
+        <ul class="lft-ex-cues"><li>Squeeze the glutes to keep hips open</li><li>Only lean as far as you can come back from</li></ul>
       </div>
     </div>
     <div class="lft-ex-row">
@@ -183,6 +223,7 @@
       <div class="lft-ex-body">
         <div class="lft-ex-top"><span class="lft-ex-name">Seated Deficit Calf Raise</span><span class="lft-ex-sr">2- 4 x 12</span><span class="lft-loc">in the ALLEY</span></div>
         <div class="lft-ex-notes">return to top. Sitting on Box with plate under forefoot place KB on each knee, drop the heel then raise.</div>
+        <ul class="lft-ex-cues"><li>Drop the heel for a full stretch</li><li>Pause at the top of every rep</li></ul>
       </div>
     </div>
   </div>
@@ -195,6 +236,7 @@
       <div class="lft-ex-body">
         <div class="lft-ex-top"><span class="lft-ex-name">Bodyweight split squat</span><span class="lft-ex-sr">2:00</span></div>
         <div class="lft-ex-notes">Hit 10 reps per side, no breaks (10s if needed) for the entire working clock. The goal is to move for the entire 2mins.</div>
+        <ul class="lft-ex-cues"><li>Torso stays upright the entire set</li><li>Ten a side, keep moving</li></ul>
       </div>
     </div>
   </div>

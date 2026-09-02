@@ -25,6 +25,7 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
 DEFAULT_MANIFESTS = ROOT / "data" / "lft-day-manifests.json"
+DEFAULT_CUES = ROOT / "data" / "lft-exercise-cues.json"
 DEFAULT_OUT = ROOT / "cards" / "lft"
 
 FOCUS_COLOR = {"Lower": "lower", "Upper": "upper", "Full": "full"}
@@ -83,6 +84,60 @@ def fmt_date_slashes(iso: str) -> str:
     return f"{m} / {d} / {y}"
 
 
+def norm_name(s: str) -> str:
+    """Key format used by lft-exercise-cues.json."""
+    s = s.lower().replace(".", " ").replace("-", " ")
+    return re.sub(r"\s+", " ", s).strip()
+
+
+_CUES: dict[str, list[str]] | None = None
+
+
+def cues_for(name: str, cues_path: Path = DEFAULT_CUES) -> list[str]:
+    """The one or two coaching cues for an exercise, if we have any."""
+    global _CUES
+    if _CUES is None:
+        _CUES = json.loads(cues_path.read_text(encoding="utf-8"))["cues"] if cues_path.exists() else {}
+    return _CUES.get(norm_name(name or ""), [])
+
+
+def main_lift_of(day: dict) -> str:
+    """The day's headline lift, for the coach's intro script.
+
+    Build/Pump/Power/Brawn weeks label it "Main LFT"; benchmark weeks split
+    the session into LFT 1-4 instead, so fall back to the first of those.
+    """
+    for wanted in ("Main LFT", "LFT 1"):
+        for sec in day.get("sections", []):
+            if sec["name"] == wanted:
+                names = [e["name"] for e in sec["exercises"] if e.get("name")]
+                if names:
+                    return " and ".join(names)
+    return ""
+
+
+def intro_script(day: dict) -> list[tuple[str, str]]:
+    """The opening talk track, with the day's own details filled in."""
+    focus = day.get("focus") or ""
+    day_name = f"{focus} Body" if focus in ("Upper", "Lower", "Full") else "today's session"
+    cycle = cycle_for(day)
+    if cycle:
+        cycle_phrase = f"we're in the <b>{escape(cycle['name'])}</b> training cycle, week {cycle['week']} of {CYCLE_LENGTH_WEEKS}"
+    else:
+        cycle_phrase = "this is a <b>benchmark week</b>, so we're testing where your strength is at"
+    lift = main_lift_of(day)
+    lift_line = (f"The main movement today is <b>{escape(lift)}</b> — I'll walk you through it right after training prep."
+                 if lift else "I'll walk you through the main movement right after training prep.")
+    return [
+        ("Welcome", "Welcome to STUDIO LFT! My name is <span class=\"intro-blank\">your name</span>."),
+        ("Today's plan", f"Today's focus is <b>{escape(day_name)}</b> and {cycle_phrase}."),
+        ("Safety", "Please use the catches and spot your partner. If you don't have a partner today, call me over and I'll spot you."),
+        ("Main lift", lift_line),
+        ("Modifications", "If you need a modification on anything as we go, call me over — there's an option for everyone."),
+        ("Let's go", "Alright — let's get pumped up to LFT!"),
+    ]
+
+
 # --------------------------------------------------------------------------- #
 # Section / row rendering
 # --------------------------------------------------------------------------- #
@@ -104,11 +159,17 @@ def render_exercise_row(ex: dict) -> str:
     sets_reps = ex.get("sets_reps", "")
     notes = ex.get("notes", "")
 
+    cue_html = ""
+    cues = cues_for(name)
+    if cues:
+        items = "".join(f'<li>{escape(c)}</li>' for c in cues)
+        cue_html = f'\n        <ul class="lft-ex-cues">{items}</ul>'
+
     return f"""    <div class="lft-ex-row">
       <div class="lft-ex-label">{escape(ex.get("label", ""))}</div>
       <div class="lft-ex-body">
         <div class="lft-ex-top">{name_html}<span class="lft-ex-sr">{escape(sets_reps)}</span>{loc_html}</div>
-        <div class="lft-ex-notes">{escape(notes)}</div>
+        <div class="lft-ex-notes">{escape(notes)}</div>{cue_html}
       </div>
     </div>"""
 
@@ -134,6 +195,11 @@ def render_card(day: dict) -> str:
     week_label = f"Week {day['week']}" if day.get("week") else "Benchmark"
     title = f"Studio LFT · {fmt_date_slashes(day['date'])}"
     sections_html = "\n\n".join(render_section(s) for s in day["sections"])
+
+    intro_html = "".join(
+        f'      <div class="intro-line"><span class="intro-label">{escape(label)}</span>{text}</div>\n'
+        for label, text in intro_script(day)
+    )
 
     cycle = cycle_for(day)
     cycle_tag = f'<span class="cycle-tag">{escape(cycle["name"])}</span>' if cycle else ""
@@ -175,6 +241,12 @@ def render_card(day: dict) -> str:
 </div>
 
 <div class="lft-wrap">
+  <details class="intro-drawer">
+    <summary><span class="intro-chev">▸</span>Coach intro &amp; talk track</summary>
+    <div class="intro-body">
+{intro_html}    </div>
+  </details>
+
 {cycle_banner}  <div class="session-notes">{escape(day.get("session_notes", ""))}</div>
 
 {sections_html}
@@ -317,6 +389,19 @@ STYLE = """
   .cycle-tag { display: inline-block; margin-left: 7px; font-family: 'Barlow Condensed', sans-serif; font-weight: 800; font-size: 12px; letter-spacing: 1px; text-transform: uppercase; padding: 1px 8px; border-radius: 10px; background: rgba(255,255,255,0.22); color: white; vertical-align: 1px; }
 
   .lft-wrap { padding: 14px; max-width: 640px; margin: 0 auto; }
+
+  .intro-drawer { background: var(--card); border: 1px solid var(--border); border-radius: 10px; margin-bottom: 12px; overflow: hidden; }
+  .intro-drawer > summary { list-style: none; cursor: pointer; padding: 12px 14px; font-family: 'Barlow Condensed', sans-serif; font-weight: 800; font-size: 18px; letter-spacing: 1px; text-transform: uppercase; color: #ddd; display: flex; align-items: center; gap: 9px; }
+  .intro-drawer > summary::-webkit-details-marker { display: none; }
+  .intro-drawer > summary:active { background: var(--card2); }
+  .intro-chev { color: var(--red); font-size: 15px; transition: transform 0.15s; display: inline-block; }
+  .intro-drawer[open] .intro-chev { transform: rotate(90deg); }
+  .intro-body { padding: 2px 14px 12px; border-top: 1px solid var(--border); }
+  .intro-line { font-size: 16.5px; color: #ddd; line-height: 1.45; margin-top: 10px; }
+  .intro-line b { color: var(--yellow); font-weight: 700; }
+  .intro-label { display: block; font-family: 'Barlow Condensed', sans-serif; font-weight: 700; font-size: 13px; letter-spacing: 1.2px; text-transform: uppercase; color: var(--muted); margin-bottom: 1px; }
+  .intro-blank { color: var(--muted); border-bottom: 1px dashed var(--muted); font-style: italic; }
+
   .cycle-banner { background: var(--card); border-left: 3px solid var(--yellow); border-radius: 0 8px 8px 0; padding: 10px 13px; margin-bottom: 12px; }
   .cycle-banner-head { font-family: 'Barlow Condensed', sans-serif; font-weight: 800; font-size: 19px; letter-spacing: 1px; text-transform: uppercase; color: var(--yellow); }
   .cycle-type { color: #ffe9a3; font-weight: 700; }
@@ -338,6 +423,10 @@ STYLE = """
   .lft-ex-sr { font-family: 'Barlow Condensed', sans-serif; font-weight: 700; font-size: 19px; color: var(--yellow); letter-spacing: 0.5px; }
   .lft-loc { font-size: 13px; font-weight: 700; letter-spacing: 0.5px; text-transform: uppercase; color: var(--blue); background: rgba(74,158,232,0.15); border-radius: 10px; padding: 1px 8px; }
   .lft-ex-notes { font-size: 17.5px; color: #bbb; line-height: 1.45; margin-top: 4px; }
+  .lft-ex-cues { list-style: none; margin: 7px 0 0; padding: 7px 0 0; border-top: 1px solid var(--border); }
+  .lft-ex-cues li { position: relative; padding-left: 16px; font-size: 16px; font-style: italic; color: var(--yellow); line-height: 1.4; margin-top: 3px; }
+  .lft-ex-cues li::before { content: '“'; position: absolute; left: 0; top: 1px; font-style: normal; font-weight: 700; color: rgba(245,200,66,0.55); }
+  .lft-ex-cues li::after { content: '”'; font-style: normal; color: rgba(245,200,66,0.55); }
 
   .lft-note-row { display: flex; align-items: flex-start; gap: 8px; background: rgba(245,200,66,0.08); border: 1px dashed rgba(245,200,66,0.4); border-radius: 8px; padding: 8px 12px; margin-bottom: 8px; font-size: 15.5px; color: var(--yellow); }
   .lft-note-icon { flex-shrink: 0; }

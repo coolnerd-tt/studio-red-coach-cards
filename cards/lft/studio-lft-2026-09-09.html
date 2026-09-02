@@ -28,6 +28,19 @@
   .cycle-tag { display: inline-block; margin-left: 7px; font-family: 'Barlow Condensed', sans-serif; font-weight: 800; font-size: 12px; letter-spacing: 1px; text-transform: uppercase; padding: 1px 8px; border-radius: 10px; background: rgba(255,255,255,0.22); color: white; vertical-align: 1px; }
 
   .lft-wrap { padding: 14px; max-width: 640px; margin: 0 auto; }
+
+  .intro-drawer { background: var(--card); border: 1px solid var(--border); border-radius: 10px; margin-bottom: 12px; overflow: hidden; }
+  .intro-drawer > summary { list-style: none; cursor: pointer; padding: 12px 14px; font-family: 'Barlow Condensed', sans-serif; font-weight: 800; font-size: 18px; letter-spacing: 1px; text-transform: uppercase; color: #ddd; display: flex; align-items: center; gap: 9px; }
+  .intro-drawer > summary::-webkit-details-marker { display: none; }
+  .intro-drawer > summary:active { background: var(--card2); }
+  .intro-chev { color: var(--red); font-size: 15px; transition: transform 0.15s; display: inline-block; }
+  .intro-drawer[open] .intro-chev { transform: rotate(90deg); }
+  .intro-body { padding: 2px 14px 12px; border-top: 1px solid var(--border); }
+  .intro-line { font-size: 16.5px; color: #ddd; line-height: 1.45; margin-top: 10px; }
+  .intro-line b { color: var(--yellow); font-weight: 700; }
+  .intro-label { display: block; font-family: 'Barlow Condensed', sans-serif; font-weight: 700; font-size: 13px; letter-spacing: 1.2px; text-transform: uppercase; color: var(--muted); margin-bottom: 1px; }
+  .intro-blank { color: var(--muted); border-bottom: 1px dashed var(--muted); font-style: italic; }
+
   .cycle-banner { background: var(--card); border-left: 3px solid var(--yellow); border-radius: 0 8px 8px 0; padding: 10px 13px; margin-bottom: 12px; }
   .cycle-banner-head { font-family: 'Barlow Condensed', sans-serif; font-weight: 800; font-size: 19px; letter-spacing: 1px; text-transform: uppercase; color: var(--yellow); }
   .cycle-type { color: #ffe9a3; font-weight: 700; }
@@ -49,6 +62,10 @@
   .lft-ex-sr { font-family: 'Barlow Condensed', sans-serif; font-weight: 700; font-size: 19px; color: var(--yellow); letter-spacing: 0.5px; }
   .lft-loc { font-size: 13px; font-weight: 700; letter-spacing: 0.5px; text-transform: uppercase; color: var(--blue); background: rgba(74,158,232,0.15); border-radius: 10px; padding: 1px 8px; }
   .lft-ex-notes { font-size: 17.5px; color: #bbb; line-height: 1.45; margin-top: 4px; }
+  .lft-ex-cues { list-style: none; margin: 7px 0 0; padding: 7px 0 0; border-top: 1px solid var(--border); }
+  .lft-ex-cues li { position: relative; padding-left: 16px; font-size: 16px; font-style: italic; color: var(--yellow); line-height: 1.4; margin-top: 3px; }
+  .lft-ex-cues li::before { content: '“'; position: absolute; left: 0; top: 1px; font-style: normal; font-weight: 700; color: rgba(245,200,66,0.55); }
+  .lft-ex-cues li::after { content: '”'; font-style: normal; color: rgba(245,200,66,0.55); }
 
   .lft-note-row { display: flex; align-items: flex-start; gap: 8px; background: rgba(245,200,66,0.08); border: 1px dashed rgba(245,200,66,0.4); border-radius: 8px; padding: 8px 12px; margin-bottom: 8px; font-size: 15.5px; color: var(--yellow); }
   .lft-note-icon { flex-shrink: 0; }
@@ -71,6 +88,18 @@
 </div>
 
 <div class="lft-wrap">
+  <details class="intro-drawer">
+    <summary><span class="intro-chev">▸</span>Coach intro &amp; talk track</summary>
+    <div class="intro-body">
+      <div class="intro-line"><span class="intro-label">Welcome</span>Welcome to STUDIO LFT! My name is <span class="intro-blank">your name</span>.</div>
+      <div class="intro-line"><span class="intro-label">Today&#x27;s plan</span>Today's focus is <b>Upper Body</b> and we're in the <b>Pump</b> training cycle, week 4 of 6.</div>
+      <div class="intro-line"><span class="intro-label">Safety</span>Please use the catches and spot your partner. If you don't have a partner today, call me over and I'll spot you.</div>
+      <div class="intro-line"><span class="intro-label">Main lift</span>The main movement today is <b>DB Bench Press</b> — I'll walk you through it right after training prep.</div>
+      <div class="intro-line"><span class="intro-label">Modifications</span>If you need a modification on anything as we go, call me over — there's an option for everyone.</div>
+      <div class="intro-line"><span class="intro-label">Let&#x27;s go</span>Alright — let's get pumped up to LFT!</div>
+    </div>
+  </details>
+
   <div class="cycle-banner">
     <div class="cycle-banner-head">Pump Cycle · <span class="cycle-type">Hypertrophy</span>
       <span class="cycle-meta">Block 2 · Week 4 of 6</span>
@@ -88,6 +117,7 @@
       <div class="lft-ex-body">
         <div class="lft-ex-top"><a class="lft-ex-name" href="https://www.dropbox.com/scl/fi/q0gp18xdlaxh5l26zl8rb/Band-Face-Pull.mov?rlkey=nn2fv5ag0n38sikgikim3ntrl&amp;st=j6dykfj3&amp;dl=0" target="_blank" rel="noopener">Hinged Over Single Arm Lat Stretch</a><span class="lft-ex-sr">:45 per side</span></div>
         <div class="lft-ex-notes">Hold onto rack with 1 arm, thumbs down position. Shift the hips away from the stretching arm.</div>
+        <ul class="lft-ex-cues"><li>Thumb down, hips shift away</li><li>Let the ribs open as you breathe</li></ul>
       </div>
     </div>
     <div class="lft-ex-row">
@@ -95,6 +125,7 @@
       <div class="lft-ex-body">
         <div class="lft-ex-top"><span class="lft-ex-name">Band Over And Back</span><span class="lft-ex-sr">1:00</span></div>
         <div class="lft-ex-notes">Take the band overhead with lateral tension, then straight down the spine rather than away from the back behind.</div>
+        <ul class="lft-ex-cues"><li>Keep tension wide the whole way</li><li>Go only as wide as the shoulders allow</li></ul>
       </div>
     </div>
     <div class="lft-ex-row">
@@ -102,6 +133,7 @@
       <div class="lft-ex-body">
         <div class="lft-ex-top"><span class="lft-ex-name">Band Pec Fly</span><span class="lft-ex-sr">1:30</span></div>
         <div class="lft-ex-notes">Wrap band behind upper back, hook around each palm. Pull arms together in front in fly motion. . This bracing will apply to the Main LFT in the workout.</div>
+        <ul class="lft-ex-cues"><li>Meet the hands out in front of the chest</li><li>Slight bend in the elbows, hold it</li></ul>
       </div>
     </div>
     <div class="lft-ex-row">
@@ -109,6 +141,7 @@
       <div class="lft-ex-body">
         <div class="lft-ex-top"><span class="lft-ex-name">Band Face Pull</span><span class="lft-ex-sr">1:00</span></div>
         <div class="lft-ex-notes">LFT in the workout. Move band to face height. Pull with both hands, keeping band in the fingers.</div>
+        <ul class="lft-ex-cues"><li>Pull to eyebrow height, elbows high</li><li>Squeeze the shoulder blades at the end</li></ul>
       </div>
     </div>
     <div class="lft-ex-row">
@@ -116,6 +149,7 @@
       <div class="lft-ex-body">
         <div class="lft-ex-top"><span class="lft-ex-name">Ball Slam</span><span class="lft-ex-sr">1:00</span></div>
         <div class="lft-ex-notes">Use your lats to slam the ball down.</div>
+        <ul class="lft-ex-cues"><li>Squat to pick up — back flat, chest tall</li><li>Load the hips and slam with intent — full body explosion</li></ul>
       </div>
     </div>
   </div>
@@ -128,6 +162,7 @@
       <div class="lft-ex-body">
         <div class="lft-ex-top"><span class="lft-ex-name">DB Bench Press</span><span class="lft-ex-sr">3-4 sets of 5+5+5</span></div>
         <div class="lft-ex-notes">moderately heavy weight; 1 set = 5 reps + 10s rest + 5 reps + 10s rest + 5 reps; only setting the DBs down quickly during 10s to reset grip.</div>
+        <ul class="lft-ex-cues"><li>Elbows about 45 degrees, not flared wide</li><li>Control the DBs down every rep</li></ul>
       </div>
     </div>
     <div class="lft-ex-row">
@@ -147,6 +182,7 @@
       <div class="lft-ex-body">
         <div class="lft-ex-top"><span class="lft-ex-name">Body Row</span><span class="lft-ex-sr">2- 4 x 12</span><span class="lft-loc">in the RACK</span></div>
         <div class="lft-ex-notes">Pull Chest to bar. Legs can be straight or bent. Set bar to hip height as a general starting point.</div>
+        <ul class="lft-ex-cues"><li>Pull the chest to the bar</li><li>Squeeze the glutes to stay in one line</li></ul>
       </div>
     </div>
     <div class="lft-ex-row">
@@ -154,6 +190,7 @@
       <div class="lft-ex-body">
         <div class="lft-ex-top"><span class="lft-ex-name">DB Skull Crusher</span><span class="lft-ex-sr">2- 4 x 12</span><span class="lft-loc">in the ALLEY</span></div>
         <div class="lft-ex-notes">point. Hold DB in each hand. Take overhead in lying position for big stretch on triceps. Bench set flat to the rack)</div>
+        <ul class="lft-ex-cues"><li>Elbows stay pointed at the ceiling</li><li>Lower to the forehead, not the chest</li></ul>
       </div>
     </div>
     <div class="lft-ex-row">
@@ -161,6 +198,7 @@
       <div class="lft-ex-body">
         <div class="lft-ex-top"><span class="lft-ex-name">Lu Raise</span><span class="lft-ex-sr">2- 4 x 12</span><span class="lft-loc">in the GAP</span></div>
         <div class="lft-ex-notes">Hold plates in each hand. Raise up to overhead position. Let hands rotate as plates are raised.</div>
+        <ul class="lft-ex-cues"><li>Let the hands rotate as the plates go up</li><li>Go light — this is harder than it looks</li></ul>
       </div>
     </div>
   </div>
@@ -173,6 +211,7 @@
       <div class="lft-ex-body">
         <div class="lft-ex-top"><span class="lft-ex-name">DB Incline Pec Fly</span><span class="lft-ex-sr">2- 4 x 12</span><span class="lft-loc">in the ALLEY</span></div>
         <div class="lft-ex-notes">45 degree bench, control the weight down with a slightly bent elbow.</div>
+        <ul class="lft-ex-cues"><li>Control the weight down, slightly bent elbow</li><li>Squeeze the chest at the top</li></ul>
       </div>
     </div>
     <div class="lft-ex-row">
@@ -180,6 +219,7 @@
       <div class="lft-ex-body">
         <div class="lft-ex-top"><span class="lft-ex-name">Band Reverse Grip Curl</span><span class="lft-ex-sr">2- 4 x 12</span><span class="lft-loc">in the GAP</span></div>
         <div class="lft-ex-notes">with a slightly bent elbow. Holding band with both hands or across wrists if needed and standing on rest. Curl up with palms facing down, slowly control lowering phase.</div>
+        <ul class="lft-ex-cues"><li>Palms down, wrists stay straight</li><li>Elbows glued to the ribs</li></ul>
       </div>
     </div>
     <div class="lft-ex-row">
@@ -187,6 +227,7 @@
       <div class="lft-ex-body">
         <div class="lft-ex-top"><span class="lft-ex-name">½ Kneeling high Angle Face Pull</span><span class="lft-ex-sr">2- 4 x 12</span><span class="lft-loc">in the RACK</span></div>
         <div class="lft-ex-notes">phase. Attach band to pull up bar. Pull band down to eyebrow level by squeezing shoulder blades together. Slowly return to straight arm position.</div>
+        <ul class="lft-ex-cues"><li>Pull to eyebrow level</li><li>Squeeze the shoulder blades together</li></ul>
       </div>
     </div>
   </div>
@@ -199,6 +240,7 @@
       <div class="lft-ex-body">
         <div class="lft-ex-top"><span class="lft-ex-name">KB Halo</span><span class="lft-ex-sr">2:00</span></div>
         <div class="lft-ex-notes">Ideally use ½ kneeling position to prevent loading the back. Standing is ok if Knee can’t handle floor. Alternate dirctions. Rest 10s as needed then get right back to the exercise.</div>
+        <ul class="lft-ex-cues"><li>Tight circle — keep the bell close to the head</li><li>Duck slightly as it passes behind</li></ul>
       </div>
     </div>
   </div>

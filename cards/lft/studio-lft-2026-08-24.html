@@ -28,6 +28,19 @@
   .cycle-tag { display: inline-block; margin-left: 7px; font-family: 'Barlow Condensed', sans-serif; font-weight: 800; font-size: 12px; letter-spacing: 1px; text-transform: uppercase; padding: 1px 8px; border-radius: 10px; background: rgba(255,255,255,0.22); color: white; vertical-align: 1px; }
 
   .lft-wrap { padding: 14px; max-width: 640px; margin: 0 auto; }
+
+  .intro-drawer { background: var(--card); border: 1px solid var(--border); border-radius: 10px; margin-bottom: 12px; overflow: hidden; }
+  .intro-drawer > summary { list-style: none; cursor: pointer; padding: 12px 14px; font-family: 'Barlow Condensed', sans-serif; font-weight: 800; font-size: 18px; letter-spacing: 1px; text-transform: uppercase; color: #ddd; display: flex; align-items: center; gap: 9px; }
+  .intro-drawer > summary::-webkit-details-marker { display: none; }
+  .intro-drawer > summary:active { background: var(--card2); }
+  .intro-chev { color: var(--red); font-size: 15px; transition: transform 0.15s; display: inline-block; }
+  .intro-drawer[open] .intro-chev { transform: rotate(90deg); }
+  .intro-body { padding: 2px 14px 12px; border-top: 1px solid var(--border); }
+  .intro-line { font-size: 16.5px; color: #ddd; line-height: 1.45; margin-top: 10px; }
+  .intro-line b { color: var(--yellow); font-weight: 700; }
+  .intro-label { display: block; font-family: 'Barlow Condensed', sans-serif; font-weight: 700; font-size: 13px; letter-spacing: 1.2px; text-transform: uppercase; color: var(--muted); margin-bottom: 1px; }
+  .intro-blank { color: var(--muted); border-bottom: 1px dashed var(--muted); font-style: italic; }
+
   .cycle-banner { background: var(--card); border-left: 3px solid var(--yellow); border-radius: 0 8px 8px 0; padding: 10px 13px; margin-bottom: 12px; }
   .cycle-banner-head { font-family: 'Barlow Condensed', sans-serif; font-weight: 800; font-size: 19px; letter-spacing: 1px; text-transform: uppercase; color: var(--yellow); }
   .cycle-type { color: #ffe9a3; font-weight: 700; }
@@ -49,6 +62,10 @@
   .lft-ex-sr { font-family: 'Barlow Condensed', sans-serif; font-weight: 700; font-size: 19px; color: var(--yellow); letter-spacing: 0.5px; }
   .lft-loc { font-size: 13px; font-weight: 700; letter-spacing: 0.5px; text-transform: uppercase; color: var(--blue); background: rgba(74,158,232,0.15); border-radius: 10px; padding: 1px 8px; }
   .lft-ex-notes { font-size: 17.5px; color: #bbb; line-height: 1.45; margin-top: 4px; }
+  .lft-ex-cues { list-style: none; margin: 7px 0 0; padding: 7px 0 0; border-top: 1px solid var(--border); }
+  .lft-ex-cues li { position: relative; padding-left: 16px; font-size: 16px; font-style: italic; color: var(--yellow); line-height: 1.4; margin-top: 3px; }
+  .lft-ex-cues li::before { content: '“'; position: absolute; left: 0; top: 1px; font-style: normal; font-weight: 700; color: rgba(245,200,66,0.55); }
+  .lft-ex-cues li::after { content: '”'; font-style: normal; color: rgba(245,200,66,0.55); }
 
   .lft-note-row { display: flex; align-items: flex-start; gap: 8px; background: rgba(245,200,66,0.08); border: 1px dashed rgba(245,200,66,0.4); border-radius: 8px; padding: 8px 12px; margin-bottom: 8px; font-size: 15.5px; color: var(--yellow); }
   .lft-note-icon { flex-shrink: 0; }
@@ -71,6 +88,18 @@
 </div>
 
 <div class="lft-wrap">
+  <details class="intro-drawer">
+    <summary><span class="intro-chev">▸</span>Coach intro &amp; talk track</summary>
+    <div class="intro-body">
+      <div class="intro-line"><span class="intro-label">Welcome</span>Welcome to STUDIO LFT! My name is <span class="intro-blank">your name</span>.</div>
+      <div class="intro-line"><span class="intro-label">Today&#x27;s plan</span>Today's focus is <b>Lower Body</b> and we're in the <b>Pump</b> training cycle, week 2 of 6.</div>
+      <div class="intro-line"><span class="intro-label">Safety</span>Please use the catches and spot your partner. If you don't have a partner today, call me over and I'll spot you.</div>
+      <div class="intro-line"><span class="intro-label">Main lift</span>The main movement today is <b>Back Squat</b> — I'll walk you through it right after training prep.</div>
+      <div class="intro-line"><span class="intro-label">Modifications</span>If you need a modification on anything as we go, call me over — there's an option for everyone.</div>
+      <div class="intro-line"><span class="intro-label">Let&#x27;s go</span>Alright — let's get pumped up to LFT!</div>
+    </div>
+  </details>
+
   <div class="cycle-banner">
     <div class="cycle-banner-head">Pump Cycle · <span class="cycle-type">Hypertrophy</span>
       <span class="cycle-meta">Block 2 · Week 2 of 6</span>
@@ -88,6 +117,7 @@
       <div class="lft-ex-body">
         <div class="lft-ex-top"><a class="lft-ex-name" href="https://www.dropbox.com/scl/fi/pleguc8vt888uc8cmttku/Bulgarian-HF-Stretch.mov?rlkey=x667qhgbgc9kxpj77b4x1l8da&amp;st=ohhtu5zq&amp;dl=0" target="_blank" rel="noopener">Bulgarian Hip Flexor Stretch</a><span class="lft-ex-sr">:45 per side</span></div>
         <div class="lft-ex-notes">Rear foot elevated. Lower slowly intro stretch, squeeze glutes and quads to get a deeper stretch sensation.</div>
+        <ul class="lft-ex-cues"><li>Squeeze the glute of the back leg</li><li>Lower slowly into the stretch</li></ul>
       </div>
     </div>
     <div class="lft-ex-row">
@@ -95,6 +125,7 @@
       <div class="lft-ex-body">
         <div class="lft-ex-top"><a class="lft-ex-name" href="https://www.dropbox.com/scl/fi/qwd10e64w3wykr2ectiyc/4-Point-Rocking.mov?rlkey=oaobl3h50oyudjy5ywffksely&amp;st=c1p3zgsh&amp;dl=0" target="_blank" rel="noopener">4pt Rocking</a><span class="lft-ex-sr">1:00</span></div>
         <div class="lft-ex-notes">In table to position, slightly lift knees off ground, rock back and forth by pushing/pulling with arms to open up ankles and knees</div>
+        <ul class="lft-ex-cues"><li>Push and pull with the arms to find range</li><li>Keep the knees just off the floor</li></ul>
       </div>
     </div>
     <div class="lft-ex-row">
@@ -102,6 +133,7 @@
       <div class="lft-ex-body">
         <div class="lft-ex-top"><a class="lft-ex-name" href="https://www.dropbox.com/scl/fi/0jqno5xjfh321gosyi3k6/Quadruped-Hip-Circles.mov?rlkey=a4mkml85mwlz32rhzabmb8ns1&amp;st=57xg4jav&amp;dl=0" target="_blank" rel="noopener">Quadruped Hip Circles</a><span class="lft-ex-sr">:45 per side</span></div>
         <div class="lft-ex-notes">Table top position, make slow circles with the knee, trying to get bigger with each pass. This bracing will apply to the Main LFT in the workout.</div>
+        <ul class="lft-ex-cues"><li>Slow circles, bigger with each pass</li><li>Back stays flat — no rocking</li></ul>
       </div>
     </div>
     <div class="lft-ex-row">
@@ -109,6 +141,7 @@
       <div class="lft-ex-body">
         <div class="lft-ex-top"><a class="lft-ex-name" href="https://www.dropbox.com/scl/fi/w2z3pie9w2c1vxwqdgpb5/BW-Squat-with-Pause.mov?rlkey=9esmm7b57rsr4xax5fcxmdeu2&amp;st=63ob1t9b&amp;dl=0" target="_blank" rel="noopener">BW Squat</a><span class="lft-ex-sr">1:00</span></div>
         <div class="lft-ex-notes">Create tension, slowly pull into deep squat position , press out to stand up.</div>
+        <ul class="lft-ex-cues"><li>Slow on the way down, own the bottom</li><li>Press the floor away to stand</li></ul>
       </div>
     </div>
     <div class="lft-ex-row">
@@ -116,6 +149,7 @@
       <div class="lft-ex-body">
         <div class="lft-ex-top"><a class="lft-ex-name" href="https://www.dropbox.com/scl/fi/mlcbkaglg0e9f0eqfpxhk/Squat-Jump.mp4?rlkey=t568w8g8kpd1oh5sznujun8es&amp;st=m147yp2p&amp;dl=0" target="_blank" rel="noopener">Squat Jump</a><span class="lft-ex-sr">1:00</span></div>
         <div class="lft-ex-notes">1 jump at a time, setting up each one and landing with control in deep squat.</div>
+        <ul class="lft-ex-cues"><li>One jump at a time — set each one up</li><li>Land in a deep squat with control</li></ul>
       </div>
     </div>
   </div>
@@ -128,6 +162,7 @@
       <div class="lft-ex-body">
         <div class="lft-ex-top"><a class="lft-ex-name" href="https://www.dropbox.com/scl/fi/bqsf4zpwb4mgyc0lr2e8m/Barbell-Back-Squat.mov?rlkey=2zl269ulsc2l1ga93wov8lfmm&amp;st=dm70aymo&amp;dl=0" target="_blank" rel="noopener">Back Squat</a><span class="lft-ex-sr">6 @4211 tempo</span></div>
         <div class="lft-ex-notes">Build to a challenging 6. keep core engaged during lift.</div>
+        <ul class="lft-ex-cues"><li>Big breath and brace before you unrack</li><li>Knees track out over the toes</li></ul>
       </div>
     </div>
     <div class="lft-note-row">
@@ -143,6 +178,7 @@
       <div class="lft-ex-body">
         <div class="lft-ex-top"><a class="lft-ex-name" href="https://www.dropbox.com/scl/fi/ek8lqnfzk3ba8obeb8jvy/RNT-Barbell-RDL.mov?rlkey=5i6d5lhcc13hrlpwxq6fhvoap&amp;st=epcqgwqc&amp;dl=0" target="_blank" rel="noopener">RNT Barbell RDL</a><span class="lft-ex-sr">2- 4 x 12</span><span class="lft-loc">in the RACK</span></div>
         <div class="lft-ex-notes">Band around shelf on rack and around bar. Hold BB with comfortable distance grip and hinge back into RDL. Band tension will force greater lat engagement.</div>
+        <ul class="lft-ex-cues"><li>Pull the bar into your body</li><li>Let the band teach you to hinge back</li></ul>
       </div>
     </div>
     <div class="lft-ex-row">
@@ -150,6 +186,7 @@
       <div class="lft-ex-body">
         <div class="lft-ex-top"><a class="lft-ex-name" href="https://www.dropbox.com/scl/fi/lneddp657eu6ccx05mzgj/Lateral-Lunge-Step-Together-LFT.mp4?rlkey=v6nf8ilyr5uzcjfgdbs4xb34f&amp;st=lm45l8d6&amp;dl=0" target="_blank" rel="noopener">Lateral Step together Lunge</a><span class="lft-ex-sr">2- 4 x 12ttl</span><span class="lft-loc">in the GAP</span></div>
         <div class="lft-ex-notes">Step into lateral lunge, stand up into stepping leg. Step into lunge on the other leg. Alternate sides</div>
+        <ul class="lft-ex-cues"><li>Push the hips back as you step out</li><li>Stay tall through the transition</li></ul>
       </div>
     </div>
     <div class="lft-ex-row">
@@ -157,6 +194,7 @@
       <div class="lft-ex-body">
         <div class="lft-ex-top"><a class="lft-ex-name" href="https://www.dropbox.com/scl/fi/a1iycs55khwq48ilruoyh/DB-SL-Hip-Thrust-LFT.mp4?rlkey=uu0htnjvn6n4v4a3et55ft4vg&amp;st=riv68k7q&amp;dl=0" target="_blank" rel="noopener">DB SL Hip Thrust</a><span class="lft-ex-sr">2- 4 x 12e</span><span class="lft-loc">in the ALLEY</span></div>
         <div class="lft-ex-notes">Shoulders on BOX, feet planted into ground. Big squeeze on glutes and press through foot to elevate the hips. Slow controlled descent. One side at a time.</div>
+        <ul class="lft-ex-cues"><li>Drive through the HEEL of the working leg — not the toe</li><li>Squeeze the glute hard at the top — full hip extension</li></ul>
       </div>
     </div>
   </div>
@@ -169,6 +207,7 @@
       <div class="lft-ex-body">
         <div class="lft-ex-top"><a class="lft-ex-name" href="https://www.dropbox.com/scl/fi/ottlggll1xyud3tq9bysc/Floating-Heel-Landmine-Kickstand-Squat.mov?rlkey=uy4jkhs93hxma6t6im0jdyiu3&amp;st=v8o1mnjt&amp;dl=0" target="_blank" rel="noopener">Floating Heel Landmine Goblet Squat</a><span class="lft-ex-sr">2- 4 x 12</span></div>
         <div class="lft-ex-notes">Heels hovering off the floor, weight in balls of feet., holding LM at chest height. Slight lean forward into bar for stability.</div>
+        <ul class="lft-ex-cues"><li>Weight stays in the balls of the feet</li><li>Slight forward lean, chest up</li></ul>
       </div>
     </div>
     <div class="lft-ex-row">
@@ -176,6 +215,7 @@
       <div class="lft-ex-body">
         <div class="lft-ex-top"><a class="lft-ex-name" href="https://www.dropbox.com/scl/fi/g845a6ca2pw9bjb6mw1ci/Band-Seated-Hamstring-Curl.mp4?rlkey=87jcnwvcl4szxnlf6iyu0yox2&amp;st=glzcgohy&amp;dl=0" target="_blank" rel="noopener">Seated Leg HS Curl</a><span class="lft-ex-sr">2- 4 x 12</span><span class="lft-loc">In the RACK</span></div>
         <div class="lft-ex-notes">forward into bar for stability. Seated on bench, hook back around back of heel (attached to rack). Lean back while holding onto bench, pull heels to butt.</div>
+        <ul class="lft-ex-cues"><li>Hook the band behind the heel</li><li>Curl slow, control it back</li></ul>
       </div>
     </div>
     <div class="lft-ex-row">
@@ -183,6 +223,7 @@
       <div class="lft-ex-body">
         <div class="lft-ex-top"><a class="lft-ex-name" href="https://www.dropbox.com/scl/fi/7lne4ipc9vsbt4xlyp37j/Calf-Raise.mov?rlkey=65daxaujbuevby7rr65ba7kby&amp;st=b52oik4k&amp;dl=0" target="_blank" rel="noopener">Deficit Calf Raise</a><span class="lft-ex-sr">2- 4 x 12</span><span class="lft-loc">in the GAP</span></div>
         <div class="lft-ex-notes">holding onto bench, pull heels to butt. Toes on plate, raise and lower to pump calves.</div>
+        <ul class="lft-ex-cues"><li>Full stretch at the bottom, full squeeze at the top</li><li>Slow it down — no bouncing</li></ul>
       </div>
     </div>
   </div>
@@ -195,6 +236,7 @@
       <div class="lft-ex-body">
         <div class="lft-ex-top"><a class="lft-ex-name" href="https://www.dropbox.com/scl/fi/wu0niiyxh3ap4f24y9lz6/Lateral-Lunge-to-Curtsy-Lunge.mp4?rlkey=vqm2osvwev5m6vo5n7pvgrylu&amp;st=bmx1jnfx&amp;dl=0" target="_blank" rel="noopener">Lateral Lunge to Curtsy Lunge</a><span class="lft-ex-sr">2:00</span></div>
         <div class="lft-ex-notes">Switch sides once you feel a burn+3reps</div>
+        <ul class="lft-ex-cues"><li>Chest tall through both directions</li><li>Switch sides when it burns, plus three</li></ul>
       </div>
     </div>
   </div>

@@ -28,6 +28,19 @@
   .cycle-tag { display: inline-block; margin-left: 7px; font-family: 'Barlow Condensed', sans-serif; font-weight: 800; font-size: 12px; letter-spacing: 1px; text-transform: uppercase; padding: 1px 8px; border-radius: 10px; background: rgba(255,255,255,0.22); color: white; vertical-align: 1px; }
 
   .lft-wrap { padding: 14px; max-width: 640px; margin: 0 auto; }
+
+  .intro-drawer { background: var(--card); border: 1px solid var(--border); border-radius: 10px; margin-bottom: 12px; overflow: hidden; }
+  .intro-drawer > summary { list-style: none; cursor: pointer; padding: 12px 14px; font-family: 'Barlow Condensed', sans-serif; font-weight: 800; font-size: 18px; letter-spacing: 1px; text-transform: uppercase; color: #ddd; display: flex; align-items: center; gap: 9px; }
+  .intro-drawer > summary::-webkit-details-marker { display: none; }
+  .intro-drawer > summary:active { background: var(--card2); }
+  .intro-chev { color: var(--red); font-size: 15px; transition: transform 0.15s; display: inline-block; }
+  .intro-drawer[open] .intro-chev { transform: rotate(90deg); }
+  .intro-body { padding: 2px 14px 12px; border-top: 1px solid var(--border); }
+  .intro-line { font-size: 16.5px; color: #ddd; line-height: 1.45; margin-top: 10px; }
+  .intro-line b { color: var(--yellow); font-weight: 700; }
+  .intro-label { display: block; font-family: 'Barlow Condensed', sans-serif; font-weight: 700; font-size: 13px; letter-spacing: 1.2px; text-transform: uppercase; color: var(--muted); margin-bottom: 1px; }
+  .intro-blank { color: var(--muted); border-bottom: 1px dashed var(--muted); font-style: italic; }
+
   .cycle-banner { background: var(--card); border-left: 3px solid var(--yellow); border-radius: 0 8px 8px 0; padding: 10px 13px; margin-bottom: 12px; }
   .cycle-banner-head { font-family: 'Barlow Condensed', sans-serif; font-weight: 800; font-size: 19px; letter-spacing: 1px; text-transform: uppercase; color: var(--yellow); }
   .cycle-type { color: #ffe9a3; font-weight: 700; }
@@ -49,6 +62,10 @@
   .lft-ex-sr { font-family: 'Barlow Condensed', sans-serif; font-weight: 700; font-size: 19px; color: var(--yellow); letter-spacing: 0.5px; }
   .lft-loc { font-size: 13px; font-weight: 700; letter-spacing: 0.5px; text-transform: uppercase; color: var(--blue); background: rgba(74,158,232,0.15); border-radius: 10px; padding: 1px 8px; }
   .lft-ex-notes { font-size: 17.5px; color: #bbb; line-height: 1.45; margin-top: 4px; }
+  .lft-ex-cues { list-style: none; margin: 7px 0 0; padding: 7px 0 0; border-top: 1px solid var(--border); }
+  .lft-ex-cues li { position: relative; padding-left: 16px; font-size: 16px; font-style: italic; color: var(--yellow); line-height: 1.4; margin-top: 3px; }
+  .lft-ex-cues li::before { content: '“'; position: absolute; left: 0; top: 1px; font-style: normal; font-weight: 700; color: rgba(245,200,66,0.55); }
+  .lft-ex-cues li::after { content: '”'; font-style: normal; color: rgba(245,200,66,0.55); }
 
   .lft-note-row { display: flex; align-items: flex-start; gap: 8px; background: rgba(245,200,66,0.08); border: 1px dashed rgba(245,200,66,0.4); border-radius: 8px; padding: 8px 12px; margin-bottom: 8px; font-size: 15.5px; color: var(--yellow); }
   .lft-note-icon { flex-shrink: 0; }
@@ -71,6 +88,18 @@
 </div>
 
 <div class="lft-wrap">
+  <details class="intro-drawer">
+    <summary><span class="intro-chev">▸</span>Coach intro &amp; talk track</summary>
+    <div class="intro-body">
+      <div class="intro-line"><span class="intro-label">Welcome</span>Welcome to STUDIO LFT! My name is <span class="intro-blank">your name</span>.</div>
+      <div class="intro-line"><span class="intro-label">Today&#x27;s plan</span>Today's focus is <b>Full Body</b> and we're in the <b>Pump</b> training cycle, week 5 of 6.</div>
+      <div class="intro-line"><span class="intro-label">Safety</span>Please use the catches and spot your partner. If you don't have a partner today, call me over and I'll spot you.</div>
+      <div class="intro-line"><span class="intro-label">Main lift</span>The main movement today is <b>Heels Elevated Goblet Squat and Close Grip Pull Up (Band Assisted As Needed)</b> — I'll walk you through it right after training prep.</div>
+      <div class="intro-line"><span class="intro-label">Modifications</span>If you need a modification on anything as we go, call me over — there's an option for everyone.</div>
+      <div class="intro-line"><span class="intro-label">Let&#x27;s go</span>Alright — let's get pumped up to LFT!</div>
+    </div>
+  </details>
+
   <div class="cycle-banner">
     <div class="cycle-banner-head">Pump Cycle · <span class="cycle-type">Hypertrophy</span>
       <span class="cycle-meta">Block 2 · Week 5 of 6</span>
@@ -88,6 +117,7 @@
       <div class="lft-ex-body">
         <div class="lft-ex-top"><a class="lft-ex-name" href="https://www.dropbox.com/scl/fi/4p3zcg132jtpaj9ie46as/45-Forward-Lunge.mp4?rlkey=8fz6j5ch8fpxgda56cfek5lr6&amp;st=4dusvetw&amp;dl=0" target="_blank" rel="noopener">Pec Stretch</a><span class="lft-ex-sr">:45 per side</span></div>
         <div class="lft-ex-notes">On a rack upright, with elbow slightly higher than shoulder. Press chest forward to stretch pec.</div>
+        <ul class="lft-ex-cues"><li>Elbow slightly above the shoulder</li><li>Press the chest forward, breathe</li></ul>
       </div>
     </div>
     <div class="lft-ex-row">
@@ -95,6 +125,7 @@
       <div class="lft-ex-body">
         <div class="lft-ex-top"><a class="lft-ex-name" href="https://www.dropbox.com/scl/fi/ghmcjeo2izoarjb8qmxtf/Core-Engaged-Leg-Raise.mp4?rlkey=yaqtxt3mj4b67wwyo09lj1p3v&amp;st=yepydqvp&amp;dl=0" target="_blank" rel="noopener">Bird Dog Contralaterals</a><span class="lft-ex-sr">1:00</span></div>
         <div class="lft-ex-notes">Core stay engaged. Include toe drag on leg portion to fire up the glutes.</div>
+        <ul class="lft-ex-cues"><li>Drag the toe out, then lift at the end</li><li>Move slow, core stays braced</li></ul>
       </div>
     </div>
     <div class="lft-ex-row">
@@ -102,6 +133,7 @@
       <div class="lft-ex-body">
         <div class="lft-ex-top"><span class="lft-ex-name">Hardstyle High Plank</span><span class="lft-ex-sr">1:30</span></div>
         <div class="lft-ex-notes">Screw hands into ground to keep tension in the shoulder and in the core, Squeeze as hard as possible for 10s then reset. This bracing will apply to the Main LFT in the workout.</div>
+        <ul class="lft-ex-cues"><li>Screw the hands into the ground</li><li>Squeeze everything — this is max tension</li></ul>
       </div>
     </div>
     <div class="lft-ex-row">
@@ -109,6 +141,7 @@
       <div class="lft-ex-body">
         <div class="lft-ex-top"><span class="lft-ex-name">Inchworm Push Up</span><span class="lft-ex-sr">1:00</span></div>
         <div class="lft-ex-notes">to the Main LFT in the workout. Keep core tight and control each step of the movement</div>
+        <ul class="lft-ex-cues"><li>Walk out slow — control every step</li><li>Full push up at the bottom of the walk</li></ul>
       </div>
     </div>
     <div class="lft-ex-row">
@@ -116,6 +149,7 @@
       <div class="lft-ex-body">
         <div class="lft-ex-top"><span class="lft-ex-name">KB SA Swing</span><span class="lft-ex-sr">1:00</span></div>
         <div class="lft-ex-notes">3 swings then reset. Keep intention high but load light.</div>
+        <ul class="lft-ex-cues"><li>Three swings then reset</li><li>Power from the hips, arm stays relaxed</li></ul>
       </div>
     </div>
   </div>
@@ -128,6 +162,7 @@
       <div class="lft-ex-body">
         <div class="lft-ex-top"><span class="lft-ex-name">Heels Elevated Goblet Squat</span><span class="lft-ex-sr">3-4 sets of 6-6-6</span></div>
         <div class="lft-ex-notes">Use a moderately heavy weight; 1 set = 6 reps + 10s rest + 6 reps + 10s rest + 6 reps; only setting the DB down quickly during 10s to reset grip. Prop bar up on box to load with plates and place on shoulder.</div>
+        <ul class="lft-ex-cues"><li>Chest tall, sit straight down</li><li>Only set the DB down during the rest</li></ul>
       </div>
     </div>
     <div class="lft-ex-row">
@@ -135,6 +170,7 @@
       <div class="lft-ex-body">
         <div class="lft-ex-top"><span class="lft-ex-name">Close Grip Pull Up (Band Assisted As Needed)</span><span class="lft-ex-sr">3-4 sets of 6-6</span></div>
         <div class="lft-ex-notes">1 set = 6 reps + 10s rest + 6 reps . Use bench to reach pull up bar.</div>
+        <ul class="lft-ex-cues"><li>Drive the elbows down into the ribs</li><li>Use only as much band as you need</li></ul>
       </div>
     </div>
   </div>
@@ -147,6 +183,7 @@
       <div class="lft-ex-body">
         <div class="lft-ex-top"><span class="lft-ex-name">DB 45-degree Forward Lunge alt.</span><span class="lft-ex-sr">2- 4 x 12e</span><span class="lft-loc">in the Alley</span></div>
         <div class="lft-ex-notes">DBs loaded in low position. Step forward at a diagonal with control. Press through the front foot to return to the start. Alternate sides each rep.</div>
+        <ul class="lft-ex-cues"><li>Step out on the diagonal with control</li><li>Press through the front foot to return</li></ul>
       </div>
     </div>
     <div class="lft-ex-row">
@@ -154,6 +191,7 @@
       <div class="lft-ex-body">
         <div class="lft-ex-top"><span class="lft-ex-name">SA DB Bench Press</span><span class="lft-ex-sr">2- 4 x 12e</span><span class="lft-loc">in the RACK</span></div>
         <div class="lft-ex-notes">to return to the start. Alternate sides each rep. 1 side at a time, drive feet into floor to create tension.</div>
+        <ul class="lft-ex-cues"><li>Drive the feet in to stay square</li><li>One side at a time — brace hard</li></ul>
       </div>
     </div>
     <div class="lft-ex-row">
@@ -161,6 +199,7 @@
       <div class="lft-ex-body">
         <div class="lft-ex-top"><span class="lft-ex-name">Band Overhead Standing Lateral Crunch</span><span class="lft-ex-sr">2- 4 x 12e</span><span class="lft-loc">in the GAP</span></div>
         <div class="lft-ex-notes">Attach band to upright, hold hands with band above head. Lean away from upright with torso only, control back to upright.</div>
+        <ul class="lft-ex-cues"><li>Bend sideways only — don&#x27;t twist</li><li>Hips stay square and still</li></ul>
       </div>
     </div>
   </div>
@@ -173,6 +212,7 @@
       <div class="lft-ex-body">
         <div class="lft-ex-top"><span class="lft-ex-name">Band Pull Through</span><span class="lft-ex-sr">2- 4 x 12</span><span class="lft-loc">in the ALLEY</span></div>
         <div class="lft-ex-notes">Hook band to band peg. Pull between legs. Hinge back, then stand up against resistance of band. Keep arms straight.</div>
+        <ul class="lft-ex-cues"><li>Arms stay long — the hips do the work</li><li>Squeeze the glutes to finish tall</li></ul>
       </div>
     </div>
     <div class="lft-ex-row">
@@ -180,6 +220,7 @@
       <div class="lft-ex-body">
         <div class="lft-ex-top"><span class="lft-ex-name">Bench hand/knee support band DB Row</span><span class="lft-ex-sr">2- 4 x 12e</span><span class="lft-loc">in the RACK</span></div>
         <div class="lft-ex-notes">Keep arms straight. One hand and knee on bench and other foot set to keep hips parallel to ground. Row DB with band attached to rack and DB to hip, band will engage lat more.</div>
+        <ul class="lft-ex-cues"><li>Back flat and level like a tabletop</li><li>Row to the hip, not the shoulder</li></ul>
       </div>
     </div>
     <div class="lft-ex-row">
@@ -187,6 +228,7 @@
       <div class="lft-ex-body">
         <div class="lft-ex-top"><span class="lft-ex-name">MB Russian Twist</span><span class="lft-ex-sr">2- 4 x 12e</span><span class="lft-loc">in the GAP</span></div>
         <div class="lft-ex-notes">more. Sit on floor, rotate ball left to right. elevate feet for more challenge but focus on a large range of motion.</div>
+        <ul class="lft-ex-cues"><li>Rotate through the ribs, not just the arms</li><li>Elevate the feet if you want more</li></ul>
       </div>
     </div>
   </div>
@@ -199,6 +241,7 @@
       <div class="lft-ex-body">
         <div class="lft-ex-top"><span class="lft-ex-name">Ball chest Slam + Core Engaged Leg Raise</span><span class="lft-ex-sr">2:00</span></div>
         <div class="lft-ex-notes">On box or bench, crunch into ball, then complete alternating straight legs raises. Sets of 10 each. Rest 10s as needed, goal is to keep moving for the entire 2 minutes.</div>
+        <ul class="lft-ex-cues"><li>Low back stays glued to the floor</li><li>Slow the legs down, don&#x27;t drop them</li></ul>
       </div>
     </div>
   </div>
