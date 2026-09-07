@@ -150,10 +150,14 @@ def render_exercise_row(ex: dict) -> str:
 
     name = ex.get("name", "")
     video = ex.get("video")
-    name_html = (
-        f'<a class="lft-ex-name" href="{escape(video, quote=True)}" target="_blank" rel="noopener">{escape(name)}</a>'
-        if video else f'<span class="lft-ex-name">{escape(name)}</span>'
-    )
+    if video:
+        name_html = (f'<a class="lft-ex-name" href="{escape(video, quote=True)}" '
+                     f'target="_blank" rel="noopener">{escape(name)}</a>')
+    else:
+        # The source programming doesn't link a demo for every exercise —
+        # say so rather than leaving a name that looks tappable but isn't.
+        name_html = (f'<span class="lft-ex-name">{escape(name)}</span>'
+                     f'<span class="lft-ex-novideo">no video</span>')
     loc = ex.get("location")
     loc_html = f'<span class="lft-loc">{escape(loc)}</span>' if loc else ""
     sets_reps = ex.get("sets_reps", "")
@@ -418,8 +422,13 @@ STYLE = """
   .lft-ex-label { font-family: 'Barlow Condensed', sans-serif; font-weight: 800; font-size: 19px; color: var(--red); background: rgba(212,43,43,0.15); border-radius: 6px; padding: 2px 7px; align-self: flex-start; flex-shrink: 0; min-width: 20px; text-align: center; }
   .lft-ex-body { flex: 1; min-width: 0; }
   .lft-ex-top { display: flex; flex-wrap: wrap; align-items: baseline; gap: 8px; }
-  .lft-ex-name { font-weight: 700; font-size: 20px; text-decoration: none; border-bottom: 1px solid rgba(255,255,255,0.35); }
+  .lft-ex-name { font-weight: 700; font-size: 20px; text-decoration: none; }
+  /* Only underline names that actually open a demo video — a handful of
+     exercises have no link in the source programming, and underlining
+     those made them look like a tap that had broken. */
+  a.lft-ex-name { border-bottom: 1px solid rgba(255,255,255,0.35); }
   a.lft-ex-name:active { color: var(--yellow); }
+  .lft-ex-novideo { font-family: 'Barlow Condensed', sans-serif; font-weight: 700; font-size: 12.5px; letter-spacing: 0.8px; text-transform: uppercase; color: var(--muted); border: 1px solid var(--border); border-radius: 9px; padding: 0 7px; white-space: nowrap; }
   .lft-ex-sr { font-family: 'Barlow Condensed', sans-serif; font-weight: 700; font-size: 19px; color: var(--yellow); letter-spacing: 0.5px; }
   .lft-loc { font-size: 13px; font-weight: 700; letter-spacing: 0.5px; text-transform: uppercase; color: var(--blue); background: rgba(74,158,232,0.15); border-radius: 10px; padding: 1px 8px; }
   .lft-ex-notes { font-size: 17.5px; color: #bbb; line-height: 1.45; margin-top: 4px; }
