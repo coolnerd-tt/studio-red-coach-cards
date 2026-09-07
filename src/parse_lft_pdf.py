@@ -671,8 +671,10 @@ def parse_page(page, canon, links: list[tuple[float, float, str]] | None = None)
 
         sec["time_allotted"] = time_allotted
         sec["time_note"] = re.sub(r"\s+", " ", time_note).strip()
-        internal_keys = {"_y", "_sr_claim_y", "_notes_claim_y"}
-        sec["exercises"] = [{k: v for k, v in ex.items() if k not in internal_keys} for ex in exercises]
+        # _y is kept for now: attach_videos matches links to rows by
+        # position. strip_internal_keys() drops it once that's done.
+        sec["exercises"] = [{k: v for k, v in ex.items() if k not in ("_sr_claim_y", "_notes_claim_y")}
+                             for ex in exercises]
 
     return {"header": header, "session_notes": session_notes, "sections": sections, "_cols": cols}
 
@@ -713,24 +715,51 @@ def dedupe_links(links: list[tuple[float, float, str]]) -> list[tuple[float, flo
     """
     deduped: list[tuple[float, float, str]] = []
     for x, y, uri in sorted(links, key=lambda l: -l[1]):
-        if any(u == uri and abs(y - dy) < 20 for dx, dy, u in deduped):
+        # Collapse a *run* of the same URI rather than everything within a
+        # fixed distance: a name wrapping to three lines spreads its three
+        # annotations further apart than a two-line one, but they're always
+        # consecutive. Runs also keep an exercise that genuinely appears
+        # twice on a page (say prep and accessory) as two separate links.
+        if deduped and deduped[-1][2] == uri:
             continue
         deduped.append((x, y, uri))
     return deduped
 
 
-def attach_videos(parsed: dict, deduped_links: list[tuple[float, float, str]], cols) -> None:
-    remaining = list(deduped_links)
+def attach_videos(parsed: dict, deduped_links: list[tuple[float, float, str]]) -> None:
+    """Give each exercise the demo link that sits in its own row.
+
+    Matched on the link's y against the row's own rect, not on its x or on
+    the order links happen to appear: the annotations moved column between
+    exports (July/August put them over the exercise name, September over
+    the row label), and rows without a link are common, so anything
+    x-filtered or purely ordinal drifts onto the wrong exercise.
+    """
+    remaining = sorted(deduped_links, key=lambda l: -l[1])
     for sec in parsed["sections"]:
+        pending: list[tuple[float, float]] = []
         for ex in sec["exercises"]:
+            if "_y" not in ex:
+                continue
+            y0, y1 = ex["_y"]
             if not ex.get("name"):
+                # An unnamed row is one whose name overflowed into the row
+                # below (the cell wrapped to more lines than its rect) — its
+                # link belongs to that next exercise, so hold on to the band.
+                pending.append((y0, y1))
                 continue
-            candidates = [l for l in remaining if cols["name"][0] - 5 <= l[0] <= cols["name"][1] + 40]
-            if not candidates:
-                continue
-            best = max(candidates, key=lambda l: l[1])  # topmost remaining candidate
-            ex["video"] = best[2]
-            remaining.remove(best)
+            # A link can sit a point or two outside its row's rect, the same
+            # way the row's own text does.
+            bands = [(y0, y1), *pending]
+            hit = None
+            for by0, by1 in bands:
+                hit = next((l for l in remaining if by0 - 2 <= l[1] <= by1 + 2), None)
+                if hit:
+                    break
+            pending.clear()
+            if hit:
+                ex["video"] = hit[2]
+                remaining.remove(hit)
 
 
 # --------------------------------------------------------------------------- #
@@ -750,6 +779,12 @@ def build_day_entries(parsed: dict, source_label: str) -> list[dict]:
     } for date in header["dates"]]
 
 
+def strip_internal_keys(parsed: dict) -> None:
+    """Drop the parse-time bookkeeping fields before the day is written out."""
+    for sec in parsed["sections"]:
+        sec["exercises"] = [{k: v for k, v in ex.items() if not k.startswith("_")} for ex in sec["exercises"]]
+
+
 def parse_pdf(pdf_path: Path, canon) -> list[dict]:
     pages = list(extract_pages(str(pdf_path)))
     all_links = extract_video_links(pdf_path)
@@ -759,7 +794,9 @@ def parse_pdf(pdf_path: Path, canon) -> list[dict]:
         parsed = parse_page(page, canon, page_links)
         if not parsed:
             continue
-        attach_videos(parsed, dedupe_links(page_links), parsed.pop("_cols"))
+        parsed.pop("_cols")
+        attach_videos(parsed, dedupe_links(page_links))
+        strip_internal_keys(parsed)
         days.extend(build_day_entries(parsed, f"{pdf_path.name} p.{i + 1}"))
     return days
 
