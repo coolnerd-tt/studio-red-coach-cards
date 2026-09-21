@@ -99,7 +99,11 @@ def parse_header(raw: str, year: int) -> dict:
         rest = m.group(2)
         kind = "build"
     else:
-        m2 = re.match(r"^B-Mark\s*(.*)$", raw, re.I)
+        # A benchmark/testing week heads its pages with "B-Mark", or from
+        # September "Deload" — same kind of week either way.
+        m2 = re.match(r"^(?:B-Mark|Deload)\s*(.*)$", raw, re.I)
+        if not m2:
+            raise ValueError(f"unrecognized page header {raw!r}")
         week_num = None
         rest = m2.group(1)
         kind = "benchmark"
@@ -125,14 +129,23 @@ def parse_header(raw: str, year: int) -> dict:
             dates.append(f"{year:04d}-{mo:02d}-{int(d):02d}")
 
     focus_m = re.search(r"(Lower|Upper|Full)\s*$", label, re.I)
-    focus = focus_m.group(1).capitalize() if focus_m else ("Full" if kind == "benchmark" else None)
+    if focus_m:
+        focus = focus_m.group(1).capitalize()
+    elif kind == "benchmark":
+        # A benchmark week's days sit in the same weekly slots as a normal
+        # week — Day 1 Mon/Tue lower, Day 2 Wed/Thu upper, Day 3 Fri-Sun
+        # full — even though the label doesn't spell the focus out.
+        day_m = re.search(r"Day\s*(\d+)", label, re.I)
+        focus = {"1": "Lower", "2": "Upper", "3": "Full"}.get(day_m.group(1) if day_m else "", "Full")
+    else:
+        focus = None
 
     return {"week": week_num, "kind": kind, "label": label, "dates": dates, "focus": focus}
 
 
 def find_header_line(lines) -> str | None:
     for x0, y, x1, t in lines:
-        if re.match(r"^(Week\s*\d+|B-Mark|B-MARK)", t.strip(), re.I):
+        if re.match(r"^(Week\s*\d+|B-Mark|Deload)", t.strip(), re.I):
             return t
     return None
 
@@ -214,8 +227,8 @@ def find_row_rects(rects, lines, header_y: tuple[float, float], cols) -> list[tu
             # renders the label and the start of the exercise name as one
             # fused text run ("2a Wide Grip Pull Up -") — match the label as
             # a prefix so the row is still found (build_row recovers the
-            # name part).
-            m = re.match(r"^(\d[a-e]?)\b", t.strip())
+            # name part). Benchmark weeks label their finisher rows F1/F2.
+            m = re.match(r"^(\d[a-e]?|F\d)\b", t.strip())
             if m:
                 candidates.append((m.group(1), y0, y1, ly))
                 break
