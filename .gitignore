@@ -12,3 +12,9 @@ files.zip
 
 # Local preview server config (machine-specific port)
 .claude/launch.json
+
+# vasa_sync: local-only session state, config and inspection dumps
+tools/vasa_sync/config.json
+tools/vasa_sync/.auth/
+tools/vasa_sync/inspect-output/
+files/downloads/
