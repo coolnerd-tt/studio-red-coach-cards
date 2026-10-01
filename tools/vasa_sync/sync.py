@@ -10,6 +10,10 @@ Two subcommands exist so far:
         is saved to disk so later runs don't need a login. Your password is
         never seen by, passed to, or stored by this script.
 
+    python3 tools/vasa_sync/sync.py update [--program LFT] [--dry-run]
+        Takes the newest PDF already sitting in each program's folder and
+        feeds it into the app. See update.py.
+
     python3 tools/vasa_sync/sync.py inspect
         Opens each program's folder using that saved session and writes down
         what it finds: the page's HTML, a screenshot, and every row that
@@ -197,10 +201,16 @@ def scrape_candidates(page, file_type: str) -> list[dict]:
 
 def main(argv=None) -> int:
     p = argparse.ArgumentParser(description="Fetch VASA programming PDFs from Appspace.")
-    p.add_argument("command", choices=["auth", "inspect"])
+    p.add_argument("command", choices=["auth", "inspect", "update"])
     p.add_argument("--config", type=Path, default=HERE / "config.json")
+    p.add_argument("--program", help="run just one program, e.g. --program LFT")
+    p.add_argument("--dry-run", action="store_true",
+                   help="parse and show what would change, without touching the app")
     args = p.parse_args(argv)
     cfg = load_config(args.config)
+    if args.command == "update":
+        import update
+        return update.run(cfg, args.program, args.dry_run)
     return {"auth": cmd_auth, "inspect": cmd_inspect}[args.command](cfg)
 
 
