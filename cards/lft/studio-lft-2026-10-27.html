@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+<title>Studio LFT · 10 / 27 / 2026</title>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600;700;900&family=Barlow:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --red: #D42B2B; --red-dark: #A01F1F; --black: #0F0F0F;
+    --card: #242424; --card2: #2E2E2E; --border: #3A3A3A;
+    --muted: #999; --yellow: #F5C842; --green: #4CAF50; --blue: #4A9EE8;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { background: var(--black); color: white; font-family: 'Barlow', sans-serif; font-size: 20px; min-height: 100vh; padding-bottom: 40px; }
+  a { color: inherit; }
+  .header { background: var(--red); padding: 14px 16px 12px; display: flex; align-items: center; justify-content: space-between; position: sticky; top: 0; z-index: 100; border-bottom: 3px solid var(--red-dark); }
+  .header-left { display: flex; align-items: center; gap: 10px; }
+  .logo-box { width: 36px; height: 36px; background: white; border-radius: 6px; display: flex; align-items: center; justify-content: center; font-family: 'Barlow Condensed', sans-serif; font-weight: 900; font-size: 22px; color: var(--red); letter-spacing: -1px; }
+  .header-title { font-family: 'Barlow Condensed', sans-serif; font-weight: 900; font-size: 22px; letter-spacing: 2px; color: white; text-transform: uppercase; }
+  .header-date { font-family: 'Barlow Condensed', sans-serif; font-weight: 600; font-size: 14px; color: white; letter-spacing: 1px; }
+  .header-week { font-family: 'Barlow Condensed', sans-serif; font-size: 11px; color: rgba(255,255,255,0.75); letter-spacing: 1px; text-transform: uppercase; }
+  .focus-badge { display: inline-block; margin-top: 3px; font-family: 'Barlow Condensed', sans-serif; font-weight: 800; font-size: 13px; letter-spacing: 1px; text-transform: uppercase; padding: 2px 10px; border-radius: 12px; background: rgba(255,255,255,0.18); color: white; }
+  .focus-lower { background: rgba(74,158,232,0.35); }
+  .focus-upper { background: rgba(245,200,66,0.3); color: #3a2e00; }
+  .focus-full { background: rgba(76,175,80,0.35); }
+
+  .cycle-tag { display: inline-block; margin-left: 7px; font-family: 'Barlow Condensed', sans-serif; font-weight: 800; font-size: 12px; letter-spacing: 1px; text-transform: uppercase; padding: 1px 8px; border-radius: 10px; background: rgba(255,255,255,0.22); color: white; vertical-align: 1px; }
+
+  .lft-wrap { padding: 14px; max-width: 640px; margin: 0 auto; }
+
+  .intro-drawer { background: var(--card); border: 1px solid var(--border); border-radius: 10px; margin-bottom: 12px; overflow: hidden; }
+  .intro-drawer > summary { list-style: none; cursor: pointer; padding: 12px 14px; font-family: 'Barlow Condensed', sans-serif; font-weight: 800; font-size: 18px; letter-spacing: 1px; text-transform: uppercase; color: #ddd; display: flex; align-items: center; gap: 9px; }
+  .intro-drawer > summary::-webkit-details-marker { display: none; }
+  .intro-drawer > summary:active { background: var(--card2); }
+  .intro-chev { color: var(--red); font-size: 15px; transition: transform 0.15s; display: inline-block; }
+  .intro-drawer[open] .intro-chev { transform: rotate(90deg); }
+  .intro-body { padding: 2px 14px 12px; border-top: 1px solid var(--border); }
+  .intro-line { font-size: 16.5px; color: #ddd; line-height: 1.45; margin-top: 10px; }
+  .intro-line b { color: var(--yellow); font-weight: 700; }
+  .intro-label { display: block; font-family: 'Barlow Condensed', sans-serif; font-weight: 700; font-size: 13px; letter-spacing: 1.2px; text-transform: uppercase; color: var(--muted); margin-bottom: 1px; }
+  .intro-blank { color: var(--muted); border-bottom: 1px dashed var(--muted); font-style: italic; }
+
+  .cycle-banner { background: var(--card); border-left: 3px solid var(--yellow); border-radius: 0 8px 8px 0; padding: 10px 13px; margin-bottom: 12px; }
+  .cycle-banner-head { font-family: 'Barlow Condensed', sans-serif; font-weight: 800; font-size: 19px; letter-spacing: 1px; text-transform: uppercase; color: var(--yellow); }
+  .cycle-type { color: #ffe9a3; font-weight: 700; }
+  .cycle-meta { display: inline-block; font-family: 'Barlow', sans-serif; font-weight: 600; font-size: 13.5px; letter-spacing: 0.3px; text-transform: none; color: var(--muted); margin-left: 6px; }
+  .cycle-banner-desc { font-size: 16px; color: #ccc; line-height: 1.45; margin-top: 4px; }
+  .session-notes { background: var(--card); border-left: 3px solid var(--red); border-radius: 0 8px 8px 0; padding: 11px 13px; font-size: 17px; color: #ddd; line-height: 1.5; margin-bottom: 16px; }
+
+  .lft-section { margin-bottom: 16px; }
+  .lft-section-head { display: flex; align-items: center; justify-content: space-between; background: #3d3d3d; border-radius: 8px; padding: 8px 12px; font-family: 'Barlow Condensed', sans-serif; font-weight: 800; font-size: 19px; letter-spacing: 1.5px; text-transform: uppercase; color: white; margin-bottom: 8px; }
+  .lft-time { font-family: 'Barlow Condensed', sans-serif; font-weight: 800; font-size: 17px; color: var(--yellow); letter-spacing: 0.5px; }
+  .lft-section-note { font-size: 15px; color: var(--muted); padding: 0 4px 8px; line-height: 1.4; }
+
+  .lft-ex-row { display: flex; gap: 10px; background: var(--card); border: 1px solid var(--border); border-radius: 10px; padding: 10px 12px; margin-bottom: 8px; }
+  .lft-ex-label { font-family: 'Barlow Condensed', sans-serif; font-weight: 800; font-size: 19px; color: var(--red); background: rgba(212,43,43,0.15); border-radius: 6px; padding: 2px 7px; align-self: flex-start; flex-shrink: 0; min-width: 20px; text-align: center; }
+  .lft-ex-body { flex: 1; min-width: 0; }
+  .lft-ex-top { display: flex; flex-wrap: wrap; align-items: baseline; gap: 8px; }
+  .lft-ex-name { font-weight: 700; font-size: 20px; text-decoration: none; }
+  /* Only underline names that actually open a demo video — a handful of
+     exercises have no link in the source programming, and underlining
+     those made them look like a tap that had broken. */
+  a.lft-ex-name { border-bottom: 1px solid rgba(255,255,255,0.35); }
+  a.lft-ex-name:active { color: var(--yellow); }
+  .lft-ex-novideo { font-family: 'Barlow Condensed', sans-serif; font-weight: 700; font-size: 12.5px; letter-spacing: 0.8px; text-transform: uppercase; color: var(--muted); border: 1px solid var(--border); border-radius: 9px; padding: 0 7px; white-space: nowrap; }
+  .lft-ex-sr { font-family: 'Barlow Condensed', sans-serif; font-weight: 700; font-size: 19px; color: var(--yellow); letter-spacing: 0.5px; }
+  .lft-loc { font-size: 13px; font-weight: 700; letter-spacing: 0.5px; text-transform: uppercase; color: var(--blue); background: rgba(74,158,232,0.15); border-radius: 10px; padding: 1px 8px; }
+  .lft-ex-notes { font-size: 17.5px; color: #bbb; line-height: 1.45; margin-top: 4px; }
+  .lft-ex-cues { list-style: none; margin: 7px 0 0; padding: 7px 0 0; border-top: 1px solid var(--border); }
+  .lft-ex-cues li { position: relative; padding-left: 16px; font-size: 16px; font-style: italic; color: var(--yellow); line-height: 1.4; margin-top: 3px; }
+  .lft-ex-cues li::before { content: '“'; position: absolute; left: 0; top: 1px; font-style: normal; font-weight: 700; color: rgba(245,200,66,0.55); }
+  .lft-ex-cues li::after { content: '”'; font-style: normal; color: rgba(245,200,66,0.55); }
+
+  .lft-note-row { display: flex; align-items: flex-start; gap: 8px; background: rgba(245,200,66,0.08); border: 1px dashed rgba(245,200,66,0.4); border-radius: 8px; padding: 8px 12px; margin-bottom: 8px; font-size: 15.5px; color: var(--yellow); }
+  .lft-note-icon { flex-shrink: 0; }
+</style>
+</head>
+<body>
+
+<div class="header">
+  <div class="header-left">
+    <div class="logo-box">V</div>
+    <div>
+      <div class="header-title">Studio LFT</div>
+      <div class="header-date">10 / 27 / 2026</div>
+    </div>
+  </div>
+  <div style="text-align:right">
+    <div class="header-week">Week 4<span class="cycle-tag">Brawn</span></div>
+    <span class="focus-badge focus-lower">Lower</span>
+  </div>
+</div>
+
+<div class="lft-wrap">
+  <details class="intro-drawer">
+    <summary><span class="intro-chev">▸</span>Coach intro &amp; talk track</summary>
+    <div class="intro-body">
+      <div class="intro-line"><span class="intro-label">Welcome</span>Welcome to STUDIO LFT! My name is <span class="intro-blank">your name</span>.</div>
+      <div class="intro-line"><span class="intro-label">Today&#x27;s plan</span>Today's focus is <b>Lower Body</b> and we're in the <b>Brawn</b> training cycle, week 4 of 6.</div>
+      <div class="intro-line"><span class="intro-label">Safety</span>Please use the catches and spot your partner. If you don't have a partner today, call me over and I'll spot you.</div>
+      <div class="intro-line"><span class="intro-label">Main lift</span>The main movement today is <b>Barbell Split Squat</b> — I'll walk you through it right after training prep.</div>
+      <div class="intro-line"><span class="intro-label">Modifications</span>If you need a modification on anything as we go, call me over — there's an option for everyone.</div>
+      <div class="intro-line"><span class="intro-label">Let&#x27;s go</span>Alright — let's get pumped up to LFT!</div>
+    </div>
+  </details>
+
+  <div class="cycle-banner">
+    <div class="cycle-banner-head">Brawn Cycle · <span class="cycle-type">Advanced Strength</span>
+      <span class="cycle-meta">Block 2 · Week 4 of 6</span>
+    </div>
+    <div class="cycle-banner-desc">Building on the strength cycle using more advanced protocols to continue to drive strength gains.</div>
+  </div>
+
+  <div class="session-notes">Bilateral to Unilateral Loading of the Main LFT will challenge the eccentric (lowering) portion of the lift to increase strength adaptations. Knee Bend Focus (form and proper loading) with</div>
+
+  <div class="lft-section">
+    <div class="lft-section-head"><span>Training Prep</span><span class="lft-time">6:00</span></div>
+    <div class="lft-section-note">Focus on finding today’s range of motion and activating the supporting muscle groups for the big LFT</div>
+    <div class="lft-ex-row">
+      <div class="lft-ex-label">1a</div>
+      <div class="lft-ex-body">
+        <div class="lft-ex-top"><a class="lft-ex-name" href="https://www.dropbox.com/scl/fi/f65eomicuja6w7fmge7o3/90-90-Hip-Rotation.mov?rlkey=0btpvw9ws328l02452qt0mncj&amp;st=50cvhuvb&amp;dl=0" target="_blank" rel="noopener">90/90 Hip Rotation</a><span class="lft-ex-sr">:45 per side</span></div>
+        <div class="lft-ex-notes">90/90 position ,rotate hips left and right to open up the joint. Keep Chest tall</div>
+        <ul class="lft-ex-cues"><li>Chest tall, turn from the hips</li><li>Both knees stay bent at 90 the whole time</li></ul>
+      </div>
+    </div>
+    <div class="lft-ex-row">
+      <div class="lft-ex-label">1b</div>
+      <div class="lft-ex-body">
+        <div class="lft-ex-top"><a class="lft-ex-name" href="https://www.dropbox.com/scl/fi/mj9ts3b0cqcjo6ph62eva/Dead-bug-ipsilateral.mp4?rlkey=gce6gvz6hw6eav2r4c2r9ubbo&amp;st=qy1bx72h&amp;dl=0" target="_blank" rel="noopener">Ipsilateral Dead Bug</a><span class="lft-ex-sr">1:00</span></div>
+        <div class="lft-ex-notes">Engage the core and slowly lower same side arm and leg to the ground, keeping core engaged during return to starting position, alternate sides</div>
+        <ul class="lft-ex-cues"><li>Same arm and leg lower together</li><li>Low back stays pressed down</li></ul>
+      </div>
+    </div>
+    <div class="lft-ex-row">
+      <div class="lft-ex-label">1c</div>
+      <div class="lft-ex-body">
+        <div class="lft-ex-top"><a class="lft-ex-name" href="https://www.dropbox.com/scl/fi/1dqxo863m5rqlgg7vhbk3/Firehydrant.mov?rlkey=mgmafo7lkzep9vv524a8zgej7&amp;st=88yvvri3&amp;dl=0" target="_blank" rel="noopener">Fire Hydrant</a><span class="lft-ex-sr">:45 per side</span></div>
+        <div class="lft-ex-notes">Keep the core engaged and hips still while laterally raising one leg using the glutes. This bracing will apply to the Main LFT in the workout.</div>
+        <ul class="lft-ex-cues"><li>Lift with the glute, not the low back</li><li>Hips stay square to the floor</li></ul>
+      </div>
+    </div>
+    <div class="lft-ex-row">
+      <div class="lft-ex-label">1d</div>
+      <div class="lft-ex-body">
+        <div class="lft-ex-top"><a class="lft-ex-name" href="https://www.dropbox.com/scl/fi/x3h1hxpvi12ly2modyaef/Single-Leg-Hip-Hinge-with-Reach.mp4?rlkey=w7wv3zitwgfmnsc6ad3hqsw3y&amp;st=ujpix1pe&amp;dl=0" target="_blank" rel="noopener">Bodyweight SL RDL w/ reach</a><span class="lft-ex-sr">1:00</span></div>
+        <div class="lft-ex-notes">Slow continuous reps, alternating sides.</div>
+        <ul class="lft-ex-cues"><li>Reach long as the hips go back</li><li>Back leg and chest finish in one line</li></ul>
+      </div>
+    </div>
+    <div class="lft-ex-row">
+      <div class="lft-ex-label">1e</div>
+      <div class="lft-ex-body">
+        <div class="lft-ex-top"><a class="lft-ex-name" href="https://www.dropbox.com/scl/fi/we54fh4lne9ot9spoq3tj/Med-Ball-Overhead-Slams.mp4?rlkey=wwh65t9a41ghl4j20rwffqyhi&amp;st=col0kft7&amp;dl=0" target="_blank" rel="noopener">OH Ball Slam</a><span class="lft-ex-sr">1:00</span></div>
+        <div class="lft-ex-notes">Focus on power, reset as needed.</div>
+        <ul class="lft-ex-cues"><li>Reach tall, then slam with everything</li><li>Reset between reps — power over speed</li></ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="lft-section">
+    <div class="lft-section-head"><span>Main LFT</span><span class="lft-time">15:00</span></div>
+    <div class="lft-section-note">Create tension before every lift</div>
+    <div class="lft-ex-row">
+      <div class="lft-ex-label">2a</div>
+      <div class="lft-ex-body">
+        <div class="lft-ex-top"><a class="lft-ex-name" href="https://www.dropbox.com/scl/fi/g9ikrgirgrzn9sko4ofcw/Barbell-Split-Squat.mov?rlkey=c34t3bac27iqkhydsbmtp4td3&amp;st=a8qndg4v&amp;dl=0" target="_blank" rel="noopener">Barbell Split Squat</a><span class="lft-ex-sr">5e</span></div>
+        <div class="lft-ex-notes">Load the bar on the back. Lowe with control, drive thru both legs equally to stand up.</div>
+        <ul class="lft-ex-cues"><li>Lower with control, back knee toward the floor</li><li>Drive through both legs equally to stand</li></ul>
+      </div>
+    </div>
+    <div class="lft-note-row">
+      <span class="lft-note-icon">↳</span>Store bench in gap against wall. — Rest 90s-2mins between sets
+    </div>
+  </div>
+
+  <div class="lft-section">
+    <div class="lft-section-head"><span>Accessory 1</span><span class="lft-time">12:00</span></div>
+    <div class="lft-section-note">Push to an RIR of 1</div>
+    <div class="lft-ex-row">
+      <div class="lft-ex-label">3a</div>
+      <div class="lft-ex-body">
+        <div class="lft-ex-top"><a class="lft-ex-name" href="https://www.dropbox.com/scl/fi/mycvuf3o7wo47m3pn092b/Landmine-Rotations.mp4?rlkey=ojcbaxezv6cp5ylttk1ix0mr0&amp;st=shoct22c&amp;dl=0" target="_blank" rel="noopener">Landmine Rotations</a><span class="lft-ex-sr">4 x 6e</span></div>
+        <div class="lft-ex-notes">Holding 1 KB opposite of front leg. Drop into split squat from standing position. Control the landing and quickly pop back up to standing.</div>
+        <ul class="lft-ex-cues"><li>Arms stay long — turn through the core</li><li>Hips and ribs rotate together</li></ul>
+      </div>
+    </div>
+    <div class="lft-ex-row">
+      <div class="lft-ex-label">3b</div>
+      <div class="lft-ex-body">
+        <div class="lft-ex-top"><a class="lft-ex-name" href="https://www.dropbox.com/scl/fi/6c9xwpt9le4jhve82b9ch/KB-Bulgarian-RDL.mov?rlkey=3q5di08sjrumbdutpujxahngy&amp;st=e7c8zloy&amp;dl=0" target="_blank" rel="noopener">Bulgarian RDL</a><span class="lft-ex-sr">3-5 x 12e</span><span class="lft-loc">in the RACK</span></div>
+        <div class="lft-ex-notes">Set roller to mid shin height inside the rack. Hinge thru the front leg. Keep back in a neutral position. Use DB or KB</div>
+        <ul class="lft-ex-cues"><li>Hinge through the front leg</li><li>Back stays flat — the roller only holds the back foot</li></ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="lft-section">
+    <div class="lft-section-head"><span>Accessory 2</span><span class="lft-time">12:00</span></div>
+    <div class="lft-section-note">Push to an RIR of 1</div>
+    <div class="lft-ex-row">
+      <div class="lft-ex-label">4a</div>
+      <div class="lft-ex-body">
+        <div class="lft-ex-top"><a class="lft-ex-name" href="https://www.dropbox.com/scl/fi/si17dd8lnhash20nczlzk/Box-Pistol-Squat.mp4?rlkey=a9gxvtu0xxbvhevbet6d1539n&amp;st=w0od0vh4&amp;dl=0" target="_blank" rel="noopener">Box Pistol Squat</a><span class="lft-ex-sr">3- 5 x 8e</span><span class="lft-loc">in the ALLEY</span></div>
+        <div class="lft-ex-notes">Sit to box on one leg. Stand up on same leg. Complete 1 side at a time.</div>
+        <ul class="lft-ex-cues"><li>Sit to the box on one leg</li><li>Stand on the same leg — no push off</li></ul>
+      </div>
+    </div>
+    <div class="lft-ex-row">
+      <div class="lft-ex-label">4b</div>
+      <div class="lft-ex-body">
+        <div class="lft-ex-top"><a class="lft-ex-name" href="https://www.dropbox.com/scl/fi/u01mem47vkbi6tecgfxtw/Barbell-Deficit-Calf-Raise.mov?rlkey=nokty3k483wlgjn26pzgy3tp2&amp;st=jbqkzz8r&amp;dl=0" target="_blank" rel="noopener">Barbell Deficit Calf Raise</a><span class="lft-ex-sr">3-5 x 12</span></div>
+        <div class="lft-ex-notes">Stand on a 45lb plate with the bar racked on your back. Drop the heels to the floor, drive to tip toes.</div>
+        <ul class="lft-ex-cues"><li>Heels drop off the plate for full range</li><li>Pause tall on the toes</li></ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="lft-section">
+    <div class="lft-section-head"><span>Finisher</span><span class="lft-time">4:00</span></div>
+    
+    <div class="lft-ex-row">
+      <div class="lft-ex-label">F</div>
+      <div class="lft-ex-body">
+        <div class="lft-ex-top"><a class="lft-ex-name" href="https://www.dropbox.com/scl/fi/we54fh4lne9ot9spoq3tj/Med-Ball-Overhead-Slams.mp4?rlkey=wwh65t9a41ghl4j20rwffqyhi&amp;st=7utn3cyy&amp;dl=0" target="_blank" rel="noopener">Split Squat Hold + OH Ball Slam</a><span class="lft-ex-sr">2:00</span></div>
+        <div class="lft-ex-notes">As many rounds as possible. Switch legs every 10 reps</div>
+        <ul class="lft-ex-cues"><li>Hold the bottom of the split squat</li><li>Switch legs every 10 slams</li></ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>
