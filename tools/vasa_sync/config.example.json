@@ -1,0 +1,26 @@
+{
+  "_comment": "Copy to config.json and adjust if your paths differ. config.json is gitignored.",
+  "browser_state": "tools/vasa_sync/.auth/state.json",
+  "state_file": "data/sync-state.json",
+  "backup_dir": "data/.backups",
+  "programs": [
+    {
+      "name": "LFT",
+      "url": "https://vasafitness.cloud.appspace.com/console/#!/browse/community/c0f2d83f-be1f-49c1-b4b0-7cc403359e1d/library?sort=-updatedAt&folderid=e454e91f-06f2-4d71-8726-13e0989ae397",
+      "file_type": "pdf",
+      "source_dir": "/Users/tylertoone/Library/Mobile Documents/com~apple~CloudDocs/Vasa/LFT",
+      "handler": "lft",
+      "min_days": 20,
+      "max_days": 40
+    },
+    {
+      "name": "RED",
+      "url": "https://vasafitness.cloud.appspace.com/console/#!/browse/community/c0f2d83f-be1f-49c1-b4b0-7cc403359e1d/library?sort=-updatedAt&folderid=b9bb56ab-b2c6-430c-93d2-941599db55c0",
+      "file_type": "pdf",
+      "source_dir": "/Users/tylertoone/Library/Mobile Documents/com~apple~CloudDocs/Vasa/Red",
+      "handler": "red",
+      "min_days": 26,
+      "max_days": 35
+    }
+  ]
+}

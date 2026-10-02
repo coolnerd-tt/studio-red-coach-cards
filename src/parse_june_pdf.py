@@ -286,7 +286,10 @@ def parse_cardio_note(lines, bhy, top, prof):
 def parse_pdf(pdf_path: Path, canon) -> tuple[list[dict], list[str]]:
     pages = list(extract_pages(str(pdf_path)))
     days, problems = [], []
-    for i in range(1, len(pages)):  # page 0 is the cover; page i == day i
+    # Most months open with a cover page, but not all — October 2026 starts
+    # straight in on 10/01. Let the date on the page decide rather than
+    # assuming: a page without one (a cover or a divider) is skipped below.
+    for i in range(len(pages)):
         prof = profile_for(pages[i])
         L = page_lines(pages[i])
         alltext = " ".join(t for x, y, t in L)
@@ -316,7 +319,7 @@ def parse_pdf(pdf_path: Path, canon) -> tuple[list[dict], list[str]]:
             "warmup": parse_warmup(L, prof),
             "cardio": cardio,
             "exercises": exs,
-            "source_file": f"{pdf_path.name} p.{i}",
+            "source_file": f"{pdf_path.name} p.{i + 1}",
         }
         txlo, txhi = prof["cardio_time_x"]
         ylo, yhi = prof["cardio_y"]

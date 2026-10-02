@@ -90,7 +90,7 @@ def month_num(name: str) -> int:
     return MONTHS[name.strip().lower()[:3]]
 
 
-def parse_header(raw: str, year: int) -> dict:
+def parse_header(raw: str, year: int, fallback_ym: tuple[int, int] | None = None) -> dict:
     """Parse the 'Week N ... / B-Mark ...' header into structured fields."""
     raw = raw.strip()
     m = re.match(r"^Week\s*(\d+)\s*(.*)$", raw, re.I)
@@ -121,12 +121,25 @@ def parse_header(raw: str, year: int) -> dict:
     # Sept"), and scanning for the pattern anywhere handles both the same way.
     dates = []
     pairs = re.findall(r"([\d/]+)\s+([A-Za-z]+)", date_part)
-    if not pairs:
+    if pairs:
+        for days_str, month_str in pairs:
+            mo = month_num(month_str)
+            for d in days_str.split("/"):
+                dates.append(f"{year:04d}-{mo:02d}-{int(d):02d}")
+    elif re.fullmatch(r"[\d/]+", date_part.strip()) and fallback_ym:
+        # Some pages leave the month off altogether ("Week 2 16/17/18 –
+        # Brawn B2 ..."). Pages run in date order, so the month is the one
+        # the previous page ended in — rolling over if the day numbers do.
+        fy, fm = fallback_ym
+        prev_day = 0
+        for d in date_part.strip().split("/"):
+            day = int(d)
+            if day < prev_day:
+                fm, fy = (1, fy + 1) if fm == 12 else (fm + 1, fy)
+            dates.append(f"{fy:04d}-{fm:02d}-{day:02d}")
+            prev_day = day
+    else:
         raise ValueError(f"unparsable date range {date_part!r} in header {raw!r}")
-    for days_str, month_str in pairs:
-        mo = month_num(month_str)
-        for d in days_str.split("/"):
-            dates.append(f"{year:04d}-{mo:02d}-{int(d):02d}")
 
     focus_m = re.search(r"(Lower|Upper|Full)\s*$", label, re.I)
     if focus_m:
@@ -227,8 +240,9 @@ def find_row_rects(rects, lines, header_y: tuple[float, float], cols) -> list[tu
             # renders the label and the start of the exercise name as one
             # fused text run ("2a Wide Grip Pull Up -") — match the label as
             # a prefix so the row is still found (build_row recovers the
-            # name part). Benchmark weeks label their finisher rows F1/F2.
-            m = re.match(r"^(\d[a-e]?|F\d)\b", t.strip())
+            # name part). Finisher rows are labelled F, F1 or F2 depending
+            # on the month; "\b" keeps this off the block label ("FOCUS").
+            m = re.match(r"^(\d[a-e]?|F\d?)\b", t.strip())
             if m:
                 candidates.append((m.group(1), y0, y1, ly))
                 break
@@ -350,6 +364,26 @@ def _col_spillover(content_lines, xlo, xhi, ry0, ry1, fallback_line_height=11.5,
     return first_t, first_y
 
 
+def _claimed_down_to(content_lines, col, ry0, claim_y):
+    """Fold col_text's own descender slop into this row's spillover claim.
+
+    col_text keeps a line whose baseline sits a fraction of a point below the
+    cell's bottom edge (fonts routinely render that way). Row rects are
+    edge-to-edge, so that same line also sits a fraction of a point inside
+    the NEXT row's rect, and both rows read it — the same sentence fragment
+    then shows up on two consecutive movements. This row wins it: text dips
+    down out of its own cell, never up out of the cell below. Report it as
+    claimed, exactly like an absorbed spillover line, so the row below skips
+    it.
+    """
+    xlo, xhi = col
+    dipped = [y for x0, y, x1, t in content_lines if xlo <= x0 < xhi and ry0 - 0.3 <= y < ry0]
+    if not dipped:
+        return claim_y
+    lowest = min(dipped)
+    return lowest if claim_y is None else min(claim_y, lowest)
+
+
 def build_row(lines, label, y0, y1, canon, cols, name_y_bounds=None, row_rects=(),
               sr_ceiling=None, notes_ceiling=None) -> dict:
     name = col_text(lines, *cols["name"], y0, y1)
@@ -432,6 +466,8 @@ def build_row(lines, label, y0, y1, canon, cols, name_y_bounds=None, row_rects=(
     notes_spill, notes_claim_y = _col_spillover(lines, *cols["notes"], y0, y1)
     if notes_spill:
         notes = f"{notes} {notes_spill}".strip()
+    sr_claim_y = _claimed_down_to(lines, cols["setsreps"], y0, sr_claim_y)
+    notes_claim_y = _claimed_down_to(lines, cols["notes"], y0, notes_claim_y)
 
     name = re.sub(r"\s+", " ", PLACEMENT_ASIDE_RE.sub("", name)).strip()
 
@@ -582,12 +618,13 @@ def _name_y_bounds_for_rows(rows_in_section, row_rects, is_instruction, is_empty
     return bounds
 
 
-def parse_page(page, canon, links: list[tuple[float, float, str]] | None = None) -> dict | None:
+def parse_page(page, canon, links: list[tuple[float, float, str]] | None = None,
+                fallback_ym: tuple[int, int] | None = None) -> dict | None:
     lines = page_lines(page)
     header_raw = find_header_line(lines)
     if not header_raw:
         return None
-    header = parse_header(header_raw, year=2026)
+    header = parse_header(header_raw, year=2026, fallback_ym=fallback_ym)
 
     # Section-header text can dip a point or so past its own bar into the
     # row directly below (same font-descender effect as a wrapped cell's
@@ -802,11 +839,14 @@ def parse_pdf(pdf_path: Path, canon) -> list[dict]:
     pages = list(extract_pages(str(pdf_path)))
     all_links = extract_video_links(pdf_path)
     days = []
+    last_ym = None
     for i, page in enumerate(pages):
         page_links = list(all_links[i])
-        parsed = parse_page(page, canon, page_links)
+        parsed = parse_page(page, canon, page_links, fallback_ym=last_ym)
         if not parsed:
             continue
+        last_date = parsed["header"]["dates"][-1]
+        last_ym = (int(last_date[:4]), int(last_date[5:7]))
         parsed.pop("_cols")
         attach_videos(parsed, dedupe_links(page_links))
         strip_internal_keys(parsed)
