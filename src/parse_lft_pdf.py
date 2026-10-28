@@ -163,7 +163,7 @@ def find_header_line(lines) -> str | None:
     return None
 
 
-def find_session_notes(lines, table_header_y0: float, cols) -> str:
+def find_session_notes(lines, table_header_top: float, cols) -> str:
     """The paragraph beside the 'Session / Notes' label, above the table header row."""
     # Bound above by the "Session"/"Notes" label itself — otherwise the
     # "studio lft" logo text (also in the paragraph's column, further up the
@@ -171,7 +171,14 @@ def find_session_notes(lines, table_header_y0: float, cols) -> str:
     divider = cols["name"][0]
     label_ys = [y for x0, y, x1, t in lines if x0 < divider and t.strip() in ("Session", "Notes")]
     ceiling = max(label_ys) + 8 if label_ys else 1e9
-    frags = [(y, t) for x0, y, x1, t in lines if x0 >= divider and table_header_y0 + 5 < y < ceiling]
+    # Bound below by the table header row's top edge, which IS this cell's
+    # bottom edge. The paragraph's last line lands within a point of that
+    # boundary — above it in some months' layouts, a hair below it in
+    # others — so any padding inward silently drops it and the note ends
+    # mid-sentence ("... Press Focus (form and"). Allow a few points either
+    # way: the header's own labels sit ~15pt lower, a full row down, so
+    # there is nothing else this band can reach.
+    frags = [(y, t) for x0, y, x1, t in lines if x0 >= divider and table_header_top - 3 <= y < ceiling]
     frags.sort(key=lambda z: -z[0])
     return re.sub(r"\s+", " ", " ".join(t for y, t in frags)).strip()
 
