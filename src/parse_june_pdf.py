@@ -152,7 +152,13 @@ def col_exercises(lines, xlo, xhi, hy) -> list[tuple[str, str | None]]:
     frags.sort(key=lambda z: -z[0])
     clusters, cur = [], []
     for y, x, t in frags:
-        if cur and (cur[-1][0] - y) > 20:  # vertical gap => next exercise
+        # Lines within one exercise (its wrapped name, then its rep token)
+        # sit 13-14pt apart; the gap to the next exercise is 20pt or more.
+        # The threshold has to clear 14 without needing to clear 20 itself —
+        # at exactly 20 (after rounding) two rack movements were being glued
+        # onto the one above, and the 66-character result was then thrown
+        # away as too long, losing both.
+        if cur and (cur[-1][0] - y) > 17:  # vertical gap => next exercise
             clusters.append(cur)
             cur = []
         cur.append((y, x, t))
@@ -168,6 +174,14 @@ def col_exercises(lines, xlo, xhi, hy) -> list[tuple[str, str | None]]:
             else:
                 parts.append(t)
         name = " ".join(parts).strip()
+        # The rep count usually gets a text line to itself, but when the name
+        # wraps it can share the last line with it ("Curl (15)"). Split it
+        # back off instead of carrying it into the exercise name, where it
+        # would read as a movement the library has never heard of.
+        if rep is None:
+            tail = re.search(r"\s*(\(\s*\d[^()]*\))$", name)
+            if tail:
+                rep, name = tail.group(1), name[: tail.start()].strip()
         if not name or JUNK.search(name) or len(name) > 50:
             continue
         out.append((name, rep))
@@ -241,7 +255,13 @@ def parse_cardio(lines, prof) -> list[dict]:
 def parse_format(lines, alltext) -> tuple[str, str]:
     if "BENCHMARK" in alltext.upper():
         return "BENCHMARK · 3 ROUNDS", "BENCHMARK"
-    bot = " ".join(t for x, y, t in lines if y < 110).lower()
+    # Read from the floor block's closing "NOTES:" paragraph down. Its height
+    # on the page moves with the number of exercises above it — a 4+4 day
+    # pushes it up past 110 — so anchor on the paragraph itself rather than a
+    # fixed y, or the format silently falls through to the EMOM default.
+    note_ys = [y for x, y, t in lines if re.match(r"^NOTES\s*:", t.strip(), re.I)]
+    cutoff = min(note_ys) + 1 if note_ys else 110
+    bot = " ".join(t for x, y, t in lines if y < cutoff).lower()
     if "top of every minute" in bot:
         return "EMOM · 9 MIN", "EMOM"
     if "ladder" in bot:
