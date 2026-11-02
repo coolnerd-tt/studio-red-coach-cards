@@ -363,11 +363,17 @@ def parse_pdf(pdf_path: Path, canon) -> tuple[list[dict], list[str]]:
     return days, problems
 
 
+from text_corrections import apply_text_corrections  # noqa: E402
+
+
 def merge_into_manifests(new_days: list[dict], manifests_path: Path) -> int:
     existing = json.loads(manifests_path.read_text(encoding="utf-8"))
     new_dates = {d["date"] for d in new_days}
     kept = [d for d in existing["days"] if d["date"] not in new_dates]
     alldays = sorted(kept + new_days, key=lambda d: d["date"])
+    t = apply_text_corrections(alldays, "red")
+    if any(t.values()):
+        print(f"  ✎ copy-edits: {t['text']} text, {t['renamed']} renamed")
     manifests_path.write_text(
         json.dumps({"days": alldays}, ensure_ascii=False, indent=2), encoding="utf-8"
     )
