@@ -1,6 +1,10 @@
 {
  "_comment": "One or two short coaching cues per Studio LFT exercise, keyed by normalized name (lowercase; '.' and '-' become spaces). Rendered under each exercise on the day card. Entries whose exercise also appears in exercise-library.json reuse that entry's cues so the two apps stay consistent.",
  "cues": {
+  "1 5 rep split squat jumps": [
+   "Down, half up, down — then jump",
+   "Land soft on the same side"
+  ],
   "1/2 kneeling hip flexor": [
    "Squeeze the back glute — that's what opens the hip",
    "Ribs down, don't arch the low back"
@@ -25,6 +29,10 @@
    "Push the hips back as you step out",
    "Straight leg stays straight — feel that stretch"
   ],
+  "45 degree ½ kneeling hip flexor": [
+   "Squeeze the back glute to open the hip",
+   "Ribs down — don't arch to get range"
+  ],
   "4pt rocking": [
    "Push and pull with the arms to find range",
    "Keep the knees just off the floor"
@@ -45,9 +53,17 @@
    "Straight leg stays long, toes forward",
    "Rock only as far as you can control"
   ],
+  "alt bw curtsy lunge": [
+   "Step behind and across, not straight back",
+   "Chest tall, front knee over the toes"
+  ],
   "alt bw reverse lunge": [
    "Step straight back, back knee toward the floor",
    "Drive through the whole front foot to stand"
+  ],
+  "alt hanging knee raise": [
+   "Knees to chest, no swinging",
+   "Lower slow — control the way down"
   ],
   "alternating db chest press": [
    "One hand lowers while the other holds",
@@ -81,6 +97,10 @@
    "Slam hard, then straight into the jump",
    "Stick the landing before you reset"
   ],
+  "band assisted push up (encourage plyo if they can)": [
+   "Band across the waist takes the weight",
+   "Push hard enough to leave the floor"
+  ],
   "band assisted reverse nordic": [
    "Squeeze the glutes to keep hips open",
    "Only lean as far as you can come back from"
@@ -112,6 +132,10 @@
   "band horizontal bicep curl + bench/box dip": [
    "20 curls straight into 10 dips",
    "Keep moving — rest only when you have to"
+  ],
+  "band leg abduction": [
+   "Outside leg is the working leg",
+   "Let it cross the midline for the stretch"
   ],
   "band over and back": [
    "Keep tension wide the whole way",
@@ -153,6 +177,10 @@
    "Big drive of the elbow behind you",
    "Stay square — don't let the torso spin"
   ],
+  "band squat and sa row": [
+   "Squat first, row as you stand",
+   "One arm at a time, ribs down"
+  ],
   "band straight arm pull down": [
    "Arms stay long — pull with the lats",
    "Ribs down, don't lean back to get range"
@@ -164,6 +192,10 @@
   "band triceps press down": [
    "Elbows locked in place, only the forearms move",
    "Lean in slightly and press the floor away"
+  ],
+  "band triceps press down + kb plank pull thru": [
+   "50 seconds each, swap on the minute",
+   "Elbows pinned on the press-down"
   ],
   "band x pulldown": [
    "Cross the bands for a better pull angle",
@@ -209,6 +241,10 @@
    "Elbows drive up — hold the front rack",
    "Touch the pins, don't bounce off them"
   ],
+  "barbell front squat to pins (offer back squat – no back squat video)": [
+   "Elbows drive up — hold the front rack",
+   "Touch the pins, don't bounce off them"
+  ],
   "barbell rollout": [
    "Ribs down — the core stops the bar",
    "Only roll as far as you can hold the plank"
@@ -220,6 +256,10 @@
   "barbell zercher split squat": [
    "Slight forward lean to load the glutes",
    "Elbows stay high, bar stays tight to you"
+  ],
+  "bb hang power clean regression > bb rdl(x6)": [
+   "Jump the bar up, drop under it fast",
+   "Zip the jacket — bar stays close"
   ],
   "bb rdl": [
    "Shave the bar down the thighs",
@@ -273,6 +313,10 @@
    "Manage the depth — shoulders shouldn't complain",
    "Chest stays proud, elbows track back"
   ],
+  "box jump": [
+   "Land soft in a quarter squat",
+   "Reset fully between jumps"
+  ],
   "box pistol squat": [
    "Sit to the box on one leg",
    "Stand on the same leg — no push off"
@@ -308,6 +352,10 @@
   "bw squat": [
    "Slow on the way down, own the bottom",
    "Press the floor away to stand"
+  ],
+  "california press": [
+   "Lower it like a skull crusher",
+   "Press back out straight over the chest"
   ],
   "chin up (assisted as needed)": [
    "Palms facing you, elbows pull to the ribs",
@@ -368,6 +416,10 @@
   "db biceps curl": [
    "Elbows pinned to your sides",
    "Control it down — no swinging"
+  ],
+  "db biceps curl + decline reverse crunch": [
+   "Drop the weight as you fatigue, keep moving",
+   "Curl without swinging the elbows"
   ],
   "db california press": [
    "Lower it like a skull crusher",
@@ -477,13 +529,25 @@
    "Drive through the HEEL of the working leg — not the toe",
    "Squeeze the glute hard at the top — full hip extension"
   ],
+  "db snatch": [
+   "One pull — lock it out overhead",
+   "Keep the DB close, zip the jacket"
+  ],
   "db snatch alt": [
    "Keep it light so it stays explosive",
    "One pull — lock it out overhead"
   ],
+  "db split jerk": [
+   "Quick dip, then punch under the DBs",
+   "Catch in a split, both feet land together"
+  ],
   "db split squat": [
    "Drop straight down — like an elevator, not an escalator",
    "Front knee tracks over the toes"
+  ],
+  "db thruster x10 + mb crazy ivan": [
+   "Drive out of the squat straight into the press",
+   "Swap after 10 — keep the pace honest"
   ],
   "db/bb push press": [
    "Small dip, big drive from the legs",
@@ -553,6 +617,10 @@
    "Weight stays in the balls of the feet",
    "Slight forward lean, chest up"
   ],
+  "floor slides": [
+   "Forearms stay as close to the floor as you can",
+   "Low back stays pressed down"
+  ],
   "front foot elevated 2db low load split squat": [
    "Knee travels toward the floor, not forward",
    "Stand up with control, no bounce"
@@ -581,6 +649,10 @@
    "Hold the body row position hard",
    "Pull through the heels on the box"
   ],
+  "hand support skater squat": [
+   "Use the J-hooks for only as much help as you need",
+   "Back leg stays off the floor"
+  ],
   "hands elevated scap push ups": [
    "Arms stay straight — only the shoulder blades move",
    "One second pause at the bottom"
@@ -608,6 +680,10 @@
   "high plank w/ alternating hip flexion": [
    "Hips stay level as the knee comes in",
    "Slow and deliberate, not rushed"
+  ],
+  "hinged over chest slam": [
+   "Slam with the chest, not the arms",
+   "Reset and breathe between reps"
   ],
   "hinged over sa lat stretch": [
    "Shift the hips away from the hand",
@@ -649,9 +725,21 @@
    "Pop it with the legs, catch it soft",
    "Hold the horns, press from the goblet"
   ],
+  "kb drop split squat": [
+   "Bell in the hand opposite the front leg",
+   "Drop under control, pop straight back up"
+  ],
   "kb halo": [
    "Tight circle — keep the bell close to the head",
    "Duck slightly as it passes behind"
+  ],
+  "kb kickstand rdl": [
+   "Back toe is a kickstand, not a leg to stand on",
+   "Hinge the hips back, flat back"
+  ],
+  "kb kickstand sa swing": [
+   "Smooth and explosive — hips drive it",
+   "Tall at the top, bell to chest height"
   ],
   "kb lateral shift swing 2hand": [
    "Shift as the bell goes under the hips",
@@ -665,6 +753,10 @@
    "Three swings then reset",
    "Power from the hips, arm stays relaxed"
   ],
+  "kb step together swing": [
+   "Step, then swing — don't rush the two",
+   "Snap the hips, arms stay relaxed"
+  ],
   "kb swing": [
    "Hips are the engine — NOT your arms",
    "Hike the KB high between your legs — get it past your hips"
@@ -672,6 +764,10 @@
   "kb t rex swing": [
    "Hips snap, elbows bend — bell floats to the chest",
    "It's still a hinge — don't squat the swing"
+  ],
+  "kb upright row": [
+   "Pull the bell up into the chest",
+   "Squeeze the shoulder blades at the top"
   ],
   "kb/db curtis p complex front rack squat > lunge r > l left > push": [
    "Pick a pace you can repeat",
@@ -709,6 +805,10 @@
    "Arms stay long — turn through the core",
    "Hips and ribs rotate together"
   ],
+  "landmine sa push press": [
+   "Dip with the legs, then press",
+   "Ribs down — no leaning back to finish"
+  ],
   "landmine t bar row": [
    "Hinge over and hold that angle",
    "Pull the bar to the chest, elbows close"
@@ -740,6 +840,10 @@
   "mb complex clean squat pushup slam": [
    "Pick a pace you can hold without gassing",
    "Full slam, then straight into the next round"
+  ],
+  "mb hinged chest slam": [
+   "Wide stance, stay hinged over",
+   "Three quick slams, then reset"
   ],
   "mb russian twist": [
    "Rotate through the ribs, not just the arms",
@@ -784,6 +888,10 @@
   "pelvic tilts": [
    "Tuck the tailbone under",
    "Small movement — the core does the work"
+  ],
+  "pendlay row from catches": [
+   "Pull explosively into the lower ribs",
+   "Bar resets on the catches every rep"
   ],
   "plank kb pull thru": [
    "Hips stay square — resist the twist",
@@ -841,6 +949,10 @@
    "Pull the bar into your body",
    "Let the band teach you to hinge back"
   ],
+  "rotational med ball slam": [
+   "Start at the opposite hip, reach up and over",
+   "Pivot the back foot as you turn"
+  ],
   "sa db bench press": [
    "Drive the feet in to stay square",
    "One side at a time — brace hard"
@@ -881,6 +993,10 @@
    "Full rest on the ground between reps",
    "Big pull — let the trunk rotate a little"
   ],
+  "skater squat": [
+   "Back leg stays off the floor",
+   "As many as you can, then switch"
+  ],
   "sl hip hinge w/ ball reach": [
    "Straight line from heel to head",
    "Hips stay square to the floor"
@@ -897,6 +1013,10 @@
    "Hold the bottom of the split squat",
    "Switch legs every 10 slams"
   ],
+  "split squat jumps": [
+   "Load both legs evenly before you jump",
+   "Land on the same side, soft knees"
+  ],
   "squat jump": [
    "One jump at a time — set each one up",
    "Land in a deep squat with control"
@@ -908,6 +1028,10 @@
   "standing band hamstring curl": [
    "Pull the heel to the butt",
    "Hips stay square, torso still"
+  ],
+  "standing clam shell": [
+   "Foot on the upright, open from the hip",
+   "Stay tall — don't lean away"
   ],
   "standing pec stretch": [
    "Elbow slightly higher than the shoulder",

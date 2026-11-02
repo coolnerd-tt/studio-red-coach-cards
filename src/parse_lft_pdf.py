@@ -382,9 +382,13 @@ def _claimed_down_to(content_lines, col, ry0, claim_y):
     down out of its own cell, never up out of the cell below. Report it as
     claimed, exactly like an absorbed spillover line, so the row below skips
     it.
+
+    The boundary itself counts: a line whose baseline lands exactly on the
+    shared edge belongs to the cell above it, and letting the row below have
+    it too is what left an otherwise-empty row carrying a stray sentence.
     """
     xlo, xhi = col
-    dipped = [y for x0, y, x1, t in content_lines if xlo <= x0 < xhi and ry0 - 0.3 <= y < ry0]
+    dipped = [y for x0, y, x1, t in content_lines if xlo <= x0 < xhi and ry0 - 0.3 <= y <= ry0]
     if not dipped:
         return claim_y
     lowest = min(dipped)
@@ -462,6 +466,14 @@ def build_row(lines, label, y0, y1, canon, cols, name_y_bounds=None, row_rects=(
 
     if not setsreps_raw and len(name) + len(notes) < 20:
         return None  # genuinely blank table row, left unused that day
+
+    # A trailing lettered row with no exercise and no sets, carrying only a
+    # coaching note, is how the programming hangs a rest instruction off the
+    # end of a superset ("3c — Rest 60-90s between sets"). It isn't a
+    # movement, so render it as the note it is rather than as an exercise
+    # with a blank name.
+    if not name and not setsreps_raw.strip() and notes:
+        return {"label": label, "instruction": notes, "notes": ""}
 
     # A location tag ("(in the RACK)") is the one recurring thing that dips
     # out of Sets x Reps into the next row — require the first absorbed
