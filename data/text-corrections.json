@@ -1,0 +1,100 @@
+{
+  "_comment": "Copy-editing and mis-pairing fixes for the published programming. HQ's PDFs carry typos, spacing slips and — occasionally — a coaching note pasted from a different movement. These are re-applied automatically on every merge (see apply_text_corrections in src/text_corrections.py), so re-parsing a month's PDF can't silently undo them. Nothing here changes a workout: only prose, exercise names, and notes that belong to a different exercise. Every entry records what the source says and why it was changed.",
+
+  "replacements": [
+    {"scope": "lft", "find": "Lowe with control", "replace": "Lower with control", "why": "typo"},
+    {"scope": "lft", "find": "slighter higher", "replace": "slightly higher", "why": "typo"},
+    {"scope": "lft", "find": "Reps withthe band", "replace": "Reps with the band", "why": "missing space"},
+    {"scope": "lft", "find": "Alternate dirctions", "replace": "Alternate directions", "why": "typo"},
+    {"scope": "lft", "find": "DB infront of you", "replace": "DB in front of you", "why": "missing space"},
+    {"scope": "lft", "find": "Pull bad to lap", "replace": "Pull band to lap", "why": "typo: 'bad' for 'band'"},
+    {"scope": "lft", "find": "the movement move squatty", "replace": "the movement more squatty", "why": "typo: 'move' for 'more'"},
+    {"scope": "lft", "find": "drop back knee to to ground", "replace": "drop back knee to the ground", "why": "doubled word"},
+    {"scope": "lft", "regex": "(\\d)(seconds|second|mins|min|reps|rep|breaths|degrees)\\b", "replace": "\\1 \\2", "why": "number run into the following word"},
+
+    {"scope": "red", "find": "Anearobic", "replace": "Anaerobic", "why": "typo"},
+    {"scope": "red", "find": "Moderte", "replace": "Moderate", "why": "typo"},
+    {"scope": "red", "find": "clearing fatigure", "replace": "clearing fatigue", "why": "typo"},
+    {"scope": "red", "find": "slightly higher speat", "replace": "slightly higher speed", "why": "typo"},
+    {"scope": "red", "find": "build the the hard effort", "replace": "build the hard effort", "why": "doubled word"},
+
+    {"scope": "both", "regex": "\\s+([,;:])", "replace": "\\1", "why": "space before punctuation"},
+    {"scope": "both", "regex": "\\s+\\.", "replace": ".", "why": "space before a full stop"},
+    {"scope": "both", "regex": ",\\s*\\.", "replace": ".", "why": "comma immediately followed by a full stop"},
+    {"scope": "both", "regex": "\\.(\\s*\\.)+", "replace": ".", "why": "repeated full stops"},
+    {"scope": "both", "regex": " {2,}", "replace": " ", "why": "double spaces"},
+    {"scope": "both", "sentence_case": true, "why": "a sentence starting lower-case after a full stop"}
+  ],
+
+  "note_overrides": [
+    {
+      "scope": "lft",
+      "exercise": "Landmine Rotations",
+      "note_startswith": "Holding 1 KB opposite of front leg",
+      "new_note": "Hinge slightly and hold the end of the bar at chest height with both hands. Turn through the hips and ribs together, arms staying long, and control the bar back across.",
+      "why": "The published note describes a KB drop split squat — the same sentence appears on 'KB Drop Split Squat' on 11/20. Replaced with a note for the movement actually named."
+    },
+    {
+      "scope": "lft",
+      "exercise": "Alt. BW Reverse Lunge",
+      "note_startswith": "Create tension, slowly pull into deep squat position",
+      "new_note": "Step straight back and drop the back knee toward the floor, torso tall. Drive through the whole front foot to stand, and alternate sides.",
+      "why": "The published note describes a deep prying squat — the same sentence appears on 'BW Squat' on 08/17. Replaced with a note for the movement actually named."
+    },
+    {
+      "scope": "lft",
+      "exercise": "DB Incline Fly",
+      "note_startswith": "Use BOX for hand support",
+      "new_note": "Lie back on the incline bench with a DB in each hand and a slight bend in the elbows. Open the arms wide as though hugging the ceiling, then bring them back together over the chest.",
+      "why": "The published note describes a kettlebell row, not an incline fly."
+    },
+    {
+      "scope": "lft",
+      "exercise": "Band Curl",
+      "note_startswith": "Lying on bench. Hold DB with both hands",
+      "new_note": "Stand on the band with a handle in each hand, palms up. Curl to the shoulders keeping the elbows pinned to the ribs, then lower under control.",
+      "why": "The published note describes a DB pullover — the same sentence appears on 'DB Pullover' on 11/20."
+    },
+    {
+      "scope": "lft",
+      "exercise": "1DB Lateral Lunge",
+      "note_startswith": "DB in goblet position, sitting deep into squat",
+      "new_note": "Hold the DB in the goblet position. Step wide to one side, pushing the hips back with the trailing leg straight, then push back to the middle and alternate.",
+      "why": "The published note describes a goblet squat — the same sentence appears on 'Heels Elevated Goblet Squat' on 09/07."
+    },
+    {
+      "scope": "lft",
+      "exercise": "90/90 Stretch",
+      "note_startswith": "Land and hold position",
+      "new_note": "Sit in the 90/90 position, drive the front knee into the ground and keep the chest tall and reaching forward over the front leg.",
+      "why": "The published note is a jump-landing cue, which belongs to the squat-jump row directly below it on the same page (both rows are labelled 1e in the source)."
+    }
+  ],
+
+  "renames": [
+    {
+      "scope": "lft",
+      "from": "Elevated Goblet Squat Band Tall Kneeling X",
+      "to": "Band Tall Kneeling X Pulldown",
+      "why": "The row above has a four-line name that overflows its cell, so the tail of it lands in this row's name. This row's own note and demo video are both the tall-kneeling band pulldown."
+    },
+    {
+      "scope": "lft",
+      "from": "Landmine Heels",
+      "to": "Landmine Heels Elevated Goblet Squat",
+      "why": "Same overflow, seen from the other side: this row's name is cut short where it spills into the row below. Its demo video is the heels-elevated landmine goblet squat."
+    },
+    {
+      "scope": "lft",
+      "from": "Banded Pin Bench Press Example video DOE",
+      "to": "Banded Pin Bench Press",
+      "why": "An internal note to the programming team was left inside the exercise name."
+    },
+    {
+      "scope": "red",
+      "from": "Fitband Rotatoinal Row to Press",
+      "to": "Fitband Rotational Row to Press",
+      "why": "typo"
+    }
+  ]
+}

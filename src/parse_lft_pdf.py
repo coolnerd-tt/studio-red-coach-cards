@@ -910,6 +910,9 @@ def apply_corrections(days: list[dict], corrections_path: Path) -> int:
     return applied
 
 
+from text_corrections import apply_text_corrections  # noqa: E402
+
+
 def merge_into_manifests(new_days: list[dict], manifests_path: Path,
                           corrections_path: Path = DEFAULT_CORRECTIONS) -> int:
     existing = {"days": []}
@@ -921,6 +924,10 @@ def merge_into_manifests(new_days: list[dict], manifests_path: Path,
     n = apply_corrections(alldays, corrections_path)
     if n:
         print(f"  ✎ re-applied {n} published-programming correction(s)")
+    t = apply_text_corrections(alldays, "lft")
+    if any(t.values()):
+        print(f"  ✎ copy-edits: {t['text']} text, {t['renamed']} renamed, "
+              f"{t['notes_replaced']} mis-paired note(s)")
     manifests_path.write_text(json.dumps({"days": alldays}, ensure_ascii=False, indent=2), encoding="utf-8")
     return len(alldays)
 
