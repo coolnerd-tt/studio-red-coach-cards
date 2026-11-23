@@ -91,14 +91,31 @@ def norm_name(s: str) -> str:
 
 
 _CUES: dict[str, list[str]] | None = None
+_TECHNICAL: dict[str, list[str]] | None = None
+
+
+def _load_cues(cues_path: Path) -> None:
+    global _CUES, _TECHNICAL
+    doc = json.loads(cues_path.read_text(encoding="utf-8")) if cues_path.exists() else {}
+    _CUES = doc.get("cues", {})
+    _TECHNICAL = doc.get("technical", {})
 
 
 def cues_for(name: str, cues_path: Path = DEFAULT_CUES) -> list[str]:
-    """The one or two coaching cues for an exercise, if we have any."""
-    global _CUES
+    """The one or two things a coach says out loud on this movement."""
     if _CUES is None:
-        _CUES = json.loads(cues_path.read_text(encoding="utf-8"))["cues"] if cues_path.exists() else {}
+        _load_cues(cues_path)
     return _CUES.get(norm_name(name or ""), [])
+
+
+def technical_for(name: str, cues_path: Path = DEFAULT_CUES) -> list[str]:
+    """The deeper form and progression notes — what a coach watches for and
+    how to load the movement up or scale it back. Not things you shout across
+    the floor, so they render as their own block rather than in quote marks.
+    """
+    if _TECHNICAL is None:
+        _load_cues(cues_path)
+    return _TECHNICAL.get(norm_name(name or ""), [])
 
 
 def main_lift_of(day: dict) -> str:
@@ -168,6 +185,11 @@ def render_exercise_row(ex: dict) -> str:
     if cues:
         items = "".join(f'<li>{escape(c)}</li>' for c in cues)
         cue_html = f'\n        <ul class="lft-ex-cues">{items}</ul>'
+    technical = technical_for(name)
+    if technical:
+        items = "".join(f'<li>{escape(t)}</li>' for t in technical)
+        cue_html += ('\n        <div class="lft-ex-tech"><span class="lft-tech-label">Form &amp; progression</span>'
+                     f'<ul>{items}</ul></div>')
 
     return f"""    <div class="lft-ex-row">
       <div class="lft-ex-label">{escape(ex.get("label", ""))}</div>
@@ -441,6 +463,18 @@ STYLE = """
   .lft-ex-cues li { position: relative; padding-left: 16px; font-size: calc(19.5px * var(--fs)); font-style: italic; color: var(--yellow); line-height: 1.4; margin-top: 3px; }
   .lft-ex-cues li::before { content: '“'; position: absolute; left: 0; top: 1px; font-style: normal; font-weight: 700; color: rgba(245,200,66,0.55); }
   .lft-ex-cues li::after { content: '”'; font-style: normal; color: rgba(245,200,66,0.55); }
+
+  /* The deeper notes: what to watch for and how to load it up or scale it
+     back. Deliberately quieter than the spoken cues above — a coach scans
+     these before the set, they don't shout them during it. */
+  .lft-ex-tech { margin-top: 8px; padding-top: 7px; border-top: 1px dashed var(--border); }
+  .lft-tech-label { display: block; font-family: 'Barlow Condensed', sans-serif; font-weight: 700;
+                    font-size: calc(15px * var(--fs)); letter-spacing: 1.2px; text-transform: uppercase;
+                    color: var(--blue); margin-bottom: 3px; }
+  .lft-ex-tech ul { list-style: none; margin: 0; padding: 0; }
+  .lft-ex-tech li { position: relative; padding-left: 15px; font-size: calc(18px * var(--fs));
+                    color: #cfcfcf; line-height: 1.45; margin-top: 3px; }
+  .lft-ex-tech li::before { content: '▸'; position: absolute; left: 0; top: 0; color: var(--blue); }
 
   .lft-note-row { display: flex; align-items: flex-start; gap: 8px; background: rgba(245,200,66,0.08); border: 1px dashed rgba(245,200,66,0.4); border-radius: 8px; padding: 8px 12px; margin-bottom: 8px; font-size: calc(19px * var(--fs)); color: var(--yellow); }
   .lft-note-icon { flex-shrink: 0; }

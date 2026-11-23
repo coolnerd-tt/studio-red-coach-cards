@@ -1,5 +1,5 @@
 {
- "_comment": "One or two short coaching cues per Studio LFT exercise, keyed by normalized name (lowercase; '.' and '-' become spaces). Rendered under each exercise on the day card. Entries whose exercise also appears in exercise-library.json reuse that entry's cues so the two apps stay consistent.",
+ "_comment": "One or two short coaching cues per Studio LFT exercise, keyed by normalized name (lowercase; '.' and '-' become spaces). 'cues' are what a coach says out loud and render in quote marks; 'technical' are the deeper form and progression notes a coach scans before the set, and render in their own block. Rendered under each exercise on the day card. Entries whose exercise also appears in exercise-library.json reuse that entry's cues so the two apps stay consistent.",
  "cues": {
   "1 5 rep split squat jumps": [
    "Down, half up, down — then jump",
@@ -1084,6 +1084,1092 @@
   "½ kneeling pallof press": [
    "Inside knee down, perpendicular to the rack",
    "Press straight out — don't let the band turn you"
+  ]
+ },
+ "technical": {
+  "1 5 rep split squat jumps": [
+   "Down, half up, down, then jump — the half rep is where people cheat",
+   "Land on the same side under control; when the landings go loud, stop"
+  ],
+  "1/2 kneeling hip flexor": [
+   "Squeeze the back glute first, then lean — leaning without the squeeze just arches the back",
+   "Add a small overhead reach on the back-leg side to deepen it"
+  ],
+  "1db front foot elevated split squat": [
+   "Front shin over the toes, back knee tracking straight down, torso tall",
+   "Raise the front foot higher for range before reaching for a heavier DB"
+  ],
+  "1db lateral lunge": [
+   "Push the hips back as you step wide and keep the trailing leg straight",
+   "Depth before load; the knee takes a lot here if the hips don't move back"
+  ],
+  "1kb kickstand crossbody rdl": [
+   "Back toe is a kickstand only — if it's carrying weight, it's a split-stance RDL instead",
+   "Progress toward a true single leg before adding bell weight"
+  ],
+  "2:1 body row": [
+   "The single-arm lower is the point; rushing it turns the set into a two-arm row",
+   "Raise the bar to scale back, lower it to progress"
+  ],
+  "2db lateral lunge": [
+   "Push the hips back as you step out and keep the trailing leg straight",
+   "Depth before load — this one gets ugly fast with heavy DBs"
+  ],
+  "45 degree ½ kneeling hip flexor": [
+   "Back glute squeezed before any lean; the ribs should stay down throughout",
+   "Hold longer rather than leaning further"
+  ],
+  "4pt rocking": [
+   "Rock back only to where the low back stays neutral — past that the pelvis tucks",
+   "Use the range they own today and grow it a little each week"
+  ],
+  "90/90 hip rotation": [
+   "Both knees hold 90 degrees as the hips turn; the chest stays tall",
+   "Work the range you own and grow it; forcing the knees down loads them instead of the hips"
+  ],
+  "90/90 stretch": [
+   "Chest tall and forward over the front shin; rounding turns a hip stretch into a back stretch",
+   "Work both the front and back leg positions rather than holding only the easy side"
+  ],
+  "active straight leg raise with ball squeeze": [
+   "Squeeze the ball to lock the pelvis, then raise the leg without the back arching",
+   "Range grows as the brace holds, never by letting the back move"
+  ],
+  "adductor rockback": [
+   "The straight leg's inner thigh is the target — rock back only as far as the back stays neutral",
+   "Grow the range slowly; this one responds to frequency, not force"
+  ],
+  "alt bw curtsy lunge": [
+   "Step behind and across with the hips staying square to the front",
+   "Shallow and square beats deep and twisted"
+  ],
+  "alt bw reverse lunge": [
+   "Front shin near-vertical and the torso tall; a forward lean shifts the work out of the glute",
+   "Progress to a deficit or hold load once they can land the back knee softly every rep"
+  ],
+  "alt hanging knee raise": [
+   "Shoulders stay packed on the bar and the swing stays out of it",
+   "End the set when the swing starts, not when the reps run out"
+  ],
+  "alternating db chest press": [
+   "The holding arm stays locked out — letting it drift down halves the core demand",
+   "Pause the held arm at full lockout before adding load"
+  ],
+  "assisted sissy squat": [
+   "Knees travel forward while the hips stay long — the body makes one straight line",
+   "Hold the rack as much as needed; reduce the assistance before increasing range"
+  ],
+  "back squat": [
+   "Brace before you unrack; the hips and chest should rise together out of the hole",
+   "Bar speed is the gauge — when it slows noticeably, the set is done"
+  ],
+  "back/front squat": [
+   "Whichever bar position, the ribs stay down and the hips and chest rise together",
+   "Pick the position the member can hold; a folded front squat is worse than a clean back squat"
+  ],
+  "ball chest slam + core engaged leg raise": [
+   "Slam from a hinge, then keep the low back flat through the leg raise",
+   "Shorten the leg lever when the back lifts rather than dropping the reps"
+  ],
+  "ball reverse lunge with chop": [
+   "Step back first, then chop — doing both at once loses the depth and the rotation",
+   "Slow the chop before adding ball weight"
+  ],
+  "ball slam": [
+   "Full reach overhead then slam through the ball — stopping short of the floor wastes the rep",
+   "Power drops off fast; reset between reps rather than chasing a pace"
+  ],
+  "ball slam broad jump": [
+   "Slam, then reset the feet before the jump — rushing the transition wrecks the landing",
+   "Stuck landings are the standard; distance is secondary"
+  ],
+  "band assisted push up (encourage plyo if they can)": [
+   "The band across the waist takes weight off, so the body can still move as one line",
+   "Push hard enough to leave the floor once the standard push-up is clean"
+  ],
+  "band assisted reverse nordic": [
+   "Hips stay open and ribs down as you lean back — folding at the hips makes it easy",
+   "Shorten the lean before adding band assistance; quads cramp fast here"
+  ],
+  "band assisted squat jump": [
+   "The band should make the jump bigger, not make the landing sloppier",
+   "Partner matches the assistance to the landing quality, not the height"
+  ],
+  "band chop": [
+   "Arms stay long and the turn comes from the ribs; the hips should stay quiet",
+   "Step further from the anchor for tension instead of swinging harder"
+  ],
+  "band curl": [
+   "Elbows glued to the ribs; drifting forward hands the work to the front delt",
+   "Step wider on the band for tension rather than swinging the body"
+  ],
+  "band face pull": [
+   "Elbows finish above the wrists; dropping them turns it into a row and loses the rear delt",
+   "Step further from the anchor for more tension rather than hauling with the torso"
+  ],
+  "band face pull and press": [
+   "Finish the pull before the press begins — rushing fuses the two and loses the rear delt",
+   "Lighter band, full range beats heavy band and a short pull"
+  ],
+  "band good morning": [
+   "Hips back, chest down, lats engaged — knees stay soft but roughly fixed",
+   "Band tension peaks at the top; squeeze there before adding more"
+  ],
+  "band horizontal bicep curl + bench/box dip": [
+   "Elbows pinned on the curl, shoulders down on the dip",
+   "Keep moving for the full two minutes; rest only as needed"
+  ],
+  "band leg abduction": [
+   "Outside leg is the working leg; the torso staying upright is the tell",
+   "Cross the leg past the midline to load the stretch before adding tension"
+  ],
+  "band over and back": [
+   "Watch the ribs flare as the arms pass overhead — that's the shoulder borrowing range from the low back",
+   "Narrow the grip to make it harder; widen it or use a lighter band if the elbows bend to get past"
+  ],
+  "band overhead standing lateral crunch": [
+   "Bend sideways only — any forward lean takes the obliques out of it",
+   "Lighter band through a full side bend beats a heavy band and a short one"
+  ],
+  "band pec fly": [
+   "Soft elbow angle, held constant; if it opens and closes it has become a press",
+   "Squeeze at the front for a count rather than reaching for a heavier band"
+  ],
+  "band plank row": [
+   "Hips stay level as the band is pulled; rotating up is where this gets easy",
+   "Widen the feet to steady it, narrow them to progress"
+  ],
+  "band pull apart": [
+   "Arms stay straight and the band finishes at chest height — bending the elbows cheats the range",
+   "Shorten your grip on the band for more tension, don't shrug to finish"
+  ],
+  "band pull through": [
+   "Arms are just hooks; the hips do all the work, and the finish is standing tall, not leaning back",
+   "Squeeze at the top for a count before adding band tension"
+  ],
+  "band resisted glute bridge": [
+   "Band over the hips means the top of the rep is hardest — squeeze there",
+   "Pause at the top before adding band tension"
+  ],
+  "band resisted lateral lunge": [
+   "The band pulls you back to the middle, so push out against it and hold the depth",
+   "Step further out as the hips allow before adding tension"
+  ],
+  "band reverse grip curl": [
+   "Palms down, wrists straight — letting the wrist break is where elbows get cranky",
+   "Lighter band, full range; this is a forearm exercise as much as a bicep one"
+  ],
+  "band sa power row": [
+   "It's a drive from the hips through the elbow — if only the arm moves, the band is too light",
+   "Explosive out, controlled back; the return is where most of the tension lives"
+  ],
+  "band squat and sa row": [
+   "Squat first, then row as you stand; fusing them loses both halves",
+   "Build the squat depth before adding band tension"
+  ],
+  "band straight arm pull down": [
+   "Arms locked straight so the lats do the work; any elbow bend passes it to the triceps",
+   "Hold the hinge — standing up as you pull is the fault"
+  ],
+  "band straight arm pulldown": [
+   "Arms locked straight so the lats do it; any elbow bend hands the work to the triceps",
+   "Hold the hinge throughout — standing up as you pull is the fault"
+  ],
+  "band tall kneeling x pulldown": [
+   "Tall through the hips with the ribs down; sitting back onto the heels loses the position",
+   "Cross the bands higher on the bar for a steeper angle as they get stronger"
+  ],
+  "band triceps press down": [
+   "Elbows pinned to the ribs — if they drift forward, the shoulders have taken over",
+   "Full lockout every rep before adding tension"
+  ],
+  "band triceps press down + kb plank pull thru": [
+   "Elbows pinned on the press-down, hips level on the pull-through",
+   "Swap on the minute; change the bell or the band, not both"
+  ],
+  "band x pulldown": [
+   "Crossing the bands sets the angle; elbows drive down into the ribs",
+   "Kneel tall — sitting back on the heels shortens the pull"
+  ],
+  "band x rear delt pull apart": [
+   "Lead with the pinkies and stop at shoulder height; shrugging means the band is too heavy",
+   "Widen the stance for balance before increasing tension"
+  ],
+  "banded barbell box squat": [
+   "Sit back to the box and pause — bouncing off it removes the whole point",
+   "Band tension makes the lockout hardest; lower the box only when the position holds"
+  ],
+  "banded broad jump": [
+   "The band pulls you back on landing, so plant and absorb before standing",
+   "Distance means nothing if the landing isn't stuck"
+  ],
+  "banded pin bench press example video does not have bands demo set up on bands non band is an option": [
+   "Touch the pins under control and press from a dead stop — no bounce",
+   "Raise the pins to shorten the range if the shoulders complain"
+  ],
+  "banded sumo deadlift": [
+   "Wide stance, toes out, knees tracking over them — this should feel more squat than hinge",
+   "Band tension makes the top half hardest; build the lockout before adding bar weight"
+  ],
+  "banded t spine rotation": [
+   "Rotation from the mid-back — the hips should stay still as the chest opens",
+   "Hold the end position for two breaths to gain range rather than swinging through"
+  ],
+  "barbell bent over row": [
+   "Hold the hinge angle for the whole set; standing up as you pull is the first sign of too much weight",
+   "Pause the bar on the ribs for a count before loading heavier"
+  ],
+  "barbell deficit calf raise": [
+   "Heels drop fully below the plate and pause at the top — bouncing skips the range",
+   "Slow the lower to three seconds before adding bar weight"
+  ],
+  "barbell floor press": [
+   "Triceps touch the floor and pause; the elbows at 45 keep the shoulders safe",
+   "The short range lets you load heavier than a bench — respect that on the way down"
+  ],
+  "barbell front squat to pins": [
+   "Elbows driving up holds the rack; when they drop the bar rolls",
+   "Touch the pins under control — raise them to scale the depth"
+  ],
+  "barbell front squat to pins (offer back squat – no back squat video)": [
+   "Elbows driving up holds the rack; the moment they drop, the bar rolls and the chest folds",
+   "Touch the pins under control, don't bounce — raise the pins to scale the depth"
+  ],
+  "barbell rollout": [
+   "Ribs down and the core stops the bar — the low back arching is the limit",
+   "Roll only as far as the plank holds; that distance is the progression"
+  ],
+  "barbell split squat": [
+   "Lower under control with both legs sharing the work; driving only off the front is the common miss",
+   "Front-foot-elevated or a deficit before heavier bar weight"
+  ],
+  "barbell zercher split squat": [
+   "The bar in the elbows pulls the chest down; staying tall is the whole challenge",
+   "Pad the crook of the elbow and build the hold before loading the split squat"
+  ],
+  "bb hang power clean regression > bb rdl(x6)": [
+   "Jump the bar up and drop under fast; muscling it with the arms is the regression trigger",
+   "If the catch is slow or the bar loops out, switch them to the RDL version"
+  ],
+  "bb rdl": [
+   "Bar stays in contact with the legs the whole way; any gap means the hips stopped moving back",
+   "Stop where the back would round — that's today's range, not a failure"
+  ],
+  "bb rnt rdl": [
+   "The band pulls the hips forward, so you must pull back against it the whole rep",
+   "Band tension teaches the hinge; add bar weight only once the pattern holds"
+  ],
+  "bench hand/knee support band db row": [
+   "Hips stay square to the bench; rotating up to finish the rep is the common cheat",
+   "Pause at the top for a count before adding DB weight"
+  ],
+  "bench press": [
+   "Shoulder blades set and feet driving into the floor; the bar path is a slight arc, not straight down",
+   "Pause on the chest before adding load — a bounced rep is not the same rep"
+  ],
+  "bent over plate raise": [
+   "Hold the hinge and raise to shoulder height with straight arms",
+   "Light plate; the moment the torso starts rising with the arms, the set is done"
+  ],
+  "bird dog contra laterals": [
+   "A glass of water on the low back shouldn't spill — the hips rotating is the fault, not the reach",
+   "Progress by slowing the transition, not by reaching higher"
+  ],
+  "bird dog contralaterals": [
+   "A glass of water on the low back shouldn't spill — the hips rotating is the fault, not the reach",
+   "Progress by slowing the transition, not by reaching higher"
+  ],
+  "bird dog legs only": [
+   "Drag the toe out long and lift only a little; the hips should stay square",
+   "Add the small lift at the end once the hips stop rotating"
+  ],
+  "body row": [
+   "Body is one line from heel to head; the hips dropping first is the end of the working set",
+   "Walk the feet out or elevate them to progress, not a heavier pull"
+  ],
+  "bodyweight sl rdl w/ reach": [
+   "Back leg and chest finish in one line and the hips stay square to the floor",
+   "Earn the balance before adding load — a fingertip on the rack is fine to start"
+  ],
+  "bodyweight split squat": [
+   "Back knee drops straight down, torso tall, front shin over the toes",
+   "Add a pause at the bottom before progressing to load"
+  ],
+  "bodyweight squat w/ pause": [
+   "The pause is where form breaks — watch the heels lift and the knees fall in at the bottom",
+   "Lengthen the pause before adding depth, and elevate the heels if the ankles limit it"
+  ],
+  "box dip": [
+   "Elbows travel straight back, shoulders stay down away from the ears",
+   "Walk the feet out to progress; shrugged shoulders mean scale it back"
+  ],
+  "box jump": [
+   "Land soft in a quarter squat, then step down — never jump down",
+   "Height isn't the progression; a silent, stuck landing is"
+  ],
+  "box pistol squat": [
+   "Sit to the box on one leg and stand on the same leg with no push-off from the free foot",
+   "Lower the box as control improves rather than adding load"
+  ],
+  "box pistol squat +body row": [
+   "Sit to the box on one leg, stand on the same leg, then hold the plank line on the row",
+   "Raise the box or the bar to keep both halves clean"
+  ],
+  "bridge walk outs": [
+   "Hips stay high as the feet walk out; the moment they drop, walk back in",
+   "Walk further out as the glutes hold, not faster"
+  ],
+  "bridge walk ups": [
+   "Hips stay high the whole way; the moment they drop, walk back in",
+   "Walk further out as the glutes hold, not faster"
+  ],
+  "broad jump": [
+   "Judge it on the landing, not the distance — soft hips, knees out, feet flat",
+   "Build height and distance only once every landing is stuck without a second hop"
+  ],
+  "bulgarian hip flexor stretch": [
+   "Squeeze the back glute and keep the ribs down before leaning in",
+   "Hold longer rather than pushing deeper"
+  ],
+  "bulgarian rdl": [
+   "Hinge through the front leg; the back foot on the roller is support only",
+   "Keep the back flat — that's the limit, not the depth"
+  ],
+  "bulgarian split squat bodyweight": [
+   "Hinge slightly forward for glute bias or stay upright for quad — pick one and hold it",
+   "Earn the full range at bodyweight before any load goes on"
+  ],
+  "bw squat": [
+   "Knees track over the toes and the heels stay planted through the full range",
+   "Add a pause at the bottom before you add any load"
+  ],
+  "california press": [
+   "Lower like a skull crusher, press out like a press — two halves, not one arc",
+   "Light DBs; elbow control is what's being trained"
+  ],
+  "chin up (assisted as needed)": [
+   "Elbows drive down into the ribs, chin clears the bar, full extension at the bottom",
+   "Use only as much assistance as it takes to keep the full range"
+  ],
+  "close grip pull up (band assisted as needed)": [
+   "Shoulder blades set before the arms pull; the lats start the rep, not the biceps",
+   "Band assistance comes off gradually — shorten the set before shortening the range"
+  ],
+  "continuous squat jump": [
+   "Land in the same position you took off from; a wide, noisy landing means fatigue has arrived",
+   "Stop the set when the landings get loud, not when the reps run out"
+  ],
+  "contralateral dead bug": [
+   "Opposite arm and leg lower together with the low back pressed flat",
+   "Shorten the lever if the back lifts; never trade position for range"
+  ],
+  "contralateral deadbug": [
+   "Opposite arm and leg lower together with the low back pressed flat",
+   "Shorten the leg lever if the back lifts; speed is never the progression"
+  ],
+  "conventional deadlift": [
+   "Set the back and pull the slack out before anything moves; hips and shoulders rise together",
+   "If the hips shoot up first, the weight is beyond today's position"
+  ],
+  "conventional/sumo deadlift": [
+   "Let the member pick the stance their hips allow, then set the back before the pull",
+   "Position holding is the indicator for loading, not how much they can grind"
+  ],
+  "copenhagen hip drop": [
+   "Hips square to the wall; rolling back makes it dramatically easier",
+   "Start from the knee on the bench, progress toward the foot"
+  ],
+  "copenhagen march": [
+   "Hips stay level and square; the march is small and controlled",
+   "Start with the knee on the bench, progress toward the ankle"
+  ],
+  "core engaged leg raise": [
+   "Low back stays pressed down; the moment it lifts, the hip flexors have taken over",
+   "Bend the knees to shorten the lever rather than cutting reps"
+  ],
+  "crunch with feet on box": [
+   "Ribs toward the hips with the low back staying down; the neck stays neutral",
+   "Slow the lower before adding reps"
+  ],
+  "db 45 degree forward lunge alt": [
+   "Step out on the diagonal, not straight ahead, and keep the back toe pointing forward",
+   "Control the step out before increasing load — this one punishes a sloppy landing"
+  ],
+  "db back support single arm shoulder press": [
+   "Back against the pad takes the cheat away — if they're arching off it, the DB is too heavy",
+   "Pause at lockout for a count before adding weight"
+  ],
+  "db bench press": [
+   "Shoulder blades set and stay set; elbows at about 45, not flared to 90",
+   "Pause on the chest for a count before chasing load"
+  ],
+  "db biceps curl": [
+   "Elbows pinned, no swing; the shoulders should stay completely still",
+   "Slow the lower to three seconds before adding weight"
+  ],
+  "db biceps curl + decline reverse crunch": [
+   "Curl without swinging, then keep the low back down through the crunch",
+   "Drop the DB weight as you fatigue and keep moving"
+  ],
+  "db california press": [
+   "Lower like a skull crusher, press out like a press — two distinct halves",
+   "Light DBs; this one is all about elbow control"
+  ],
+  "db chest supported row": [
+   "Chest stays glued to the pad — if it peels off, the load is too heavy",
+   "Pause at the top for a count before adding weight"
+  ],
+  "db curtsy lunge": [
+   "Step behind and across with the hips staying square to the front",
+   "Depth and control before load — the knee travels a long way here"
+  ],
+  "db deadstop row with hand support": [
+   "The DB rests fully on the floor between reps so each pull starts dead",
+   "Pause at the top rather than adding weight when the torso starts twisting"
+  ],
+  "db floor press": [
+   "Triceps touch the floor and pause; the shortened range protects the shoulder",
+   "Set the DBs with the knees to get into position safely as the load climbs"
+  ],
+  "db fly press": [
+   "The fly half is a wide arc with soft elbows; once the elbows bend it has become a press",
+   "Pause at the bottom of the fly before adding weight"
+  ],
+  "db front loaded squat – lunge – press": [
+   "The DBs stay in the front rack for the whole complex — dropping them resets the sequence",
+   "Light enough to finish the press; the squat is never the limiter here"
+  ],
+  "db goblet spanish squat": [
+   "The band behind the knees pulls them back, so drive them forward against it",
+   "Band tension first, then DB weight — not both at once"
+  ],
+  "db incline bench press": [
+   "Shoulder blades set, elbows at 45, pause at the bottom of each rep",
+   "Slow tempo is the point — add time under tension before weight"
+  ],
+  "db incline fly": [
+   "Fixed soft elbow angle throughout; the stretch should be felt across the chest, not in the shoulder joint",
+   "Pause at the bottom before adding weight, and stop level with the chest if the shoulder complains"
+  ],
+  "db incline pec fly": [
+   "Same arc, same fixed elbow; the DBs meet over the upper chest, not the face",
+   "Slow the opening before adding load"
+  ],
+  "db incline press": [
+   "Shoulder blades set on the pad, elbows at 45, press up and slightly back",
+   "Pause at the bottom before adding load"
+  ],
+  "db incline skull crusher": [
+   "Elbows point at the ceiling and stay there; only the forearms move",
+   "Lighter than a flat version — the incline lengthens the triceps"
+  ],
+  "db lateral kickstand rdl": [
+   "The hinge is to the side of the planted leg, and the lifted foot carries no weight",
+   "Lower the box for the outside foot to progress toward a single-leg version"
+  ],
+  "db lateral raise": [
+   "Lead with the elbows and stop at shoulder height; shrugging means too heavy",
+   "Slow the lower — that's half the rep and where the growth is"
+  ],
+  "db pause goblet squat": [
+   "Elbows inside the knees at the bottom, chest tall; the DB drifting forward means the brace is gone",
+   "Add a second to the pause before adding weight"
+  ],
+  "db pullover": [
+   "Ribs stay down as the DB travels back — arching the low back is borrowed range, not shoulder range",
+   "Only go as far back as the shoulders allow, then slow the lower"
+  ],
+  "db push press": [
+   "The dip is short and vertical; a long dip or the chest tipping forward kills the drive",
+   "Once the catch is soft and controlled, add load before adding reps"
+  ],
+  "db rack support single leg rdl": [
+   "Use the rack for balance only — gripping hard is a sign the load is too heavy",
+   "Wean off the hand support before adding weight"
+  ],
+  "db rdl": [
+   "Bar path stays against the legs; the hips go back, they don't just bend down",
+   "Stop the descent at the point the back would round — that's their range today"
+  ],
+  "db reverse lunge": [
+   "Torso upright and the weight in the whole front foot; pushing off the back toe is the common miss",
+   "Progress to a deficit, or front-foot-elevated, before heavier DBs"
+  ],
+  "db rotational row in lunge": [
+   "Hold the lunge depth while you rotate; standing up to make the row easier is the fault",
+   "Slow the rotation rather than increasing the DB"
+  ],
+  "db sa bench press": [
+   "The free side will try to lift off the bench — keep both shoulder blades pinned",
+   "The anti-rotation demand is the point; add load only while both hips stay down"
+  ],
+  "db single arm bicep curl": [
+   "Shoulders stay square; leaning away from the working arm is the giveaway",
+   "Pause at the top before adding weight"
+  ],
+  "db single arm incline press": [
+   "Both shoulder blades stay on the pad and the hips stay square",
+   "Anti-rotation is the point — load only while nothing twists"
+  ],
+  "db skull crusher": [
+   "Elbows point at the ceiling and stay there; only the forearms move",
+   "Lighter than you think — elbow position is what gets trained here"
+  ],
+  "db sl hip thrust": [
+   "Hips stay level — the free side dropping means the working glute has given out",
+   "Pause at the top for two counts before adding load"
+  ],
+  "db snatch": [
+   "One continuous pull with the DB close; a looping arm means the hips stopped early",
+   "Keep it light and fast — speed is the quality being trained"
+  ],
+  "db snatch alt": [
+   "One continuous pull, DB close to the body; a looping arm path means the hips didn't finish",
+   "Keep it light and fast — this is a speed exercise, not a strength one"
+  ],
+  "db split jerk": [
+   "Quick dip, then punch under the DBs; catching with soft knees in a split is the skill",
+   "Both feet land together — if one lands late, drop the weight"
+  ],
+  "db split squat": [
+   "Front shin over the toes, back knee straight down, torso tall throughout",
+   "Front-foot-elevated for range before heavier DBs"
+  ],
+  "db thruster x10 + mb crazy ivan": [
+   "Drive straight out of the squat into the press; a pause at the top wastes the chain",
+   "Pick a DB weight that lets all ten thrusters stay unbroken"
+  ],
+  "db/bb push press": [
+   "Short vertical dip, then drive — the legs start it and the arms finish it",
+   "Add load once the catch is soft and the feet stay planted"
+  ],
+  "dead bug leg raise with upper body ball squeeze": [
+   "Low back stays flat on the floor; if it lifts, shorten the leg lever",
+   "Extend the leg further as the brace holds, rather than going faster"
+  ],
+  "dead bug press": [
+   "Press while the low back stays flat; the ribs flaring is the tell",
+   "Shorten the leg lever before dropping the load"
+  ],
+  "deficit bulgarian split squat": [
+   "Chest stays tall on the way down; folding forward shifts the load off the front leg",
+   "Add the deficit before you add the dumbbells"
+  ],
+  "deficit calf raise": [
+   "Full heel drop and a pause at the top; bouncing skips the range that matters",
+   "Slow the lower before adding load"
+  ],
+  "deficit db/kb reverse lunge": [
+   "The deficit lengthens the range, so the torso wants to fold — keep it tall",
+   "Add the deficit before the weight"
+  ],
+  "double trouble: kb clean, kb squat, kb rdl, hop x 3e from bss": [
+   "Each movement finishes before the next starts; rushing the clean ruins the squat",
+   "One bell weight for the whole complex — the weakest link sets the load"
+  ],
+  "drop squat to pause": [
+   "Drop fast into the catch position and hold it still — the landing is the rep",
+   "Hold the pause longer rather than dropping from higher"
+  ],
+  "dynamic pigeon": [
+   "The rotation comes from the hip, not the lumbar spine — the back leg staying long is the tell",
+   "Sit taller or prop the hip on a plate if the knee loads up"
+  ],
+  "elevated goblet squat band tall kneeling x": [
+   "Tall through the hips, ribs down, elbows driving into the ribs",
+   "Cross the bands higher for a steeper pull as they get stronger"
+  ],
+  "explosive band horizontal press": [
+   "Punch out fast, return slow; the eccentric is where the tension is",
+   "Step back for more tension rather than shortening the punch"
+  ],
+  "explosive band press": [
+   "Punch out fast and control the return; the return is where the tension lives",
+   "Step further from the anchor for tension, not a heavier band and a short punch"
+  ],
+  "explosive horizontal band press": [
+   "Punch out on each rep with the ribs down and no lean into it",
+   "Same band setup both sides; switch at the halfway mark"
+  ],
+  "face pull": [
+   "Elbows high and wide, hands finish by the ears — dropping the elbows makes it a row",
+   "Pause at the back and squeeze before adding tension"
+  ],
+  "feet elevated glute bridge": [
+   "Ribs down and squeeze at the top — arching the low back fakes extra height",
+   "Pause at the top before progressing to a single leg"
+  ],
+  "fire hydrant": [
+   "Hips stay square to the floor — if the torso tips away, the lift is coming from the low back",
+   "Add a band or a pause at the top; raising the leg higher is not the progression"
+  ],
+  "floating heel landmine goblet squat": [
+   "Weight stays in the balls of the feet with the chest tall — this is a quad-biased squat",
+   "Build the balance before the load; it is deliberately unstable"
+  ],
+  "floor slides": [
+   "Forearms stay as close to the floor as possible and the low back stays down",
+   "Range grows slowly; lifting off the floor to reach further defeats the drill"
+  ],
+  "front foot elevated 2db low load split squat": [
+   "Front shin over the toes, hips square, back knee dropping straight down",
+   "The elevation is the progression — deeper range beats heavier load here"
+  ],
+  "front foot elevated barbell split squat": [
+   "Back knee drops straight down toward the floor, torso tall, front shin over the toes",
+   "Raise the front foot for range before adding bar weight"
+  ],
+  "front foot elevated split squat": [
+   "The elevation lengthens the range, so the torso wants to fold — keep it tall",
+   "Raise the front foot further before adding weight"
+  ],
+  "front squat": [
+   "Elbows up and ribs down; the bar rolling forward means the upper back has given out",
+   "Build the front rack position before building the squat load"
+  ],
+  "front squat to box": [
+   "Elbows up, sit back to the box, touch and stand — no sinking or rocking",
+   "Lower the box as the position holds; don't chase depth with a folded chest"
+  ],
+  "glute bridge pull apart": [
+   "Hips and band should move independently — if the hips drop as the band opens, the glutes have let go",
+   "Add band tension only once they can hold the bridge height for the full set"
+  ],
+  "hamstring body curls": [
+   "Hips stay extended the whole rep — piking at the hips is how this gets easy",
+   "Lower slowly and push back up with the hands until they can control the full curl"
+  ],
+  "hand support skater squat": [
+   "Back leg stays off the floor the whole set; touching down resets the rep",
+   "Wean off the J-hook support before adding load"
+  ],
+  "hands elevated scap push ups": [
+   "Arms stay straight — only the shoulder blades move",
+   "Lower the hands to progress; one second pause at the bottom"
+  ],
+  "hanging knee raise": [
+   "Knees to the chest with no swing; the shoulders stay packed on the bar",
+   "Stop the set when the swing starts rather than grinding out extra reps"
+  ],
+  "hanging scap shrug": [
+   "Arms stay straight — only the shoulder blades move, pulling the body up an inch",
+   "Pause at the top; adding reps before control just turns it into a swing"
+  ],
+  "hardstyle high plank": [
+   "This is a hard contraction, not a hold — glutes, quads and fists all squeezed at once",
+   "Ten hard seconds beats sixty soft ones; shorten the set if the tension drops"
+  ],
+  "heels elevated goblet squat": [
+   "Heel lift buys depth; the knees should still track over the toes, not cave in",
+   "Add the pause at the bottom before adding the weight"
+  ],
+  "high angle single arm band row": [
+   "Elbow drives down and back past the ribs with the torso staying square",
+   "Step back for tension rather than rotating to finish the pull"
+  ],
+  "high plank w/ alternating hip flexion": [
+   "Hips stay level and square as each knee comes in",
+   "Slow the knee drive rather than speeding up the set"
+  ],
+  "hinged over chest slam": [
+   "Stay hinged and slam with the chest, not the arms",
+   "Reset and breathe between reps to keep the output high"
+  ],
+  "hinged over sa lat stretch": [
+   "Sit the hips back and let the chest sink; the stretch belongs in the lat",
+   "Breathe out and ease deeper each rep instead of forcing the position"
+  ],
+  "hinged over single arm lat stretch": [
+   "Let the hips sit back and the chest sink — the stretch is in the lat, not the shoulder joint",
+   "Breathe out at the bottom and ease a little deeper each rep rather than forcing it"
+  ],
+  "hybrid stance deadlift": [
+   "Stance sits between conventional and sumo; knees track out over the toes, back set before the pull",
+   "Pull the slack out of the bar before every rep rather than yanking from the floor"
+  ],
+  "inchworm push up": [
+   "Hips shouldn't sag as the hands walk out; that's the cue to stop walking",
+   "Add the push-up only when the plank at full reach holds"
+  ],
+  "ipsilateral db reverse lunge": [
+   "The weight is on the side of the working front leg, so expect a side-bend — resist it",
+   "Lighter than a two-DB lunge; the anti-lean demand is the work"
+  ],
+  "ipsilateral dead bug": [
+   "Same arm and leg move together while the low back stays pressed down",
+   "Extend further as control improves; speed is never the progression here"
+  ],
+  "kb 3pt row": [
+   "Three points of contact stay fixed; the hips rotating up is the cheat",
+   "Pause at the ribs before adding bell weight"
+  ],
+  "kb anterior loaded good morning": [
+   "The bell at the chest pulls you forward, so the hinge has to be deliberate",
+   "Lighter bell, longer range beats a heavy bell and a short hinge"
+  ],
+  "kb beast row": [
+   "Knees hover an inch off the floor and the hips stay level as the bell comes up",
+   "Widen the feet to make it steadier, narrow them to progress"
+  ],
+  "kb clean to overhead press 2 hand": [
+   "Catch the bells soft in the rack before pressing — a bruised forearm means a late catch",
+   "Clean each rep rather than pressing from a held rack as fatigue sets in"
+  ],
+  "kb drop split squat": [
+   "Bell in the hand opposite the front leg; drop under control, then pop straight back up",
+   "Control the landing first — the speed comes later"
+  ],
+  "kb halo": [
+   "The bell circles the head while the ribs and hips stay completely still",
+   "Slow circles, both directions evenly; speed hides a lazy core"
+  ],
+  "kb kickstand rdl": [
+   "Back toe is a kickstand carrying almost nothing; hips hinge back, back stays flat",
+   "Move toward a true single-leg RDL before adding weight"
+  ],
+  "kb kickstand sa swing": [
+   "Hips drive it and the bell stops at chest height; the arm stays a rope",
+   "Smooth and explosive — if the bell floats higher, it's the arms doing it"
+  ],
+  "kb lateral shift swing 2hand": [
+   "The shift happens at the top with the hips, not by dragging the bell sideways",
+   "Build a clean two-hand swing before adding the lateral shift"
+  ],
+  "kb plank pull through": [
+   "Hips stay level as the bell passes under; feet wide for a stable base",
+   "Heavier bell or narrower feet — one change at a time"
+  ],
+  "kb sa swing": [
+   "It's a hip snap, not a lift — the arm should feel like a rope",
+   "Stand tall and tight at the top; floating the bell higher is not the progression"
+  ],
+  "kb step together swing": [
+   "Step, then swing — fusing the two turns it into a drag",
+   "Build a clean two-hand swing before adding the step"
+  ],
+  "kb swing": [
+   "Hips snap, arms stay relaxed; squatting the bell up instead of hinging is the common fault",
+   "The bell floating to chest height is the ceiling — heavier bell, same height"
+  ],
+  "kb t rex swing": [
+   "Elbows stay bent and tight to the ribs; the hips still do all the work",
+   "Lighter than a standard swing — the short lever changes everything"
+  ],
+  "kb upright row": [
+   "Lead with the elbows and stop at shoulder height; higher pinches the shoulder",
+   "Stop at chest height if there's any pinching — range is the variable, not load"
+  ],
+  "kb/db curtis p complex front rack squat > lunge r > l left > push": [
+   "Hold the front rack through the whole complex; dropping it resets the sequence",
+   "Load for the push press — it's the weakest link in the chain"
+  ],
+  "kb/db curtis p complex front rack squat > lunge r > l left > push press x1 each": [
+   "Front rack held throughout; the push press sets the load for the whole complex",
+   "One weight for all four movements — pick for the weakest link"
+  ],
+  "kb/db death march in place": [
+   "One hinge per step with the back flat; rushing turns it into a bend-and-snatch",
+   "Keep the bells light — this is a position drill under fatigue"
+  ],
+  "kb/db squat lunge press combo": [
+   "Move steady through the sequence; the press is where form fails first",
+   "Full lockout on every press before adding weight"
+  ],
+  "kettlebell upright row": [
+   "Bells stay close to the body and the elbows lead the pull",
+   "Pause at the top rather than reaching for heavier bells"
+  ],
+  "kickstand 2db rdl": [
+   "Most of the load sits on the front leg; the back toe only balances",
+   "Shift more weight forward over time before adding DBs"
+  ],
+  "landmine heels": [
+   "Heels on the plate buys depth, but the knees still track over the toes",
+   "Add the pause at the bottom before the bar weight"
+  ],
+  "landmine heels elevated goblet squat": [
+   "Heels on the plate buys depth, but the knees still track over the toes",
+   "Add the pause at the bottom before you add the bar weight"
+  ],
+  "landmine rdl": [
+   "Bar in the hand on the same side as the planted leg, hips pushing back, back flat",
+   "Lower the range before you load it if the back starts to round"
+  ],
+  "landmine rotations": [
+   "Arms stay long and the turn comes from the hips and ribs together",
+   "Control the end of the arc — that's where the back gets asked to do too much"
+  ],
+  "landmine sa push press": [
+   "Dip with the legs, press with the ribs down — no leaning back to finish",
+   "Add load once the lockout happens without an arch"
+  ],
+  "landmine t bar row": [
+   "Hold the hinge angle and pull the bar to the chest with the elbows close",
+   "Pause at the chest before adding plates"
+  ],
+  "lateral lunge step together lunge": [
+   "Hips push back on every step out; the trailing leg stays straight",
+   "Slow the transitions before adding load"
+  ],
+  "lateral lunge to curtsy lunge": [
+   "Hips square through both halves — the curtsy is where the pelvis wants to twist",
+   "Control before depth; this one combines two long knee paths"
+  ],
+  "lateral step together lunge": [
+   "Step out, sit the hips back, then step together — three distinct beats",
+   "Slow the transitions before adding load"
+  ],
+  "loaded push up": [
+   "Body moves as one unit; the hips sagging or piking first ends the set",
+   "Elevate the hands to scale back before dropping the load"
+  ],
+  "low box jump": [
+   "Land soft in a quarter squat and own it — stepping down between reps keeps this clean",
+   "Box height is not the progression; a stuck, silent landing is"
+  ],
+  "lu raise": [
+   "Plates travel out and up in one arc to overhead with straight arms",
+   "Light plates only; this is a position exercise, not a strength one"
+  ],
+  "mb complex clean squat pushup slam": [
+   "Each movement finishes before the next begins; the push-up is where the line breaks",
+   "Pick a ball weight that keeps the push-up honest"
+  ],
+  "mb hinged chest slam": [
+   "Wide stance, stay hinged, three quick slams and then reset",
+   "Reset between clusters; continuous slams lose power fast"
+  ],
+  "mb russian twist": [
+   "Turn through the ribs with the chest; shuffling the ball side to side with the arms is the easy version",
+   "Elevate the feet for more demand, and keep the range large rather than fast"
+  ],
+  "med ball alternating push up": [
+   "One hand on the ball, one on the floor, body staying in one line",
+   "Elevate the free hand to scale before dropping to the knees"
+  ],
+  "med ball russian twist": [
+   "Rotate the chest and let the eyes follow — the arms alone is the shortcut",
+   "Elevate the feet to progress; a heavier ball with less range is a step backwards"
+  ],
+  "med ball slam": [
+   "Full reach overhead, then slam through the ball to the floor",
+   "Reset each rep — power, not pace, is what's being trained"
+  ],
+  "neutral grip pull up (band assisted as needed)": [
+   "Drive the elbows down to the ribs; the neutral grip is the friendliest on the shoulder",
+   "Use only as much band as it takes to keep the full range"
+  ],
+  "oh ball slam": [
+   "Reach tall and finish the slam with the whole body, not just the arms",
+   "Two breaths between reps keeps the output high"
+  ],
+  "overhead band tricep press": [
+   "Elbows stay pointed forward and close; flaring them hands it to the shoulders",
+   "Full lockout before adding band tension"
+  ],
+  "pause push up (band assist if needed)": [
+   "The pause is at the bottom, chest an inch off the floor, elbows at 45",
+   "Use only as much band as it takes to keep the body in one line"
+  ],
+  "paused push up": [
+   "One full second at the bottom with the body still in one line",
+   "Elevate the hands to keep the pause honest rather than shortening it"
+  ],
+  "pec stretch": [
+   "Elbow at or just above shoulder height; higher pinches the front of the shoulder",
+   "Ease into it over 30 seconds rather than pressing hard and holding"
+  ],
+  "pelvic tilts": [
+   "Small movement from the pelvis only; the ribs and legs stay still",
+   "Slower and smaller is better here — this is a feel drill"
+  ],
+  "pendlay row from catches": [
+   "Bar resets on the catches every rep so each pull starts dead",
+   "Explosive pull; when the bar slows noticeably, the set is over"
+  ],
+  "plank kb pull thru": [
+   "Hips stay level as the bell passes; feet wide gives a stable base",
+   "Heavier bell or narrower feet to progress, one at a time"
+  ],
+  "plate bent over rear delt raise": [
+   "Hold the hinge, lead with the pinkies, and stop at shoulder height",
+   "Pause at the top before adding plate weight"
+  ],
+  "plate crazy ivan": [
+   "Arms stay long and the plate travels in a wide arc as the ribs rotate",
+   "Bigger arc before heavier plate"
+  ],
+  "plate press out squat": [
+   "The plate pressed out makes the squat want to fold — keep the chest tall",
+   "Press the plate further out for more demand rather than a heavier plate"
+  ],
+  "prisoner good morning": [
+   "Hinge should stop when the low back starts to round, not when the chest reaches parallel",
+   "Progress by slowing the lower to three seconds before adding any load"
+  ],
+  "pull up/chin up": [
+   "Shoulder blades set before the arms pull; full extension at the bottom of every rep",
+   "Band assistance or a slow lower before cutting the range short"
+  ],
+  "push up": [
+   "Elbows back at 45, not flared wide; hands under the shoulders not out by the head",
+   "Elevate the hands on a bench to scale — knees down changes the brace entirely"
+  ],
+  "quadruped adductor stretch": [
+   "The straight leg's inner thigh is the target; rock back with a neutral low back",
+   "Grow the range gradually — this responds to frequency, not force"
+  ],
+  "quadruped hip circles": [
+   "Hips stay square and the low back stays still; the circle comes from the hip joint",
+   "Grow the circle as control improves rather than speeding it up"
+  ],
+  "quadruped hip extensions": [
+   "Drive the heel to the ceiling without arching the low back",
+   "Pause at the top; height past neutral comes from the spine, not the glute"
+  ],
+  "quadruped rocking": [
+   "Rock back only as far as the low back stays neutral",
+   "Range grows slowly — the point is the position, not the distance"
+  ],
+  "rack aslr hs stretch": [
+   "Keep the down leg pressed flat and the pelvis level as the other leg raises",
+   "Lower the strap or rack height to meet today's range"
+  ],
+  "rdl wall drill": [
+   "The hips reach back to tap the wall; the knees stay soft and roughly fixed",
+   "Step further from the wall as the hinge improves"
+  ],
+  "rnt barbell rdl": [
+   "The band pulls you forward, so pull the hips back against it the whole way",
+   "Band first, bar weight second — the band is teaching the pattern"
+  ],
+  "rotational med ball slam": [
+   "Start at the opposite hip, reach up and over, and pivot the back foot as you turn",
+   "Reset each rep; a continuous pace turns it into an arm exercise"
+  ],
+  "sa db bench press": [
+   "Both shoulder blades stay on the bench and the hips stay square through the press",
+   "The anti-rotation is the work — add load only once nothing twists"
+  ],
+  "scap pull ups": [
+   "Arms stay straight — only the shoulder blades move",
+   "One second pause at the bottom before adding reps"
+  ],
+  "seated deficit calf raise": [
+   "Knees bent shifts the work to the soleus; full heel drop and a pause up top",
+   "Slow the lower before adding plate weight"
+  ],
+  "seated leg hs curl": [
+   "Control the return — the lowering phase is where hamstrings actually get trained",
+   "Three-second lower before adding load"
+  ],
+  "shoulder car 1/2 kneeling": [
+   "Move as slowly as you can through the biggest circle the shoulder owns, ribs down",
+   "Slower and bigger, never faster — this is a control drill"
+  ],
+  "side plank clam (from knees)": [
+   "Shoulder stacked over the elbow, hips pushed forward, then open the top knee",
+   "Progress to a full side plank from the feet before adding reps"
+  ],
+  "side plank hip drop": [
+   "Shoulder stacked over the elbow and hips square — rolling toward the floor makes it an easy rep",
+   "From the knees first, then full side plank, then add a pause at the top"
+  ],
+  "single arm arnold press": [
+   "Rotate as you press and reverse the spiral coming down; ribs stay down throughout",
+   "Lighter than a straight press — the rotation is the work"
+  ],
+  "single arm band row with kb rack hold": [
+   "The racked bell side must not sag; the hold is as much the exercise as the row",
+   "Heavier bell or lighter band, not both at once"
+  ],
+  "single arm bench deadstop row": [
+   "DB rests on the floor between reps and the hips stay square through the pull",
+   "Some trunk rotation is allowed on a big pull, but the hips shouldn't follow"
+  ],
+  "skater squat": [
+   "Back leg stays off the floor the whole set",
+   "Reduce hand support before adding load"
+  ],
+  "sl hip hinge w/ ball reach": [
+   "Back leg and chest finish in one line; the hips stay square to the floor",
+   "Reach further as balance improves before adding any load"
+  ],
+  "snatch grip elevated deadlift": [
+   "Wide grip and the elevation both lengthen the range — the back must stay set throughout",
+   "Reduce the deficit before reducing the grip width"
+  ],
+  "spanish split squat": [
+   "The band behind the knee pulls it back, so drive forward against it",
+   "Band tension first, then load"
+  ],
+  "split squat hold + oh ball slam": [
+   "Hold the bottom of the split squat while you slam — rising up between reps is the cheat",
+   "Switch legs every 10 slams and keep the hold depth honest"
+  ],
+  "split squat jumps": [
+   "Load both legs evenly before the jump and land on the same side you started",
+   "Land soft; when the landings get loud, end the set"
+  ],
+  "squat jump": [
+   "Land in the same stance you left from, soft and quiet",
+   "Quality of landing ends the set, not the rep count"
+  ],
+  "squat jump w/ stick": [
+   "Stick the landing in a quarter squat and hold it before the next rep",
+   "The hold is the progression, not the height"
+  ],
+  "standing band hamstring curl": [
+   "Hips stay still and extended; swinging the thigh forward makes it a hip flexor drill",
+   "Pause at full flexion before adding band tension"
+  ],
+  "standing clam shell": [
+   "Foot on the upright, open from the hip, stay tall and don't lean away",
+   "Pause at the open position rather than rushing reps"
+  ],
+  "standing pec stretch": [
+   "Elbow slightly above the shoulder, then press the chest forward, not the arm back",
+   "Hold longer rather than pushing harder"
+  ],
+  "sumo med ball zercher good morning": [
+   "Wide stance, ball in the elbows, hinge back with a flat back",
+   "The ball position pulls the chest down — keep it light and slow"
+  ],
+  "t spine rotation": [
+   "The turn comes from the mid-back with the hips staying still",
+   "Hold the end range for two breaths rather than swinging through"
+  ],
+  "tuck jump": [
+   "Knees come to the chest, the chest doesn't drop to the knees",
+   "Reset fully between reps; continuous tuck jumps degrade fast"
+  ],
+  "v in and out’s": [
+   "Legs and chest move together and the low back stays down",
+   "Bend the knees to shorten the lever before reducing reps"
+  ],
+  "wall support sl standing clam": [
+   "Hips stay square to the wall; opening the whole body is the easy version",
+   "Pause at the open position before adding a band"
+  ],
+  "wall support standing clam": [
+   "Hips stay square to the wall; opening the whole body is the easy version",
+   "Pause at the open position before adding a band"
+  ],
+  "wide grip pull up assisted as needed": [
+   "Shoulder blades set before the arms pull; full extension at the bottom",
+   "Use only as much assistance as it takes to keep the full range"
+  ],
+  "z press": [
+   "Legs straight and sat tall — any lean back means the position has gone",
+   "Build the seated position first; load comes a long way after"
+  ],
+  "½ kneeling high angle face pull": [
+   "Pull to eyebrow height with the elbows above the wrists, ribs down",
+   "Lighter band through the full range beats a heavy band and a short pull"
+  ],
+  "½ kneeling pallof press": [
+   "Inside knee down, perpendicular to the rack; press straight out without turning",
+   "Step further from the anchor for more rotational demand"
   ]
  }
 }
