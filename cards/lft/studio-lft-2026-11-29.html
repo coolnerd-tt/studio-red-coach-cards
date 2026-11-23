@@ -77,6 +77,18 @@
   .lft-ex-cues li::before { content: '“'; position: absolute; left: 0; top: 1px; font-style: normal; font-weight: 700; color: rgba(245,200,66,0.55); }
   .lft-ex-cues li::after { content: '”'; font-style: normal; color: rgba(245,200,66,0.55); }
 
+  /* The deeper notes: what to watch for and how to load it up or scale it
+     back. Deliberately quieter than the spoken cues above — a coach scans
+     these before the set, they don't shout them during it. */
+  .lft-ex-tech { margin-top: 8px; padding-top: 7px; border-top: 1px dashed var(--border); }
+  .lft-tech-label { display: block; font-family: 'Barlow Condensed', sans-serif; font-weight: 700;
+                    font-size: calc(15px * var(--fs)); letter-spacing: 1.2px; text-transform: uppercase;
+                    color: var(--blue); margin-bottom: 3px; }
+  .lft-ex-tech ul { list-style: none; margin: 0; padding: 0; }
+  .lft-ex-tech li { position: relative; padding-left: 15px; font-size: calc(18px * var(--fs));
+                    color: #cfcfcf; line-height: 1.45; margin-top: 3px; }
+  .lft-ex-tech li::before { content: '▸'; position: absolute; left: 0; top: 0; color: var(--blue); }
+
   .lft-note-row { display: flex; align-items: flex-start; gap: 8px; background: rgba(245,200,66,0.08); border: 1px dashed rgba(245,200,66,0.4); border-radius: 8px; padding: 8px 12px; margin-bottom: 8px; font-size: calc(19px * var(--fs)); color: var(--yellow); }
   .lft-note-icon { flex-shrink: 0; }
 </style>
@@ -128,6 +140,7 @@
         <div class="lft-ex-top"><a class="lft-ex-name" href="https://www.dropbox.com/scl/fi/8yntgwwzpt9i3niortq7g/Squat-to-SA-Row.mp4?rlkey=pjzn1tk9omwxns7ivbn98481x&amp;st=jd3sm10s&amp;dl=0" target="_blank" rel="noopener">Band Squat and SA Row</a><span class="lft-ex-sr">:45 per side</span></div>
         <div class="lft-ex-notes">Squat and then row 1 arm to stand up. This bracing will apply to the Main LFT in the workout.</div>
         <ul class="lft-ex-cues"><li>Squat first, row as you stand</li><li>One arm at a time, ribs down</li></ul>
+        <div class="lft-ex-tech"><span class="lft-tech-label">Form &amp; progression</span><ul><li>Squat first, then row as you stand; fusing them loses both halves</li><li>Build the squat depth before adding band tension</li></ul></div>
       </div>
     </div>
     <div class="lft-ex-row">
@@ -136,6 +149,7 @@
         <div class="lft-ex-top"><a class="lft-ex-name" href="https://www.dropbox.com/scl/fi/iglcaefiay2lrzbby9a8x/Band-Over-and-Back.mov?rlkey=qh5kdfh2b414yov3og0xbvqcw&amp;st=x09zmepi&amp;dl=0" target="_blank" rel="noopener">Band Over and Back</a><span class="lft-ex-sr">1:00</span></div>
         <div class="lft-ex-notes">Make a D-shape with the band out in front and then tracing the spine</div>
         <ul class="lft-ex-cues"><li>Keep tension wide the whole way</li><li>Go only as wide as the shoulders allow</li></ul>
+        <div class="lft-ex-tech"><span class="lft-tech-label">Form &amp; progression</span><ul><li>Watch the ribs flare as the arms pass overhead — that&#x27;s the shoulder borrowing range from the low back</li><li>Narrow the grip to make it harder; widen it or use a lighter band if the elbows bend to get past</li></ul></div>
       </div>
     </div>
     <div class="lft-ex-row">
@@ -144,6 +158,7 @@
         <div class="lft-ex-top"><a class="lft-ex-name" href="https://www.dropbox.com/scl/fi/3st3w6qf1mr05qz6eyc59/45-Hip-Flexor-Stretch.mp4?rlkey=au854u98dxqfby7gme4p3ft36&amp;st=mfvlalcq&amp;dl=0" target="_blank" rel="noopener">45 degree ½ kneeling Hip Flexor</a><span class="lft-ex-sr">:45 per side</span></div>
         <div class="lft-ex-notes">Open the hips, gently rock into and out of stretch.</div>
         <ul class="lft-ex-cues"><li>Squeeze the back glute to open the hip</li><li>Ribs down — don&#x27;t arch to get range</li></ul>
+        <div class="lft-ex-tech"><span class="lft-tech-label">Form &amp; progression</span><ul><li>Back glute squeezed before any lean; the ribs should stay down throughout</li><li>Hold longer rather than leaning further</li></ul></div>
       </div>
     </div>
     <div class="lft-ex-row">
@@ -152,6 +167,7 @@
         <div class="lft-ex-top"><a class="lft-ex-name" href="https://www.dropbox.com/scl/fi/2vfr4wg5mih4ykw9e8nmc/Kettlebell-Upright-Row.mp4?rlkey=9o6t80si9knjv4gxbiunv4t62&amp;st=p58kg406&amp;dl=0" target="_blank" rel="noopener">KB Upright Row</a><span class="lft-ex-sr">1:00</span></div>
         <div class="lft-ex-notes">Pull the KB up and into the chest. Squeeze Shoulder blades together at the top of each movement.</div>
         <ul class="lft-ex-cues"><li>Pull the bell up into the chest</li><li>Squeeze the shoulder blades at the top</li></ul>
+        <div class="lft-ex-tech"><span class="lft-tech-label">Form &amp; progression</span><ul><li>Lead with the elbows and stop at shoulder height; higher pinches the shoulder</li><li>Stop at chest height if there&#x27;s any pinching — range is the variable, not load</li></ul></div>
       </div>
     </div>
     <div class="lft-ex-row">
@@ -160,6 +176,7 @@
         <div class="lft-ex-top"><a class="lft-ex-name" href="https://www.dropbox.com/scl/fi/vguriqd0vd8wvlo3tru5a/Box-Jump.mp4?rlkey=3s1hp9a9urt1nreusqlybes1o&amp;st=6mqzaxvu&amp;dl=0" target="_blank" rel="noopener">Box Jump</a><span class="lft-ex-sr">1:00</span></div>
         <div class="lft-ex-notes">Land softly, reset after each Jump. Alternate Jumps with Partner.</div>
         <ul class="lft-ex-cues"><li>Land soft in a quarter squat</li><li>Reset fully between jumps</li></ul>
+        <div class="lft-ex-tech"><span class="lft-tech-label">Form &amp; progression</span><ul><li>Land soft in a quarter squat, then step down — never jump down</li><li>Height isn&#x27;t the progression; a silent, stuck landing is</li></ul></div>
       </div>
     </div>
   </div>
@@ -173,6 +190,7 @@
         <div class="lft-ex-top"><a class="lft-ex-name" href="https://www.dropbox.com/scl/fi/080iijgxchbnoxc049g3f/Pendlay-Row-From-Catches.mp4?rlkey=xoipg1kovcaxw5181i4kwngej&amp;st=65w5l0s0&amp;dl=0" target="_blank" rel="noopener">Pendlay Row from catches</a><span class="lft-ex-sr">4 – 5 x 6</span></div>
         <div class="lft-ex-notes">Set catches to lowest position. Explosively pull barbell into lower ribs, slightly using the legs to create momentum.</div>
         <ul class="lft-ex-cues"><li>Pull explosively into the lower ribs</li><li>Bar resets on the catches every rep</li></ul>
+        <div class="lft-ex-tech"><span class="lft-tech-label">Form &amp; progression</span><ul><li>Bar resets on the catches every rep so each pull starts dead</li><li>Explosive pull; when the bar slows noticeably, the set is over</li></ul></div>
       </div>
     </div>
     <div class="lft-ex-row">
@@ -181,6 +199,7 @@
         <div class="lft-ex-top"><a class="lft-ex-name" href="https://www.dropbox.com/scl/fi/ahi4tdnm3h9lpw55cebe8/Dumbell-Split-Jerk.mp4?rlkey=8fsg9oz1rhwgmu3l2u4jlctv8&amp;st=4wme7pnb&amp;dl=0" target="_blank" rel="noopener">DB Split Jerk</a><span class="lft-ex-sr">4-5 x 4 ea</span><span class="lft-loc">in GAP</span></div>
         <div class="lft-ex-notes">Quick Dip with DBs on fronts of shoulders. Explode Up, catch DBs overhead in a split stance.</div>
         <ul class="lft-ex-cues"><li>Quick dip, then punch under the DBs</li><li>Catch in a split, both feet land together</li></ul>
+        <div class="lft-ex-tech"><span class="lft-tech-label">Form &amp; progression</span><ul><li>Quick dip, then punch under the DBs; catching with soft knees in a split is the skill</li><li>Both feet land together — if one lands late, drop the weight</li></ul></div>
       </div>
     </div>
   </div>
@@ -194,6 +213,7 @@
         <div class="lft-ex-top"><a class="lft-ex-name" href="https://www.dropbox.com/scl/fi/afkrz3zokub5jg7ddaryf/Dumbell-Pullover.mp4?rlkey=emhvr0rm2evqj4ev7e3x03l5z&amp;st=ix7phkho&amp;dl=0" target="_blank" rel="noopener">DB Pullover</a><span class="lft-ex-sr">3-4 x 12</span><span class="lft-loc">in Rack</span></div>
         <div class="lft-ex-notes">Lying on bench. Hold DB with both hands. Engage core, lower weight behind head for a big stretch. Pull back to top of movement using lats.</div>
         <ul class="lft-ex-cues"><li>Ribs down — don&#x27;t let the back arch</li><li>Long arms, soft elbows</li></ul>
+        <div class="lft-ex-tech"><span class="lft-tech-label">Form &amp; progression</span><ul><li>Ribs stay down as the DB travels back — arching the low back is borrowed range, not shoulder range</li><li>Only go as far back as the shoulders allow, then slow the lower</li></ul></div>
       </div>
     </div>
     <div class="lft-ex-row">
@@ -202,6 +222,7 @@
         <div class="lft-ex-top"><a class="lft-ex-name" href="https://www.dropbox.com/scl/fi/g67v3g4no417mqwiq9ct7/Kettlebell-Drop-Split-Squat.mp4?rlkey=gedxc5gzzj5ml97jk0yti9wlr&amp;st=rfxzvx0k&amp;dl=0" target="_blank" rel="noopener">KB Drop Split Squat</a><span class="lft-ex-sr">3-4 x 6ea</span><span class="lft-loc">In Gap</span></div>
         <div class="lft-ex-notes">Holding 1 KB opposite of front leg. Drop into split squat from standing position. Control the landing and quickly pop back up to standing.</div>
         <ul class="lft-ex-cues"><li>Bell in the hand opposite the front leg</li><li>Drop under control, pop straight back up</li></ul>
+        <div class="lft-ex-tech"><span class="lft-tech-label">Form &amp; progression</span><ul><li>Bell in the hand opposite the front leg; drop under control, then pop straight back up</li><li>Control the landing first — the speed comes later</li></ul></div>
       </div>
     </div>
   </div>
@@ -215,6 +236,7 @@
         <div class="lft-ex-top"><a class="lft-ex-name" href="https://www.dropbox.com/scl/fi/q0gp18xdlaxh5l26zl8rb/Band-Face-Pull.mov?rlkey=nn2fv5ag0n38sikgikim3ntrl&amp;st=j6dykfj3&amp;dl=0" target="_blank" rel="noopener">Face Pull</a><span class="lft-ex-sr">3-4 x 15</span><span class="lft-loc">in Alley</span></div>
         <div class="lft-ex-notes">Move band to face height. Pull with both hands, keeping band in the fingers.</div>
         <ul class="lft-ex-cues"><li>Pull to face height, elbows high</li><li>Band stays in the fingers</li></ul>
+        <div class="lft-ex-tech"><span class="lft-tech-label">Form &amp; progression</span><ul><li>Elbows high and wide, hands finish by the ears — dropping the elbows makes it a row</li><li>Pause at the back and squeeze before adding tension</li></ul></div>
       </div>
     </div>
     <div class="lft-ex-row">
@@ -223,6 +245,7 @@
         <div class="lft-ex-top"><a class="lft-ex-name" href="https://www.dropbox.com/scl/fi/75k1swwhdstsbni7cvfxs/KB-Kickstand-RDL.mov?rlkey=ngswkhriy9gn6twxu8bn4ygub&amp;st=8pgzlner&amp;dl=0" target="_blank" rel="noopener">KB Kickstand RDL</a><span class="lft-ex-sr">2- 4 x 10ea</span><span class="lft-loc">in Alley</span></div>
         <div class="lft-ex-notes">Holding weight hinge at hips in kickstand position.</div>
         <ul class="lft-ex-cues"><li>Back toe is a kickstand, not a leg to stand on</li><li>Hinge the hips back, flat back</li></ul>
+        <div class="lft-ex-tech"><span class="lft-tech-label">Form &amp; progression</span><ul><li>Back toe is a kickstand carrying almost nothing; hips hinge back, back stays flat</li><li>Move toward a true single-leg RDL before adding weight</li></ul></div>
       </div>
     </div>
   </div>
@@ -236,6 +259,7 @@
         <div class="lft-ex-top"><a class="lft-ex-name" href="https://www.dropbox.com/scl/fi/denx56xv4h5cztq80d2st/Pause-Goblet-Squat.mov?rlkey=zfmz26g2fkmn6yrzt57tqgvk7&amp;st=t9rt5fyn&amp;dl=0" target="_blank" rel="noopener">DB Pause Goblet Squat</a><span class="lft-ex-sr">5</span></div>
         <div class="lft-ex-notes">Treat as a continuous complex. Do each</div>
         <ul class="lft-ex-cues"><li>Hold three seconds at the bottom</li><li>Stand up at normal speed</li></ul>
+        <div class="lft-ex-tech"><span class="lft-tech-label">Form &amp; progression</span><ul><li>Elbows inside the knees at the bottom, chest tall; the DB drifting forward means the brace is gone</li><li>Add a second to the pause before adding weight</li></ul></div>
       </div>
     </div>
     <div class="lft-ex-row">
@@ -244,6 +268,7 @@
         <div class="lft-ex-top"><a class="lft-ex-name" href="https://www.dropbox.com/scl/fi/bkk4mct205yjjmel0dilf/Reverse-Lunge.mov?rlkey=mvtlidjttceoh3zmr0ejmmv6f&amp;st=6yl9dq29&amp;dl=0" target="_blank" rel="noopener">Alt. BW Reverse Lunge</a><span class="lft-ex-sr">5ea</span></div>
         <div class="lft-ex-notes">exercise for 5 reps. But the DB / KB down for jumps. Rest as long as needed and repeat. How many times can you get through the</div>
         <ul class="lft-ex-cues"><li>Step straight back, back knee toward the floor</li><li>Drive through the whole front foot to stand</li></ul>
+        <div class="lft-ex-tech"><span class="lft-tech-label">Form &amp; progression</span><ul><li>Front shin near-vertical and the torso tall; a forward lean shifts the work out of the glute</li><li>Progress to a deficit or hold load once they can land the back knee softly every rep</li></ul></div>
       </div>
     </div>
     <div class="lft-ex-row">
@@ -252,6 +277,7 @@
         <div class="lft-ex-top"><a class="lft-ex-name" href="https://www.dropbox.com/scl/fi/8t56fpfo0uscadd7mof93/Push-Up.mov?rlkey=8kq3wbxag6sz3suvnarh97twv&amp;st=hz544pjx&amp;dl=0" target="_blank" rel="noopener">Push Up</a><span class="lft-ex-sr">5</span></div>
         <div class="lft-ex-notes">complex in 2 minutes?</div>
         <ul class="lft-ex-cues"><li>Body in one line — head to heels, no sagging hips, no piked butt</li><li>Elbows at 45° — not flared out to the sides</li></ul>
+        <div class="lft-ex-tech"><span class="lft-tech-label">Form &amp; progression</span><ul><li>Elbows back at 45, not flared wide; hands under the shoulders not out by the head</li><li>Elevate the hands on a bench to scale — knees down changes the brace entirely</li></ul></div>
       </div>
     </div>
   </div>
